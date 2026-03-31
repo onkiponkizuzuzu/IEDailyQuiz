@@ -3,100 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TH & IE Reader Pro</title>
+    <title>UPSC Reader Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; }
         .dark { --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: all 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: all 0.3s; margin: 0; }
         .serif-title { font-family: 'Merriweather', serif; }
-        .content-body { font-family: 'Merriweather', serif; font-size: 1.1rem; line-height: 1.8; }
-        .quiz-box { background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; padding: 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0; }
-        .solution-panel { display: none; background: #f1f5f9; padding: 1rem; margin-top: 1rem; border-radius: 8px; border: 1px dashed #3b82f6; }
-        .dark .solution-panel { background: #1e293b; }
+        .content-body { font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.8; max-width: 800px; margin: 0 auto; }
+        .quiz-card { background: var(--sidebar); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .solution-box { display: none; margin-top: 1.5rem; padding: 1.5rem; border-top: 2px dashed #3b82f6; background: rgba(59, 130, 246, 0.05); border-radius: 0 0 12px 12px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body>
-    <nav class="sticky top-0 z-50 px-4 py-3 flex flex-wrap gap-4 justify-between items-center border-b shadow-sm bg-white dark:bg-slate-900">
-        <div class="flex items-center space-x-4">
-            <h1 class="font-bold text-lg">TH & IE Reader</h1>
+<body class="dark">
+    <nav class="sticky top-0 z-50 px-6 py-4 flex flex-wrap gap-6 justify-between items-center border-b bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800">
+        <div class="flex items-center gap-6">
+            <h1 class="font-bold text-xl tracking-tight text-blue-500">UPSC Reader</h1>
             <div id="topic-tabs" class="flex gap-2"></div>
         </div>
-        <div id="category-tabs" class="flex gap-2 overflow-x-auto no-scrollbar"></div>
+        <div id="category-tabs" class="flex gap-2 overflow-x-auto no-scrollbar max-w-xl"></div>
+        <button onclick="document.body.classList.toggle('dark')" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800"><i class="fas fa-moon text-blue-500"></i></button>
     </nav>
 
-    <main class="max-w-4xl mx-auto py-10 px-6">
+    <main class="max-w-4xl mx-auto py-12 px-6">
         <div id="article-feed"></div>
     </main>
 
     <script>
         let rawData = [], activeTopic = 'The Hindu', activeSubtopic = 'Environment';
-        const topics = {
-            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"],
-            "Indian Express": ["UPSC Current Affairs", "Quizzes"]
-        };
+        const topics = { "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], "Indian Express": ["UPSC Current Affairs", "Quizzes"] };
 
         async function init() {
-            const res = await fetch('data.json');
-            rawData = await res.json();
-            renderTopicTabs();
-            renderView('The Hindu', 'Environment');
+            try {
+                const res = await fetch('data.json');
+                rawData = await res.json();
+                renderTopicTabs();
+                renderView('The Hindu', 'Environment');
+            } catch(e) { document.getElementById('article-feed').innerHTML = "No data found."; }
         }
 
         function renderTopicTabs() {
             document.getElementById('topic-tabs').innerHTML = Object.keys(topics).map(t => `
-                <button onclick="switchTopic('${t}')" class="px-4 py-1.5 rounded-full text-sm font-medium ${activeTopic === t ? 'bg-blue-600 text-white' : 'opacity-60'}">${t}</button>
+                <button onclick="switchTopic('${t}')" class="px-4 py-2 rounded-full text-sm font-semibold transition ${activeTopic === t ? 'bg-blue-600 text-white' : 'opacity-50 hover:opacity-100'}">${t}</button>
             `).join('');
             renderSubtopicTabs();
         }
 
         function renderSubtopicTabs() {
             document.getElementById('category-tabs').innerHTML = topics[activeTopic].map(s => `
-                <button onclick="renderView('${activeTopic}', '${s}')" class="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider ${activeSubtopic === s ? 'text-blue-500 border-b-2 border-blue-500' : 'opacity-50'}">${s}</button>
+                <button onclick="renderView('${activeTopic}', '${s}')" class="px-4 py-2 whitespace-nowrap text-xs font-bold uppercase ${activeSubtopic === s ? 'text-blue-500 border-b-2 border-blue-500' : 'opacity-40 hover:opacity-100'}">${s}</button>
             `).join('');
         }
 
         function switchTopic(t) { activeTopic = t; activeSubtopic = topics[t][0]; renderTopicTabs(); renderView(t, activeSubtopic); }
 
         function renderView(t, s) {
-            activeSubtopic = s;
-            renderSubtopicTabs();
+            activeSubtopic = s; renderSubtopicTabs();
             const filtered = rawData.filter(a => a.category === s);
             const feed = document.getElementById('article-feed');
             
             feed.innerHTML = filtered.map((art, idx) => {
                 if (s === "Quizzes") {
                     return `
-                    <div class="mb-12 border-b pb-8">
-                        <h2 class="serif-title text-2xl font-bold mb-6">${art.title}</h2>
+                    <div class="mb-16">
+                        <h2 class="serif-title text-3xl font-bold mb-8 text-center text-blue-400">${art.title}</h2>
                         ${art.quiz_data.map((q, qIdx) => `
-                            <div class="quiz-box">
-                                <div class="question-text">${q.question}</div>
-                                <button onclick="toggleSolution('${idx}-${qIdx}')" class="mt-4 text-sm text-blue-600 font-bold">
-                                    <i class="fas fa-lightbulb mr-2"></i>View Solution & Explanation
-                                </button>
-                                <div id="sol-${idx}-${qIdx}" class="solution-panel content-body text-sm">
-                                    ${q.solution}
-                                </div>
+                            <div class="quiz-card">
+                                <div class="content-body text-lg">${q.question}</div>
+                                <button onclick="toggleSol('${idx}-${qIdx}')" class="mt-6 w-full py-3 border-2 border-blue-500 text-blue-500 font-bold rounded-xl hover:bg-blue-500 hover:text-white transition">Show Solution & Explanation</button>
+                                <div id="sol-${idx}-${qIdx}" class="solution-box content-body text-sm italic">${q.solution}</div>
                             </div>
                         `).join('')}
                     </div>`;
                 }
                 return `
-                <article class="mb-12">
-                    <h2 class="serif-title text-2xl font-bold mb-4">${art.title}</h2>
-                    <div class="content-body">${art.content.map(c => `<p class="mb-4">${c.value}</p>`).join('')}</div>
+                <article class="mb-20 border-b border-slate-800 pb-12">
+                    <h2 class="serif-title text-3xl font-bold mb-6">${art.title}</h2>
+                    <div class="content-body text-slate-300">${art.content.map(c => `<p class="mb-6">${c.value}</p>`).join('')}</div>
+                    <a href="${art.url}" target="_blank" class="text-blue-500 text-sm underline">Source: Indian Express</a>
                 </article>`;
             }).join('');
+            window.scrollTo(0,0);
         }
 
-        function toggleSolution(id) {
+        function toggleSol(id) {
             const el = document.getElementById('sol-' + id);
             el.style.display = el.style.display === 'block' ? 'none' : 'block';
         }
-
         window.onload = init;
     </script>
 </body>
