@@ -1,20 +1,21 @@
-name: Scheduled Scraper (TH + IE Quizzes)
+name: Scheduled Hindu & IE Scrape
 
 on:
   schedule:
     - cron: '30 2,10 * * *'   # 8:00 AM IST and 4:00 PM IST
-  workflow_dispatch:
+  workflow_dispatch:          # Allows manual triggering
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30       # Increased timeout for 20-page deep scrape
     
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
    
     permissions:
       contents: write
-      
+     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,7 +25,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Chrome and Selenium
+      - name: Install Chrome and Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y wget gnupg2 fonts-liberation \
@@ -37,7 +38,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
           
-          pip install selenium pandas
+          # Install selenium and requirements
+          pip install selenium
 
       - name: Run Scraper
         run: python scraper.py
@@ -47,5 +49,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "Update DB: Quizzes & News Archive $(date)" || exit 0
+          # The || exit 0 ensures the workflow doesn't fail if there's nothing new to commit
+          git commit -m "System: Automated Scrape & Quiz Update $(date)" || exit 0
           git push
