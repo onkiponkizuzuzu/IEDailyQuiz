@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Quiz & News Reader | by onkiponkizuzuzu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; }
+        .dark { --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: all 0.3s; margin: 0; min-height: 100vh; }
+        .serif-title { font-family: 'Merriweather', serif; }
+        nav, aside { background-color: var(--sidebar); border-color: var(--border); }
+        .article-card { border-bottom: 2px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; width: 100%; }
+        #sidebar { transition: all 0.3s ease; width: 280px; position: sticky; top: 65px; height: calc(100vh - 65px); overflow-y: auto; }
+        #sidebar.collapsed { width: 0; padding: 0; overflow: hidden; border: none; }
+        
+        .article-title { 
+            font-size: 1.75rem; 
+            line-height: 2.1rem; 
+            font-weight: 600; 
+            color: inherit; 
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .article-title:hover { color: #3b82f6; }
+        
+        .content-body { 
+            font-family: 'Merriweather', serif; 
+            font-size: 1.125rem; 
+            line-height: 1.85; 
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content-body p { margin-bottom: 1.5rem; }
+        .content-body h4 { font-size: 1.25rem; font-weight: 700; margin: 2rem 0 1rem; }
+        
+        /* Quiz Specific Styles */
+        .quiz-container { margin-bottom: 2rem; }
+        .quiz-question { font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 1rem; white-space: pre-wrap; }
+        .quiz-solution { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; margin-top: 1rem; }
+        .quiz-solution summary { font-family: 'Inter', sans-serif; font-weight: bold; color: #3b82f6; cursor: pointer; outline: none; transition: color 0.2s; }
+        .quiz-solution summary:hover { color: #2563eb; }
+        .quiz-solution-text { font-family: 'Inter', sans-serif; font-size: 1rem; margin-top: 1rem; white-space: pre-wrap; line-height: 1.6; }
+
+        .beeline-mode .content-body p, .beeline-mode .quiz-question, .beeline-mode .quiz-solution-text {
+            background: linear-gradient(to right, #3b82f6 0%, #60a5fa 15%, #93c5fd 50%, #60a5fa 85%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+        .dark .beeline-mode .content-body p, .dark .beeline-mode .quiz-question, .dark .beeline-mode .quiz-solution-text {
+            background: linear-gradient(to right, #60a5fa 0%, #93c5fd 15%, #dbeafe 50%, #93c5fd 85%, #60a5fa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .source-link { color: #3b82f6; text-decoration: underline; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 z-50 px-4 py-3 flex flex-wrap gap-4 justify-between items-center border-b shadow-sm">
+        <div class="flex items-center space-x-4">
+            <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"><i class="fas fa-bars"></i></button>
+            <div>
+                <h1 class="font-bold text-lg hidden lg:block tracking-tight">UPSC Quiz & News <span class="text-blue-500 text-xs font-normal">by onkiponkizuzuzu</span></h1>
+                <div id="prelims-counter" class="text-xs text-blue-600 dark:text-blue-400 mt-1 font-medium">
+                    Days to Prelims 2026 (24 May): <span id="days-count" class="font-semibold">54</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-2" id="topic-tabs"></div>
+
+        <div class="flex-1 max-w-md relative">
+            <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search archive..." class="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+            <i class="fas fa-search absolute left-3 top-2.5 opacity-30 text-sm"></i>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <button onclick="toggleBeeLine()" id="beeline-btn" class="px-4 py-1.5 text-sm font-medium rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2">
+                <i class="fas fa-book-open"></i>
+                <span>BeeLine Mode</span>
+            </button>
+            <button onclick="toggleDarkMode()" class="p-3 rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110"><i id="theme-icon" class="fas fa-moon text-blue-500"></i></button>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <aside id="sidebar" class="border-r p-6 hidden md:block collapsed">
+            <h3 class="text-xs font-bold uppercase opacity-40 mb-6 tracking-widest text-inherit">Historical Dates</h3>
+            <div id="date-list" class="space-y-1"></div>
+        </aside>
+
+        <main class="flex-1 px-4 md:px-12 py-10 min-h-screen">
+            <div id="article-feed" class="max-w-3xl mx-auto"></div>
+        </main>
+    </div>
+
+    <script>
+        let rawData = [], activeTopic = 'Indian Express', activeSubtopic = 'UPSC Quizzes', activeDate = null, isSearch = false;
+        let beelineEnabled = false;
+
+        const topics = {
+            "Indian Express": ["UPSC Quizzes"],
+            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"]
+        };
+
+        async function init() {
+            const feed = document.getElementById('article-feed');
+            feed.innerHTML = `<div class="text-center py-20"><i class="fas fa-spinner fa-spin text-4xl text-blue-500"></i><p class="mt-4 opacity-70">Loading articles & quizzes...</p></div>`;
+
+            try {
+                const res = await fetch('data.json');
+                if (!res.ok) throw new Error('File not found');
+                rawData = await res.json();
+                if (!Array.isArray(rawData) || rawData.length === 0) throw new Error('No articles');
+                
+                rawData.sort((a, b) => b.date.localeCompare(a.date));
+                renderTopicTabs();
+                renderView('Indian Express', 'UPSC Quizzes');
+            } catch (e) {
+                feed.innerHTML = `
+                    <div class="text-center py-20">
+                        <p class="text-xl font-medium opacity-80">No data found</p>
+                        <p class="mt-3 text-sm opacity-60">The scraper runs twice daily. Wait for GitHub Actions to complete.</p>
+                        <button onclick="location.reload()" class="mt-6 px-6 py-2 bg-blue-600 text-white rounded-xl text-sm hover:bg-blue-700">Refresh Page</button>
+                    </div>`;
+            }
+        }
+
+        function renderTopicTabs() {
+            const html = Object.keys(topics).map(topic => `
+                <button onclick="switchTopic('${topic}')" 
+                        class="px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeTopic === topic ? 'bg-blue-600 text-white shadow-md' : 'opacity-70 hover:opacity-100'}">
+                    ${topic}
+                </button>
+            `).join('');
+            document.getElementById('topic-tabs').innerHTML = html;
+            renderSubtopicTabs();
+        }
+
+        function renderSubtopicTabs() {
+            const subs = topics[activeTopic];
+            const html = subs.map(sub => `
+                <button onclick="renderView('${activeTopic}', '${sub}')" 
+                        class="px-4 py-2 rounded-full text-sm font-semibold transition-all whitespace-nowrap ${activeSubtopic === sub ? 'bg-blue-600 text-white shadow-md' : 'opacity-60 hover:opacity-100'}">
+                    ${sub}
+                </button>
+            `).join('');
+            
+            const container = document.getElementById('category-tabs') || document.createElement('div');
+            if (!document.getElementById('category-tabs')) {
+                const div = document.createElement('div');
+                div.id = 'category-tabs';
+                div.className = 'flex space-x-2 overflow-x-auto no-scrollbar mt-3';
+                document.querySelector('nav').appendChild(div);
+            }
+            document.getElementById('category-tabs').innerHTML = html;
+        }
+
+        function switchTopic(topic) {
+            activeTopic = topic;
+            activeSubtopic = topics[topic][0];
+            renderTopicTabs();
+            renderView(activeTopic, activeSubtopic);
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            if (q.length < 2) { isSearch = false; renderView(activeTopic, activeSubtopic); return; }
+            isSearch = true;
+            
+            const filtered = rawData.filter(art => {
+                const inTitle = art.title.toLowerCase().includes(q);
+                const inContent = art.content.some(c => {
+                    if (c.type === 'quiz_item') {
+                        return c.question.toLowerCase().includes(q) || c.solution.toLowerCase().includes(q);
+                    }
+                    return c.value && c.value.toLowerCase().includes(q);
+                });
+                return inTitle || inContent;
+            });
+            renderFeed(filtered, `Search results for: "${q}"`);
+        }
+
+        function renderView(topic, subtopic) {
+            isSearch = false;
+            activeTopic = topic;
+            activeSubtopic = subtopic;
+            document.getElementById('searchInput').value = "";
+            renderTopicTabs();
+            
+            const filtered = rawData.filter(a => a.category === subtopic);
+            renderFeed(filtered);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleArticle(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                content.style.display = 'none';
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        }
+
+        function toggleBeeLine() {
+            beelineEnabled = !beelineEnabled;
+            const btn = document.getElementById('beeline-btn');
+            if (beelineEnabled) {
+                document.documentElement.classList.add('beeline-mode');
+                btn.classList.add('bg-blue-100', 'dark:bg-blue-900', 'border-blue-500');
+            } else {
+                document.documentElement.classList.remove('beeline-mode');
+                btn.classList.remove('bg-blue-100', 'dark:bg-blue-900', 'border-blue-500');
+            }
+        }
+
+        function renderContentBlock(item) {
+            if (item.type === 'quiz_item') {
+                return `
+                    <div class="quiz-container">
+                        <div class="quiz-question">${item.question}</div>
+                        <details class="quiz-solution">
+                            <summary><i class="fas fa-lightbulb mr-2"></i>View Solution & Explanation</summary>
+                            <div class="quiz-solution-text">${item.solution}</div>
+                        </details>
+                    </div>
+                `;
+            } else if (item.type === 'heading') {
+                return `<h4>${item.value}</h4>`;
+            } else {
+                return `<p>${item.value}</p>`;
+            }
+        }
+
+        function renderFeed(arts, title = null) {
+            const feed = document.getElementById('article-feed');
+            let html = title ? `<h2 class="text-xl font-bold mb-8 opacity-40">${title}</h2>` : "";
+            
+            if (!arts.length) {
+                feed.innerHTML = html + `<p class="text-center py-20 opacity-30">No content found.</p>`;
+                return;
+            }
+
+            feed.innerHTML = html + arts.map((art, index) => {
+                const id = 'art' + index;
+                return `
+                <article class="article-card">
+                    <div onclick="toggleArticle('${id}')" class="flex items-center justify-between cursor-pointer">
+                        <h2 class="serif-title article-title">${art.title}</h2>
+                        <i id="icon-${id}" class="fas fa-chevron-down text-blue-500 ml-4"></i>
+                    </div>
+                    <div id="content-${id}" class="content-body mt-6" style="display: none;">
+                        ${art.content.map(item => renderContentBlock(item)).join('')}
+                        <div class="mt-8 pt-4 border-t">
+                            <a href="${art.url}" target="_blank" class="source-link">Read original page →</a>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mt-4">${art.category} | ${art.date}</div>
+                </article>`;
+            }).join('');
+        }
+
+        function toggleSidebar() { 
+            document.getElementById('sidebar').classList.toggle('collapsed'); 
+        }
+        
+        function toggleDarkMode() {
+            const dark = document.body.classList.toggle('dark');
+            document.getElementById('theme-icon').className = dark ? 'fas fa-sun text-yellow-400' : 'fas fa-moon text-blue-500';
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+        
+        if (localStorage.getItem('theme') === 'dark') toggleDarkMode();
+        
+        window.onload = function() {
+            document.getElementById('sidebar').classList.add('collapsed');
+            init();
+        };
+    </script>
+</body>
+</html>
