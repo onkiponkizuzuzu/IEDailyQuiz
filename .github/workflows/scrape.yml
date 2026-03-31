@@ -1,54 +1,36 @@
-name: Scheduled Hindu & IE Scrape
+name: Scheduled UPSC Scrape
 
 on:
   schedule:
-    - cron: '30 2,10 * * *'   # 8:00 AM IST and 4:00 PM IST
-  workflow_dispatch:          # Allows manual triggering
+    - cron: '30 2,10 * * *'
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30       # Increased timeout for 20-page deep scrape
-    
+    timeout-minutes: 45
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-   
     permissions:
       contents: write
-     
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up Python
+      - name: Python 3.12
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Install Chrome and Dependencies
+      - name: Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget gnupg2 fonts-liberation \
-            libappindicator3-1 libasound2t64 libatk-bridge2.0-0 libatk1.0-0 \
-            libcups2 libdbus-1-3 libdrm2 libgbm1 libnspr4 libnss3 \
-            libx11-xcb1 libxcb-dri3-0 libxcomposite1 libxdamage1 libxrandr2 xdg-utils
-          
-          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-          
-          # Install selenium and requirements
           pip install selenium
-
-      - name: Run Scraper
+      - name: Run
         run: python scraper.py
-
-      - name: Commit and Push Data
+      - name: Deploy
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          # The || exit 0 ensures the workflow doesn't fail if there's nothing new to commit
-          git commit -m "System: Automated Scrape & Quiz Update $(date)" || exit 0
+          git commit -m "Update Archive: $(date)" || exit 0
           git push
