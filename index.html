@@ -3,97 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPSC Reader Pro</title>
+    <title>CSE CAff by onkiponkizuzuzu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&family=Merriweather:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
     <style>
-        :root { --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; }
-        .dark { --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: all 0.3s; margin: 0; }
+        :root { 
+            --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; 
+            color-scheme: light; /* Forces browser elements to light mode */
+        }
+        .dark { 
+            --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; 
+            color-scheme: dark; /* Forces browser elements to dark mode */
+        }
+        body { font-family: 'Inter', sans-serif; transition: all 0.3s; margin: 0; min-height: 100vh; }
         .serif-title { font-family: 'Merriweather', serif; }
-        .content-body { font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.8; max-width: 800px; margin: 0 auto; }
-        .quiz-card { background: var(--sidebar); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .solution-box { display: none; margin-top: 1.5rem; padding: 1.5rem; border-top: 2px dashed #3b82f6; background: rgba(59, 130, 246, 0.05); border-radius: 0 0 12px 12px; }
+        
+        .article-card { border-bottom: 2px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; width: 100%; }
+        #sidebar { transition: all 0.3s ease; width: 280px; position: sticky; top: 60px; height: calc(100vh - 60px); overflow-y: auto; z-index: 30; }
+        #sidebar.collapsed { width: 0; padding: 0; overflow: hidden; border: none; }
+        
+        .article-title { font-size: 1.4rem; line-height: 1.8rem; font-weight: 400; cursor: pointer; transition: color 0.2s; }
+        .article-title:hover { color: #3b82f6; }
+        .content-body { font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.85; font-weight: 100; max-width: 800px; margin: 0 auto; }
+        .content-body p { margin-bottom: 1.5rem; }
+        .content-body h4 { font-size: 1.25rem; font-weight: 700; margin: 2rem 0 1rem; }
+        
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .source-link { color: #3b82f6; text-decoration: underline; font-size: 0.95rem; }
+
+        #auth-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 100; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+        .hidden { display: none !important; }
     </style>
 </head>
-<body class="dark">
-    <nav class="sticky top-0 z-50 px-6 py-4 flex flex-wrap gap-6 justify-between items-center border-b bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800">
-        <div class="flex items-center gap-6">
-            <h1 class="font-bold text-xl tracking-tight text-blue-500">UPSC Reader</h1>
-            <div id="topic-tabs" class="flex gap-2"></div>
-        </div>
-        <div id="category-tabs" class="flex gap-2 overflow-x-auto no-scrollbar max-w-xl"></div>
-        <button onclick="document.body.classList.toggle('dark')" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800"><i class="fas fa-moon text-blue-500"></i></button>
-    </nav>
+<body class="bg-slate-50 dark:bg-[#0f172a] text-gray-900 dark:text-gray-100">
 
-    <main class="max-w-4xl mx-auto py-12 px-6">
-        <div id="article-feed"></div>
-    </main>
+    <div id="auth-overlay">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-gray-200 dark:border-gray-700">
+            <h2 class="text-2xl font-bold mb-2 text-center text-gray-900 dark:text-white">Authorized Access Only</h2>
+            <p class="text-sm text-gray-500 text-center mb-6">Please log in to access the UPSC archive.</p>
+            <div id="auth-error" class="hidden mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm text-center"></div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input type="email" id="email-input" class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Password</label>
+                    <input type="password" id="password-input" class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white" onkeypress="if(event.key === 'Enter') handleLogin()">
+                </div>
+                <div class="pt-2">
+                    <button onclick="handleLogin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-content" class="hidden">
+        <nav class="sticky top-0 z-40 px-4 py-2 border-b shadow-sm bg-white dark:bg-[#1e293b] border-gray-200 dark:border-gray-700">
+            <div class="flex items-end justify-between flex-wrap gap-3 pb-1">
+                <div class="flex items-center space-x-3 mb-0.5">
+                    <button onclick="toggleSidebar()" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"><i class="fas fa-bars text-lg text-gray-700 dark:text-gray-200"></i></button>
+                    <div>
+                        <h1 class="font-bold text-base tracking-tight leading-none text-gray-900 dark:text-white">CSE CAff</h1>
+                        <div class="text-blue-500 text-[10px] font-normal leading-tight mt-0.5">by onkiponkizuzuzu</div>
+                        <div id="prelims-counter" class="text-[10px] text-blue-600 dark:text-blue-400 font-medium leading-tight mt-0.5">
+                            Days to Prelims: <span id="days-count" class="font-semibold">...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-end gap-2 flex-1 max-w-sm">
+                    <div class="w-1/2 flex flex-col">
+                        <label class="text-[10px] text-gray-500 dark:text-gray-400 font-semibold mb-0.5 ml-1 uppercase tracking-wider">Source</label>
+                        <select id="topic-select" onchange="switchTopic(this.value)" class="w-full h-[34px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm rounded-lg focus:ring-blue-500 px-2 text-gray-900 dark:text-white outline-none cursor-pointer transition-colors"></select>
+                    </div>
+                    <div class="w-1/2 flex flex-col">
+                        <label class="text-[10px] text-gray-500 dark:text-gray-400 font-semibold mb-0.5 ml-1 uppercase tracking-wider">Category</label>
+                        <select id="subtopic-select" onchange="switchSubtopic(this.value)" class="w-full h-[34px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm rounded-lg focus:ring-blue-500 px-2 text-gray-900 dark:text-white outline-none cursor-pointer transition-colors"></select>
+                    </div>
+                </div>
+
+                <div class="flex items-end gap-2">
+                    <div class="relative w-28 sm:w-48">
+                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search..." class="w-full h-[34px] pl-8 pr-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm text-gray-900 dark:text-white">
+                        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 opacity-30 text-sm text-gray-700 dark:text-gray-400"></i>
+                    </div>
+                    <button onclick="toggleImmersive()" id="immersive-btn" title="Immersive Reader" class="h-[34px] w-[34px] flex items-center justify-center text-sm font-medium rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200">
+                        <i class="fas fa-book-open"></i>
+                    </button>
+                    <button onclick="toggleDarkMode()" title="Toggle Theme" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
+                        <i id="theme-icon" class="fas fa-moon text-blue-500"></i>
+                    </button>
+                    <button onclick="handleLogout()" title="Logout" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl border border-red-200 dark:border-red-900 hover:bg-red-50 dark:hover:bg-red-900 text-red-600 transition-colors">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex">
+            <aside id="sidebar" class="border-r p-6 hidden md:block collapsed bg-white dark:bg-[#1e293b] border-gray-200 dark:border-gray-700">
+                <h3 class="text-xs font-bold uppercase opacity-40 mb-6 tracking-widest text-gray-900 dark:text-gray-400">Historical Dates</h3>
+                <div id="date-list" class="space-y-1"></div>
+            </aside>
+            <main class="flex-1 px-4 md:px-12 py-8 min-h-screen bg-slate-50 dark:bg-[#0f172a]">
+                <div id="article-feed" class="max-w-3xl mx-auto"></div>
+            </main>
+        </div>
+    </div>
 
     <script>
-        let rawData = [], activeTopic = 'The Hindu', activeSubtopic = 'Environment';
-        const topics = { "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], "Indian Express": ["UPSC Current Affairs", "Quizzes"] };
+        const firebaseConfig = { apiKey: "AIzaSyDY3HiW87T204-6jTpSwZp72QkzYe4jz2o", authDomain: "csecaffreader.firebaseapp.com", projectId: "csecaffreader", storageBucket: "csecaffreader.firebasestorage.app", messagingSenderId: "478819279571", appId: "1:478819279571:web:d8956a3156960747776a26" };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
 
-        async function init() {
+        const authOverlay = document.getElementById('auth-overlay'), appContent = document.getElementById('app-content'), authError = document.getElementById('auth-error'), sidebar = document.getElementById('sidebar');
+        let currentUser = null, rawData = [], activeTopic = 'The Hindu', activeSubtopic = 'Environment', activeDate = null, isSearch = false, immersiveEnabled = false;
+
+        const topics = { "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"] };
+
+        function updatePrelimsCounter() {
+            const prelimsDate = new Date("May 24, 2026 00:00:00").getTime();
+            const daysLeft = Math.floor((prelimsDate - new Date().getTime()) / (1000 * 60 * 60 * 24));
+            document.getElementById("days-count").innerText = daysLeft > 0 ? daysLeft : "0";
+        }
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                currentUser = user; authOverlay.classList.add('hidden'); appContent.classList.remove('hidden');
+                updatePrelimsCounter(); initApp(); 
+            } else {
+                currentUser = null; authOverlay.classList.remove('hidden'); appContent.classList.add('hidden');
+            }
+        });
+
+        async function initApp() {
+            if(rawData.length > 0) return; 
+            const feed = document.getElementById('article-feed');
+            feed.innerHTML = `<div class="text-center py-20 text-gray-900 dark:text-white"><i class="fas fa-spinner fa-spin text-4xl text-blue-500"></i></div>`;
             try {
                 const res = await fetch('data.json');
                 rawData = await res.json();
-                renderTopicTabs();
-                renderView('The Hindu', 'Environment');
-            } catch(e) { document.getElementById('article-feed').innerHTML = "No data found."; }
+                rawData.sort((a, b) => b.date.localeCompare(a.date));
+                renderTopicTabs(); renderView('The Hindu', 'Environment');
+            } catch (e) { feed.innerHTML = `<div class="text-center py-20 text-gray-900 dark:text-white"><p>No data found yet.</p></div>`; }
         }
 
         function renderTopicTabs() {
-            document.getElementById('topic-tabs').innerHTML = Object.keys(topics).map(t => `
-                <button onclick="switchTopic('${t}')" class="px-4 py-2 rounded-full text-sm font-semibold transition ${activeTopic === t ? 'bg-blue-600 text-white' : 'opacity-50 hover:opacity-100'}">${t}</button>
-            `).join('');
+            document.getElementById('topic-select').innerHTML = Object.keys(topics).map(t => `<option value="${t}" ${activeTopic === t ? 'selected' : ''}>${t}</option>`).join('');
             renderSubtopicTabs();
         }
 
         function renderSubtopicTabs() {
-            document.getElementById('category-tabs').innerHTML = topics[activeTopic].map(s => `
-                <button onclick="renderView('${activeTopic}', '${s}')" class="px-4 py-2 whitespace-nowrap text-xs font-bold uppercase ${activeSubtopic === s ? 'text-blue-500 border-b-2 border-blue-500' : 'opacity-40 hover:opacity-100'}">${s}</button>
-            `).join('');
+            document.getElementById('subtopic-select').innerHTML = topics[activeTopic].map(s => `<option value="${s}" ${activeSubtopic === s ? 'selected' : ''}>${s}</option>`).join('');
         }
 
-        function switchTopic(t) { activeTopic = t; activeSubtopic = topics[t][0]; renderTopicTabs(); renderView(t, activeSubtopic); }
+        function renderDateSidebar() {
+            const dates = [...new Set(rawData.map(a => a.date))].sort((a, b) => b.localeCompare(a));
+            document.getElementById('date-list').innerHTML = dates.map(d => `<button onclick="filterByDate('${d}')" class="block w-full text-left px-3 py-2 mt-1 text-sm rounded-lg transition-colors ${activeDate === d ? 'font-bold text-blue-600 bg-blue-50 dark:bg-gray-800' : 'text-gray-600 dark:text-gray-400'}">${d}</button>`).join('');
+        }
 
-        function renderView(t, s) {
-            activeSubtopic = s; renderSubtopicTabs();
-            const filtered = rawData.filter(a => a.category === s);
+        function filterByDate(date) {
+            activeDate = date; isSearch = false; renderDateSidebar(); 
+            const filtered = rawData.filter(a => a.category === activeSubtopic && a.date === activeDate);
+            renderFeed(filtered, `Showing articles from ${date}`);
+        }
+
+        function switchTopic(topic) { activeTopic = topic; activeSubtopic = topics[topic][0]; renderTopicTabs(); renderView(activeTopic, activeSubtopic); }
+        function switchSubtopic(sub) { activeSubtopic = sub; renderView(activeTopic, activeSubtopic); }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            if (q.length < 2) { isSearch = false; renderFeed(rawData.filter(a => a.category === activeSubtopic)); return; }
+            isSearch = true;
+            const filtered = rawData.filter(art => art.title.toLowerCase().includes(q) || art.content.some(c => c.type === 'quiz_item' ? (c.question?.toLowerCase().includes(q) || c.solution?.toLowerCase().includes(q)) : c.value?.toLowerCase().includes(q)));
+            renderFeed(filtered, `Search results for: "${q}"`);
+        }
+
+        function renderView(topic, subtopic) {
+            isSearch = false; activeTopic = topic; activeSubtopic = subtopic; activeDate = null;
+            document.getElementById('searchInput').value = ""; renderTopicTabs(); renderDateSidebar();
+            renderFeed(rawData.filter(a => a.category === subtopic));
+        }
+
+        function toggleArticle(id) {
+            const content = document.getElementById('content-' + id), icon = document.getElementById('icon-' + id);
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            icon.className = content.style.display === 'none' ? 'fas fa-chevron-down text-blue-500 ml-4' : 'fas fa-chevron-up text-blue-500 ml-4';
+            if (immersiveEnabled && content.style.display === 'block') setTimeout(applyImmersiveToAll, 50);
+        }
+
+        function renderFeed(arts, title = null) {
             const feed = document.getElementById('article-feed');
-            
-            feed.innerHTML = filtered.map((art, idx) => {
-                if (s === "Quizzes") {
-                    return `
-                    <div class="mb-16">
-                        <h2 class="serif-title text-3xl font-bold mb-8 text-center text-blue-400">${art.title}</h2>
-                        ${art.quiz_data.map((q, qIdx) => `
-                            <div class="quiz-card">
-                                <div class="content-body text-lg">${q.question}</div>
-                                <button onclick="toggleSol('${idx}-${qIdx}')" class="mt-6 w-full py-3 border-2 border-blue-500 text-blue-500 font-bold rounded-xl hover:bg-blue-500 hover:text-white transition">Show Solution & Explanation</button>
-                                <div id="sol-${idx}-${qIdx}" class="solution-box content-body text-sm italic">${q.solution}</div>
-                            </div>
-                        `).join('')}
-                    </div>`;
-                }
-                return `
-                <article class="mb-20 border-b border-slate-800 pb-12">
-                    <h2 class="serif-title text-3xl font-bold mb-6">${art.title}</h2>
-                    <div class="content-body text-slate-300">${art.content.map(c => `<p class="mb-6">${c.value}</p>`).join('')}</div>
-                    <a href="${art.url}" target="_blank" class="text-blue-500 text-sm underline">Source: Indian Express</a>
-                </article>`;
+            let html = title ? `<h2 class="text-xl font-bold mb-8 opacity-40 text-gray-900 dark:text-white">${title}</h2>` : "";
+            if (!arts.length) return feed.innerHTML = html + `<p class="text-center py-20 opacity-30 text-gray-900 dark:text-white">No content found.</p>`;
+            feed.innerHTML = html + arts.map(art => {
+                const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
+                return `<article class="article-card border-gray-200 dark:border-gray-700"><div onclick="toggleArticle('${safeId}')" class="flex items-start justify-between cursor-pointer text-gray-900 dark:text-white"><h2 class="serif-title article-title pr-4">${art.title}</h2><i id="icon-${safeId}" class="fas fa-chevron-down text-blue-500 ml-5 text-xl"></i></div><div id="content-${safeId}" class="content-body mt-6 text-gray-800 dark:text-gray-300" style="display: none;">${art.content.map(c => c.type === 'quiz_item' ? `<div class="quiz-container"><div class="quiz-question font-semibold text-gray-900 dark:text-white">${c.question}</div><details class="quiz-solution bg-slate-100 dark:bg-slate-800 rounded-lg p-2 mt-2" ontoggle="if(this.open && immersiveEnabled) setTimeout(applyImmersiveToAll, 50)"><summary class="cursor-pointer text-blue-500 font-bold"><i class="fas fa-lightbulb mr-2"></i>View Solution</summary><div class="quiz-solution-text mt-2">${c.solution}</div></details></div>` : (c.type === 'heading' ? `<h4 class="font-bold text-gray-900 dark:text-white mt-4 mb-2">${c.value}</h4>` : `<p class="mb-4">${c.value}</p>`)).join('')}<div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700"><a href="${art.url}" target="_blank" class="source-link">Read original page →</a></div></div><div class="text-xs text-gray-500 mt-4">${art.category} | ${art.date}</div></article>`;
             }).join('');
-            window.scrollTo(0,0);
+            if (immersiveEnabled) setTimeout(applyImmersiveToAll, 50);
         }
 
-        function toggleSol(id) {
-            const el = document.getElementById('sol-' + id);
-            el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        function toggleSidebar() { sidebar.classList.toggle('collapsed'); }
+
+        function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            document.body.classList.toggle('dark');
+            document.getElementById('theme-icon').className = isDark ? 'fas fa-sun text-yellow-400' : 'fas fa-moon text-blue-500';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            if (immersiveEnabled) applyImmersiveToAll(); 
         }
-        window.onload = init;
+
+        function handleLogout() { auth.signOut(); }
+        function handleLogin() { const e = document.getElementById('email-input').value, p = document.getElementById('password-input').value; if(e && p) auth.signInWithEmailAndPassword(e, p).catch(err => { authError.textContent = err.message; authError.classList.remove('hidden'); setTimeout(() => authError.classList.add('hidden'), 5000); }); }
+
+        function toggleImmersive() {
+            immersiveEnabled = !immersiveEnabled;
+            const btn = document.getElementById('immersive-btn');
+            if (immersiveEnabled) { btn.classList.add('bg-red-100', 'border-red-500'); applyImmersiveToAll(); } 
+            else { btn.classList.remove('bg-red-100', 'border-red-500'); document.querySelectorAll('[data-orig]').forEach(el => el.innerHTML = el.getAttribute('data-orig')); }
+        }
+
+        function applyImmersiveToAll() {
+            if (!immersiveEnabled) return;
+            const targets = document.querySelectorAll('.content-body:not([style*="display: none"]) p, .content-body:not([style*="display: none"]) .quiz-question, .content-body:not([style*="display: none"]) .quiz-solution-text');
+            const cRed = [159, 18, 57], cBlue = [30, 64, 175]; // Fixed dark colors
+            targets.forEach(el => {
+                if (!el.hasAttribute('data-orig')) el.setAttribute('data-orig', el.innerHTML);
+                el.innerHTML = el.getAttribute('data-orig');
+                const words = el.textContent.split(/(\s+)/); el.innerHTML = '';
+                words.forEach(w => { if (w.trim() === '') el.appendChild(document.createTextNode(w)); else { const s = document.createElement('span'); s.textContent = w; el.appendChild(s); } });
+                let line = [], lines = [], lastT = -1;
+                el.querySelectorAll('span').forEach(s => { const t = s.offsetTop; if (t !== lastT) { if (line.length) lines.push(line); line = []; lastT = t; } line.push(s); });
+                if (line.length) lines.push(line);
+                lines.forEach((l, i) => { const start = i % 2 === 0 ? cRed : cBlue, end = i % 2 === 0 ? cBlue : cRed; l.forEach((s, wi) => { const r = l.length > 1 ? wi / (l.length - 1) : 0; s.style.color = `rgb(${Math.round(start[0] + (end[0]-start[0])*r)},${Math.round(start[1] + (end[1]-start[1])*r)},${Math.round(start[2] + (end[2]-start[2])*r)})`; }); });
+            });
+        }
+
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+                document.getElementById('theme-icon').className = 'fas fa-sun text-yellow-400';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.body.classList.remove('dark');
+                document.getElementById('theme-icon').className = 'fas fa-moon text-blue-500';
+            }
+            sidebar.classList.add('collapsed');
+            updatePrelimsCounter();
+        };
     </script>
 </body>
 </html>
