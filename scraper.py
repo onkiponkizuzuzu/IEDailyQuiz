@@ -172,16 +172,13 @@ def scrape_ie_quizzes(category="UPSC Quizzes", pages=20):
                         if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan", "Click Here", "Share your views"]):
                             continue
                         
-                        # Keep formatting while detecting logical breaks
                         if "QUESTION" in text.upper() or (el.tag_name in ["h2", "h3"] and "QUESTION" in text.upper()):
                             if current_q: article_content.append(current_q)
                             current_q = {"type": "quiz_item", "question": f"<p>{html_content}</p>", "solution": ""}
                         elif current_q:
-                            # Split Relevance, Explanation, and Answer into the dropdown
                             if any(x in text for x in ["Relevance:", "Explanation:", "Therefore, option", "Correct Answer", "Answer:"]) or current_q["solution"] != "":
                                 current_q["solution"] += f"<p>{html_content}</p>"
                             else:
-                                # Appends the options directly under the question
                                 current_q["question"] += f"<p>{html_content}</p>"
                         else:
                             article_content.append({"type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text", "value": html_content})
