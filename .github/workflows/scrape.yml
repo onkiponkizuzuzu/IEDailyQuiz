@@ -46,7 +46,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
           
-          pip install selenium pandas google-generativeai
+          pip install selenium pandas google-genai
 
       - name: Run Scraper
         run: python scraper.py
