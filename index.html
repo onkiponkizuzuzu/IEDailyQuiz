@@ -14,11 +14,11 @@
     <style>
         :root { 
             --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; 
-            color-scheme: light; /* Forces browser elements to light mode */
+            color-scheme: light; 
         }
         .dark { 
             --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; 
-            color-scheme: dark; /* Forces browser elements to dark mode */
+            color-scheme: dark; 
         }
         body { font-family: 'Inter', sans-serif; transition: all 0.3s; margin: 0; min-height: 100vh; }
         .serif-title { font-family: 'Merriweather', serif; }
@@ -38,6 +38,13 @@
 
         #auth-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 100; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
         .hidden { display: none !important; }
+
+        /* Gemini AI Summary Styling */
+        .gemini-summary-box { font-family: 'Inter', sans-serif; }
+        .gemini-summary-box ul { list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem; }
+        .gemini-summary-box li { margin-bottom: 0.5rem; }
+        .gemini-summary-box strong { font-weight: 600; color: #1e40af; }
+        .dark .gemini-summary-box strong { color: #93c5fd; }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-[#0f172a] text-gray-900 dark:text-gray-100">
@@ -198,13 +205,66 @@
             if (immersiveEnabled && content.style.display === 'block') setTimeout(applyImmersiveToAll, 50);
         }
 
+        function toggleGemini(id) {
+            const summaryBox = document.getElementById('gemini-' + id);
+            summaryBox.classList.toggle('hidden');
+        }
+
+        // Helper function to render simple markdown from Gemini safely
+        function formatGeminiText(text) {
+            if (!text) return '';
+            let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Bold
+            html = html.replace(/\*(.*?)\n/g, '<li>$1</li>'); // Lists
+            html = html.replace(/\n/g, '<br>'); // Line breaks
+            if (html.includes('<li>')) html = '<ul>' + html + '</ul>';
+            return html;
+        }
+
         function renderFeed(arts, title = null) {
             const feed = document.getElementById('article-feed');
             let html = title ? `<h2 class="text-xl font-bold mb-8 opacity-40 text-gray-900 dark:text-white">${title}</h2>` : "";
             if (!arts.length) return feed.innerHTML = html + `<p class="text-center py-20 opacity-30 text-gray-900 dark:text-white">No content found.</p>`;
+            
             feed.innerHTML = html + arts.map(art => {
                 const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
-                return `<article class="article-card border-gray-200 dark:border-gray-700"><div onclick="toggleArticle('${safeId}')" class="flex items-start justify-between cursor-pointer text-gray-900 dark:text-white"><h2 class="serif-title article-title pr-4">${art.title}</h2><i id="icon-${safeId}" class="fas fa-chevron-down text-blue-500 ml-5 text-xl"></i></div><div id="content-${safeId}" class="content-body mt-6 text-gray-800 dark:text-gray-300" style="display: none;">${art.content.map(c => c.type === 'quiz_item' ? `<div class="quiz-container"><div class="quiz-question font-semibold text-gray-900 dark:text-white">${c.question}</div><details class="quiz-solution bg-slate-100 dark:bg-slate-800 rounded-lg p-2 mt-2" ontoggle="if(this.open && immersiveEnabled) setTimeout(applyImmersiveToAll, 50)"><summary class="cursor-pointer text-blue-500 font-bold"><i class="fas fa-lightbulb mr-2"></i>View Solution</summary><div class="quiz-solution-text mt-2">${c.solution}</div></details></div>` : (c.type === 'heading' ? `<h4 class="font-bold text-gray-900 dark:text-white mt-4 mb-2">${c.value}</h4>` : `<p class="mb-4">${c.value}</p>`)).join('')}<div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700"><a href="${art.url}" target="_blank" class="source-link">Read original page →</a></div></div><div class="text-xs text-gray-500 mt-4">${art.category} | ${art.date}</div></article>`;
+                
+                // Gemini HTML block
+                const geminiBlock = art.summary ? `
+                    <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <button onclick="toggleGemini('${safeId}')" class="flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-700 transition-colors">
+                            <i class="fas fa-magic"></i> Summarize with Gemini ✨
+                        </button>
+                        <div id="gemini-${safeId}" class="hidden gemini-summary-box mt-3 p-4 bg-purple-50 dark:bg-[#1e1b4b] rounded-xl text-sm leading-relaxed text-gray-800 dark:text-gray-200 border border-purple-100 dark:border-purple-900">
+                            ${formatGeminiText(art.summary)}
+                        </div>
+                    </div>
+                ` : '';
+
+                return `<article class="article-card border-gray-200 dark:border-gray-700">
+                    <div onclick="toggleArticle('${safeId}')" class="flex items-start justify-between cursor-pointer text-gray-900 dark:text-white">
+                        <h2 class="serif-title article-title pr-4">${art.title}</h2>
+                        <i id="icon-${safeId}" class="fas fa-chevron-down text-blue-500 ml-5 text-xl"></i>
+                    </div>
+                    <div id="content-${safeId}" class="content-body mt-6 text-gray-800 dark:text-gray-300" style="display: none;">
+                        ${art.content.map(c => c.type === 'quiz_item' ? 
+                            `<div class="quiz-container mb-6">
+                                <div class="quiz-question font-semibold text-gray-900 dark:text-white">${c.question}</div>
+                                <details class="quiz-solution bg-slate-100 dark:bg-slate-800 rounded-lg p-3 mt-3 border-l-4 border-blue-500" ontoggle="if(this.open && immersiveEnabled) setTimeout(applyImmersiveToAll, 50)">
+                                    <summary class="cursor-pointer text-blue-500 font-bold outline-none"><i class="fas fa-lightbulb mr-2"></i>View Solution</summary>
+                                    <div class="quiz-solution-text mt-3 text-sm">${c.solution}</div>
+                                </details>
+                            </div>` 
+                            : (c.type === 'heading' ? `<h4 class="font-bold text-gray-900 dark:text-white mt-4 mb-2">${c.value}</h4>` : `<p class="mb-4">${c.value}</p>`)
+                        ).join('')}
+                        
+                        ${geminiBlock}
+
+                        <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <a href="${art.url}" target="_blank" class="source-link">Read original page →</a>
+                        </div>
+                    </div>
+                    <div class="text-xs text-gray-500 mt-4">${art.category} | ${art.date}</div>
+                </article>`;
             }).join('');
             if (immersiveEnabled) setTimeout(applyImmersiveToAll, 50);
         }
@@ -232,7 +292,7 @@
         function applyImmersiveToAll() {
             if (!immersiveEnabled) return;
             const targets = document.querySelectorAll('.content-body:not([style*="display: none"]) p, .content-body:not([style*="display: none"]) .quiz-question, .content-body:not([style*="display: none"]) .quiz-solution-text');
-            const cRed = [159, 18, 57], cBlue = [30, 64, 175]; // Fixed dark colors
+            const cRed = [159, 18, 57], cBlue = [30, 64, 175];
             targets.forEach(el => {
                 if (!el.hasAttribute('data-orig')) el.setAttribute('data-orig', el.innerHTML);
                 el.innerHTML = el.getAttribute('data-orig');
