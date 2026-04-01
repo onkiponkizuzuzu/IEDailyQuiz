@@ -31,7 +31,7 @@
         body { font-family: 'Inter', sans-serif; transition: all 0.3s; margin: 0; min-height: 100vh; }
         .serif-title { font-family: 'Merriweather', serif; }
         
-        .article-card { border-bottom: 2px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; width: 100%; }
+        .article-card { scroll-margin-top: 80px; border-bottom: 2px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; width: 100%; }
         #sidebar { transition: all 0.3s ease; width: 280px; position: sticky; top: 60px; height: calc(100vh - 60px); overflow-y: auto; z-index: 30; }
         #sidebar.collapsed { width: 0; padding: 0; overflow: hidden; border: none; }
         
@@ -130,6 +130,9 @@
                     <button onclick="toggleDarkMode()" title="Toggle Theme" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
                         <i id="theme-icon" class="fas fa-moon text-blue-500"></i>
                     </button>
+                    <button onclick="showArchivedView()" title="Archived" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
+                        <i class="fas fa-archive text-gray-600 dark:text-gray-300"></i>
+                    </button>
                     <button onclick="handleLogout()" title="Logout" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl border border-red-200 dark:border-red-900 hover:bg-red-50 dark:hover:bg-red-900 text-red-600 transition-colors">
                         <i class="fas fa-sign-out-alt"></i>
                     </button>
@@ -139,7 +142,7 @@
 
         <div class="flex">
             <aside id="sidebar" class="border-r p-6 hidden md:block collapsed bg-white dark:bg-[#1e293b] border-gray-200 dark:border-gray-700">
-                <h3 class="text-xs font-bold uppercase opacity-40 mb-6 tracking-widest text-gray-900 dark:text-gray-400">Historical Dates</h3>
+                <h3 class="text-xs font-bold uppercase opacity-40 mb-6 tracking-widest text-gray-900 dark:text-gray-400">Navigation</h3>
                 <div id="date-list" class="space-y-1"></div>
             </aside>
             <main class="flex-1 px-4 md:px-12 py-8 min-h-screen bg-slate-50 dark:bg-[#0f172a]">
@@ -154,7 +157,15 @@
         const auth = firebase.auth();
 
         const authOverlay = document.getElementById('auth-overlay'), appContent = document.getElementById('app-content'), authError = document.getElementById('auth-error'), sidebar = document.getElementById('sidebar');
-        let currentUser = null, rawData = [], activeTopic = 'The Hindu', activeSubtopic = 'Environment', activeDate = null, isSearch = false, immersiveEnabled = false;
+        
+        let currentUser = null;
+        let rawData = [];
+        let activeTopic = 'The Hindu';
+        let activeSubtopic = 'Environment';
+        let isSearch = false;
+        let immersiveEnabled = false;
+        let isArchiveView = false;
+        let archivedUrls = JSON.parse(localStorage.getItem('archivedUrls') || '[]');
 
         const topics = { "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"] };
 
@@ -191,41 +202,126 @@
         }
 
         function renderSubtopicTabs() {
-            document.getElementById('subtopic-select').innerHTML = topics[activeTopic].map(s => `<option value="${s}" ${activeSubtopic === s ? 'selected' : ''}>${s}</option>`).join('');
+            if (isArchiveView) {
+                document.getElementById('subtopic-select').innerHTML = `<option value="Archived" selected>Archived Articles</option>`;
+            } else {
+                document.getElementById('subtopic-select').innerHTML = topics[activeTopic].map(s => `<option value="${s}" ${activeSubtopic === s ? 'selected' : ''}>${s}</option>`).join('');
+            }
         }
 
         function renderDateSidebar() {
-            const dates = [...new Set(rawData.map(a => a.date))].sort((a, b) => b.localeCompare(a));
-            document.getElementById('date-list').innerHTML = dates.map(d => `<button onclick="filterByDate('${d}')" class="block w-full text-left px-3 py-2 mt-1 text-sm rounded-lg transition-colors ${activeDate === d ? 'font-bold text-blue-600 bg-blue-50 dark:bg-gray-800' : 'text-gray-600 dark:text-gray-400'}">${d}</button>`).join('');
+            const viewArts = isArchiveView 
+                ? rawData.filter(a => archivedUrls.includes(a.url)) 
+                : rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
+            
+            const grouped = {};
+            viewArts.forEach(a => {
+                if(!grouped[a.date]) grouped[a.date] = [];
+                grouped[a.date].push(a);
+            });
+            
+            const dates = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
+            let html = '';
+            
+            dates.forEach(d => {
+                html += `<div class="font-bold text-blue-600 dark:text-blue-400 mt-5 mb-2 text-xs uppercase tracking-wider">${d}</div>`;
+                grouped[d].forEach(art => {
+                    const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
+                    html += `<button onclick="scrollToArticle('${safeId}')" class="block w-full text-left px-2 py-1.5 text-[11px] rounded transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-gray-600 dark:text-gray-400 truncate mb-1" title="${art.title}">${art.title}</button>`;
+                });
+            });
+            
+            document.getElementById('date-list').innerHTML = html || `<p class="text-sm text-gray-500 mt-4">No articles found.</p>`;
         }
 
-        function filterByDate(date) {
-            activeDate = date; isSearch = false; renderDateSidebar(); 
-            const filtered = rawData.filter(a => a.category === activeSubtopic && a.date === activeDate);
-            renderFeed(filtered, `Showing articles from ${date}`);
+        function scrollToArticle(id) {
+            const el = document.getElementById(id);
+            if(el) {
+                el.scrollIntoView({behavior: 'smooth', block: 'start'});
+                const content = document.getElementById('content-' + id);
+                if(content.style.display === 'none') toggleArticle(id);
+            }
         }
 
-        function switchTopic(topic) { activeTopic = topic; activeSubtopic = topics[topic][0]; renderTopicTabs(); renderView(activeTopic, activeSubtopic); }
-        function switchSubtopic(sub) { activeSubtopic = sub; renderView(activeTopic, activeSubtopic); }
+        function switchTopic(topic) { 
+            isArchiveView = false;
+            activeTopic = topic; 
+            activeSubtopic = topics[topic][0]; 
+            renderTopicTabs(); 
+            renderView(activeTopic, activeSubtopic); 
+        }
+
+        function switchSubtopic(sub) { 
+            if (sub === 'Archived') return;
+            isArchiveView = false;
+            activeSubtopic = sub; 
+            renderView(activeTopic, activeSubtopic); 
+        }
+
+        function toggleArchive(urlEncoded) {
+            const url = decodeURIComponent(urlEncoded);
+            if (archivedUrls.includes(url)) {
+                archivedUrls = archivedUrls.filter(u => u !== url);
+            } else {
+                archivedUrls.push(url);
+            }
+            localStorage.setItem('archivedUrls', JSON.stringify(archivedUrls));
+            
+            if (isArchiveView) {
+                showArchivedView();
+            } else {
+                renderView(activeTopic, activeSubtopic);
+            }
+        }
+
+        function showArchivedView() {
+            isArchiveView = true;
+            isSearch = false;
+            document.getElementById('searchInput').value = "";
+            renderSubtopicTabs(); // Updates to show "Archived Articles"
+            
+            const filtered = rawData.filter(a => archivedUrls.includes(a.url));
+            renderDateSidebar();
+            renderFeed(filtered, "Archived Articles");
+        }
 
         function handleSearch() {
             const q = document.getElementById('searchInput').value.toLowerCase();
-            if (q.length < 2) { isSearch = false; renderFeed(rawData.filter(a => a.category === activeSubtopic)); return; }
+            if (q.length < 2) { 
+                isSearch = false; 
+                if (isArchiveView) {
+                    showArchivedView();
+                } else {
+                    renderFeed(rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url))); 
+                }
+                return; 
+            }
             isSearch = true;
-            const filtered = rawData.filter(art => art.title.toLowerCase().includes(q) || art.content.some(c => c.type === 'quiz_item' ? (c.question?.toLowerCase().includes(q) || c.solution?.toLowerCase().includes(q)) : c.value?.toLowerCase().includes(q)));
+            let baseArts = isArchiveView 
+                ? rawData.filter(a => archivedUrls.includes(a.url)) 
+                : rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
+                
+            const filtered = baseArts.filter(art => art.title.toLowerCase().includes(q) || art.content.some(c => c.type === 'quiz_item' ? (c.question?.toLowerCase().includes(q) || c.solution?.toLowerCase().includes(q)) : c.value?.toLowerCase().includes(q)));
             renderFeed(filtered, `Search results for: "${q}"`);
         }
 
         function renderView(topic, subtopic) {
-            isSearch = false; activeTopic = topic; activeSubtopic = subtopic; activeDate = null;
-            document.getElementById('searchInput').value = ""; renderTopicTabs(); renderDateSidebar();
-            renderFeed(rawData.filter(a => a.category === subtopic));
+            isArchiveView = false;
+            isSearch = false; 
+            activeTopic = topic; 
+            activeSubtopic = subtopic;
+            document.getElementById('searchInput').value = ""; 
+            renderTopicTabs(); 
+            
+            const filtered = rawData.filter(a => a.category === subtopic && !archivedUrls.includes(a.url));
+            renderDateSidebar();
+            renderFeed(filtered);
         }
 
         function toggleArticle(id) {
             const content = document.getElementById('content-' + id), icon = document.getElementById('icon-' + id);
             content.style.display = content.style.display === 'none' ? 'block' : 'none';
-            icon.className = content.style.display === 'none' ? 'fas fa-chevron-down text-blue-500 ml-4' : 'fas fa-chevron-up text-blue-500 ml-4';
+            icon.className = content.style.display === 'none' ? 'fas fa-chevron-down text-blue-500 ml-2 text-xl mt-1' : 'fas fa-chevron-up text-blue-500 ml-2 text-xl mt-1';
             if (immersiveEnabled && content.style.display === 'block') setTimeout(applyImmersiveToAll, 50);
         }
 
@@ -314,11 +410,19 @@
             feed.innerHTML = html + arts.map(art => {
                 const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
                 
+                // Identify path
+                let artTopic = "Unknown";
+                for (const [t, subs] of Object.entries(topics)) {
+                    if (subs.includes(art.category)) { artTopic = t; break; }
+                }
+                const pathText = `${artTopic} / ${art.category}`;
+                const isArchived = archivedUrls.includes(art.url);
+                
                 const geminiBlock = `
                     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                         <div class="gemini-input-container flex items-center bg-slate-100 dark:bg-slate-800 rounded-[28px] px-2 py-1 border border-gray-200 dark:border-gray-700 focus-within:shadow-md transition-shadow">
                             <button disabled class="p-2 flex items-center justify-center text-purple-500">
-                                <img width="24" alt="Google Gemini sparkle logo." src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gemini_sparkle_v002.svg/40px-Gemini_sparkle_v002.svg.png">
+                                <span class="material-symbols-outlined">spark</span>
                             </button>
                             <input type="text" id="gemini-input-${safeId}" 
                                 class="flex-1 bg-transparent outline-none text-sm text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 py-2.5"
@@ -335,10 +439,15 @@
                     </div>
                 `;
 
-                return `<article class="article-card border-gray-200 dark:border-gray-700">
+                return `<article id="${safeId}" class="article-card border-gray-200 dark:border-gray-700">
                     <div onclick="toggleArticle('${safeId}')" class="flex items-start justify-between cursor-pointer text-gray-900 dark:text-white">
-                        <h2 class="serif-title article-title pr-4">${art.title}</h2>
-                        <i id="icon-${safeId}" class="fas fa-chevron-down text-blue-500 ml-5 text-xl"></i>
+                        <div class="flex items-start flex-1 pr-4">
+                            <button onclick="event.stopPropagation(); toggleArchive('${encodeURIComponent(art.url)}')" class="mr-3 mt-1 text-gray-400 hover:text-blue-500 transition-colors" title="${isArchived ? 'Unarchive' : 'Archive'}">
+                                <i class="fas ${isArchived ? 'fa-box-open' : 'fa-archive'}"></i>
+                            </button>
+                            <h2 class="serif-title article-title">${art.title}</h2>
+                        </div>
+                        <i id="icon-${safeId}" class="fas fa-chevron-down text-blue-500 ml-2 text-xl mt-1"></i>
                     </div>
                     <div id="content-${safeId}" class="content-body mt-6 text-gray-800 dark:text-gray-300" style="display: none;">
                         ${art.content.map(c => c.type === 'quiz_item' ? 
@@ -358,7 +467,7 @@
                             <a href="${art.url}" target="_blank" class="source-link">Read original page →</a>
                         </div>
                     </div>
-                    <div class="text-xs text-gray-500 mt-4">${art.category} | ${art.date}</div>
+                    <div class="text-xs text-gray-500 mt-4">${pathText} | ${art.date}</div>
                 </article>`;
             }).join('');
             if (immersiveEnabled) setTimeout(applyImmersiveToAll, 50);
