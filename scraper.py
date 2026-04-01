@@ -6,20 +6,21 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import google.generativeai as genai
+from google import genai
 
 # === GEMINI AI SETUP ===
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
 
 def get_ai_summary(text_content):
     if not GEMINI_API_KEY or not text_content.strip():
         return ""
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        prompt = "Provide summar of whole content in 200 words in bullet points without missing key details.\n\n" + text_content
-        response = model.generate_content(prompt)
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        prompt = "Provide summary of whole content in 200 words in bullet points without missing key details.\n\n" + text_content
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+        )
         time.sleep(4)  # 4-second delay to respect free tier rate limits (15 RPM)
         return response.text
     except Exception as e:
