@@ -14,110 +14,256 @@ def get_driver():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
     
-    driver = webdriver.Chrome(options=chrome_options)
+    chrome_options.binary_location = "/usr/bin/google-chrome"
+    service = Service("/usr/bin/chromedriver")
     
-    # === CDP NETWORK BLOCKER ===
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    
+    # === CDP NETWORK BLOCKER (The Hindu + Indian Express Paywall) ===
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
-        "urls": ["*tinypass.com*", "*piano.io*", "*googletagservices.com*", "*cxense.com*", "*evolok*", "*ev-engagement*"]
+        "urls": [
+            "*tinypass.com*", "*piano.io*", "*googletagservices.com*", "*cxense.com*",
+            "*evolok*", "*ev-engagement*", "*paywall*", "*premium*", "*subscription*"
+        ]
     })
     
     driver.set_page_load_timeout(180)
     return driver
 
+
+# ================== The Hindu Scraper (unchanged) ==================
 def scrape_hindu_section(url, category):
     driver = get_driver()
     articles = []
     try:
         driver.get(url)
         time.sleep(8)
+        
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article" in el.get_attribute("href")]))
+
         for link in links:
             try:
                 driver.get(link)
                 time.sleep(5)
+
                 body_container = driver.find_element(By.CSS_SELECTOR, 'div.schemaDiv[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h4.sub_head")
+                
                 article_content = []
                 for el in content_elements:
                     text = el.text.strip()
-                    if not text or any(x in text for x in ["Related Stories", "| Photo Credit:"]): continue
-                    article_content.append({"type": "heading" if el.tag_name == "h4" else "text", "value": text})
+                    if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:"]):
+                        continue
+                    
+                    article_content.append({
+                        "type": "heading" if el.tag_name == "h4" else "text",
+                        "value": text
+                    })
+
                 title = driver.find_element(By.CSS_SELECTOR, "h1.title").text.strip()
+                
                 if len(article_content) > 1:
-                    articles.append({"category": category, "title": title, "url": link, "content": article_content, "date": datetime.now().strftime("%Y-%m-%d")})
-            except: continue
-    finally: driver.quit()
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+            except:
+                continue
+    finally:
+        driver.quit()
     return articles
 
-def scrape_ie_upsc(pages=20):
-    driver = get_driver()
-    all_data = []
-    base_url = "https://indianexpress.com/section/upsc-current-affairs/page/"
-    
-    try:
-        for p_num in range(1, pages + 1):
-            print(f"Scraping IE UPSC Page {p_num}...")
-            driver.get(f"{base_url}{p_num}/")
-            time.sleep(6)
-            elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
-            links = [el.get_attribute("href") for el in elements]
 
+# ================== Indian Express Scraper (Paywall Fixed) ==================
+def scrape_ie_section(url, category):
+    driver = get_driver()
+    articles = []
+    try:
+        driver.get(url)
+        time.sleep(8)
+        
+        elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
+        links = list(set([el.get_attribute("href") for el in elements if "/article/upsc-current-affairs/" in el.get_attribute("href")]))
+
+        for link in links:
+            try:
+                driver.get(link)
+                time.sleep(6)
+
+                # === REMOVE INDIAN EXPRESS PAYWALL ===
+                driver.execute_script("""
+                    // Remove ev-engagement paywall container
+                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                    // Remove any leftover paywall elements
+                    document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
+                    // Force show the real content
+                    const content = document.getElementById('pcl-full-content');
+                    if (content) content.style.display = 'block';
+                """)
+
+                body_container = driver.find_element(By.ID, "pcl-full-content")
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    if not text:
+                        continue
+                    if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan"]):
+                        continue
+                    
+                    article_content.append({
+                        "type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text",
+                        "value": text
+                    })
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                
+                if len(article_content) > 3:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+            except:
+                continue
+    finally:
+        driver.quit()
+    return articles
+
+
+# ================== Indian Express Quizzes Scraper ==================
+def scrape_ie_quizzes(category="UPSC Quizzes", pages=20):
+    driver = get_driver()
+    articles = []
+    base_url = "https://indianexpress.com/section/upsc-current-affairs/page/"
+    try:
+        for page in range(1, pages + 1):
+            print(f"Scraping {category} Page {page}...")
+            driver.get(f"{base_url}{page}/")
+            time.sleep(6)
+            
+            elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
+            links = []
+            for el in elements:
+                href = el.get_attribute("href")
+                text = el.text
+                if href and "/article/upsc-current-affairs/" in href and "Daily subject-wise quiz" in text:
+                    links.append(href)
+                    
+            links = list(set(links))
+            
             for link in links:
                 try:
                     driver.get(link)
-                    time.sleep(5)
-                    driver.execute_script("document.querySelectorAll('ev-engagement, .ev-engagement, .ev-paywall-template').forEach(el => el.remove());")
-                    
-                    title = driver.find_element(By.TAG_NAME, "h1").text.strip()
-                    container = driver.find_element(By.ID, "pcl-full-content")
-                    
-                    if "Daily subject-wise quiz" in title:
-                        paras = container.find_elements(By.CSS_SELECTOR, "p, h3")
-                        quiz_items = []
-                        current_item = None
-                        for p in paras:
-                            txt = p.text.strip()
-                            if not txt: continue
-                            if "QUESTION" in txt.upper() or p.tag_name == "h3":
-                                if current_item: quiz_items.append(current_item)
-                                current_item = {"question": "", "solution": ""}
-                            if current_item:
-                                if any(x in txt for x in ["Relevance:", "Explanation:", "Therefore, option"]):
-                                    current_item["solution"] += f"<p>{txt}</p>"
-                                else:
-                                    current_item["question"] += f"<p>{txt}</p>"
-                        if current_item: quiz_items.append(current_item)
-                        all_data.append({"category": "Quizzes", "title": title, "url": link, "quiz_data": quiz_items, "date": datetime.now().strftime("%Y-%m-%d")})
-                    else:
-                        content_elements = container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
-                        article_content = [{"type": "text", "value": el.text.strip()} for el in content_elements if el.text.strip() and "Subscriber Only" not in el.text]
-                        if len(article_content) > 3:
-                            all_data.append({"category": "UPSC Current Affairs", "title": title, "url": link, "content": article_content, "date": datetime.now().strftime("%Y-%m-%d")})
-                except: continue
-    finally: driver.quit()
-    return all_data
+                    time.sleep(6)
 
-# Main Execution
-targets = {"Science": "https://www.thehindu.com/sci-tech/science/", "Health": "https://www.thehindu.com/sci-tech/health/", "Agriculture": "https://www.thehindu.com/sci-tech/agriculture/", "Environment": "https://www.thehindu.com/sci-tech/energy-and-environment/", "Internet": "https://www.thehindu.com/sci-tech/technology/internet/"}
+                    # === REMOVE INDIAN EXPRESS PAYWALL ===
+                    driver.execute_script("""
+                        document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                        document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
+                        const content = document.getElementById('pcl-full-content');
+                        if (content) content.style.display = 'block';
+                    """)
+
+                    body_container = driver.find_element(By.ID, "pcl-full-content")
+                    content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                    
+                    article_content = []
+                    current_q = None
+                    
+                    for el in content_elements:
+                        text = el.text.strip()
+                        if not text:
+                            continue
+                        if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan", "Click Here", "Share your views"]):
+                            continue
+                        
+                        # Identify new question
+                        if "QUESTION" in text.upper() or (el.tag_name in ["h2", "h3"] and "QUESTION" in text.upper()):
+                            if current_q:
+                                article_content.append(current_q)
+                            current_q = {"type": "quiz_item", "question": f"<p><strong>{text}</strong></p>", "solution": ""}
+                        elif current_q:
+                            # Split logic: if text contains keywords OR if we have already started recording the solution
+                            if any(x in text for x in ["Relevance:", "Explanation:", "Therefore, option", "Correct Answer"]) or current_q["solution"] != "":
+                                current_q["solution"] += f"<p>{text}</p>"
+                            else:
+                                current_q["question"] += f"<p>{text}</p>"
+                        else:
+                            # Intro paragraphs before first question
+                            article_content.append({
+                                "type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text",
+                                "value": text
+                            })
+
+                    if current_q:
+                        article_content.append(current_q)
+
+                    title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                    
+                    if len(article_content) > 1:
+                        articles.append({
+                            "category": category,
+                            "title": title,
+                            "url": link,
+                            "content": article_content,
+                            "date": datetime.now().strftime("%Y-%m-%d")
+                        })
+                except:
+                    continue
+    finally:
+        driver.quit()
+    return articles
+
+
+# ================== Targets ==================
+targets = {
+    # The Hindu
+    "Science": "https://www.thehindu.com/sci-tech/science/",
+    "Health": "https://www.thehindu.com/sci-tech/health/",
+    "Agriculture": "https://www.thehindu.com/sci-tech/agriculture/",
+    "Environment": "https://www.thehindu.com/sci-tech/energy-and-environment/",
+    "Internet": "https://www.thehindu.com/sci-tech/technology/internet/",
+    
+    # Indian Express - UPSC Current Affairs
+    "UPSC Current Affairs": "https://indianexpress.com/section/upsc-current-affairs/"
+}
+
 data_file = "data.json"
 full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
 
-# Scrape The Hindu
+# 1. Scrape standard categories
 for cat, url in targets.items():
-    new_arts = scrape_hindu_section(url, cat)
+    print(f"Scraping {cat}...")
+    if cat == "UPSC Current Affairs":
+        new_arts = scrape_ie_section(url, cat)
+    else:
+        new_arts = scrape_hindu_section(url, cat)
+    
     urls = [a['url'] for a in full_db]
     for art in new_arts:
-        if art['url'] not in urls: full_db.insert(0, art)
+        if art['url'] not in urls:
+            full_db.insert(0, art)
 
-# Scrape Indian Express (Current Affairs + Quizzes)
-ie_data = scrape_ie_upsc(pages=20)
+# 2. Scrape Quizzes (20 pages deep)
+print("Scraping UPSC Quizzes (20 pages)...")
+quiz_arts = scrape_ie_quizzes("UPSC Quizzes", pages=20)
 urls = [a['url'] for a in full_db]
-for art in ie_data:
-    if art['url'] not in urls: full_db.insert(0, art)
+for art in quiz_arts:
+    if art['url'] not in urls:
+        full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    json.dump(full_db[:1200], f, ensure_ascii=False, indent=4)
+    json.dump(full_db[:1000], f, ensure_ascii=False, indent=4)
+
+print(f"Scrape completed. Total articles: {len(full_db)}")
