@@ -277,7 +277,6 @@
             isSearch = false;
             document.getElementById('searchInput').value = "";
             
-            // Temporary labels to signify view, without injecting an actual category that breaks dropdown mapping
             document.getElementById('topic-select').innerHTML = `<option value="" hidden selected>Archived</option>` + Object.keys(topics).map(t => `<option value="${t}">${t}</option>`).join('');
             document.getElementById('subtopic-select').innerHTML = `<option value="" hidden selected>Saved Articles</option>` + topics[activeTopic].map(s => `<option value="${s}">${s}</option>`).join('');
             
@@ -354,7 +353,7 @@
             const inputEl = document.getElementById(`gemini-input-${safeId}`);
             let userCommand = inputEl.value.trim();
             if (!userCommand) {
-                userCommand = inputEl.placeholder;
+                userCommand = "Provide a UPSC-ready summary of the content in 300 words in bullet points without missing key details.";
             }
 
             const url = decodeURIComponent(urlEncoded);
@@ -411,7 +410,6 @@
             feed.innerHTML = html + arts.map(art => {
                 const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
                 
-                // Identify path
                 let artTopic = "Unknown";
                 for (const [t, subs] of Object.entries(topics)) {
                     if (subs.includes(art.category)) { artTopic = t; break; }
@@ -423,7 +421,7 @@
                     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                         <div class="gemini-input-container flex items-center bg-slate-100 dark:bg-slate-800 rounded-[28px] px-2 py-1 border border-gray-200 dark:border-gray-700 focus-within:shadow-md transition-shadow">
                             <button disabled class="p-2 flex items-center justify-center text-purple-500">
-                                <span class="material-symbols-outlined">spark</span>
+                                <img width="24" alt="Google Gemini sparkle logo." src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Gemini_sparkle_v002.svg/40px-Gemini_sparkle_v002.svg.png">
                             </button>
                             <input type="text" id="gemini-input-${safeId}" 
                                 class="flex-1 bg-transparent outline-none text-sm text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 py-2.5"
