@@ -40,6 +40,13 @@
         .content-body p { margin-bottom: 1.5rem; }
         .content-body h4 { font-size: 1.25rem; font-weight: 700; margin: 2rem 0 1rem; }
         
+        /* Restoring formatting stripped by Tailwind for HTML passed directly from scraper */
+        .content-body strong, .content-body b { font-weight: 700; }
+        .content-body em, .content-body i { font-style: italic; }
+        .content-body ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .content-body ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .content-body a { color: #3b82f6; text-decoration: underline; }
+
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .source-link { color: #3b82f6; text-decoration: underline; font-size: 0.95rem; }
 
@@ -315,7 +322,7 @@
                             `<div class="quiz-container mb-6">
                                 <div class="quiz-question font-semibold text-gray-900 dark:text-white">${c.question}</div>
                                 <details class="quiz-solution bg-slate-100 dark:bg-slate-800 rounded-lg p-3 mt-3 border-l-4 border-blue-500" ontoggle="if(this.open && immersiveEnabled) setTimeout(applyImmersiveToAll, 50)">
-                                    <summary class="cursor-pointer text-blue-500 font-bold outline-none"><i class="fas fa-lightbulb mr-2"></i>View Solution</summary>
+                                    <summary class="cursor-pointer text-blue-500 font-bold outline-none"><i class="fas fa-lightbulb mr-2"></i>Show Answer</summary>
                                     <div class="quiz-solution-text mt-3 text-sm">${c.solution}</div>
                                 </details>
                             </div>` 
