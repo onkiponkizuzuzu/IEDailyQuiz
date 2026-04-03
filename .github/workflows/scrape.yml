@@ -1,21 +1,29 @@
-name: Scheduled Hindu Scrape
+name: Scheduled Scraper Action
 
 on:
   schedule:
-    - cron: '30 2,10 * * *'   # 8 AM & 4 PM IST
+    # GitHub uses UTC. IST is UTC + 5:30.
+    # 5:00 AM IST  = 23:30 UTC (previous day)
+    - cron: '30 23 * * *'
+    # 11:00 AM IST = 05:30 UTC
+    - cron: '30 5 * * *'
+    # 12:00 PM IST = 06:30 UTC
+    - cron: '30 6 * * *'
+    # 6:00 PM IST  = 12:30 UTC
+    - cron: '30 12 * * *'
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-   
+  
     permissions:
       contents: write
-     
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,19 +33,20 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Chrome + Playwright
+      - name: Install Chrome and Selenium
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget gnupg2 fonts-liberation libappindicator3-1 libasound2t64 libatk-bridge2.0-0 libatk1.0-0 libcups2 libdbus-1-3 libdrm2 libgbm1 libnspr4 libnss3 libx11-xcb1 libxcb-dri3-0 libxcomposite1 libxdamage1 libxrandr2 xdg-utils
+          sudo apt-get install -y wget gnupg2 fonts-liberation \
+            libappindicator3-1 libasound2t64 libatk-bridge2.0-0 libatk1.0-0 \
+            libcups2 libdbus-1-3 libdrm2 libgbm1 libnspr4 libnss3 \
+            libx11-xcb1 libxcb-dri3-0 libxcomposite1 libxdamage1 libxrandr2 xdg-utils
           
           wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
           echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
           
-          pip install --upgrade pip
-          pip install playwright pandas
-          playwright install chromium --with-deps
+          pip install selenium pandas
 
       - name: Run Scraper
         run: python scraper.py
@@ -47,5 +56,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "System: Optimized scrape $(date)" || exit 0
-          git push
+          git commit -m "System: Update DB via Incremental Scrape $(date)" || exit 0
+          git pull origin main --rebase
+          git push origin main
