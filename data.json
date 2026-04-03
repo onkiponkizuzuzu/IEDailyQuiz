@@ -1,5 +1,389 @@
 [
     {
+        "category": "Science",
+        "title": "Doctors advise caution on vision risks linked to diabetes, weight-loss drugs",
+        "url": "https://www.thehindu.com/news/national/karnataka/doctors-advise-caution-on-vision-risks-linked-to-diabetes-weight-loss-drugs/article70812366.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Medical experts have urged caution over potential eye-related risks associated with <a href=\"https://www.thehindu.com/sci-tech/health/who-backs-use-of-glp-1-drugs-for-weight-loss-along-with-diet-exercise/article70350676.ece\" target=\"_self\">GLP-1 receptor agonists</a>, a class of drugs increasingly used to treat obesity and type-2 diabetes."
+            },
+            {
+                "type": "text",
+                "value": "Medications such as <a href=\"https://www.thehindu.com/sci-tech/health/has-semaglutide-transformed-treatment-of-diabetes-and-obesity-in-india/article68755461.ece\" target=\"_self\">semaglutide</a> (sold as Ozempic and Wegovy) and tirzepatide (Mounjaro) have gained global attention for their effectiveness in improving blood sugar control and aiding weight loss."
+            },
+            {
+                "type": "text",
+                "value": "Their use in India is expected to rise following the expiry of semaglutide’s key patent on March 20, potentially paving the way for <a href=\"https://www.thehindu.com/business/sun-pharma-dr-reddys-zydus-glenmark-roll-out-generic-semaglutide/article70768590.ece\" target=\"_self\">more affordable versions</a>. While this could expand access, doctors warned it may also lead to unsupervised or inappropriate use."
+            },
+            {
+                "type": "heading",
+                "value": "Emerging concerns"
+            },
+            {
+                "type": "text",
+                "value": "Ophthalmologists point to growing evidence that these drugs may be linked to an initial worsening of diabetic retinopathy and, in rare cases, non-arteritic ischemic optic neuropathy (NAION) - often described as an “eye stroke” that can cause sudden, painless vision loss."
+            },
+            {
+                "type": "text",
+                "value": "Experts said rapid reductions in blood sugar levels triggered by these therapies may temporarily affect blood flow to the retina and optic nerve in some patients. This is of crucial significance India, which bears <a href=\"https://www.thehindu.com/sci-tech/health/diabetes-atlas-projections-indicate-900-million-people-will-have-diabetes-in-2050/article70412984.ece\" target=\"_self\">one of the highest diabetes burdens in the world</a>."
+            },
+            {
+                "type": "heading",
+                "value": "Evidence and risk factors"
+            },
+            {
+                "type": "text",
+                "value": "Although long-term data is still evolving, global agencies such as the World Health Organization and the European Medicines Agency have recognised NAION as a rare potential adverse effect."
+            },
+            {
+                "type": "text",
+                "value": "The risk appears higher among individuals with pre-existing diabetic retinopathy, hypertension, sleep apnoea, or certain optic nerve characteristics, though overall incidence remains low."
+            },
+            {
+                "type": "heading",
+                "value": "Call for careful use"
+            },
+            {
+                "type": "text",
+                "value": "Rohit Shetty, director of Narayana Nethralaya, said the benefits of these drugs must be balanced with careful clinical judgment."
+            },
+            {
+                "type": "text",
+                "value": "“These medications are effective when used appropriately, but their increasing use means we must be more vigilant in identifying patients at higher risk of complications,” he said."
+            },
+            {
+                "type": "text",
+                "value": "He stressed the need for detailed pre-treatment evaluation. “Assessing both systemic and ocular health - particularly the presence of diabetic retinopathy or vascular risk factors - helps in stratifying patients and choosing the most appropriate therapy,” he said."
+            },
+            {
+                "type": "text",
+                "value": "He added that high-risk patients may need closer monitoring, including baseline and periodic retinal examinations. “In some cases, tighter follow-up or even reconsideration of therapy may be required, especially during the early phase when blood sugar levels change rapidly,” he said."
+            },
+            {
+                "type": "heading",
+                "value": "Need for integrated care"
+            },
+            {
+                "type": "text",
+                "value": "G. V. Divakar, past president of the Bangalore Ophthalmic Society and consultant at Divakars Speciality Hospital, said GLP-1 receptor agonists have been linked to rare but serious ocular complications."
+            },
+            {
+                "type": "text",
+                "value": "“These include non-arteritic anterior ischemic optic neuropathy, which can result in permanent vision loss, as well as progression of diabetic retinopathy,” he said, emphasising the need for regular eye examinations and follow-up."
+            },
+            {
+                "type": "text",
+                "value": "“A collaborative approach between endocrinologists and ophthalmologists is key to minimising risks while ensuring patients benefit from these therapies. With wider access expected, patients should not self-medicate. Treatment should only be undertaken under proper medical supervision,” he said."
+            },
+            {
+                "type": "text",
+                "value": "Rajesh R., consultant - vitreo-retina and ocular oncology at Sankara Eye Hospital, said while these drugs are effective, awareness of potential risks is crucial."
+            },
+            {
+                "type": "text",
+                "value": "“Rapid improvement in blood glucose levels can sometimes lead to a temporary worsening of diabetic retinopathy. This is not unique to these drugs and can occur with any form of intensive glucose control,” he explained."
+            },
+            {
+                "type": "heading",
+                "value": "Most vulnerable"
+            },
+            {
+                "type": "text",
+                "value": "Patients with long-standing uncontrolled diabetes or advanced retinopathy are particularly vulnerable. Some visual disturbances reported during treatment may be linked to fluctuations in blood sugar rather than a direct drug effect, he said."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Rajesh also pointed out that isolated reports of optic nerve-related vision loss are still under investigation. “At present, there is not enough evidence to establish a clear causal relationship, and further research is needed,” he said."
+            }
+        ],
+        "date": "2026-04-03"
+    },
+    {
+        "category": "Science",
+        "title": "AI-based monitoring system to boost safety and quality in Karnataka government-run dialysis units",
+        "url": "https://www.thehindu.com/news/national/karnataka/ai-based-monitoring-system-to-boost-safety-and-quality-in-government-run-dialysis-units-under-ppp/article70815654.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "To enhance clinical oversight and improve the quality of care across dialysis centres under the State’s public-private partnership (PPP) model, an AI-based smart monitoring system has been introduced in seven centres across the State. Health Minister Dinesh Gundu Rao launched the system at K C General Hospital on Thursday."
+            },
+            {
+                "type": "text",
+                "value": "The AI-enabled platform, introduced by NephroPlus, integrates advanced monitoring and surveillance technology into dialysis centres under the government’s PPP programme, with a focus on strengthening patient safety, clinical oversight and standardised care."
+            },
+            {
+                "type": "heading",
+                "value": "Real-time tracking"
+            },
+            {
+                "type": "text",
+                "value": "The system enables real-time tracking of critical dialysis parameters, including blood pressure, fluid removal and electrolyte balance, allowing healthcare teams to closely monitor patients during treatment and respond quickly to any variations."
+            },
+            {
+                "type": "text",
+                "value": "The platform monitors 28 key indicators such as adherence to dialysis protocols, clinical care, patient safety, bed availability, staff alertness, emergency preparedness, infection control, hygiene, security compliance and overall operational efficiency."
+            },
+            {
+                "type": "heading",
+                "value": "Digital governance"
+            },
+            {
+                "type": "text",
+                "value": "Officials said the system creates a digital governance layer by replacing periodic audits with continuous, AI-driven monitoring. It also supports automated Key Performance Indicator (KPI) tracking and data-driven clinical and operational decision-making, improving transparency and consistency in care delivery."
+            },
+            {
+                "type": "text",
+                "value": "The platform operates at an accuracy level of 85% to 95%, with further refinements expected to enhance its performance and predictive capabilities."
+            },
+            {
+                "type": "text",
+                "value": "“Karnataka has been committed to expanding access to dialysis services through the PPP model. The introduction of AI-enabled monitoring systems further strengthens this effort by improving clinical oversight and enhancing patient safety,” the Minister said."
+            },
+            {
+                "type": "text",
+                "value": "“It is encouraging to see how innovation and partnerships can work together to ensure that dialysis services delivered under the PPP programme match, and even exceed, private sector standards,” he added."
+            },
+            {
+                "type": "text",
+                "value": "A live demonstration of AI-powered dashboards was held during the launch, showcasing real-time monitoring of dialysis procedures and quality indicators."
+            }
+        ],
+        "date": "2026-04-03"
+    },
+    {
+        "category": "Science",
+        "title": "Overcrowding Odisha jails worsens health and hygiene for prisoners, says CAG report",
+        "url": "https://www.thehindu.com/news/national/odisha/overcrowding-odisha-jails-worsens-health-and-hygiene-for-prisoners-says-cag-report/article70812070.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "A performance audit by Comptroller Auditor General (CAG) of India has revealed overcrowding in several prisons in <a href=\"https://www.thehindu.com/news/national/odisha/\" target=\"_self\">Odisha</a> affecting health and hygiene and lack of inspections of prisons and security deployment further worsened the situation."
+            },
+            {
+                "type": "text",
+                "value": "Observing that a minimum ground space of 3.71 square metre per prisoner for sleeping barracks was required to be provided for accommodation, the CAG noticed that there was a shortage of space per inmate in barracks of the jails even in terms of scheduled accommodation which ranged from 0.34 sq. mt. (Special Jail, Bhubaneswar) to 1.61 sq. mt. (Sub-Jail, Nayagarh)."
+            },
+            {
+                "type": "text",
+                "value": "“This shortage was further accentuated as the actual inmate capacity exceeded more than 40% in four jails. Thus, the availability of less space per inmate led to congested living conditions for the prisoners. Such prisoners were deprived of the standard requisite space for sleeping and basic living conditions, as per the norms,” the apex agency said in its report which was tabled in Odisha Legislative Assembly on Tuesday (March 31, 2026)."
+            },
+            {
+                "type": "text",
+                "value": "“Scrutiny of records at Director General of Prisons revealed that in all the 87 jails, as against the requirement of 2,203 bathing places as per the scheduled accommodations, only 916 places were available for bathing and there was a shortage of 1,287 bathing places,” the report pointed out."
+            },
+            {
+                "type": "text",
+                "value": "“This shortage of adequate bathing places existed in 58.40% of all jails across the State. Moreover, audit scrutiny of the selected 15 units revealed that there was a shortage of bathing places in 10 out 15 jails, ranging between 50% in Sub-Jail, Athagarh to 90.57% in district Jail Balasore,” it added."
+            },
+            {
+                "type": "text",
+                "value": "The performance report says, “in Sub-Jail Deogarh, the women inmates were using open pindis (concrete platforms) &nbsp;to take a bath. Similarly, there was a shortage of 71 toilets in four out of 15 test checked jails, in which Special Jail, Bhubaneswar had the shortage of toilets to the extent of 25%. Thus, inadequate bathing spaces and toilets in jails deprived the prisoners of their basic needs of living conditions and instances of open bathing places for women inmates raised concerns regarding their privacy.”"
+            },
+            {
+                "type": "text",
+                "value": "Observing that essential security equipment required for safe and secure jail administration was either not available or not operational, the CAG said 29 escape of prisoners were recorded from 2020 to 2023, out of which 17 had been recaptured and 12 were yet to be traced and recaptured."
+            },
+            {
+                "type": "text",
+                "value": "In another serious violation of jail manual, scrutiny of records of the 15 sampled jails revealed that in 10 jails, 121 mentally ill patients were detained as on March 31, 2023 with other prisoners without ensuring segregation."
+            },
+            {
+                "type": "text",
+                "value": "“They were also not transferred to a lunatic asylum, place of safe custody or appropriate mental health institutions. The psychiatric prisoners were living inside the jail with other inmates and being treated by the visiting psychiatrist specialists in violation of the codal provisions and instructions of NHRC, due to non-availability of separate lunatic asylums,” the CAG says."
+            }
+        ],
+        "date": "2026-04-03"
+    },
+    {
+        "category": "Science",
+        "title": "The putrid mix of money and medical malpractice",
+        "url": "https://www.thehindu.com/news/national/maharashtra/the-putrid-mix-of-money-and-medical-malpractice/article70812996.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Three years ago, Laxmi (name changed to protect identity), 28, decided to sell her eggs. She worked part-time as a waiter in Mumbai, about 60 km from her home in Badlapur, but wasn’t able to make ends meet. “I was desperate for work and money,” she says. Each job offered just between ₹250 and ₹300 per day."
+            },
+            {
+                "type": "text",
+                "value": "Laxmi says she left her husband to start a new life after he began living with another woman with whom he had a child. “We were married for eight years. It was an inter-caste marriage. My husband’s family was pressuring him to marry someone from their caste,” she adds."
+            },
+            {
+                "type": "text",
+                "value": "While her husband was from the Agri community, a subcaste of fisherfolk, Laxmi was a Mahar, listed as a Scheduled Caste."
+            },
+            {
+                "type": "text",
+                "value": "“I was unable to make enough money to rent a house and live on my own,” she says, adding that she was forced to stay with friends for a year."
+            },
+            {
+                "type": "text",
+                "value": "During that year, on a train to Mumbai for work, she met Sulochana Gadekar, 44. She told Laxmi that she could make some “quick money” through egg donation. “She told me to look at it as a social service for women who couldn’t bear their own children. She said it was a common practice at IVF (in-vitro fertilization) centres.”"
+            },
+            {
+                "type": "text",
+                "value": "Laxmi, like many women, had seen boards of IVF centres and did not think it was illegal. In India, the Assisted Reproductive Technology (Regulation) Act, 2021 permits egg donation only once in a lifetime by a woman who has borne a child. It prohibits commercialisation and stipulates medical insurance for the donor."
+            },
+            {
+                "type": "text",
+                "value": "Gadekar offered Laxmi accommodation at her house in Vangani, about 25 km from Badlapur. She was relieved to have a rent-free place to live in and at the prospect of cash. For the first cycle, which took place in Gadekar’s house, she was paid ₹15,000."
+            },
+            {
+                "type": "text",
+                "value": "After a month, Laxmi moved out and found her own rented accommodation in Vangani, a 1RK (room and kitchen) unit, and decided to undergo the egg donation process again."
+            },
+            {
+                "type": "text",
+                "value": "“I underwent the cycle eight times. Each cycle took about a month,” she says. For these, she remembers going to Nashik and Thane and being paid between ₹12,000 and ₹25,000."
+            },
+            {
+                "type": "text",
+                "value": "She says she finally had to stop donating eggs when she was diagnosed with a thyroid problem. Six months ago, she had a problem in her pelvis. “I feel my health complications are linked to multiple egg donations,” she says."
+            },
+            {
+                "type": "text",
+                "value": "Laxmi has gone back to her job as a gig worker in the catering industry. In her sparse home, she sits on an ageing wooden sofa, its sponge exposed, and says, “I would donate eggs again if I could. I still need money.” The only time she cries is when she speaks about her husband."
+            },
+            {
+                "type": "text",
+                "value": "On February 18 this year, Gadekar was arrested. According to the Maharashtra police, she is part of an inter-State network of clinics, pharmacies, and egg-harvesting agents, all operating illegally. Since then, the police have made six more arrests. The two other main accused are also agents: Ashwini Rupesh Chabukswar, 29, and Manjusha Wankhede, 46."
+            },
+            {
+                "type": "text",
+                "value": "The others named as accused in the First Information Report registered at the Badlapur (East) police station are Sonal Gurudev Garewal, 24, who allegedly operated a sonography machine without formal training at Bhagwan Hospital in Ulhasnagar; Dr. Amol Patil, director of Malti IVF Centre in Nashik; and Sumit Bhagwan Sonkamble, 38, a pharmacist allegedly involved in arranging logistics and documentation. Satish Dilip Choudhary, an electrician who allegedly worked with Patil, was also arrested."
+            },
+            {
+                "type": "text",
+                "value": "The police are investigating the role of Rajesh Jammu Nehlani, 47, owner of Bhagwan Hospital, and examining documents and medical records seized during searches conducted at several hospitals. According to the police, Malti IVF Centre was licensed to operate in Nashik, but its branch in Thane was functioning without authorisation."
+            },
+            {
+                "type": "text",
+                "value": "The IVF market, a subset of the healthcare industry, was valued at $883.50 million in 2022, as per Allied Market Research, a market research, consulting, and advisory firm. It is estimated to surpass $4667.80 million by 2032."
+            },
+            {
+                "type": "text",
+                "value": "Laxmi is one of 10 women identified as victims of the alleged IVF scam."
+            },
+            {
+                "type": "heading",
+                "value": "The modus operandi"
+            },
+            {
+                "type": "text",
+                "value": "Three days before Gadekar’s arrest, a woman walked into a government health centre in Badlapur East. She told the physician on duty that she was not paid for the eggs she had donated. The woman assumed that the government was paying for egg donation because Gadekar had told them that this was part of a social contribution."
+            },
+            {
+                "type": "text",
+                "value": "The doctor noted her complaint and Gadekar’s name and alerted the police."
+            },
+            {
+                "type": "text",
+                "value": "Investigators conducted a raid on Gadekar’s residence on the 13th floor of a gated housing society in Joveli Gaon on the outskirts of Badlapur and recovered multiple vials of hormonal injections, valued at approximately ₹8 lakh."
+            },
+            {
+                "type": "text",
+                "value": "According to the police, agents would approach women facing financial hardship. They would offer potential donors amounts between ₹18,000 and ₹30,000. Women producing more than five eggs were promised more money. Gadekar would shelter them at her residence for 10 to 12 days and administer daily hormonal injections."
+            },
+            {
+                "type": "text",
+                "value": "These injections are intended to stimulate the ovaries to produce multiple eggs in a single cycle, say doctors. Egg extraction was conducted without medical consultation, say the police."
+            },
+            {
+                "type": "text",
+                "value": "Multiple teams are probing the case, said Deputy Commissioner of Police Sachin Gore, Ulhasnagar Police, at a recent press conference. “The preliminary investigation has revealed that the three main arrested accused were in direct contact with IVF centres. The inter-State links, financial trail, and involvement of medical professionals are being probed,” he said."
+            },
+            {
+                "type": "text",
+                "value": "Digital evidence retrieved from mobile phones seized from the accused indicates that donors were transported to various locations. Investigators say data show that after being administered hormonal injections at transit points, the women were taken to medical facilities in Karnataka’s capital Bengaluru, parts of Telangana, and within Maharashtra, including Nagpur, Pune, and Nashik, where the eggs were extracted."
+            },
+            {
+                "type": "text",
+                "value": "The police say forged Aadhaar cards were used to make it difficult to track down victims. Fake Aadhaar cards were found at the residences of Gadekar and Choudhary."
+            },
+            {
+                "type": "text",
+                "value": "“We are tracking 30 to 35 agents and trying to find the recipients of the harvested eggs,” says a police officer."
+            },
+            {
+                "type": "heading",
+                "value": "Building and bringing down lives"
+            },
+            {
+                "type": "text",
+                "value": "With Gadekar in jail, her second husband lives alone in the 500-600-square-foot home they had moved into this January in Joveli Gaon, which is nearly denuded of trees. The 16-floor apartment block sits next to a highway and close to an industrial area. A home here costs about ₹50 lakh."
+            },
+            {
+                "type": "text",
+                "value": "He says he has liver cirrhosis and that Gadekar was the “main earner”. He adds that he lost his job as a watch repairer in Mumbai after his employers got to know about his wife’s arrest."
+            },
+            {
+                "type": "text",
+                "value": "“Twenty years ago, after we got married, I realised that she had been an egg donor and a surrogate mother. Soon, she became an agent. Offers came in from doctors to find other women to donate eggs,” he says."
+            },
+            {
+                "type": "text",
+                "value": "When the police raided the house, they did not produce a search or an arrest warrant, he says. “It all happened after 9.30 in the night. The search went on until 11. They took her to the police station and only then produced the arrest warrant,” he says."
+            },
+            {
+                "type": "text",
+                "value": "He points to a wooden cupboard and says they just had it made, but the police broke it. Hormonal injections were recovered from here, he adds. “I don’t have money now, so I am not sure how I will survive. The only person who earned was Sulochana. I now have to try and get bail for her.”"
+            },
+            {
+                "type": "text",
+                "value": "Medical professionals have highlighted the health risks associated with repeated and unsupervised egg donation. “The donors are receiving injections of menotropins [the hormonal injections that were recovered from Gadekar’s house]. If high dosage is administered multiple times in a lifetime to induce repeated ovulation, it increases the risk of ovarian cancer,” says Dr. Sainath Bairagi, an obstetrician-gynaecologist based in Kalyan, explaining the complications posed by drugs used in such procedures."
+            },
+            {
+                "type": "text",
+                "value": "He adds that the immediate side effects can be life-threatening. “It causes Ovarian Hyperstimulation Syndrome. This can lead to fluid accumulation in the body. It is a life-threatening situation. No one should donate eggs repeatedly.”"
+            },
+            {
+                "type": "heading",
+                "value": "Far away from Badlapur"
+            },
+            {
+                "type": "text",
+                "value": "Bharatiya Janata Party MLC Chitra Wagh, who raised the matter in the Legislative Council, claimed some women were made to donate eggs up to 10 times. Deputy Chairperson of the House Neelam Gorhe then directed Minister of State for Home (Urban) Yogesh Kadam to cancel the licences of doctors allegedly involved in the scam."
+            },
+            {
+                "type": "text",
+                "value": "Health Minister Prakash Abitkar assured the Legislative Assembly that an investigation will be conducted and warned that action will be taken against the guilty."
+            },
+            {
+                "type": "text",
+                "value": "Maharashtra has 860 IVF centres, as per government data. The Health Minister said these centres will be linked to a centralised monitoring system, but did not specify a timeline. Joint inspections by the Home and Health departments will be carried out through committees comprising the Superintendent of Police and the Civil Surgeon, he added."
+            },
+            {
+                "type": "text",
+                "value": "The State government indicated that it may invoke the Maharashtra Control of Organised Crime Act, 1999 if the investigation reveals a larger criminal conspiracy. This law stipulates that a person, if convicted, can get punishment up to life imprisonment."
+            },
+            {
+                "type": "text",
+                "value": "Rupali Chakankar, who stepped down as chairperson of the State Women’s Commission on March 20, had visited Badlapur on March 5 to review the case. She met police officials, the doctor at the government health centre who alerted the police to the illegal network, and the mayor of the local municipal council."
+            },
+            {
+                "type": "text",
+                "value": "Addressing reporters, she said, “Although the illegal extraction of eggs has taken place in Badlapur, its roots have spread across the State. A crackdown will begin on illegal IVF and sonography centres in and around Badlapur from today. We will dig up the roots of this network.”"
+            },
+            {
+                "type": "text",
+                "value": "Chakankar resigned from her position over her alleged association with a self-styled godman who was arrested for allegedly exploiting hundreds of women in Nashik district."
+            },
+            {
+                "type": "text",
+                "value": "Meanwhile, the woman who first approached the doctor in Badlapur East over money she was allegedly owed for repeated egg harvesting has not spoken again, even to investigators. The police say she has left her home, and possibly fled.&lt;extra_leading&gt;"
+            },
+            {
+                "type": "text",
+                "value": "<i>chinmay.r@thehindu.co.in</i>"
+            },
+            {
+                "type": "text",
+                "value": "Edited by Sunalini Mathew"
+            }
+        ],
+        "date": "2026-04-03"
+    },
+    {
         "category": "UPSC Current Affairs",
         "title": "UPSC Essentials | Daily subject-wise quiz: Polity and Governance MCQs on electoral college of the President of India, disqualification from the Legislative Assembly and more (Week 156)",
         "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/upsc-subject-wise-quiz-polity-and-governance-week-156-10611934/",
