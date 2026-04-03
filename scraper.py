@@ -95,7 +95,6 @@ def scrape_ie_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(6)
 
-                # FIX: Unhide paywall containers instead of deleting them, as they hold the text
                 driver.execute_script("""
                     document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
                     document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
@@ -141,7 +140,7 @@ def scrape_ie_section(url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== IE Explained Scraper (Incremental + 30 Limit) ==================
+# ================== IE Explained Scraper (Incremental + Deep Rescrape) ==================
 def scrape_ie_explained(url, category, existing_urls, is_first_run):
     driver = get_driver()
     articles = []
@@ -150,18 +149,16 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         time.sleep(5)
 
         clicks = 0
-        max_clicks = 15
+        max_clicks = 30  # Increased to 30 for deep rescrape
         all_links = []
 
         while clicks < max_clicks:
             elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
             current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
-            all_links = current_links
+            all_links = list(set(all_links + current_links))
 
-            if is_first_run:
-                if len(all_links) >= 30:
-                    break
-            else:
+            if not is_first_run:
+                # On scheduled runs, stop paginating instantly when a known article is hit
                 if any(link in existing_urls for link in current_links):
                     break
 
@@ -171,22 +168,22 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 )
                 driver.execute_script("arguments[0].click();", load_more)
                 clicks += 1
-                print(f"[{category}] Clicked Load More {clicks}")
+                print(f"[{category}] Clicked Load More {clicks}/{max_clicks}")
                 time.sleep(3)
             except:
+                print(f"[{category}] Reached end of available articles.")
                 break 
 
+        # Filter out what we already have
         new_links = [link for link in all_links if link not in existing_urls]
 
-        if is_first_run:
-            new_links = new_links[:30]
+        # Removed the slice [30:] so it processes ALL links found during the deep scrape
 
         for link in new_links:
             try:
                 driver.get(link)
                 time.sleep(5)
 
-                # FIX: Unhide paywall containers here too
                 driver.execute_script("""
                     document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
                     document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
@@ -261,7 +258,6 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                     driver.get(link)
                     time.sleep(6)
 
-                    # FIX: Unhide paywall containers here too
                     driver.execute_script("""
                         document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
                         document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
@@ -355,8 +351,10 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
+    # If the DB has less than 50 articles for this category, it triggers the deep 30-click rescrape.
+    # Otherwise, it runs incrementally.
     existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
-    is_first_run = existing_category_count == 0
+    is_first_run = existing_category_count < 50
     
     new_arts = scrape_ie_explained(url, cat, existing_urls, is_first_run)
     for art in new_arts:
@@ -370,6 +368,7 @@ for art in quiz_arts:
     full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    json.dump(full_db[:2500], f, ensure_ascii=False, indent=4) 
+    # Increased to 5000 to safely hold the massive influx of deep-scraped articles
+    json.dump(full_db[:5000], f, ensure_ascii=False, indent=4) 
 
 print(f"Scrape completed. Total articles in database: {len(full_db)}")
