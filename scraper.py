@@ -32,9 +32,8 @@ def get_driver():
     driver.set_page_load_timeout(180)
     return driver
 
-# ================== The Hindu Scraper ==================
-def scrape_hindu_section(url, category):
-    driver = get_driver()
+# ================== The Hindu Scraper (reused driver) ==================
+def scrape_hindu_section(driver, url, category):
     articles = []
     try:
         driver.get(url)
@@ -51,14 +50,11 @@ def scrape_hindu_section(url, category):
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h4.sub_head")
                
                 article_content = []
-               
                 for el in content_elements:
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
-                   
                     if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:"]):
                         continue
-                   
                     article_content.append({"type": "heading" if el.tag_name == "h4" else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1.title").text.strip()
@@ -72,12 +68,11 @@ def scrape_hindu_section(url, category):
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
             except: continue
-    finally: driver.quit()
+    except: pass
     return articles
 
-# ================== Indian Express UPSC Current Affairs Scraper ==================
-def scrape_ie_section(url, category):
-    driver = get_driver()
+# ================== Indian Express UPSC Current Affairs ==================
+def scrape_ie_section(driver, url, category):
     articles = []
     try:
         driver.get(url)
@@ -101,15 +96,12 @@ def scrape_ie_section(url, category):
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                
                 article_content = []
-               
                 for el in content_elements:
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
-                   
                     if not text: continue
                     if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan"]):
                         continue
-                   
                     article_content.append({"type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
@@ -123,36 +115,35 @@ def scrape_ie_section(url, category):
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
             except: continue
-    finally: driver.quit()
+    except: pass
     return articles
 
-# ================== NEW: IE Explained Scraper (with Load More x15) ==================
-def scrape_ie_explained_section(url, category):
-    driver = get_driver()
+# ================== IE Explained + Load More (incremental) ==================
+def scrape_ie_explained_section(driver, url, category, existing_urls):
     articles = []
     try:
         driver.get(url)
         time.sleep(8)
 
-        # Click "Load More" button 15 times
-        for _ in range(15):
+        # Click "Load More" up to 15 times, but stop early if we see already-scraped articles
+        for i in range(15):
             try:
                 load_btn = driver.find_element(By.CSS_SELECTOR, "button.load_tag_data, .m-featured-link.load_tag_data")
                 driver.execute_script("arguments[0].click();", load_btn)
                 time.sleep(4)
             except:
-                break  # no more button
+                break
 
-        # Collect article links
         elements = driver.find_elements(By.CSS_SELECTOR, "h3 a")
         links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
 
         for link in links:
+            if link in existing_urls:  # Stop early on duplicate
+                break
             try:
                 driver.get(link)
                 time.sleep(6)
 
-                # Same paywall blocker as UPSC Current Affairs
                 driver.execute_script("""
                     document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
                     document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
@@ -164,15 +155,12 @@ def scrape_ie_explained_section(url, category):
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                
                 article_content = []
-               
                 for el in content_elements:
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
-                   
                     if not text: continue
                     if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan"]):
                         continue
-                   
                     article_content.append({"type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
@@ -186,10 +174,16 @@ def scrape_ie_explained_section(url, category):
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
             except: continue
-    finally: driver.quit()
+    except: pass
     return articles
 
-# ================== Targets & Main Execution ==================
+# ================== Main Execution (single driver + incremental) ==================
+data_file = "data.json"
+full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
+existing_urls = {a['url'] for a in full_db}
+
+driver = get_driver()   # ← One driver for everything
+
 targets = {
     "Science": "https://www.thehindu.com/sci-tech/science/",
     "Health": "https://www.thehindu.com/sci-tech/health/",
@@ -197,7 +191,6 @@ targets = {
     "Environment": "https://www.thehindu.com/sci-tech/energy-and-environment/",
     "Internet": "https://www.thehindu.com/sci-tech/technology/internet/",
     "UPSC Current Affairs": "https://indianexpress.com/section/upsc-current-affairs/",
-    # === NEW IE Explained subtopics ===
     "Global": "https://indianexpress.com/about/explained-global/?ref=explained_pg",
     "Law and Policy": "https://indianexpress.com/section/explained/explained-law/?ref=explained_pg",
     "Sci-Tech": "https://indianexpress.com/about/explained-sci-tech/",
@@ -206,22 +199,21 @@ targets = {
     "Everyday Explainer": "https://indianexpress.com/section/explained/everyday-explainers/?ref=explained_pg"
 }
 
-data_file = "data.json"
-full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
-
 for cat, url in targets.items():
     print(f"Scraping {cat}...")
     if cat == "UPSC Current Affairs":
-        new_arts = scrape_ie_section(url, cat)
+        new_arts = scrape_ie_section(driver, url, cat)
     elif cat in ["Global", "Law and Policy", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer"]:
-        new_arts = scrape_ie_explained_section(url, cat)
+        new_arts = scrape_ie_explained_section(driver, url, cat, existing_urls)
     else:
-        new_arts = scrape_hindu_section(url, cat)
+        new_arts = scrape_hindu_section(driver, url, cat)
     
-    urls = [a['url'] for a in full_db]
     for art in new_arts:
-        if art['url'] not in urls:
+        if art['url'] not in existing_urls:
             full_db.insert(0, art)
+            existing_urls.add(art['url'])
+
+driver.quit()   # Close the single driver at the end
 
 with open(data_file, "w", encoding='utf-8') as f:
     json.dump(full_db[:1000], f, ensure_ascii=False, indent=4)
