@@ -23,7 +23,6 @@ def get_driver():
     
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
-    # Network Blocker to prevent paywalls and trackers from loading
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
         "urls": [
@@ -143,20 +142,21 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
 
         clicks = 0
         max_clicks = 15
+        all_links = []
 
         while clicks < max_clicks:
             elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
-            current_links = [el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]
-            
-            overlap_found = any(link in existing_urls for link in current_links)
+            # Use set to remove duplicates, then convert to list
+            current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
+            all_links = current_links
 
             if is_first_run:
-                # Stop if we have enough links for the first run
-                if len(current_links) >= 35: 
+                # If first run for this subtopic, stop clicking once we have ~30 links
+                if len(all_links) >= 30:
                     break
             else:
-                # Stop paginating if we see articles we already scraped
-                if overlap_found:
+                # If incremental run, stop clicking immediately if we see ANY link we already have
+                if any(link in existing_urls for link in current_links):
                     break
 
             try:
@@ -170,15 +170,10 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             except:
                 break # No more button found
 
-        elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
-        all_links = []
-        for el in elements:
-            href = el.get_attribute("href")
-            if "/article/explained/" in href and href not in all_links:
-                all_links.append(href)
-
+        # Filter to only get links not in DB
         new_links = [link for link in all_links if link not in existing_urls]
 
+        # Enforce exact 30 limit on first run
         if is_first_run:
             new_links = new_links[:30]
 
@@ -336,7 +331,7 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
-    # Check if this category already has entries in the database
+    # Check if THIS specific category already has entries in the database
     existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
     is_first_run = existing_category_count == 0
     
@@ -352,7 +347,6 @@ for art in quiz_arts:
     full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    # Cap slightly increased to handle the influx of new explained articles
     json.dump(full_db[:2500], f, ensure_ascii=False, indent=4) 
 
 print(f"Scrape completed. Total articles in database: {len(full_db)}")
