@@ -33,7 +33,6 @@
         
         .article-card { scroll-margin-top: 80px; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; width: 100%; }
         
-        /* FIX: Sidebar Responsive & Collapse CSS */
         #sidebar { 
             transition: all 0.3s ease; 
             width: 280px; 
@@ -153,6 +152,9 @@
                     <button onclick="toggleDarkMode()" title="Toggle Theme" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
                         <i id="theme-icon" class="fas fa-moon text-blue-500"></i>
                     </button>
+                    <button onclick="showStarredView()" title="Starred" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </button>
                     <button onclick="showArchivedView()" title="Archived" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
                         <i class="fas fa-archive text-gray-600 dark:text-gray-300"></i>
                     </button>
@@ -188,9 +190,10 @@
         let isSearch = false;
         let immersiveEnabled = false;
         let isArchiveView = false;
+        let isStarredView = false;
         let archivedUrls = JSON.parse(localStorage.getItem('archivedUrls') || '[]');
+        let starredUrls = JSON.parse(localStorage.getItem('starredUrls') || '[]');
 
-        // FIX: Configured Topics with IE Explained
         const topics = { 
             "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], 
             "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"],
@@ -217,7 +220,6 @@
             const feed = document.getElementById('article-feed');
             feed.innerHTML = `<div class="text-center py-20 text-gray-900 dark:text-white"><i class="fas fa-spinner fa-spin text-4xl text-blue-500"></i></div>`;
             try {
-                // Ensure browser doesn't load a deeply cached version
                 const res = await fetch('data.json?t=' + new Date().getTime());
                 rawData = await res.json();
                 rawData.sort((a, b) => b.date.localeCompare(a.date));
@@ -227,7 +229,7 @@
 
         function renderTopicTabs() {
             document.getElementById('topic-select').innerHTML = Object.keys(topics).map(t => `<option value="${t}" ${activeTopic === t ? 'selected' : ''}>${t}</option>`).join('');
-            if (!isArchiveView) renderSubtopicTabs();
+            if (!isArchiveView && !isStarredView) renderSubtopicTabs();
         }
 
         function renderSubtopicTabs() {
@@ -235,9 +237,14 @@
         }
 
         function renderDateSidebar() {
-            const viewArts = isArchiveView
-                ? rawData.filter(a => archivedUrls.includes(a.url))
-                : rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
+            let viewArts = [];
+            if (isStarredView) {
+                viewArts = rawData.filter(a => starredUrls.includes(a.url));
+            } else if (isArchiveView) {
+                viewArts = rawData.filter(a => archivedUrls.includes(a.url));
+            } else {
+                viewArts = rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
+            }
             
             const grouped = {};
             viewArts.forEach(a => {
@@ -262,7 +269,6 @@
         function scrollToArticle(id) {
             const el = document.getElementById(id);
             if(el) {
-                // Ensure header doesn't block the title
                 const yOffset = -80; 
                 const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({top: y, behavior: 'smooth'});
@@ -270,7 +276,6 @@
                 const content = document.getElementById('content-' + id);
                 if(content.style.display === 'none') toggleArticle(id);
                 
-                // Close sidebar on mobile after clicking a link
                 if (window.innerWidth <= 768 && !sidebar.classList.contains('collapsed')) {
                     toggleSidebar();
                 }
@@ -279,6 +284,7 @@
 
         function switchTopic(topic) {
             isArchiveView = false;
+            isStarredView = false;
             activeTopic = topic;
             activeSubtopic = topics[topic][0];
             renderTopicTabs();
@@ -287,6 +293,7 @@
 
         function switchSubtopic(sub) {
             isArchiveView = false;
+            isStarredView = false;
             activeSubtopic = sub;
             renderView(activeTopic, activeSubtopic);
         }
@@ -300,7 +307,27 @@
             }
             localStorage.setItem('archivedUrls', JSON.stringify(archivedUrls));
             
-            if (isArchiveView) {
+            if (isStarredView) {
+                showStarredView();
+            } else if (isArchiveView) {
+                showArchivedView();
+            } else {
+                renderView(activeTopic, activeSubtopic);
+            }
+        }
+
+        function toggleStar(urlEncoded) {
+            const url = decodeURIComponent(urlEncoded);
+            if (starredUrls.includes(url)) {
+                starredUrls = starredUrls.filter(u => u !== url);
+            } else {
+                starredUrls.push(url);
+            }
+            localStorage.setItem('starredUrls', JSON.stringify(starredUrls));
+            
+            if (isStarredView) {
+                showStarredView();
+            } else if (isArchiveView) {
                 showArchivedView();
             } else {
                 renderView(activeTopic, activeSubtopic);
@@ -309,6 +336,7 @@
 
         function showArchivedView() {
             isArchiveView = true;
+            isStarredView = false;
             isSearch = false;
             document.getElementById('searchInput').value = "";
             
@@ -320,11 +348,27 @@
             renderFeed(filtered, "Archived Articles");
         }
 
+        function showStarredView() {
+            isStarredView = true;
+            isArchiveView = false;
+            isSearch = false;
+            document.getElementById('searchInput').value = "";
+            
+            document.getElementById('topic-select').innerHTML = `<option value="" hidden selected>Starred</option>` + Object.keys(topics).map(t => `<option value="${t}">${t}</option>`).join('');
+            document.getElementById('subtopic-select').innerHTML = `<option value="" hidden selected>Important Articles</option>` + topics[activeTopic].map(s => `<option value="${s}">${s}</option>`).join('');
+            
+            const filtered = rawData.filter(a => starredUrls.includes(a.url));
+            renderDateSidebar();
+            renderFeed(filtered, "Starred Articles");
+        }
+
         function handleSearch() {
             const q = document.getElementById('searchInput').value.toLowerCase();
             if (q.length < 2) {
                 isSearch = false;
-                if (isArchiveView) {
+                if (isStarredView) {
+                    showStarredView();
+                } else if (isArchiveView) {
                     showArchivedView();
                 } else {
                     renderFeed(rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url)));
@@ -332,9 +376,11 @@
                 return;
             }
             isSearch = true;
-            let baseArts = isArchiveView
-                ? rawData.filter(a => archivedUrls.includes(a.url))
-                : rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
+            let baseArts = isStarredView 
+                ? rawData.filter(a => starredUrls.includes(a.url))
+                : isArchiveView
+                    ? rawData.filter(a => archivedUrls.includes(a.url))
+                    : rawData.filter(a => a.category === activeSubtopic && !archivedUrls.includes(a.url));
                 
             const filtered = baseArts.filter(art => art.title.toLowerCase().includes(q) || art.content.some(c => c.type === 'quiz_item' ? (c.question?.toLowerCase().includes(q) || c.solution?.toLowerCase().includes(q)) : c.value?.toLowerCase().includes(q)));
             renderFeed(filtered, `Search results for: "${q}"`);
@@ -342,6 +388,7 @@
 
         function renderView(topic, subtopic) {
             isArchiveView = false;
+            isStarredView = false;
             isSearch = false;
             activeTopic = topic;
             activeSubtopic = subtopic;
@@ -451,7 +498,13 @@
                 }
                 const pathText = `${artTopic} / ${art.category}`;
                 const isArchived = archivedUrls.includes(art.url);
+                const isStarred = starredUrls.includes(art.url);
                 
+                let tagsHtml = '';
+                if (isStarredView && isArchived) {
+                    tagsHtml = `<span class="ml-2 text-[10px] bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded uppercase font-bold tracking-wider align-middle">Archived</span>`;
+                }
+
                 const geminiBlock = `
                     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                         <div class="gemini-input-container flex items-center bg-slate-100 dark:bg-slate-800 rounded-[28px] px-2 py-1 border border-gray-200 dark:border-gray-700 focus-within:shadow-md transition-shadow">
@@ -475,8 +528,11 @@
 
                 return `<article id="${safeId}" class="article-card border-gray-200 dark:border-gray-700">
                     <div onclick="toggleArticle('${safeId}')" class="flex items-center justify-between cursor-pointer text-gray-900 dark:text-white group">
-                        <h2 class="serif-title article-title pr-4 flex-1">${art.title}</h2>
+                        <h2 class="serif-title article-title pr-4 flex-1">${art.title} ${tagsHtml}</h2>
                         <div class="flex items-center whitespace-nowrap pl-2">
+                            <button onclick="event.stopPropagation(); toggleStar('${encodeURIComponent(art.url)}')" class="text-gray-400 hover:text-yellow-400 transition-colors mr-3" title="${isStarred ? 'Unstar' : 'Star'}">
+                                <i class="fas fa-star ${isStarred ? 'text-yellow-400' : ''} text-lg"></i>
+                            </button>
                             <button onclick="event.stopPropagation(); toggleArchive('${encodeURIComponent(art.url)}')" class="text-gray-400 hover:text-blue-500 transition-colors mr-4" title="${isArchived ? 'Unarchive' : 'Archive'}">
                                 <i class="fas ${isArchived ? 'fa-box-open text-blue-500' : 'fa-archive'} text-lg"></i>
                             </button>
@@ -497,8 +553,11 @@
                         
                         ${geminiBlock}
 
-                        <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex justify-between items-center mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
                             <a href="${art.url}" target="_blank" class="source-link">Read original page →</a>
+                            <button onclick="toggleArticle('${safeId}'); window.scrollTo({top: document.getElementById('${safeId}').getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth'})" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
+                                <i class="fas fa-chevron-up"></i> Collapse
+                            </button>
                         </div>
                     </div>
                     <div class="text-xs text-gray-500 mt-2">${pathText} | ${art.date}</div>
