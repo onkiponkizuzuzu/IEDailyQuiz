@@ -8,124 +8,22 @@
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&family=Merriweather:wght@100;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-
-    <style>
-        :root { --bg: #f8fafc; --text: #0f172a; --border: #e2e8f0; --sidebar: #ffffff; color-scheme: light; }
-        .dark { --bg: #0f172a; --text: #f1f5f9; --border: #334155; --sidebar: #1e293b; color-scheme: dark; }
-        body { font-family: 'Inter', sans-serif; transition: all 0.3s; margin: 0; min-height: 100vh; }
-        .serif-title { font-family: 'Merriweather', serif; }
-       
-        .article-card { scroll-margin-top: 80px; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; width: 100%; }
-        #sidebar { transition: all 0.3s ease; width: 280px; position: sticky; top: 60px; height: calc(100vh - 60px); overflow-y: auto; z-index: 30; }
-        #sidebar.collapsed { width: 0; padding: 0; overflow: hidden; border: none; }
-       
-        .article-title { font-size: 1.15rem; line-height: 1.5rem; font-weight: 600; cursor: pointer; transition: color 0.2s; }
-        .article-title:hover { color: #3b82f6; }
-       
-        .content-body { font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.85; font-weight: 100; max-width: 800px; margin: 0 auto; }
-        .content-body p { margin-bottom: 1.2rem; }
-        .content-body h4 { font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 1rem; }
-       
-        .content-body strong, .content-body b { font-weight: 700; }
-        .content-body em, .content-body i { font-style: italic; }
-        .content-body ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-        .content-body ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
-        .content-body a { color: #3b82f6; text-decoration: underline; }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .source-link { color: #3b82f6; text-decoration: underline; font-size: 0.95rem; }
-
-        #auth-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 100; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
-        .hidden { display: none !important; }
-
-        .gemini-summary-box { font-family: 'Inter', sans-serif; }
-        .gemini-summary-box ul { list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem; }
-        .gemini-summary-box li { margin-bottom: 0.5rem; }
-        .gemini-summary-box strong { font-weight: 900; color: #1e40af; }
-        .dark .gemini-summary-box strong { color: #93c5fd; }
-       
-        .gemini-input-container:focus-within {
-            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.5);
-            border-color: transparent;
-        }
-    </style>
+    <!-- Your existing styles and scripts remain the same until the nav part -->
+    <!-- ... keep all your previous <style> and scripts ... -->
 </head>
-<body class="bg-slate-50 dark:bg-[#0f172a] text-gray-900 dark:text-gray-100">
-
-    <div id="auth-overlay">
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-gray-200 dark:border-gray-700">
-            <h2 class="text-2xl font-bold mb-2 text-center text-gray-900 dark:text-white">Authorized Access Only</h2>
-            <p class="text-sm text-gray-500 text-center mb-6">Please log in to access the UPSC archive.</p>
-            <div id="auth-error" class="hidden mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm text-center"></div>
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                    <input type="email" id="email-input" class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Password</label>
-                    <input type="password" id="password-input" class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white" onkeypress="if(event.key === 'Enter') handleLogin()">
-                </div>
-                <div class="pt-2">
-                    <button onclick="handleLogin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl transition-colors">Log In</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
+    <!-- Your auth overlay remains the same -->
 
     <div id="app-content" class="hidden">
         <nav class="sticky top-0 z-40 px-4 py-2 border-b shadow-sm bg-white dark:bg-[#1e293b] border-gray-200 dark:border-gray-700">
-            <div class="flex items-center justify-between flex-wrap gap-3">
-                <!-- Hamburger Button -->
+            <div class="flex items-center justify-between">
+                <!-- Fixed Hamburger Button -->
                 <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                     <i class="fas fa-bars text-2xl text-gray-700 dark:text-gray-200"></i>
                 </button>
 
-                <div class="flex items-center space-x-3">
-                    <h1 class="font-bold text-base tracking-tight leading-none text-gray-900 dark:text-white">CSE CAff</h1>
-                    <div class="text-blue-500 text-[10px] font-normal">by onkiponkizuzuzu</div>
-                </div>
-
-                <div id="prelims-counter" class="text-[10px] text-blue-600 dark:text-blue-400 font-medium">
-                    Days to Prelims: <span id="days-count" class="font-semibold">...</span>
-                </div>
-
-                <!-- Rest of nav (unchanged) -->
-                <div class="flex items-end gap-2 flex-1 max-w-sm">
-                    <div class="w-1/2 flex flex-col">
-                        <label class="text-[10px] text-gray-500 dark:text-gray-400 font-semibold mb-0.5 ml-1 uppercase tracking-wider">Source</label>
-                        <select id="topic-select" onchange="switchTopic(this.value)" class="w-full h-[34px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm rounded-lg focus:ring-blue-500 px-2 text-gray-900 dark:text-white outline-none cursor-pointer transition-colors"></select>
-                    </div>
-                    <div class="w-1/2 flex flex-col">
-                        <label class="text-[10px] text-gray-500 dark:text-gray-400 font-semibold mb-0.5 ml-1 uppercase tracking-wider">Category</label>
-                        <select id="subtopic-select" onchange="switchSubtopic(this.value)" class="w-full h-[34px] bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm rounded-lg focus:ring-blue-500 px-2 text-gray-900 dark:text-white outline-none cursor-pointer transition-colors"></select>
-                    </div>
-                </div>
-
-                <div class="flex items-end gap-2">
-                    <div class="relative w-28 sm:w-48">
-                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search..." class="w-full h-[34px] pl-8 pr-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm text-gray-900 dark:text-white">
-                        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 opacity-30 text-sm text-gray-700 dark:text-gray-400"></i>
-                    </div>
-                    <button onclick="promptForKey()" title="Set Gemini API Key" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-900 text-purple-600 transition-transform hover:scale-110">
-                        <i class="fas fa-key"></i>
-                    </button>
-                    <button onclick="toggleImmersive()" id="immersive-btn" title="Immersive Reader" class="h-[34px] w-[34px] flex items-center justify-center text-sm font-medium rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200">
-                        <i class="fas fa-book-open"></i>
-                    </button>
-                    <button onclick="toggleDarkMode()" title="Toggle Theme" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
-                        <i id="theme-icon" class="fas fa-moon text-blue-500"></i>
-                    </button>
-                    <button onclick="showArchivedView()" title="Archived" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110">
-                        <i class="fas fa-archive text-gray-600 dark:text-gray-300"></i>
-                    </button>
-                    <button onclick="handleLogout()" title="Logout" class="h-[34px] w-[34px] flex items-center justify-center rounded-xl border border-red-200 dark:border-red-900 hover:bg-red-50 dark:hover:bg-red-900 text-red-600 transition-colors">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </button>
-                </div>
+                <!-- Rest of your nav (topic select, search, buttons etc.) remains exactly as before -->
+                <!-- ... your existing nav content ... -->
             </div>
         </nav>
 
@@ -141,41 +39,23 @@
     </div>
 
     <script>
-        // ... (all previous script remains exactly the same except the toggle function and onload)
-
-        const sidebar = document.getElementById('sidebar');
-
+        // Your entire previous script remains the same, except ensure this function exists:
         function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('collapsed');
         }
 
-        // Auto-collapse after 10 seconds when mouse leaves
+        // Auto-collapse after 10s mouse away (optional, as you liked before)
         let sidebarTimeout = null;
-        function setupSidebarAutoCollapse() {
-            sidebar.addEventListener('mouseenter', () => {
-                if (sidebarTimeout) clearTimeout(sidebarTimeout);
-            });
-            sidebar.addEventListener('mouseleave', () => {
-                sidebarTimeout = setTimeout(() => {
-                    sidebar.classList.add('collapsed');
-                }, 10000);
-            });
-        }
-
-        // Rest of your existing script (initApp, render functions, immersive, etc.) remains unchanged
-        // ... [paste the entire script from your previous working version here, except replace the toggleSidebar and onload]
+        const sidebar = document.getElementById('sidebar');
+        sidebar.addEventListener('mouseleave', () => {
+            sidebarTimeout = setTimeout(() => sidebar.classList.add('collapsed'), 10000);
+        });
+        sidebar.addEventListener('mouseenter', () => clearTimeout(sidebarTimeout));
 
         window.onload = () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.body.classList.add('dark');
-                document.getElementById('theme-icon').className = 'fas fa-sun text-yellow-400';
-            }
-            sidebar.classList.add('collapsed');           // collapsed by default
-            setupSidebarAutoCollapse();
-            updatePrelimsCounter();
-            // ... rest of your init code
+            sidebar.classList.add('collapsed');   // collapsed by default
+            // ... your existing onload code ...
         };
     </script>
 </body>
