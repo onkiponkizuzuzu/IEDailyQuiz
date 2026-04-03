@@ -2,12 +2,14 @@ import os
 import json
 import time
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
 
 FULL_SCRAPE = True          # ← Change to False AFTER first successful full run
 MAX_WORKERS = 4
 MAX_MINT_FIRST_RUN = 50     # Mint will scrape 50 articles per subtopic on first run
+
+# --- Your exact scraping functions remain completely unchanged ---
 
 def scrape_hindu(driver, url, category):
     articles = []
@@ -113,15 +115,37 @@ def scrape_mint(driver, url, category, existing_urls):
     except: pass
     return articles
 
-# ================== Main ==================
-data_file = "data.json"
-full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
-existing_urls = {a['url'] for a in full_db}
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    context = browser.new_context()
-    driver = context.new_page()
+# ================== NEW PARALLEL WORKER ==================
+def process_category(cat, url, target_type, existing_urls):
+    """
+    This function runs in a completely separate CPU process. 
+    It launches its own isolated browser so it doesn't collide with other categories.
+    """
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context()
+        driver = context.new_page()
+        
+        try:
+            if target_type == "ie":
+                return cat, scrape_ie(driver, url, cat)
+            elif target_type == "mint":
+                return cat, scrape_mint(driver, url, cat, existing_urls)
+            else:
+                return cat, scrape_hindu(driver, url, cat)
+        except Exception as e:
+            return cat, {"error": str(e)}
+        finally:
+            browser.close()
+
+
+# ================== Main Execution ==================
+# Note: if __name__ == '__main__': is strictly required for Python Multiprocessing
+if __name__ == '__main__':
+    data_file = "data.json"
+    full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
+    existing_urls = {a['url'] for a in full_db}
 
     targets = {
         "Science": "https://www.thehindu.com/sci-tech/science/",
@@ -142,34 +166,39 @@ with sync_playwright() as p:
         "Markets": "https://www.livemint.com/market"
     }
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_cat = {}
-        for cat, url in targets.items():
-            if cat in ["UPSC Current Affairs", "Global", "Law and Policy", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer"]:
-                future_to_cat[executor.submit(scrape_ie, driver, url, cat)] = cat
-            elif cat in ["Economy", "MintExplainers", "Opinion", "Markets"]:
-                future_to_cat[executor.submit(scrape_mint, driver, url, cat, existing_urls)] = cat
-            else:
-                future_to_cat[executor.submit(scrape_hindu, driver, url, cat)] = cat
+    # Prepare the arguments for our parallel processes
+    tasks_args = []
+    for cat, url in targets.items():
+        if cat in ["UPSC Current Affairs", "Global", "Law and Policy", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer"]:
+            tasks_args.append((cat, url, "ie", existing_urls))
+        elif cat in ["Economy", "MintExplainers", "Opinion", "Markets"]:
+            tasks_args.append((cat, url, "mint", existing_urls))
+        else:
+            tasks_args.append((cat, url, "hindu", existing_urls))
 
-        for future in as_completed(future_to_cat):
-            cat = future_to_cat[future]
-            try:
-                new_arts = future.result()
-                added = 0
-                for art in new_arts:
-                    if art['url'] not in existing_urls:
-                        full_db.insert(0, art)
-                        existing_urls.add(art['url'])
-                        added += 1
-                print(f"  → {cat}: {added} new articles")
-            except Exception as e:
-                print(f"  → {cat}: Error {e}")
+    print(f"Starting parallel scrape with {MAX_WORKERS} workers...")
+    
+    # ProcessPoolExecutor safely isolates Playwright instances across CPU cores
+    with ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = [executor.submit(process_category, *args) for args in tasks_args]
+        
+        for future in as_completed(futures):
+            cat, result = future.result()
+            
+            # Check if the process returned an error dictionary
+            if isinstance(result, dict) and "error" in result:
+                print(f"  → {cat}: Failed due to error - {result['error']}")
+                continue
+                
+            added = 0
+            for art in result:
+                if art['url'] not in existing_urls:
+                    full_db.insert(0, art)
+                    existing_urls.add(art['url'])
+                    added += 1
+            print(f"  → {cat}: {added} new articles processed.")
 
-    driver.close()
-    browser.close()
+    with open(data_file, "w", encoding='utf-8') as f:
+        json.dump(full_db[:1000], f, ensure_ascii=False, indent=4)
 
-with open(data_file, "w", encoding='utf-8') as f:
-    json.dump(full_db[:1000], f, ensure_ascii=False, indent=4)
-
-print(f"Scrape completed. Total articles: {len(full_db)}")
+    print(f"Scrape completed. Total articles in database: {len(full_db)}")
