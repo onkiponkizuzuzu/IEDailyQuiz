@@ -23,6 +23,7 @@ def get_driver():
     
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
+    # Network Blocker to prevent paywalls and trackers from loading
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
         "urls": [
@@ -144,19 +145,17 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         max_clicks = 15
 
         while clicks < max_clicks:
-            # Check current links on the page
             elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
             current_links = [el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]
             
-            # Check if we have hit an overlap (meaning we've reached articles we already scraped)
             overlap_found = any(link in existing_urls for link in current_links)
 
             if is_first_run:
-                # If first run, stop clicking once we have at least 30 links visible
-                if len(current_links) >= 30:
+                # Stop if we have enough links for the first run
+                if len(current_links) >= 35: 
                     break
             else:
-                # If incremental, stop clicking once we see an article we already have
+                # Stop paginating if we see articles we already scraped
                 if overlap_found:
                     break
 
@@ -171,7 +170,6 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             except:
                 break # No more button found
 
-        # Extract all final links after pagination
         elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
         all_links = []
         for el in elements:
@@ -179,10 +177,8 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             if "/article/explained/" in href and href not in all_links:
                 all_links.append(href)
 
-        # Filter out existing links
         new_links = [link for link in all_links if link not in existing_urls]
 
-        # Enforce the 30 article limit strictly on the first run
         if is_first_run:
             new_links = new_links[:30]
 
@@ -246,7 +242,7 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
             links = list(set(links))
             new_links = [link for link in links if link not in existing_urls]
 
-            # If we found links on this page, but none of them are new, we can stop paginating early
+            # Stop paginating if all quizzes on this page are already in our database
             if links and not new_links:
                 print("Reached already scraped quizzes. Stopping pagination.")
                 break
@@ -314,12 +310,12 @@ targets = {
 }
 
 ie_explained_targets = {
-    "Global": "https://indianexpress.com/about/explained-global/",
+    "Global": "https://indianexpress.com/about/explained-global/?ref=explained_pg",
     "Sci-Tech": "https://indianexpress.com/about/explained-sci-tech/",
-    "Economics": "https://indianexpress.com/about/explained-economics/",
-    "Expert Explains": "https://indianexpress.com/about/an-expert-explains/",
-    "Everyday Explainer": "https://indianexpress.com/section/explained/everyday-explainers/",
-    "Law and Policy": "https://indianexpress.com/section/explained/explained-law/"
+    "Economics": "https://indianexpress.com/about/explained-economics/?ref=explained_pg",
+    "Expert Explains": "https://indianexpress.com/about/an-expert-explains/?ref=explained_pg",
+    "Everyday Explainer": "https://indianexpress.com/section/explained/everyday-explainers/?ref=explained_pg",
+    "Law and Policy": "https://indianexpress.com/section/explained/explained-law/?ref=explained_pg"
 }
 
 data_file = "data.json"
@@ -340,7 +336,7 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
-    # Check if this category exists in the DB to determine if it's the first run
+    # Check if this category already has entries in the database
     existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
     is_first_run = existing_category_count == 0
     
@@ -356,6 +352,7 @@ for art in quiz_arts:
     full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    json.dump(full_db[:2000], f, ensure_ascii=False, indent=4) # Increased cap slightly to accommodate 30 * 6 = 180 new explained articles
+    # Cap slightly increased to handle the influx of new explained articles
+    json.dump(full_db[:2500], f, ensure_ascii=False, indent=4) 
 
 print(f"Scrape completed. Total articles in database: {len(full_db)}")
