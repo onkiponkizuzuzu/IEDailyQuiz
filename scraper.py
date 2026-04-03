@@ -44,7 +44,6 @@ def scrape_hindu_section(url, category, existing_urls):
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article" in el.get_attribute("href")]))
         
-        # Incremental check: Only process links we haven't scraped yet
         new_links = [link for link in links if link not in existing_urls]
 
         for link in new_links:
@@ -89,7 +88,6 @@ def scrape_ie_section(url, category, existing_urls):
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article/upsc-current-affairs/" in el.get_attribute("href")]))
 
-        # Incremental check
         new_links = [link for link in links if link not in existing_urls]
 
         for link in new_links:
@@ -97,11 +95,22 @@ def scrape_ie_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(6)
 
+                # FIX: Unhide paywall containers instead of deleting them, as they hold the text
                 driver.execute_script("""
                     document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                    document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                        el.style.display = 'block';
+                        el.style.height = 'auto';
+                        el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
+                    });
                     const content = document.getElementById('pcl-full-content');
-                    if (content) content.style.display = 'block';
+                    if (content) {
+                        content.style.display = 'block';
+                        content.style.height = 'auto';
+                        content.style.overflow = 'visible';
+                    }
                 """)
 
                 body_container = driver.find_element(By.ID, "pcl-full-content")
@@ -146,16 +155,13 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
 
         while clicks < max_clicks:
             elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
-            # Use set to remove duplicates, then convert to list
             current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
             all_links = current_links
 
             if is_first_run:
-                # If first run for this subtopic, stop clicking once we have ~30 links
                 if len(all_links) >= 30:
                     break
             else:
-                # If incremental run, stop clicking immediately if we see ANY link we already have
                 if any(link in existing_urls for link in current_links):
                     break
 
@@ -168,12 +174,10 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 print(f"[{category}] Clicked Load More {clicks}")
                 time.sleep(3)
             except:
-                break # No more button found
+                break 
 
-        # Filter to only get links not in DB
         new_links = [link for link in all_links if link not in existing_urls]
 
-        # Enforce exact 30 limit on first run
         if is_first_run:
             new_links = new_links[:30]
 
@@ -182,11 +186,22 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 driver.get(link)
                 time.sleep(5)
 
+                # FIX: Unhide paywall containers here too
                 driver.execute_script("""
-                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template, .ev-meter-content').forEach(el => el.remove());
-                    document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
+                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                        el.style.display = 'block';
+                        el.style.height = 'auto';
+                        el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
+                    });
                     const content = document.getElementById('pcl-full-content');
-                    if (content) content.style.display = 'block';
+                    if (content) {
+                        content.style.display = 'block';
+                        content.style.height = 'auto';
+                        content.style.overflow = 'visible';
+                    }
                 """)
 
                 body_container = driver.find_element(By.ID, "pcl-full-content")
@@ -237,7 +252,6 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
             links = list(set(links))
             new_links = [link for link in links if link not in existing_urls]
 
-            # Stop paginating if all quizzes on this page are already in our database
             if links and not new_links:
                 print("Reached already scraped quizzes. Stopping pagination.")
                 break
@@ -247,11 +261,22 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                     driver.get(link)
                     time.sleep(6)
 
+                    # FIX: Unhide paywall containers here too
                     driver.execute_script("""
                         document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                        document.querySelectorAll('.paywall-content, [class*="paywall"], [id*="paywall"]').forEach(el => el.remove());
+                        document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                            el.style.display = 'block';
+                            el.style.height = 'auto';
+                            el.style.overflow = 'visible';
+                            el.style.maskImage = 'none';
+                            el.style.webkitMaskImage = 'none';
+                        });
                         const content = document.getElementById('pcl-full-content');
-                        if (content) content.style.display = 'block';
+                        if (content) {
+                            content.style.display = 'block';
+                            content.style.height = 'auto';
+                            content.style.overflow = 'visible';
+                        }
                     """)
 
                     body_container = driver.find_element(By.ID, "pcl-full-content")
@@ -316,7 +341,6 @@ ie_explained_targets = {
 data_file = "data.json"
 full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
 
-# Create a fast lookup set of URLs we already have
 existing_urls = set(a['url'] for a in full_db)
 
 # Process Main Targets
@@ -331,7 +355,6 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
-    # Check if THIS specific category already has entries in the database
     existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
     is_first_run = existing_category_count == 0
     
