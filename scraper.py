@@ -143,7 +143,7 @@ def scrape_ie_section(url, category, existing_urls):
     return articles
 
 # ================== IE Explained Scraper (Load More Button) ==================
-def scrape_ie_explained(url, category, existing_urls, is_first_run):
+def scrape_ie_explained(url, category, existing_urls):
     driver = get_driver()
     articles = []
     try:
@@ -151,7 +151,7 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         time.sleep(5)
 
         clicks = 0
-        max_clicks = 30
+        max_clicks = 15
         all_links = []
 
         while clicks < max_clicks:
@@ -159,10 +159,10 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
             all_links = list(set(all_links + current_links))
 
-            if not is_first_run:
-                # Instantly stop if incremental
-                if any(link in existing_urls for link in current_links):
-                    break
+            # Strictly Incremental: Stop paginating instantly when a known article is hit
+            if any(link in existing_urls for link in current_links):
+                print(f"[{category}] Reached already scraped articles. Stopping pagination.")
+                break
 
             try:
                 load_more = WebDriverWait(driver, 5).until(
@@ -176,9 +176,6 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 break 
 
         new_links = [link for link in all_links if link not in existing_urls]
-
-        if is_first_run:
-            new_links = new_links[:60]
 
         for link in new_links:
             try:
@@ -230,14 +227,14 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
     return articles
 
 # ================== IE Explained Scraper (URL Pagination /section/) ==================
-def scrape_ie_section_paginated(base_url, category, existing_urls, is_first_run):
+def scrape_ie_section_paginated(base_url, category, existing_urls):
     driver = get_driver()
     articles = []
     all_links = []
     page = 1
     
     try:
-        while len(all_links) < 60 and page <= 15:
+        while page <= 15:
             current_url = f"{base_url}page/{page}/" if page > 1 else base_url
             print(f"[{category}] Scanning page {page}...")
             driver.get(current_url)
@@ -255,17 +252,14 @@ def scrape_ie_section_paginated(base_url, category, existing_urls, is_first_run)
                 
             all_links.extend(current_links)
             
-            # If not first run, break as soon as we see known links (incremental)
-            if not is_first_run and any(link in existing_urls for link in current_links):
+            # Strictly Incremental: Break as soon as we see known links
+            if any(link in existing_urls for link in current_links):
+                print(f"[{category}] Reached already scraped articles. Stopping pagination.")
                 break
                 
             page += 1
 
         new_links = [link for link in list(set(all_links)) if link not in existing_urls]
-        
-        # Enforce strict 60 limit on catch-up
-        if is_first_run:
-            new_links = new_links[:60]
             
         print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
 
@@ -437,18 +431,14 @@ for cat, url in targets.items():
         full_db.insert(0, art)
         existing_urls.add(art['url'])
 
-# Process IE Explained Targets
+# Process IE Explained Targets (Strictly Incremental)
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
     if cat in ["Everyday Explainer", "Law and Policy"]:
-        # Only grab 60 if it's practically empty, else run incrementally
-        existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
-        is_first_run = existing_category_count < 60
-        new_arts = scrape_ie_section_paginated(url, cat, existing_urls, is_first_run)
+        new_arts = scrape_ie_section_paginated(url, cat, existing_urls)
     else:
-        # Strictly incremental for all other IE Explained subtopics
-        new_arts = scrape_ie_explained(url, cat, existing_urls, is_first_run=False)
+        new_arts = scrape_ie_explained(url, cat, existing_urls)
         
     for art in new_arts:
         full_db.insert(0, art)
