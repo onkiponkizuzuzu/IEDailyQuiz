@@ -21,7 +21,6 @@ def get_mint_driver():
     
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
-    # Notice: *premium* and *paywall* are NOT blocked here, as Mint needs them to load the text payload
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
         "urls": ["*tinypass.com*", "*piano.io*", "*googletagservices.com*", "*cxense.com*", "*evolok*", "*ev-engagement*"]
@@ -38,23 +37,25 @@ def scrape_mint_section(url, category, existing_urls):
         time.sleep(8)
         
         print(f"[{category}] Scrolling to load articles...")
-        # Scroll to load articles dynamically
         for _ in range(8):
             driver.execute_script("window.scrollBy(0, 1500);")
             time.sleep(2)
         
-        # Broad selectors to catch Mint's layout
-        elements = driver.find_elements(By.CSS_SELECTOR, "h2 a, .tagTitle a, .agencySeoClass a, .headline a, .listtostory a")
+        # Broadened selectors + looking for any link wrapping an article
+        elements = driver.find_elements(By.CSS_SELECTOR, "h2 a, .headline a, a[data-vars-storyid], .listtostory a, section div a")
         links = []
         for el in elements:
-            href = el.get_attribute("href")
-            if href and "/news/" not in href and href not in links:
-                links.append(href)
+            try:
+                href = el.get_attribute("href")
+                # All Mint articles end in .html. This is the safest way to filter out UI links!
+                if href and "livemint.com" in href and ".html" in href and href not in links:
+                    links.append(href)
+            except:
+                continue
                 
         new_links = [link for link in links if link not in existing_urls]
-        print(f"[{category}] Found {len(links)} total links on page, {len(new_links)} are new.")
+        print(f"[{category}] Found {len(links)} total article links on page, {len(new_links)} are new.")
         
-        # Limit to 30 for this test run
         new_links = new_links[:30]
 
         for link in new_links:
@@ -62,7 +63,6 @@ def scrape_mint_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(6)
                 
-                # Unhide Mint's premium content blocks
                 driver.execute_script("""
                     document.querySelectorAll('.paywall, .premium, .subscription, [class*="paywall"]').forEach(el => {
                         el.style.display = 'block';
@@ -71,12 +71,10 @@ def scrape_mint_section(url, category, existing_urls):
                     });
                 """)
                 
-                # Find the main article container
                 try:
                     body_container = driver.find_element(By.CSS_SELECTOR, '.premium-article-body, #mainArea, .storyPage, article, .paywall')
                     content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 except:
-                    # Fallback if specific container fails
                     content_elements = driver.find_elements(By.CSS_SELECTOR, "p")
 
                 article_content = []
@@ -84,7 +82,6 @@ def scrape_mint_section(url, category, existing_urls):
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
                     
-                    # Filter out short UI text and ads
                     if len(text) < 30 or any(skip in text.lower() for skip in ["subscribe to mint", "catch all the", "download the mint app"]): 
                         continue
                         
@@ -117,7 +114,6 @@ def scrape_mint_section(url, category, existing_urls):
     return articles
 
 # ================== Test Execution ==================
-# Only testing MintExplainers
 test_target = {
     "MintExplainers": "https://www.livemint.com/topic/mint-explainer"
 }
