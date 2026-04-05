@@ -140,7 +140,7 @@ def scrape_ie_section(url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== IE Explained Scraper (Incremental + Deep Rescrape) ==================
+# ================== IE Explained Scraper (Incremental + 60 Articles Deep Scrape) ==================
 def scrape_ie_explained(url, category, existing_urls, is_first_run):
     driver = get_driver()
     articles = []
@@ -149,7 +149,7 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         time.sleep(5)
 
         clicks = 0
-        max_clicks = 30  # Increased to 30 for deep rescrape
+        max_clicks = 30  # Safeguard to prevent infinite loops
         all_links = []
 
         while clicks < max_clicks:
@@ -157,7 +157,11 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
             all_links = list(set(all_links + current_links))
 
-            if not is_first_run:
+            if is_first_run:
+                # Stop if we've fetched 60 or more articles
+                if len(all_links) >= 60:
+                    break
+            else:
                 # On scheduled runs, stop paginating instantly when a known article is hit
                 if any(link in existing_urls for link in current_links):
                     break
@@ -168,7 +172,7 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 )
                 driver.execute_script("arguments[0].click();", load_more)
                 clicks += 1
-                print(f"[{category}] Clicked Load More {clicks}/{max_clicks}")
+                print(f"[{category}] Clicked Load More {clicks} (Found {len(all_links)} articles)")
                 time.sleep(3)
             except:
                 print(f"[{category}] Reached end of available articles.")
@@ -177,7 +181,9 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         # Filter out what we already have
         new_links = [link for link in all_links if link not in existing_urls]
 
-        # Removed the slice [30:] so it processes ALL links found during the deep scrape
+        # Enforce exactly 60 new articles on the first run
+        if is_first_run:
+            new_links = new_links[:60]
 
         for link in new_links:
             try:
@@ -351,10 +357,9 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
-    # If the DB has less than 50 articles for this category, it triggers the deep 30-click rescrape.
-    # Otherwise, it runs incrementally.
+    # Check threshold to trigger deep 60-article scrape
     existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
-    is_first_run = existing_category_count < 50
+    is_first_run = existing_category_count < 60
     
     new_arts = scrape_ie_explained(url, cat, existing_urls, is_first_run)
     for art in new_arts:
@@ -368,7 +373,6 @@ for art in quiz_arts:
     full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    # Increased to 5000 to safely hold the massive influx of deep-scraped articles
     json.dump(full_db[:5000], f, ensure_ascii=False, indent=4) 
 
 print(f"Scrape completed. Total articles in database: {len(full_db)}")
