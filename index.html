@@ -194,10 +194,11 @@
         let archivedUrls = JSON.parse(localStorage.getItem('archivedUrls') || '[]');
         let starredUrls = JSON.parse(localStorage.getItem('starredUrls') || '[]');
 
-        const topics = { 
-            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], 
+        const topics = {
+            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"],
             "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"],
-            "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"]
+            "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"],
+            "Mint": ["Economy", "MintExplainers", "Opinion", "Markets"]   // ← NEW
         };
 
         function updatePrelimsCounter() {
