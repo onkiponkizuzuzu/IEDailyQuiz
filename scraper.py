@@ -44,6 +44,7 @@ def scrape_hindu_section(url, category, existing_urls):
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article" in el.get_attribute("href")]))
         
+        # Incremental: Only grab new
         new_links = [link for link in links if link not in existing_urls]
 
         for link in new_links:
@@ -88,6 +89,7 @@ def scrape_ie_section(url, category, existing_urls):
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article/upsc-current-affairs/" in el.get_attribute("href")]))
 
+        # Incremental: Only grab new
         new_links = [link for link in links if link not in existing_urls]
 
         for link in new_links:
@@ -140,7 +142,7 @@ def scrape_ie_section(url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== IE Explained Scraper (Incremental + 60 Articles Deep Scrape) ==================
+# ================== IE Explained Scraper (Load More Button) ==================
 def scrape_ie_explained(url, category, existing_urls, is_first_run):
     driver = get_driver()
     articles = []
@@ -149,7 +151,7 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
         time.sleep(5)
 
         clicks = 0
-        max_clicks = 30  # Safeguard to prevent infinite loops
+        max_clicks = 30
         all_links = []
 
         while clicks < max_clicks:
@@ -157,12 +159,8 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
             current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
             all_links = list(set(all_links + current_links))
 
-            if is_first_run:
-                # Stop if we've fetched 60 or more articles
-                if len(all_links) >= 60:
-                    break
-            else:
-                # On scheduled runs, stop paginating instantly when a known article is hit
+            if not is_first_run:
+                # Instantly stop if incremental
                 if any(link in existing_urls for link in current_links):
                     break
 
@@ -172,18 +170,104 @@ def scrape_ie_explained(url, category, existing_urls, is_first_run):
                 )
                 driver.execute_script("arguments[0].click();", load_more)
                 clicks += 1
-                print(f"[{category}] Clicked Load More {clicks} (Found {len(all_links)} articles)")
+                print(f"[{category}] Clicked Load More {clicks}/{max_clicks}")
                 time.sleep(3)
             except:
-                print(f"[{category}] Reached end of available articles.")
                 break 
 
-        # Filter out what we already have
         new_links = [link for link in all_links if link not in existing_urls]
 
-        # Enforce exactly 60 new articles on the first run
         if is_first_run:
             new_links = new_links[:60]
+
+        for link in new_links:
+            try:
+                driver.get(link)
+                time.sleep(5)
+
+                driver.execute_script("""
+                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                        el.style.display = 'block';
+                        el.style.height = 'auto';
+                        el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
+                    });
+                    const content = document.getElementById('pcl-full-content');
+                    if (content) {
+                        content.style.display = 'block';
+                        content.style.height = 'auto';
+                        content.style.overflow = 'visible';
+                    }
+                """)
+
+                body_container = driver.find_element(By.ID, "pcl-full-content")
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    if not text or any(skip in text for skip in ["Subscriber Only", "Story continues below", "ALSO READ", "Subscribe"]):
+                        continue
+                    
+                    article_content.append({
+                        "type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text",
+                        "value": el.get_attribute('innerHTML').strip()
+                    })
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                if len(article_content) > 3:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+            except: continue
+    finally: driver.quit()
+    return articles
+
+# ================== IE Explained Scraper (URL Pagination /section/) ==================
+def scrape_ie_section_paginated(base_url, category, existing_urls, is_first_run):
+    driver = get_driver()
+    articles = []
+    all_links = []
+    page = 1
+    
+    try:
+        while len(all_links) < 60 and page <= 15:
+            current_url = f"{base_url}page/{page}/" if page > 1 else base_url
+            print(f"[{category}] Scanning page {page}...")
+            driver.get(current_url)
+            time.sleep(5)
+            
+            elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a, .img-context h3 a")
+            current_links = []
+            for el in elements:
+                href = el.get_attribute("href")
+                if href and "/article/explained/" in href and href not in all_links:
+                    current_links.append(href)
+            
+            if not current_links:
+                break
+                
+            all_links.extend(current_links)
+            
+            # If not first run, break as soon as we see known links (incremental)
+            if not is_first_run and any(link in existing_urls for link in current_links):
+                break
+                
+            page += 1
+
+        new_links = [link for link in list(set(all_links)) if link not in existing_urls]
+        
+        # Enforce strict 60 limit on catch-up
+        if is_first_run:
+            new_links = new_links[:60]
+            
+        print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
 
         for link in new_links:
             try:
@@ -345,7 +429,7 @@ full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(da
 
 existing_urls = set(a['url'] for a in full_db)
 
-# Process Main Targets
+# Process Main Targets (Strictly Incremental)
 for cat, url in targets.items():
     print(f"Scraping {cat}...")
     new_arts = scrape_ie_section(url, cat, existing_urls) if cat == "UPSC Current Affairs" else scrape_hindu_section(url, cat, existing_urls)
@@ -357,22 +441,26 @@ for cat, url in targets.items():
 for cat, url in ie_explained_targets.items():
     print(f"Scraping IE Explained: {cat}...")
     
-    # Check threshold to trigger deep 60-article scrape
-    existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
-    is_first_run = existing_category_count < 60
-    
-    new_arts = scrape_ie_explained(url, cat, existing_urls, is_first_run)
+    if cat in ["Everyday Explainer", "Law and Policy"]:
+        # Only grab 60 if it's practically empty, else run incrementally
+        existing_category_count = sum(1 for a in full_db if a.get('category') == cat)
+        is_first_run = existing_category_count < 60
+        new_arts = scrape_ie_section_paginated(url, cat, existing_urls, is_first_run)
+    else:
+        # Strictly incremental for all other IE Explained subtopics
+        new_arts = scrape_ie_explained(url, cat, existing_urls, is_first_run=False)
+        
     for art in new_arts:
         full_db.insert(0, art)
         existing_urls.add(art['url'])
 
-# Process Quizzes
+# Process Quizzes (Strictly Incremental)
 print("Scraping UPSC Quizzes...")
 quiz_arts = scrape_ie_quizzes("UPSC Quizzes", existing_urls, pages=20)
 for art in quiz_arts:
     full_db.insert(0, art)
 
 with open(data_file, "w", encoding='utf-8') as f:
-    json.dump(full_db[:5000], f, ensure_ascii=False, indent=4) 
+    json.dump(full_db[:6000], f, ensure_ascii=False, indent=4) 
 
 print(f"Scrape completed. Total articles in database: {len(full_db)}")
