@@ -241,8 +241,7 @@
             "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], 
             "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"],
             "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"],
-            "Mint": ["Economy", "MintExplainers", "Opinion", "Markets"],
-            "BusinessLine": ["Economy", "Markets", "Companies", "Info-tech", "Agri Business"]
+            "BusinessLine": ["Macro Economy", "Policy"]
         };
 
         function updatePrelimsCounter() {
@@ -301,6 +300,7 @@
             let html = '';
             
             dates.forEach(d => {
+                // Link sidebar date to the full-width separator
                 html += `<div onclick="scrollToArticle('date-sep-${d}')" class="font-bold text-blue-600 dark:text-blue-400 mt-5 mb-2 text-xs uppercase tracking-wider cursor-pointer hover:underline" title="Jump to ${d}">${d}</div>`;
                 grouped[d].forEach(art => {
                     const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
@@ -314,13 +314,16 @@
         function scrollToArticle(id) {
             const el = document.getElementById(id);
             if(el) {
+                // Adjust offset to account for sticky nav
                 const yOffset = -70; 
                 const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({top: y, behavior: 'smooth'});
                 
+                // If it's an article card and collapsed, expand it
                 const content = document.getElementById('content-' + id);
                 if(content && content.style.display === 'none') toggleArticle(id);
                 
+                // Close sidebar on mobile after clicking
                 if (window.innerWidth <= 768 && !sidebar.classList.contains('collapsed')) {
                     toggleSidebar();
                 }
@@ -538,16 +541,19 @@
 
             feed.innerHTML = html + arts.map(art => {
                 let dateSeparator = '';
+                // Add separator only when date changes and not in search view
                 if (!isSearch && art.date !== lastDate) {
                     const [y, m, d] = art.date.split('-');
                     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                     const formattedDate = parseInt(d, 10) + ' ' + months[parseInt(m, 10) - 1] + ' ' + y;
                     
+                    // Creates a full-screen width container for the line
                     dateSeparator = `
                     <div id="date-sep-${art.date}" class="date-separator-container">
                         <div class="date-separator-margin"></div>
-                        <span class="date-separator-text">${formattedDate}</span>
                         <div class="date-separator-line" style="flex-grow: 1;"></div>
+                        <span class="date-separator-text">${formattedDate}</span>
+                        <div class="date-separator-line" style="flex-grow: 19;"></div>
                         <div class="date-separator-margin"></div>
                     </div>`;
                     lastDate = art.date;
