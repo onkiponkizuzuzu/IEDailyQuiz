@@ -7,8 +7,6 @@ on:
     - cron: '30 23 * * *'
     # 11:00 AM IST = 05:30 UTC
     - cron: '30 5 * * *'
-    # 12:00 PM IST = 06:30 UTC
-    - cron: '30 6 * * *'
     # 6:00 PM IST  = 12:30 UTC
     - cron: '30 12 * * *'
   workflow_dispatch:
