@@ -9,6 +9,13 @@
     <script>
         tailwind.config = {
             darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        calibri: ['Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
         }
     </script>
 
@@ -31,7 +38,7 @@
         body { font-family: 'Inter', sans-serif; transition: all 0.3s; margin: 0; min-height: 100vh; }
         .serif-title { font-family: 'Merriweather', serif; }
         
-        .article-card { scroll-margin-top: 80px; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; width: 100%; }
+        .article-card { scroll-margin-top: 110px; border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; width: 100%; }
         
         #sidebar { 
             transition: all 0.3s ease; 
@@ -87,6 +94,42 @@
         .gemini-input-container:focus-within {
             box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.5);
             border-color: transparent;
+        }
+
+        /* Full width date separator styles */
+        .date-separator-container {
+            scroll-margin-top: 80px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            display: flex;
+            align-items: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-family: Calibri, sans-serif;
+            font-style: italic;
+            opacity: 0.3; /* Thinner visual weight */
+            font-size: 0.85rem;
+        }
+
+        .date-separator-line {
+            height: 1px;
+            background-color: var(--text);
+        }
+
+        /* The "quiet margins" at the edges of the webpage */
+        .date-separator-margin {
+            width: 5vw; 
+            height: 1px;
+        }
+
+        .date-separator-text {
+            padding: 0 0.5rem;
+            white-space: nowrap;
+            color: var(--text);
         }
     </style>
 </head>
@@ -170,7 +213,7 @@
                 <h3 class="text-xs font-bold uppercase opacity-40 mb-6 tracking-widest text-gray-900 dark:text-gray-400">Navigation</h3>
                 <div id="date-list" class="space-y-1"></div>
             </aside>
-            <main class="flex-1 px-4 md:px-12 py-8 min-h-screen bg-slate-50 dark:bg-[#0f172a] w-full">
+            <main class="flex-1 px-4 md:px-12 py-8 min-h-screen bg-slate-50 dark:bg-[#0f172a] w-full overflow-x-hidden">
                 <div id="article-feed" class="max-w-3xl mx-auto"></div>
             </main>
         </div>
@@ -194,11 +237,10 @@
         let archivedUrls = JSON.parse(localStorage.getItem('archivedUrls') || '[]');
         let starredUrls = JSON.parse(localStorage.getItem('starredUrls') || '[]');
 
-        const topics = {
-            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"],
+        const topics = { 
+            "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], 
             "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"],
-            "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"],
-            "Mint": ["Economy", "MintExplainers", "Opinion", "Markets"]   // ← NEW
+            "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"]
         };
 
         function updatePrelimsCounter() {
@@ -257,7 +299,8 @@
             let html = '';
             
             dates.forEach(d => {
-                html += `<div class="font-bold text-blue-600 dark:text-blue-400 mt-5 mb-2 text-xs uppercase tracking-wider">${d}</div>`;
+                // Link sidebar date to the full-width separator
+                html += `<div onclick="scrollToArticle('date-sep-${d}')" class="font-bold text-blue-600 dark:text-blue-400 mt-5 mb-2 text-xs uppercase tracking-wider cursor-pointer hover:underline" title="Jump to ${d}">${d}</div>`;
                 grouped[d].forEach(art => {
                     const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
                     html += `<button onclick="scrollToArticle('${safeId}')" class="block w-full text-left px-2 py-1.5 text-[11px] rounded transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-gray-600 dark:text-gray-400 truncate mb-1" title="${art.title}">${art.title}</button>`;
@@ -270,13 +313,16 @@
         function scrollToArticle(id) {
             const el = document.getElementById(id);
             if(el) {
-                const yOffset = -80; 
+                // Adjust offset to account for sticky nav
+                const yOffset = -70; 
                 const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({top: y, behavior: 'smooth'});
                 
+                // If it's an article card and collapsed, expand it
                 const content = document.getElementById('content-' + id);
-                if(content.style.display === 'none') toggleArticle(id);
+                if(content && content.style.display === 'none') toggleArticle(id);
                 
+                // Close sidebar on mobile after clicking
                 if (window.innerWidth <= 768 && !sidebar.classList.contains('collapsed')) {
                     toggleSidebar();
                 }
@@ -490,7 +536,28 @@
             let html = title ? `<h2 class="text-xl font-bold mb-6 opacity-40 text-gray-900 dark:text-white">${title}</h2>` : "";
             if (!arts.length) return feed.innerHTML = html + `<p class="text-center py-20 opacity-30 text-gray-900 dark:text-white">No content found.</p>`;
             
+            let lastDate = null;
+
             feed.innerHTML = html + arts.map(art => {
+                let dateSeparator = '';
+                // Add separator only when date changes and not in search view
+                if (!isSearch && art.date !== lastDate) {
+                    const [y, m, d] = art.date.split('-');
+                    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    const formattedDate = parseInt(d, 10) + ' ' + months[parseInt(m, 10) - 1] + ' ' + y;
+                    
+                    // Creates a full-screen width container for the line
+                    dateSeparator = `
+                    <div id="date-sep-${art.date}" class="date-separator-container">
+                        <div class="date-separator-margin"></div>
+                        <div class="date-separator-line" style="flex-grow: 1;"></div>
+                        <span class="date-separator-text">${formattedDate}</span>
+                        <div class="date-separator-line" style="flex-grow: 19;"></div>
+                        <div class="date-separator-margin"></div>
+                    </div>`;
+                    lastDate = art.date;
+                }
+
                 const safeId = 'art_' + encodeURIComponent(art.url).replace(/[^a-zA-Z0-9]/g, '');
                 
                 let artTopic = "Unknown";
@@ -527,7 +594,7 @@
                     </div>
                 `;
 
-                return `<article id="${safeId}" class="article-card border-gray-200 dark:border-gray-700">
+                return dateSeparator + `<article id="${safeId}" class="article-card border-gray-200 dark:border-gray-700">
                     <div onclick="toggleArticle('${safeId}')" class="flex items-center justify-between cursor-pointer text-gray-900 dark:text-white group">
                         <h2 class="serif-title article-title pr-4 flex-1">${art.title} ${tagsHtml}</h2>
                         <div class="flex items-center whitespace-nowrap pl-2">
