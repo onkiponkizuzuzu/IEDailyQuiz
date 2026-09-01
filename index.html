@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE C. Aff by onkiponkizuzuzu</title>
+    <title>CSE CAff by onkiponkizuzuzu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -82,7 +82,7 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .source-link { color: #3b82f6; text-decoration: underline; font-size: 0.95rem; }
 
-        #auth-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 100; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+        #auth-overlay, #exam-modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95); z-index: 100; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
         .hidden { display: none !important; }
 
         .gemini-summary-box { font-family: 'Inter', sans-serif; }
@@ -96,7 +96,6 @@
             border-color: transparent;
         }
 
-        /* Full width date separator styles */
         .date-separator-container {
             scroll-margin-top: 80px;
             width: 100vw;
@@ -111,21 +110,17 @@
             margin-bottom: 2rem;
             font-family: Calibri, sans-serif;
             font-style: italic;
-            opacity: 0.3; /* Thinner visual weight */
+            opacity: 0.3;
             font-size: 0.85rem;
         }
-
         .date-separator-line {
             height: 1px;
             background-color: var(--text);
         }
-
-        /* The "quiet margins" at the edges of the webpage */
         .date-separator-margin {
             width: 5vw; 
             height: 1px;
         }
-
         .date-separator-text {
             padding: 0 0.5rem;
             white-space: nowrap;
@@ -156,6 +151,35 @@
         </div>
     </div>
 
+    <!-- Exam Manager Modal -->
+    <div id="exam-modal-overlay" class="hidden">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-gray-200 dark:border-gray-700">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white">Manage Exam Counters</h2>
+                <button onclick="closeExamModal()" class="text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            
+            <div id="exam-modal-list" class="mb-5 space-y-2 max-h-40 overflow-y-auto pr-1">
+                <!-- Added exams list renders here -->
+            </div>
+            
+            <div id="exam-add-form" class="space-y-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Exam Name</label>
+                    <input type="text" id="exam-name-input" class="w-full px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white" placeholder="e.g., UPSC Prelims" maxlength="30">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Exam Date</label>
+                    <input type="date" id="exam-date-input" class="w-full px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-sm focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 dark:text-white">
+                </div>
+                <button onclick="addExam()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-colors text-sm mt-2">Add Exam</button>
+                <p id="exam-error" class="text-xs text-red-500 hidden text-center mt-2"></p>
+            </div>
+        </div>
+    </div>
+
     <div id="app-content" class="hidden">
         <nav class="sticky top-0 z-40 px-4 py-2 border-b shadow-sm bg-white dark:bg-[#1e293b] border-gray-200 dark:border-gray-700">
             <div class="flex items-end justify-between flex-wrap gap-3 pb-1">
@@ -164,9 +188,15 @@
                     <div>
                         <h1 class="font-bold text-base tracking-tight leading-none text-gray-900 dark:text-white">CSE CAff</h1>
                         <div class="text-blue-500 text-[10px] font-normal leading-tight mt-0.5">by onkiponkizuzuzu</div>
-                        <div id="prelims-counter" class="text-[10px] text-blue-600 dark:text-blue-400 font-medium leading-tight mt-0.5">
-                            Days to Prelims: <span id="days-count" class="font-semibold">...</span>
+                        
+                        <!-- Dynamic Exam Counters Container -->
+                        <div id="exam-counters-container" onclick="openExamModal()" class="text-[10px] text-blue-600 dark:text-blue-400 font-medium leading-tight mt-1 cursor-pointer hover:opacity-80 transition-opacity" title="Click to manage countdowns">
+                            <div class="text-gray-600 dark:text-gray-400 mb-0.5 font-bold">Days until -</div>
+                            <div id="exam-counters-list" class="flex flex-col gap-[2px]">
+                                <!-- Populated dynamically by JS -->
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -236,24 +266,128 @@
         let isStarredView = false;
         let archivedUrls = JSON.parse(localStorage.getItem('archivedUrls') || '[]');
         let starredUrls = JSON.parse(localStorage.getItem('starredUrls') || '[]');
+        
+        // Custom Exams Logic
+        let customExams = JSON.parse(localStorage.getItem('customExams') || '[]');
 
         const topics = { 
             "The Hindu": ["Science", "Health", "Agriculture", "Environment", "Internet"], 
             "Indian Express": ["UPSC Quizzes", "UPSC Current Affairs"],
             "IE Explained": ["Global", "Sci-Tech", "Economics", "Expert Explains", "Everyday Explainer", "Law and Policy"],
-            "BusinessLine": ["Macro Economy", "Policy"]
+            "BusinessLine": ["Macro Economy", "Policy", "Budget 2026", "Logistics", "WEF", "Agri Business"]
         };
 
-        function updatePrelimsCounter() {
-            const prelimsDate = new Date("May 24, 2026 00:00:00").getTime();
-            const daysLeft = Math.floor((prelimsDate - new Date().getTime()) / (1000 * 60 * 60 * 24));
-            document.getElementById("days-count").innerText = daysLeft > 0 ? daysLeft : "0";
+        function updateExamsDisplay() {
+            const listEl = document.getElementById('exam-counters-list');
+            if (customExams.length === 0) {
+                listEl.innerHTML = '<span class="opacity-70 text-gray-500 dark:text-gray-400">Click to add up to 5 exams...</span>';
+                return;
+            }
+
+            const today = new Date().setHours(0, 0, 0, 0);
+            let html = '';
+            
+            // Sort to display nearest exams first
+            const sortedExams = [...customExams].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+            
+            sortedExams.forEach((exam, index) => {
+                const examDateObj = new Date(exam.date);
+                const examDate = examDateObj.getTime();
+                const daysLeft = Math.ceil((examDate - today) / (1000 * 60 * 60 * 24));
+                
+                const formattedDate = examDateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                let daysText = daysLeft > 0 ? `${daysLeft} days left` : daysLeft === 0 ? "Today!" : `${Math.abs(daysLeft)} days ago`;
+                
+                html += `<div>${index + 1}. ${exam.name} - ${formattedDate} - <span class="font-bold">${daysText}</span></div>`;
+            });
+            listEl.innerHTML = html;
+        }
+
+        function openExamModal() {
+            document.getElementById('exam-modal-overlay').classList.remove('hidden');
+            renderExamModalList();
+        }
+
+        function closeExamModal() {
+            document.getElementById('exam-modal-overlay').classList.add('hidden');
+            document.getElementById('exam-error').classList.add('hidden');
+            document.getElementById('exam-name-input').value = '';
+            document.getElementById('exam-date-input').value = '';
+        }
+
+        function renderExamModalList() {
+            const listEl = document.getElementById('exam-modal-list');
+            if (customExams.length === 0) {
+                listEl.innerHTML = '<p class="text-xs text-gray-500 dark:text-gray-400 text-center py-4">No exams tracked yet.</p>';
+            } else {
+                let html = '';
+                customExams.forEach((exam, index) => {
+                    const formattedDate = new Date(exam.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                    html += `
+                        <div class="flex justify-between items-center bg-gray-50 dark:bg-gray-700/50 p-2.5 rounded-lg text-sm border border-gray-100 dark:border-gray-600">
+                            <span class="text-gray-800 dark:text-gray-200 truncate pr-2"><span class="font-semibold">${exam.name}</span> (${formattedDate})</span>
+                            <button onclick="removeExam(${index})" class="text-red-400 hover:text-red-600 transition-colors ml-2"><i class="fas fa-trash"></i></button>
+                        </div>
+                    `;
+                });
+                listEl.innerHTML = html;
+            }
+            
+            // Limit to 5 custom exams
+            const isMax = customExams.length >= 5;
+            document.getElementById('exam-name-input').disabled = isMax;
+            document.getElementById('exam-date-input').disabled = isMax;
+            
+            const addBtn = document.querySelector('#exam-add-form button');
+            const errorEl = document.getElementById('exam-error');
+            
+            if(isMax) {
+                addBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                errorEl.textContent = "Maximum 5 exams allowed.";
+                errorEl.classList.remove('hidden');
+            } else {
+                addBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                errorEl.classList.add('hidden');
+            }
+        }
+
+        function addExam() {
+            if (customExams.length >= 5) return;
+            const nameEl = document.getElementById('exam-name-input');
+            const dateEl = document.getElementById('exam-date-input');
+            const errorEl = document.getElementById('exam-error');
+            
+            const name = nameEl.value.trim();
+            const date = dateEl.value;
+            
+            if (!name || !date) {
+                errorEl.textContent = "Please provide both exam name and date.";
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            
+            customExams.push({ name, date });
+            localStorage.setItem('customExams', JSON.stringify(customExams));
+            
+            nameEl.value = '';
+            dateEl.value = '';
+            errorEl.classList.add('hidden');
+            
+            renderExamModalList();
+            updateExamsDisplay();
+        }
+
+        function removeExam(index) {
+            customExams.splice(index, 1);
+            localStorage.setItem('customExams', JSON.stringify(customExams));
+            renderExamModalList();
+            updateExamsDisplay();
         }
 
         auth.onAuthStateChanged(user => {
             if (user) {
                 currentUser = user; authOverlay.classList.add('hidden'); appContent.classList.remove('hidden');
-                updatePrelimsCounter(); initApp();
+                updateExamsDisplay(); initApp();
             } else {
                 currentUser = null; authOverlay.classList.remove('hidden'); appContent.classList.add('hidden');
             }
@@ -683,7 +817,7 @@
                 document.getElementById('theme-icon').className = 'fas fa-moon text-blue-500';
             }
             sidebar.classList.add('collapsed');
-            updatePrelimsCounter();
+            updateExamsDisplay();
         };
     </script>
 </body>
