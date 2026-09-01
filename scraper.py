@@ -23,10 +23,13 @@ def get_driver():
     
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
-    # Powerful network block that natively prevents Piano/Tinypass paywalls
+    # Natively blocks Piano/Tinypass paywalls before they even load
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
-        "urls": ["*tinypass.com*", "*piano.io*", "*googletagservices.com*", "*cxense.com*", "*evolok*", "*ev-engagement*", "*paywall*", "*premium*", "*subscription*"]
+        "urls": [
+            "*tinypass.com*", "*piano.io*", "*googletagservices.com*", "*cxense.com*",
+            "*evolok*", "*ev-engagement*", "*paywall*", "*premium*", "*subscription*"
+        ]
     })
     
     driver.set_page_load_timeout(180)
@@ -42,8 +45,8 @@ def scrape_hindu_section(url, category, existing_urls):
         elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
         links = list(set([el.get_attribute("href") for el in elements if "/article" in el.get_attribute("href")]))
         
-        # Incremental: Only grab new
         new_links = [link for link in links if link not in existing_urls]
+        print(f"[{category}] Found {len(new_links)} new articles.")
 
         for link in new_links:
             try:
@@ -73,7 +76,10 @@ def scrape_hindu_section(url, category, existing_urls):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
     finally: driver.quit()
     return articles
 
@@ -84,34 +90,34 @@ def scrape_ie_section(url, category, existing_urls):
     try:
         driver.get(url)
         time.sleep(8)
-        elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
-        links = list(set([el.get_attribute("href") for el in elements if "/article/upsc-current-affairs/" in el.get_attribute("href")]))
+        
+        # Broadened selectors for IE
+        elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
+        links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/upsc-current-affairs/" in el.get_attribute("href")]))
 
         new_links = [link for link in links if link not in existing_urls]
+        print(f"[{category}] Found {len(new_links)} new articles.")
 
         for link in new_links:
             try:
                 driver.get(link)
                 time.sleep(6)
 
+                # Robust IE Paywall Unhider
                 driver.execute_script("""
-                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                    document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
                         el.style.display = 'block';
                         el.style.height = 'auto';
                         el.style.overflow = 'visible';
                         el.style.maskImage = 'none';
                         el.style.webkitMaskImage = 'none';
+                        el.style.opacity = '1';
                     });
-                    const content = document.getElementById('pcl-full-content');
-                    if (content) {
-                        content.style.display = 'block';
-                        content.style.height = 'auto';
-                        content.style.overflow = 'visible';
-                    }
                 """)
 
-                body_container = driver.find_element(By.ID, "pcl-full-content")
+                # Broadened body container selector
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 
                 article_content = []
@@ -119,15 +125,15 @@ def scrape_ie_section(url, category, existing_urls):
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
                     
-                    if not text: continue
-                    if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan"]):
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe", "about our expert", "select a plan"]):
                         continue
                     
-                    article_content.append({"type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text", "value": html_content})
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
                 
-                if len(article_content) > 3:
+                if len(article_content) > 2:
                     articles.append({
                         "category": category,
                         "title": title,
@@ -135,7 +141,12 @@ def scrape_ie_section(url, category, existing_urls):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
+                    print(f"  -> Extracted: {title[:50]}...")
+                else:
+                    print(f"  -> Skipped (not enough content): {link}")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
     finally: driver.quit()
     return articles
 
@@ -152,8 +163,9 @@ def scrape_ie_explained(url, category, existing_urls):
         all_links = []
 
         while clicks < max_clicks:
-            elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a")
-            current_links = list(set([el.get_attribute("href") for el in elements if "/article/explained/" in el.get_attribute("href")]))
+            # Broadened selector
+            elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a, .articles h2 a, .title a")
+            current_links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/explained/" in el.get_attribute("href")]))
             all_links = list(set(all_links + current_links))
 
             if any(link in existing_urls for link in current_links):
@@ -161,9 +173,7 @@ def scrape_ie_explained(url, category, existing_urls):
                 break
 
             try:
-                load_more = WebDriverWait(driver, 5).until(
-                    EC.element_to_be_clickable((By.ID, "load_tag_article"))
-                )
+                load_more = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "load_tag_article")))
                 driver.execute_script("arguments[0].click();", load_more)
                 clicks += 1
                 print(f"[{category}] Clicked Load More {clicks}/{max_clicks}")
@@ -172,6 +182,7 @@ def scrape_ie_explained(url, category, existing_urls):
                 break 
 
         new_links = [link for link in all_links if link not in existing_urls]
+        print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
 
         for link in new_links:
             try:
@@ -179,38 +190,31 @@ def scrape_ie_explained(url, category, existing_urls):
                 time.sleep(5)
 
                 driver.execute_script("""
-                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                    document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
                         el.style.display = 'block';
                         el.style.height = 'auto';
                         el.style.overflow = 'visible';
                         el.style.maskImage = 'none';
                         el.style.webkitMaskImage = 'none';
+                        el.style.opacity = '1';
                     });
-                    const content = document.getElementById('pcl-full-content');
-                    if (content) {
-                        content.style.display = 'block';
-                        content.style.height = 'auto';
-                        content.style.overflow = 'visible';
-                    }
                 """)
 
-                body_container = driver.find_element(By.ID, "pcl-full-content")
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 
                 article_content = []
                 for el in content_elements:
                     text = el.text.strip()
-                    if not text or any(skip in text for skip in ["Subscriber Only", "Story continues below", "ALSO READ", "Subscribe"]):
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe"]):
                         continue
                     
-                    article_content.append({
-                        "type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text",
-                        "value": el.get_attribute('innerHTML').strip()
-                    })
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": el.get_attribute('innerHTML').strip()})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
-                if len(article_content) > 3:
+                if len(article_content) > 2:
                     articles.append({
                         "category": category,
                         "title": title,
@@ -218,7 +222,10 @@ def scrape_ie_explained(url, category, existing_urls):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
     finally: driver.quit()
     return articles
 
@@ -237,15 +244,9 @@ def scrape_ie_section_paginated(base_url, category, existing_urls):
             time.sleep(5)
             
             elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a, .img-context h3 a")
-            current_links = []
-            for el in elements:
-                href = el.get_attribute("href")
-                if href and "/article/explained/" in href and href not in all_links:
-                    current_links.append(href)
+            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/explained/" in el.get_attribute("href") and el.get_attribute("href") not in all_links]
             
-            if not current_links:
-                break
-                
+            if not current_links: break
             all_links.extend(current_links)
             
             if any(link in existing_urls for link in current_links):
@@ -255,6 +256,7 @@ def scrape_ie_section_paginated(base_url, category, existing_urls):
             page += 1
 
         new_links = [link for link in list(set(all_links)) if link not in existing_urls]
+        print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
 
         for link in new_links:
             try:
@@ -262,38 +264,31 @@ def scrape_ie_section_paginated(base_url, category, existing_urls):
                 time.sleep(5)
 
                 driver.execute_script("""
-                    document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                    document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
                         el.style.display = 'block';
                         el.style.height = 'auto';
                         el.style.overflow = 'visible';
                         el.style.maskImage = 'none';
                         el.style.webkitMaskImage = 'none';
+                        el.style.opacity = '1';
                     });
-                    const content = document.getElementById('pcl-full-content');
-                    if (content) {
-                        content.style.display = 'block';
-                        content.style.height = 'auto';
-                        content.style.overflow = 'visible';
-                    }
                 """)
 
-                body_container = driver.find_element(By.ID, "pcl-full-content")
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 
                 article_content = []
                 for el in content_elements:
                     text = el.text.strip()
-                    if not text or any(skip in text for skip in ["Subscriber Only", "Story continues below", "ALSO READ", "Subscribe"]):
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe"]):
                         continue
                     
-                    article_content.append({
-                        "type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text",
-                        "value": el.get_attribute('innerHTML').strip()
-                    })
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": el.get_attribute('innerHTML').strip()})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
-                if len(article_content) > 3:
+                if len(article_content) > 2:
                     articles.append({
                         "category": category,
                         "title": title,
@@ -301,7 +296,10 @@ def scrape_ie_section_paginated(base_url, category, existing_urls):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
     finally: driver.quit()
     return articles
 
@@ -316,11 +314,13 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
             driver.get(f"{base_url}{page}/")
             time.sleep(6)
             
-            elements = driver.find_elements(By.CSS_SELECTOR, "h3.title a")
+            # Broadened selector
+            elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
             links = []
             for el in elements:
                 href = el.get_attribute("href")
-                if href and "/article/upsc-current-affairs/" in href and "Daily subject-wise quiz" in el.text:
+                # Look for "quiz" in text to be safe
+                if href and "/article/upsc-current-affairs/" in href and "quiz" in el.text.lower():
                     links.append(href)
                     
             links = list(set(links))
@@ -336,23 +336,18 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                     time.sleep(6)
 
                     driver.execute_script("""
-                        document.querySelectorAll('ev-engagement, .ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
-                        document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"]').forEach(el => {
+                        document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                        document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
                             el.style.display = 'block';
                             el.style.height = 'auto';
                             el.style.overflow = 'visible';
                             el.style.maskImage = 'none';
                             el.style.webkitMaskImage = 'none';
+                            el.style.opacity = '1';
                         });
-                        const content = document.getElementById('pcl-full-content');
-                        if (content) {
-                            content.style.display = 'block';
-                            content.style.height = 'auto';
-                            content.style.overflow = 'visible';
-                        }
                     """)
 
-                    body_container = driver.find_element(By.ID, "pcl-full-content")
+                    body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                     content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                     
                     article_content = []
@@ -363,7 +358,7 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                         html_content = el.get_attribute('innerHTML').strip()
                         
                         if not text: continue
-                        if any(skip in text for skip in ["Subscriber Only", "Story continues below this ad", "ALSO READ", "Subscribe", "About our expert", "Select a plan", "Click Here", "Share your views"]):
+                        if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe", "about our expert", "select a plan", "click here", "share your views"]):
                             continue
                         
                         if "QUESTION" in text.upper() or (el.tag_name in ["h2", "h3"] and "QUESTION" in text.upper()):
@@ -375,7 +370,7 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                             else:
                                 current_q["question"] += f"<p>{html_content}</p>"
                         else:
-                            article_content.append({"type": "heading" if el.tag_name in ["h2", "h3", "h4"] else "text", "value": html_content})
+                            article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                     if current_q: article_content.append(current_q)
                     title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
@@ -388,11 +383,14 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
                             "content": article_content,
                             "date": datetime.now().strftime("%Y-%m-%d")
                         })
-                except: continue
+                        print(f"  -> Extracted Quiz: {title[:50]}...")
+                except Exception as e:
+                    print(f"  -> Failed Quiz {link}: {str(e).splitlines()[0]}")
+                    continue
     finally: driver.quit()
     return articles
 
-# ================== TH BusinessLine Scraper (Strictly Incremental) ==================
+# ================== TH BusinessLine Scraper (Incremental) ==================
 def scrape_businessline_incremental(base_url, category, existing_urls):
     driver = get_driver()
     articles = []
@@ -411,19 +409,18 @@ def scrape_businessline_incremental(base_url, category, existing_urls):
             if not current_links: break
             all_links.extend(current_links)
             
-            # Stop paginating instantly when a known article is hit
             if any(link in existing_urls for link in current_links):
                 print(f"[{category}] Reached already scraped articles. Stopping pagination.")
                 break
 
         new_links = [link for link in list(set(all_links)) if link not in existing_urls]
+        print(f"[{category}] Found {len(new_links)} new articles.")
 
         for link in new_links:
             try:
                 driver.get(link)
                 time.sleep(5)
                 
-                # Optimized: No JS execution needed due to native network block
                 body_container = driver.find_element(By.CSS_SELECTOR, 'div[itemprop="articleBody"], .contentbody')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4, h4.sub_head")
                 
@@ -434,10 +431,7 @@ def scrape_businessline_incremental(base_url, category, existing_urls):
                     if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:", "Click here"]):
                         continue
                     
-                    article_content.append({
-                        "type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text",
-                        "value": html_content
-                    })
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
                 
@@ -449,9 +443,11 @@ def scrape_businessline_incremental(base_url, category, existing_urls):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
-    finally:
-        driver.quit()
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
     return articles
 
 # ================== TH BusinessLine Scraper (Deep Scrape for Policy) ==================
@@ -461,14 +457,12 @@ def scrape_businessline_deep(base_url, category):
     all_links = []
     
     try:
-        # Scrape Pages 1 through 9
         for page in range(1, 10):
             page_url = base_url if page == 1 else f"{base_url}?page={page}"
             print(f"[{category}] Scanning page {page}/9 → {page_url}")
             driver.get(page_url)
             time.sleep(6)
             
-            # On the 9th page, attempt 5 'Show More' clicks
             if page == 9:
                 print(f"  [{category}] Reached page 9. Executing 5 'Show More' clicks...")
                 for click_num in range(1, 6):
@@ -484,8 +478,8 @@ def scrape_businessline_deep(base_url, category):
             current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article" in el.get_attribute("href") and "/todays-poll/" not in el.get_attribute("href")]
             all_links.extend(current_links)
 
-        # Remove duplicates
         unique_links = list(set(all_links))
+        print(f"[{category}] Proceeding to extract {len(unique_links)} articles from scratch...")
         
         for link in unique_links:
             try:
@@ -499,14 +493,10 @@ def scrape_businessline_deep(base_url, category):
                 for el in content_elements:
                     text = el.text.strip()
                     html_content = el.get_attribute('innerHTML').strip()
-                    
                     if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:", "Click here"]):
                         continue
                     
-                    article_content.append({
-                        "type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text",
-                        "value": html_content
-                    })
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
                
@@ -518,11 +508,13 @@ def scrape_businessline_deep(base_url, category):
                         "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
-            except: continue
-    finally:
-        driver.quit()
-        
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
     return articles
+
 
 # ================== Targets & Main Execution ==================
 targets = {
@@ -556,17 +548,19 @@ data_file = "data.json"
 full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
 existing_urls = set(a['url'] for a in full_db)
 
-# Process Main Targets (Incremental)
+
+# 1. Process Main Targets (The Hindu + IE Current Affairs)
 for cat, url in targets.items():
-    print(f"Scraping {cat}...")
+    print(f"\n--- Scraping {cat} ---")
     new_arts = scrape_ie_section(url, cat, existing_urls) if cat == "UPSC Current Affairs" else scrape_hindu_section(url, cat, existing_urls)
     for art in new_arts:
         full_db.insert(0, art)
         existing_urls.add(art['url'])
 
-# Process IE Explained Targets (Incremental)
+
+# 2. Process IE Explained Targets
 for cat, url in ie_explained_targets.items():
-    print(f"Scraping IE Explained: {cat}...")
+    print(f"\n--- Scraping IE Explained: {cat} ---")
     if cat in ["Everyday Explainer", "Law and Policy"]:
         new_arts = scrape_ie_section_paginated(url, cat, existing_urls)
     else:
@@ -576,9 +570,10 @@ for cat, url in ie_explained_targets.items():
         full_db.insert(0, art)
         existing_urls.add(art['url'])
 
-# Process TH BusinessLine Targets
+
+# 3. Process TH BusinessLine Targets
 for cat, url in businessline_targets.items():
-    print(f"Scraping TH BusinessLine → {cat}...")
+    print(f"\n--- Scraping TH BusinessLine: {cat} ---")
     
     if cat == "Policy":
         # Run Deep Scraper exclusively for Policy
@@ -596,20 +591,22 @@ for cat, url in businessline_targets.items():
             existing_urls.add(art['url'])
             
     else:
-        # Run Incremental Scraper for Macro Economy, Budget, Logistics, WEF, Agri Business
+        # Run Incremental Scraper for all other BL topics
         new_arts = scrape_businessline_incremental(url, cat, existing_urls)
         for art in new_arts:
             full_db.insert(0, art)
             existing_urls.add(art['url'])
 
-# Process Quizzes (Incremental)
-print("Scraping UPSC Quizzes...")
+
+# 4. Process Quizzes
+print("\n--- Scraping UPSC Quizzes ---")
 quiz_arts = scrape_ie_quizzes("UPSC Quizzes", existing_urls, pages=20)
 for art in quiz_arts:
     full_db.insert(0, art)
     existing_urls.add(art['url'])
 
+# Save File
 with open(data_file, "w", encoding='utf-8') as f:
     json.dump(full_db[:6000], f, ensure_ascii=False, indent=4) 
 
-print(f"Scrape completed. Total articles in database: {len(full_db)}")
+print(f"\n✅ Scrape completed. Total articles in database: {len(full_db)}")
