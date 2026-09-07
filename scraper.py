@@ -1,18 +1,29 @@
 import os
-import csv
+import json
 import time
 from datetime import datetime
-import google_colab_selenium as gs
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from google.colab import files
 
 def get_driver():
-    # Properly initialize using google-colab-selenium
-    driver = gs.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--headless=new")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
     
-    # Block paywall and tracker scripts at the network level
+    chrome_options.binary_location = "/usr/bin/google-chrome"
+    service = Service("/usr/bin/chromedriver")
+    
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    
+    # Natively blocks Piano/Tinypass paywalls before they even load
     driver.execute_cdp_cmd('Network.enable', {})
     driver.execute_cdp_cmd('Network.setBlockedURLs', {
         "urls": [
@@ -23,16 +34,6 @@ def get_driver():
     
     driver.set_page_load_timeout(180)
     return driver
-
-def load_existing_urls(filepath):
-    existing_urls = set()
-    if os.path.exists(filepath):
-        with open(filepath, "r", encoding="utf-8-sig") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                if 'url' in row:
-                    existing_urls.add(row['url'])
-    return existing_urls
 
 # ================== The Hindu Scraper ==================
 def scrape_hindu_section(url, category, existing_urls):
@@ -52,24 +53,27 @@ def scrape_hindu_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(5)
 
-                body_container = driver.find_element(By.CSS_SELECTOR, '[itemprop="articleBody"]')
+                body_container = driver.find_element(By.CSS_SELECTOR, 'div.schemaDiv[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h4.sub_head")
                 
                 article_content = []
                 for el in content_elements:
                     text = el.text.strip()
-                    if not text or "| Photo Credit:" in text or "mukunth.v@" in text or "Related Stories" in text:
+                    html_content = el.get_attribute('innerHTML').strip()
+                    
+                    if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:"]):
                         continue
-                    article_content.append(text)
+                    
+                    article_content.append({"type": "heading" if el.tag_name == "h4" else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1.title").text.strip()
                 
-                if article_content:
+                if len(article_content) > 1:
                     articles.append({
                         "category": category,
                         "title": title,
                         "url": link,
-                        "content": "\n\n".join(article_content),
+                        "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
                     print(f"  -> Extracted: {title[:50]}...")
@@ -79,7 +83,7 @@ def scrape_hindu_section(url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== Indian Express Scraper ==================
+# ================== Regular Indian Express Scraper ==================
 def scrape_ie_section(url, category, existing_urls):
     driver = get_driver()
     articles = []
@@ -87,9 +91,9 @@ def scrape_ie_section(url, category, existing_urls):
         driver.get(url)
         time.sleep(8)
         
-        # Broadened selectors to catch new IE layouts
+        # Broadened selectors for IE
         elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
-        links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/" in el.get_attribute("href")]))
+        links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/upsc-current-affairs/" in el.get_attribute("href")]))
 
         new_links = [link for link in links if link not in existing_urls]
         print(f"[{category}] Found {len(new_links)} new articles.")
@@ -99,37 +103,123 @@ def scrape_ie_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(6)
 
-                # IE Paywall Unhider
+                # Robust IE Paywall Unhider
                 driver.execute_script("""
                     document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
                     document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
                         el.style.display = 'block';
                         el.style.height = 'auto';
                         el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
                         el.style.opacity = '1';
                     });
                 """)
 
-                # Strict Schema.org targeting
-                body_container = driver.find_element(By.CSS_SELECTOR, '[itemprop="articleBody"]')
+                # Broadened body container selector
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 
                 article_content = []
                 for el in content_elements:
                     text = el.text.strip()
-                    if not text or "| Photo Credit:" in text: continue
-                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe"]):
+                    html_content = el.get_attribute('innerHTML').strip()
+                    
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe", "about our expert", "select a plan"]):
                         continue
-                    article_content.append(text)
+                    
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
 
                 title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
                 
-                if article_content:
+                if len(article_content) > 2:
                     articles.append({
                         "category": category,
                         "title": title,
                         "url": link,
-                        "content": "\n\n".join(article_content),
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+                    print(f"  -> Extracted: {title[:50]}...")
+                else:
+                    print(f"  -> Skipped (not enough content): {link}")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
+    return articles
+
+# ================== IE Explained Scraper (Load More Button) ==================
+def scrape_ie_explained(url, category, existing_urls):
+    driver = get_driver()
+    articles = []
+    try:
+        driver.get(url)
+        time.sleep(5)
+
+        clicks = 0
+        max_clicks = 15
+        all_links = []
+
+        while clicks < max_clicks:
+            # Broadened selector
+            elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a, .articles h2 a, .title a")
+            current_links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/explained/" in el.get_attribute("href")]))
+            all_links = list(set(all_links + current_links))
+
+            if any(link in existing_urls for link in current_links):
+                print(f"[{category}] Reached already scraped articles. Stopping pagination.")
+                break
+
+            try:
+                load_more = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "load_tag_article")))
+                driver.execute_script("arguments[0].click();", load_more)
+                clicks += 1
+                print(f"[{category}] Clicked Load More {clicks}/{max_clicks}")
+                time.sleep(3)
+            except:
+                break 
+
+        new_links = [link for link in all_links if link not in existing_urls]
+        print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
+
+        for link in new_links:
+            try:
+                driver.get(link)
+                time.sleep(5)
+
+                driver.execute_script("""
+                    document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
+                        el.style.display = 'block';
+                        el.style.height = 'auto';
+                        el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
+                        el.style.opacity = '1';
+                    });
+                """)
+
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe"]):
+                        continue
+                    
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": el.get_attribute('innerHTML').strip()})
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                if len(article_content) > 2:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
                         "date": datetime.now().strftime("%Y-%m-%d")
                     })
                     print(f"  -> Extracted: {title[:50]}...")
@@ -139,44 +229,384 @@ def scrape_ie_section(url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== Main Execution ==================
-csv_filename = "scraped_data.csv"
-existing_urls = load_existing_urls(csv_filename)
-all_scraped_articles = []
+# ================== IE Explained Scraper (URL Pagination) ==================
+def scrape_ie_section_paginated(base_url, category, existing_urls):
+    driver = get_driver()
+    articles = []
+    all_links = []
+    page = 1
+    
+    try:
+        while page <= 15:
+            current_url = f"{base_url}page/{page}/" if page > 1 else base_url
+            print(f"[{category}] Scanning page {page}...")
+            driver.get(current_url)
+            time.sleep(5)
+            
+            elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a, .img-context h3 a")
+            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/explained/" in el.get_attribute("href") and el.get_attribute("href") not in all_links]
+            
+            if not current_links: break
+            all_links.extend(current_links)
+            
+            if any(link in existing_urls for link in current_links):
+                print(f"[{category}] Reached already scraped articles. Stopping pagination.")
+                break
+                
+            page += 1
 
-# Using smaller target list for demonstration
+        new_links = [link for link in list(set(all_links)) if link not in existing_urls]
+        print(f"[{category}] Proceeding to extract {len(new_links)} articles...")
+
+        for link in new_links:
+            try:
+                driver.get(link)
+                time.sleep(5)
+
+                driver.execute_script("""
+                    document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
+                    document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
+                        el.style.display = 'block';
+                        el.style.height = 'auto';
+                        el.style.overflow = 'visible';
+                        el.style.maskImage = 'none';
+                        el.style.webkitMaskImage = 'none';
+                        el.style.opacity = '1';
+                    });
+                """)
+
+                body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    if not text or len(text) < 15: continue
+                    if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe"]):
+                        continue
+                    
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": el.get_attribute('innerHTML').strip()})
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                if len(article_content) > 2:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed to extract {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
+    return articles
+
+# ================== Indian Express Quizzes Scraper ==================
+def scrape_ie_quizzes(category, existing_urls, pages=20):
+    driver = get_driver()
+    articles = []
+    base_url = "https://indianexpress.com/section/upsc-current-affairs/page/"
+    try:
+        for page in range(1, pages + 1):
+            print(f"Scraping {category} Page {page}...")
+            driver.get(f"{base_url}{page}/")
+            time.sleep(6)
+            
+            # Broadened selector
+            elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
+            links = []
+            for el in elements:
+                href = el.get_attribute("href")
+                # Look for "quiz" in text to be safe
+                if href and "/article/upsc-current-affairs/" in href and "quiz" in el.text.lower():
+                    links.append(href)
+                    
+            links = list(set(links))
+            new_links = [link for link in links if link not in existing_urls]
+
+            if links and not new_links:
+                print("Reached already scraped quizzes. Stopping pagination.")
+                break
+            
+            for link in new_links:
+                try:
+                    driver.get(link)
+                    time.sleep(6)
+
+                    driver.execute_script("""
+                        document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template').forEach(el => el.remove());
+                        document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
+                            el.style.display = 'block';
+                            el.style.height = 'auto';
+                            el.style.overflow = 'visible';
+                            el.style.maskImage = 'none';
+                            el.style.webkitMaskImage = 'none';
+                            el.style.opacity = '1';
+                        });
+                    """)
+
+                    body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
+                    content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
+                    
+                    article_content = []
+                    current_q = None
+                    
+                    for el in content_elements:
+                        text = el.text.strip()
+                        html_content = el.get_attribute('innerHTML').strip()
+                        
+                        if not text: continue
+                        if any(skip in text.lower() for skip in ["subscriber only", "story continues below", "also read", "subscribe", "about our expert", "select a plan", "click here", "share your views"]):
+                            continue
+                        
+                        if "QUESTION" in text.upper() or (el.tag_name in ["h2", "h3"] and "QUESTION" in text.upper()):
+                            if current_q: article_content.append(current_q)
+                            current_q = {"type": "quiz_item", "question": f"<p>{html_content}</p>", "solution": ""}
+                        elif current_q:
+                            if any(x in text for x in ["Relevance:", "Explanation:", "Therefore, option", "Correct Answer", "Answer:"]) or current_q["solution"] != "":
+                                current_q["solution"] += f"<p>{html_content}</p>"
+                            else:
+                                current_q["question"] += f"<p>{html_content}</p>"
+                        else:
+                            article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
+
+                    if current_q: article_content.append(current_q)
+                    title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                    
+                    if len(article_content) > 1:
+                        articles.append({
+                            "category": category,
+                            "title": title,
+                            "url": link,
+                            "content": article_content,
+                            "date": datetime.now().strftime("%Y-%m-%d")
+                        })
+                        print(f"  -> Extracted Quiz: {title[:50]}...")
+                except Exception as e:
+                    print(f"  -> Failed Quiz {link}: {str(e).splitlines()[0]}")
+                    continue
+    finally: driver.quit()
+    return articles
+
+# ================== TH BusinessLine Scraper (Incremental) ==================
+def scrape_businessline_incremental(base_url, category, existing_urls):
+    driver = get_driver()
+    articles = []
+    all_links = []
+    
+    try:
+        for page in range(1, 15):
+            page_url = base_url if page == 1 else f"{base_url}?page={page}"
+            print(f"[{category}] Scanning page {page}...")
+            driver.get(page_url)
+            time.sleep(5)
+            
+            elements = driver.find_elements(By.CSS_SELECTOR, "a.element, h2 a, .title a, .agencySeoClass a")
+            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article" in el.get_attribute("href") and "/todays-poll/" not in el.get_attribute("href")]
+            
+            if not current_links: break
+            all_links.extend(current_links)
+            
+            if any(link in existing_urls for link in current_links):
+                print(f"[{category}] Reached already scraped articles. Stopping pagination.")
+                break
+
+        new_links = [link for link in list(set(all_links)) if link not in existing_urls]
+        print(f"[{category}] Found {len(new_links)} new articles.")
+
+        for link in new_links:
+            try:
+                driver.get(link)
+                time.sleep(5)
+                
+                body_container = driver.find_element(By.CSS_SELECTOR, 'div[itemprop="articleBody"], .contentbody')
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4, h4.sub_head")
+                
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    html_content = el.get_attribute('innerHTML').strip()
+                    if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:", "Click here"]):
+                        continue
+                    
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+                
+                if len(article_content) > 1:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
+    return articles
+
+# ================== TH BusinessLine Scraper (Deep Scrape for Policy) ==================
+def scrape_businessline_deep(base_url, category):
+    driver = get_driver()
+    articles = []
+    all_links = []
+    
+    try:
+        for page in range(1, 10):
+            page_url = base_url if page == 1 else f"{base_url}?page={page}"
+            print(f"[{category}] Scanning page {page}/9 → {page_url}")
+            driver.get(page_url)
+            time.sleep(6)
+            
+            if page == 9:
+                print(f"  [{category}] Reached page 9. Executing 5 'Show More' clicks...")
+                for click_num in range(1, 6):
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight - 800);")
+                    time.sleep(2)
+                    try:
+                        load_more = driver.find_element(By.CSS_SELECTOR, "a.loadMore, .load-more, .show-more, a[title='Load More'], button.loadMore")
+                        driver.execute_script("arguments[0].click();", load_more)
+                        time.sleep(4)
+                    except: break
+            
+            elements = driver.find_elements(By.CSS_SELECTOR, "a.element, h2 a, .title a, .agencySeoClass a")
+            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article" in el.get_attribute("href") and "/todays-poll/" not in el.get_attribute("href")]
+            all_links.extend(current_links)
+
+        unique_links = list(set(all_links))
+        print(f"[{category}] Proceeding to extract {len(unique_links)} articles from scratch...")
+        
+        for link in unique_links:
+            try:
+                driver.get(link)
+                time.sleep(5)
+                
+                body_container = driver.find_element(By.CSS_SELECTOR, 'div[itemprop="articleBody"], .contentbody')
+                content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4, h4.sub_head")
+               
+                article_content = []
+                for el in content_elements:
+                    text = el.text.strip()
+                    html_content = el.get_attribute('innerHTML').strip()
+                    if not text or any(x in text for x in ["Related Stories", "mukunth.v@", "| Photo Credit:", "Click here"]):
+                        continue
+                    
+                    article_content.append({"type": "heading" if el.tag_name.lower() in ["h2", "h3", "h4"] else "text", "value": html_content})
+
+                title = driver.find_element(By.CSS_SELECTOR, "h1").text.strip()
+               
+                if len(article_content) > 1:
+                    articles.append({
+                        "category": category,
+                        "title": title,
+                        "url": link,
+                        "content": article_content,
+                        "date": datetime.now().strftime("%Y-%m-%d")
+                    })
+                    print(f"  -> Extracted: {title[:50]}...")
+            except Exception as e:
+                print(f"  -> Failed {link}: {str(e).splitlines()[0]}")
+                continue
+    finally: driver.quit()
+    return articles
+
+
+# ================== Targets & Main Execution ==================
 targets = {
     "Science": "https://www.thehindu.com/sci-tech/science/",
+    "Health": "https://www.thehindu.com/sci-tech/health/",
+    "Agriculture": "https://www.thehindu.com/sci-tech/agriculture/",
+    "Environment": "https://www.thehindu.com/sci-tech/energy-and-environment/",
+    "Internet": "https://www.thehindu.com/sci-tech/technology/internet/",
     "UPSC Current Affairs": "https://indianexpress.com/section/upsc-current-affairs/"
 }
 
+ie_explained_targets = {
+    "Global": "https://indianexpress.com/about/explained-global/?ref=explained_pg",
+    "Sci-Tech": "https://indianexpress.com/about/explained-sci-tech/",
+    "Economics": "https://indianexpress.com/about/explained-economics/?ref=explained_pg",
+    "Expert Explains": "https://indianexpress.com/about/an-expert-explains/?ref=explained_pg",
+    "Everyday Explainer": "https://indianexpress.com/section/explained/everyday-explainers/?ref=explained_pg",
+    "Law and Policy": "https://indianexpress.com/section/explained/explained-law/?ref=explained_pg"
+}
+
+businessline_targets = {
+    "Macro Economy": "https://www.thehindubusinessline.com/economy/macro-economy/",
+    "Policy": "https://www.thehindubusinessline.com/economy/policy/",
+    "Budget 2026": "https://www.thehindubusinessline.com/economy/budget/",
+    "Logistics": "https://www.thehindubusinessline.com/economy/logistics/",
+    "WEF": "https://www.thehindubusinessline.com/economy/world-economic-forum/",
+    "Agri Business": "https://www.thehindubusinessline.com/economy/agri-business/"
+}
+
+data_file = "data.json"
+full_db = json.load(open(data_file, "r", encoding='utf-8')) if os.path.exists(data_file) else []
+existing_urls = set(a['url'] for a in full_db)
+
+
+# 1. Process Main Targets (The Hindu + IE Current Affairs)
 for cat, url in targets.items():
     print(f"\n--- Scraping {cat} ---")
-    if "indianexpress" in url:
-        new_arts = scrape_ie_section(url, cat, existing_urls)
+    new_arts = scrape_ie_section(url, cat, existing_urls) if cat == "UPSC Current Affairs" else scrape_hindu_section(url, cat, existing_urls)
+    for art in new_arts:
+        full_db.insert(0, art)
+        existing_urls.add(art['url'])
+
+
+# 2. Process IE Explained Targets
+for cat, url in ie_explained_targets.items():
+    print(f"\n--- Scraping IE Explained: {cat} ---")
+    if cat in ["Everyday Explainer", "Law and Policy"]:
+        new_arts = scrape_ie_section_paginated(url, cat, existing_urls)
     else:
-        new_arts = scrape_hindu_section(url, cat, existing_urls)
-    
-    all_scraped_articles.extend(new_arts)
+        new_arts = scrape_ie_explained(url, cat, existing_urls)
+        
+    for art in new_arts:
+        full_db.insert(0, art)
+        existing_urls.add(art['url'])
 
-# ================== CSV Export Routine ==================
-if all_scraped_articles:
-    file_exists = os.path.isfile(csv_filename)
-    
-    # Save with utf-8-sig encoding for perfect Excel/CSV compatibility
-    with open(csv_filename, 'a', newline='', encoding='utf-8-sig') as csvfile:
-        fieldnames = ['category', 'title', 'url', 'content', 'date']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        if not file_exists:
-            writer.writeheader()
+# 3. Process TH BusinessLine Targets
+for cat, url in businessline_targets.items():
+    print(f"\n--- Scraping TH BusinessLine: {cat} ---")
+    
+    if cat == "Policy":
+        # Run Deep Scraper exclusively for Policy
+        new_arts = scrape_businessline_deep(url, cat)
+        
+        # Purge the old Policy articles
+        original_len = len(full_db)
+        full_db = [art for art in full_db if art.get('category') != cat]
+        print(f"  Removed {original_len - len(full_db)} old '{cat}' articles from the database.")
+        
+        # Add new ones at the top, preserving timeline order
+        new_arts.reverse()
+        for art in new_arts:
+            full_db.insert(0, art)
+            existing_urls.add(art['url'])
             
-        for article in all_scraped_articles:
-            writer.writerow(article)
+    else:
+        # Run Incremental Scraper for all other BL topics
+        new_arts = scrape_businessline_incremental(url, cat, existing_urls)
+        for art in new_arts:
+            full_db.insert(0, art)
+            existing_urls.add(art['url'])
 
-    print(f"\n✅ Successfully saved {len(all_scraped_articles)} new articles to {csv_filename}")
-    
-    # Trigger native Colab download
-    files.download(csv_filename)
-else:
-    print("\nNo new articles to save.")
+
+# 4. Process Quizzes
+print("\n--- Scraping UPSC Quizzes ---")
+quiz_arts = scrape_ie_quizzes("UPSC Quizzes", existing_urls, pages=20)
+for art in quiz_arts:
+    full_db.insert(0, art)
+    existing_urls.add(art['url'])
+
+# Save File
+with open(data_file, "w", encoding='utf-8') as f:
+    json.dump(full_db[:6000], f, ensure_ascii=False, indent=4) 
+
+print(f"\n✅ Scrape completed. Total articles in database: {len(full_db)}")
