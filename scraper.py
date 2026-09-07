@@ -91,7 +91,6 @@ def scrape_ie_section(url, category, existing_urls):
         driver.get(url)
         time.sleep(8)
         
-        # Broadened selectors for IE
         elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
         links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/upsc-current-affairs/" in el.get_attribute("href")]))
 
@@ -103,7 +102,6 @@ def scrape_ie_section(url, category, existing_urls):
                 driver.get(link)
                 time.sleep(6)
 
-                # Robust IE Paywall Unhider
                 driver.execute_script("""
                     document.querySelectorAll('.ev-engagement, .content-login-wrapper, .ev-paywall-template, .premium-article-ads').forEach(el => el.remove());
                     document.querySelectorAll('.ev-meter-content, .ie-premium-content-block, [class*="paywall"], [id*="paywall"], #pcl-full-content').forEach(el => {
@@ -116,7 +114,6 @@ def scrape_ie_section(url, category, existing_urls):
                     });
                 """)
 
-                # Broadened body container selector
                 body_container = driver.find_element(By.CSS_SELECTOR, '#pcl-full-content, div.story_details, div[itemprop="articleBody"]')
                 content_elements = body_container.find_elements(By.CSS_SELECTOR, "p, h2, h3, h4")
                 
@@ -163,7 +160,6 @@ def scrape_ie_explained(url, category, existing_urls):
         all_links = []
 
         while clicks < max_clicks:
-            # Broadened selector
             elements = driver.find_elements(By.CSS_SELECTOR, "#tag_article .details h3 a, .articles h2 a, .title a")
             current_links = list(set([el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article/explained/" in el.get_attribute("href")]))
             all_links = list(set(all_links + current_links))
@@ -314,12 +310,10 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
             driver.get(f"{base_url}{page}/")
             time.sleep(6)
             
-            # Broadened selector
             elements = driver.find_elements(By.CSS_SELECTOR, ".articles h2 a, h3.title a, .title a, .img-context h2 a")
             links = []
             for el in elements:
                 href = el.get_attribute("href")
-                # Look for "quiz" in text to be safe
                 if href and "/article/upsc-current-affairs/" in href and "quiz" in el.text.lower():
                     links.append(href)
                     
@@ -390,7 +384,7 @@ def scrape_ie_quizzes(category, existing_urls, pages=20):
     finally: driver.quit()
     return articles
 
-# ================== TH BusinessLine Scraper (Incremental) ==================
+# ================== TH BusinessLine Scraper (Incremental - Updated with Schema.org Selectors) ==================
 def scrape_businessline_incremental(base_url, category, existing_urls):
     driver = get_driver()
     articles = []
@@ -403,8 +397,17 @@ def scrape_businessline_incremental(base_url, category, existing_urls):
             driver.get(page_url)
             time.sleep(5)
             
-            elements = driver.find_elements(By.CSS_SELECTOR, "a.element, h2 a, .title a, .agencySeoClass a")
-            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article" in el.get_attribute("href") and "/todays-poll/" not in el.get_attribute("href")]
+            # Updated to leverage Schema.org List items
+            items = driver.find_elements(By.CSS_SELECTOR, 'li[itemprop="itemListElement"]')
+            current_links = []
+            for item in items:
+                try:
+                    link_elem = item.find_element(By.CSS_SELECTOR, 'a[itemprop="url"], a.element')
+                    href = link_elem.get_attribute('href')
+                    if href and "/article" in href and "/todays-poll/" not in href:
+                        current_links.append(href)
+                except:
+                    continue
             
             if not current_links: break
             all_links.extend(current_links)
@@ -450,7 +453,7 @@ def scrape_businessline_incremental(base_url, category, existing_urls):
     finally: driver.quit()
     return articles
 
-# ================== TH BusinessLine Scraper (Deep Scrape for Policy) ==================
+# ================== TH BusinessLine Scraper (Deep Scrape for Policy - Updated with Schema.org Selectors) ==================
 def scrape_businessline_deep(base_url, category):
     driver = get_driver()
     articles = []
@@ -474,8 +477,16 @@ def scrape_businessline_deep(base_url, category):
                         time.sleep(4)
                     except: break
             
-            elements = driver.find_elements(By.CSS_SELECTOR, "a.element, h2 a, .title a, .agencySeoClass a")
-            current_links = [el.get_attribute("href") for el in elements if el.get_attribute("href") and "/article" in el.get_attribute("href") and "/todays-poll/" not in el.get_attribute("href")]
+            items = driver.find_elements(By.CSS_SELECTOR, 'li[itemprop="itemListElement"]')
+            current_links = []
+            for item in items:
+                try:
+                    link_elem = item.find_element(By.CSS_SELECTOR, 'a[itemprop="url"], a.element')
+                    href = link_elem.get_attribute('href')
+                    if href and "/article" in href and "/todays-poll/" not in href:
+                        current_links.append(href)
+                except:
+                    continue
             all_links.extend(current_links)
 
         unique_links = list(set(all_links))
@@ -576,22 +587,18 @@ for cat, url in businessline_targets.items():
     print(f"\n--- Scraping TH BusinessLine: {cat} ---")
     
     if cat == "Policy":
-        # Run Deep Scraper exclusively for Policy
         new_arts = scrape_businessline_deep(url, cat)
         
-        # Purge the old Policy articles
         original_len = len(full_db)
         full_db = [art for art in full_db if art.get('category') != cat]
         print(f"  Removed {original_len - len(full_db)} old '{cat}' articles from the database.")
         
-        # Add new ones at the top, preserving timeline order
         new_arts.reverse()
         for art in new_arts:
             full_db.insert(0, art)
             existing_urls.add(art['url'])
             
     else:
-        # Run Incremental Scraper for all other BL topics
         new_arts = scrape_businessline_incremental(url, cat, existing_urls)
         for art in new_arts:
             full_db.insert(0, art)
