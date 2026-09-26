@@ -1,84 +1,196 @@
 [
     {
-        "category": "Policy",
-        "title": "Goyal says 1,000 people to be trained to support exporters at district, state levels",
-        "url": "https://www.thehindubusinessline.com/economy/policy/goyal-says-1000-people-to-be-trained-to-support-exporters-at-district-state-levels/article71497050.ece",
+        "category": "Agri Business",
+        "title": "India’s waste problem is also a data problem",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-waste-problem-is-also-a-data-problem/article71509987.ece",
         "content": [
             {
                 "type": "text",
-                "value": "Commerce and Industry Minister Piyush Goyal on Tuesday said that about 1,000 people will be trained in regional languages about trade to support existing and prospective exporters at the district and state levels."
+                "value": "India’s waste challenge is often discussed in terms of how much waste the country generates, processes or sends to landfill. But before answering those questions, there is a more fundamental issue: how reliable is the data itself? A note by the Press Information Bureau (PIB) in March 2023 stated that urban India generated 1,52,245 tonnes per day (MTD), while a June 2024 PIB report put the figure at 150 thousand MTD. This is difficult to reconcile with the government’s stated annual average growth rate of around 4 per cent in waste generation. Such inconsistencies point to gaps in data quality, granularity and the mechanisms used to collect and track waste."
             },
             {
                 "type": "text",
-                "value": "Addressing an industry stakeholders meeting on ease of doing business and free trade agreement (FTA) opportunities, he also said that instead of establishing separate offices of every department in every location, integrated commerce and industry offices are envisaged in major cities to provide businesses with a common point of access to multiple departments and agencies."
+                "value": "India’s official waste data comes through several channels, including Parliamentary replies, government and PIB releases, Pollution Control Board data, and the Swachhatam portal of the Ministry of Housing and Urban Affairs. Each has limitations. Parliamentary data is dependent on questions being raised within a particular period; government releases are event-driven; Pollution Control Board datasets are not always readily accessible; and while Swachhatam is currently among the more robust sources, its data can lack granularity and clarity on update frequency."
+            },
+            {
+                "type": "text",
+                "value": "The proposed centralised portal under the Solid Waste Management Rules 2026 therefore has an important role to play. But digitising the system alone will not solve the problem. The underlying mechanism of measurement and tracking also needs strengthening."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Agri Business",
+        "title": "The hidden economy of farm waste: How biochar and biogas are changing the game",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/the-hidden-economy-of-farm-waste-how-biochar-and-biogas-are-changing-the-game/article71509958.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "For a long time, agricultural residue in India was treated as waste. It was often burned, left to decompose or simply seen as a problem that needed to be managed. That approach is changing. As India looks to strengthen its energy security, reduce emissions and build a circular economy, farm waste is increasingly being recognised as a resource with real economic value."
+            },
+            {
+                "type": "text",
+                "value": "India generates nearly 750 million tonnes of agricultural biomass every year, of which around 230 million tonnes is estimated to be surplus and underutilised. This represents a significant opportunity. If we can convert more of this biomass into useful energy and products, we can reduce dependence on conventional fuels while creating new sources of income in rural areas. The opportunity is not just about waste management; it is about building new value chains around a resource that is already available."
+            },
+            {
+                "type": "text",
+                "value": "The key, however, is using the right technology for the right kind of biomass. Wet waste and dry agricultural residue behave very differently and cannot be approached in the same way."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Agri Business",
+        "title": "NABARD sanctions ₹195-crore loan to boost fisheries infrastructure in Bihar's Siwan",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/nabard-sanctions-195-crore-loan-to-boost-fisheries-infrastructure-in-bihars-siwan/article71511545.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The National Bank for Agriculture and Rural Development (NABARD) has sanctioned a ₹195-crore loan to the Bihar government to develop modern fisheries infrastructure in Siwan district, officials said on Friday."
+            },
+            {
+                "type": "text",
+                "value": "The loan was sanctioned under the Fisheries and Aquaculture Infrastructure Development Fund (FIDF)."
+            },
+            {
+                "type": "text",
+                "value": "According to a statement issued by NABARD, “The project will support fish farming units, seed production centres and hatcheries, collection and landing centres, cold storage and cold-chain facilities, processing and packaging units, modern fish markets and improved transportation and marketing infrastructure.”"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Agri Business",
+        "title": "An economy built on agriculture needs deeper access to equity capital",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/an-economy-built-on-agriculture-needs-deeper-access-to-equity-capital/article71509118.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India’s agricultural economy is undergoing a significant transformation. Agriculture and allied activities remain central to the country’s economic and employment landscape, with the sector providing livelihoods to approximately 46.1 per cent of India’s workforce. Its Gross Value Added has also expanded substantially, reaching an estimated ₹52.08 lakh crore in 2025-26. Yet the depth of the sector’s participation in India’s equity markets has not kept pace with this evolution."
+            },
+            {
+                "type": "text",
+                "value": "The opportunity today is not simply about increasing the number of listed agricultural companies. It is about creating a stronger capital-market ecosystem around businesses that are closely connected to India’s agricultural value chains from agri-inputs and seeds to food processing, warehousing, logistics, rural technology, livestock, fisheries and other allied activities."
+            },
+            {
+                "type": "text",
+                "value": "Many of these businesses are becoming more organised, technology-enabled and professionally managed. As they scale, equity capital can play an important role in helping them invest in capacity, technology, distribution and market expansion. A deeper pipeline of such companies entering the listed market can also give investors greater avenues to participate in India’s agricultural growth story."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Beyond clean label food: Where consumer brand differentiation goes next",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/beyond-clean-label-food-where-consumer-brand-differentiation-goes-next/article71509273.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "For most of the last decade, “clean label” was the fastest way for an Indian consumer brand to signal quality. No parabens, no sulphates, no maida, no palm oil, no added sugar, no artificial colour — the absence of undesirables was, by itself, a compelling enough story to build a brand around. From this proposition alone have sprung dozens of new-age brands, which went on to threaten incumbents, and reshape categories."
+            },
+            {
+                "type": "text",
+                "value": "Today, though, every second personal care, food, or wellness brand launched claims to be clean, natural, or free-from something. In a world where clean label has become table stakes, what comes next?"
+            },
+            {
+                "type": "text",
+                "value": "We’ve noticed the answers emerging from several different directions."
             },
             {
                 "type": "heading",
-                "value": "1,000 local personnel to support exporters"
+                "value": "Building axis of functionality"
             },
             {
                 "type": "text",
-                "value": "The minister also announced a proposed network of approximately 1,000 trained local personnel, with knowledge of regional languages, to support exporters and prospective exporters at the district and state levels, the commerce ministry said in a statement."
+                "value": "As brands move from “free-from” claims to “doing-something-for-me” proof, they build the axis of functionality. Consumers who have spent years reading ingredient lists are now asking harder questions: Does this serum actually fade pigmentation? Does this supplement actually improve a measurable outcome? Does this leave-in actually stop frizz? Brands are responding with clinical trials, before-and-after data, and third-party testing baked directly into their marketing. In BPC, we see the shift from naturals to derma skincare, with The Derma Co formulating its range with clinical-grade actives at concentrations backed by in-vivo testing and published research rather than marketing copy. In F&amp;B, we see Yoga Bar, possibly the clean label OG, now focused on high-quality, great-tasting protein that – in their words – loves you back."
             },
             {
                 "type": "text",
-                "value": "“These personnel would be trained and subsequently deployed to provide handholding support to businesses, including through industry chambers and regional associations,” it said."
+                "value": "Another axis is expertise, with brands built by practitioners rather than marketers. In BPC, that’s usually doctors, dermatologists, or scientists. Chosen, founded by cosmetic dermatologist Dr Renita Rajan, is a clear example: it builds formulations specifically for melanin-rich Indian skin using an “exposome” approach that studies pollution, UV exposure, and diet. Its sunscreen, for example, uses a UV filter called bemotrizinol, which is the first of its kind to be approved by the US FDA in 26 years. SKINQ, too, follows a similar playbook, where the dermatologist isn’t just a recommender of products, but at the very core of the brand itself. In food, you can enjoy offerings created and shaped by chefs: Le15 brings alive Pooja Dhingra’s obsession with French patisserie, specifically macarons, while The Baker’s Dozen reflects Aditi Handa’s decades of expertise with sourdough and baking."
+            },
+            {
+                "type": "text",
+                "value": "Close to 90 per cent of Indian households already choose at least one health-linked FMCG product, and this wave of healthification has expanded well beyond food and supplements. Snacks are “protein-fortified.” Beverages are “gut-friendly.” Skincare is “oxytocin-releasing.” The trend also goes deeper, as consumers actively track and optimise their performance, sleep, and long-term health. So Inito helps track fertility hormones to support conception. DUSQ calms the parasympathetic nervous system so you can sleep better. Mattresses from The Sleep Company deliver measurable outcomes like spinal alignment and recovery via their patented technology. Kitchenware from Cumin Co and Stahl helps you cook and serve food in healthier ways."
             },
             {
                 "type": "heading",
-                "value": "Industry seeks smoother FTA processes"
+                "value": "Another important axis"
             },
             {
                 "type": "text",
-                "value": "The statement also said that a dedicated session was held on recent FTAs and trade facilitation reforms, which provided industry with an overview of opportunities and obligations arising from India’s trade agreements."
+                "value": "A brand like Cumin Co also taps into another important axis, design. Looking good for the ’gram has sharpened the focus on aesthetic appeal, with consumers raving about Cumin Co’s Shyamal Dutch ovens, that can be customised with a charm, or the retro styling of the Nester oven, or even the bright, cheery, design-forward appeal of Mokobara."
             },
             {
                 "type": "text",
-                "value": "Industry representatives highlighted the need for greater interoperability between government systems and foreign trade platforms, including digital transmission and verification of Certificates of Origin under FTAs."
+                "value": "Not only do these brands look and feel distinctive, they exemplify the cross-category trend of Made for India and Indians. So, EDT Luma is a glass air-fryer for Indian cooking, and Beyond chimneys are designed for the high heat of an Indian kitchen. Fable Street and Underneat offer fashion and shapewear made for Indian women, not adapted to them – so everything from sizing, to materials, to use cases, reflects that focus."
             },
             {
                 "type": "text",
-                "value": "“The proposal to extend such electronic processes to other FTA partners was noted for examination. Industry also highlighted the need for further integration of the export cycle involving the Directorate General of Foreign Trade (DGFT), Customs, banks and other stakeholders,” it said."
+                "value": "An emerging axis is traceable, ethical sourcing, which could well become a values-based differentiator as Indian consumers grow more discerning about where ingredients come from and how they’re produced, rather than just what they exclude."
             },
             {
                 "type": "text",
-                "value": "The interaction also covered logistics and trade-process bottlenecks, including documentation backlogs and concerns relating to sea-freight costs."
-            },
-            {
-                "type": "heading",
-                "value": "Logistics key to unlocking export growth"
+                "value": "None of these axes are mutually exclusive, and the strongest emerging brands are stacking two or three at once. So, you might see a dermatologist-founded brand with clinically proven actives and an AI-driven diagnostic front end, for example."
             },
             {
                 "type": "text",
-                "value": "Commenting on the trade pacts, Suryansh Jalan, CBO, FarEye, said India’s free trade agreements can open markets, but export growth depends on whether an Indian manufacturer can promise a competitive delivered price, a reliable delivery date and a simple returns process."
+                "value": "Clean label unlocked a world of opportunity for new-age consumer brands. But what lies ahead is an entire arsenal to take them to the next level."
             },
             {
                 "type": "text",
-                "value": "“The commerce ministry’s next policy push should help MSMEs build that capability. Many businesses can manufacture for the world; serving overseas consumers requires access to an integrated fulfilment network,” he said."
+                "value": "<i>The author is Co-founder &amp; Partner at Fireside Ventures</i>"
             },
             {
                 "type": "text",
-                "value": "He added that building on the National Logistics Policy, PM GatiShakti and ULIP, the priority should be to connect shipment consolidation in India, simpler customs processes, shared overseas warehousing and dependable last-mile delivery."
-            },
+                "value": "Published on  September 26, 2026"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Logistics",
+        "title": "DHL Express to hike charges by 8.9% in India from January 2027",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/dhl-express-to-hike-charges-by-89-in-india-from-january-2027/article71512090.ece",
+        "content": [
             {
-                "type": "heading",
-                "value": "Digital platforms to support exporters"
+                "type": "text",
+                "value": "Logistics operator DHL Express on Saturday announced an 8.9 per cent increase in its shipment charges in India from January 1 next year."
             },
             {
                 "type": "text",
-                "value": "“Digital platforms can help exporters understand FTA eligibility and rules of origin, estimate landed costs, validate documentation and track orders across partners. AI can support better routing, inventory placement and early responses to disruption,” Jalan said."
+                "value": "The annual price hike enables the company to adjust for some of the increased costs arising from various factors such as inflationary pressures, currency fluctuations, and industry-specific cost developments."
             },
             {
                 "type": "text",
-                "value": "He also said that shared infrastructure can give smaller exporters access to logistics capabilities typically available to larger enterprises."
+                "value": "As an internationally integrated business operating in more than 220 countries and territories, DHL Express is influenced not only by local economic conditions but also by developments across global markets, the company said."
             },
             {
                 "type": "text",
-                "value": "“Success should be measured in lower costs, predictable deliveries and repeat overseas orders. That is how preferential market access becomes lasting demand for Indian products,” he said."
+                "value": "\"This annual price adjustment enables us to maintain the high level of service and reliability our customers expect while continuing to strengthen the resilience and adaptability of our global operations,\" said RS Subramanian, senior vice president for South Asia at DHL Express."
             },
             {
                 "type": "text",
-                "value": "Published on  September 23, 2026"
+                "value": "International trade continues to create new opportunities for businesses, while supply chains are becoming increasingly interconnected and complex, he added."
+            },
+            {
+                "type": "text",
+                "value": "\"We remain committed to helping our customers navigate this evolving environment by investing in our global network, digital capabilities, security infrastructure, and sustainable logistics solutions,\" Subramanian noted."
+            },
+            {
+                "type": "text",
+                "value": "DHL Express said it adjusts its prices annually to account for inflationary pressures, currency fluctuations, and industry-specific cost developments."
+            },
+            {
+                "type": "text",
+                "value": "In addition to inflation, the company's cost structure continues to be affected by factors such as energy costs, compliance requirements, and administrative expenses related to evolving customs, regulatory, and security measures introduced by national and international authorities, it said."
+            },
+            {
+                "type": "text",
+                "value": "Ongoing labour market pressures in many countries also contribute to increased operational costs, according to DHL Express."
+            },
+            {
+                "type": "text",
+                "value": "Published on  September 26, 2026"
             }
         ],
         "date": "2026-09-26"
@@ -99,6 +211,122 @@
             {
                 "type": "text",
                 "value": "The applicant has alleged that the dumped imports from China are causing material injury to it. It has requested the imposition of anti-dumping duty on the imports, according to a DGTR notification."
+            },
+            {
+                "type": "text",
+                "value": "For the probe, the directorate will consider the data between 2022-25."
+            },
+            {
+                "type": "text",
+                "value": "\"The authority, hereby, initiates an antidumping investigation to determine the existence, degree, and effect of the dumping,\" it said on Tuesday."
+            },
+            {
+                "type": "text",
+                "value": "If it is established that the dumping has caused material injury to domestic players, the DGTR would recommend the imposition of duties on the imports."
+            },
+            {
+                "type": "text",
+                "value": "The finance ministry takes the final decision to impose these duties."
+            },
+            {
+                "type": "text",
+                "value": "US-China trade tensions and China's significant industrial overcapacity pose a major risk of cheap Chinese goods being dumped in India."
+            },
+            {
+                "type": "text",
+                "value": "In the recent period, India has initiated multiple such probes against dumped import of certain goods from China."
+            },
+            {
+                "type": "text",
+                "value": "Anti-dumping probes are conducted by countries to determine if domestic industries have been hurt because of a surge in cheap imports."
+            },
+            {
+                "type": "text",
+                "value": "As a countermeasure, they impose these duties under the multilateral regime of the Geneva-based World Trade Organisation (WTO). The duty is aimed at ensuring fair trading practices and creating a level-playing field for domestic producers vis-a-vis foreign producers and exporters."
+            },
+            {
+                "type": "text",
+                "value": "India and China are members of the WTO."
+            },
+            {
+                "type": "text",
+                "value": "India has already imposed anti-dumping duties on several products to tackle cheap imports from various countries, including China."
+            },
+            {
+                "type": "text",
+                "value": "India's exports to China rose 36.66 per cent to USD 19.47 billion during the last fiscal year, while imports increased 16 per cent to USD 131.63 billion. The trade deficit swelled to an all-time high of USD 112.6 billion in 2025-26 as against USD 99.2 billion in 2024-25."
+            },
+            {
+                "type": "heading",
+                "value": "ANTI-CIRCUMVENTION PROBE"
+            },
+            {
+                "type": "text",
+                "value": "In another notification, the DGTR said that it has started an investigation into allegations that anti-dumping duties on CPVC (Chlorinated Polyvinyl Chloride) resin from China and South Korea are being avoided by routing the product through Malaysia, Japan and Thailand."
+            },
+            {
+                "type": "text",
+                "value": "The product is used in many industrial piping applications."
+            },
+            {
+                "type": "text",
+                "value": "DCW Ltd, Epigral Ltd and Lubrizol Advanced Materials India in an application have alleged that the anti-dumping duty imposed on imports of this resin from China and Korea is being circumvented through exports from Japan, Malaysia and Thailand."
+            },
+            {
+                "type": "text",
+                "value": "According to the notification, there is a change in the pattern of trade wherein imports of this product from Japan, Malaysia and Thailand have increased to a significant level without any sufficient cause or economic justification, thereby undermining the remedial effects of the existing anti-dumping measure imposed on the imports from China."
+            },
+            {
+                "type": "text",
+                "value": "On the basis of the duly substantiated application filed by the applicants, the authority has found prima facie evidence that the anti-dumping duty is being circumvented and that the imports involved are being dumped."
+            },
+            {
+                "type": "text",
+                "value": "\"Accordingly, the Authority hereby initiates an anti-circumvention investigation ...to determine the existence and effect of the alleged circumvention of the existing anti-dumping duty on the product under consideration...,\" it said."
+            },
+            {
+                "type": "text",
+                "value": "Published on  September 23, 2026"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Policy",
+        "title": "Cabinet raises EPFO wage ceiling to Rs 25,000; 51 lakh employees to benefit",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-raises-epfo-wage-ceiling-to-rs-25000-51-lakh-employees-to-benefit/article71472392.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday approved a proposal to raise the wage ceiling for mandatory coverage under the Employees’ Provident Fund Organisation (EPFO) to Rs 25,000 per month from Rs 15,000."
+            },
+            {
+                "type": "text",
+                "value": "The wage ceiling revision is taking place after 12 years."
+            },
+            {
+                "type": "text",
+                "value": "The decision is expected to bring more than 51 lakh additional employees within the ambit of mandatory EPFO coverage, significantly widening social security protection for workers, Information and Broadcasting Minister Ashwini Vaishnaw said at a press briefing."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Policy",
+        "title": "Goyal says 1,000 people to be trained to support exporters at district, state levels",
+        "url": "https://www.thehindubusinessline.com/economy/policy/goyal-says-1000-people-to-be-trained-to-support-exporters-at-district-state-levels/article71497050.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Commerce and Industry Minister Piyush Goyal on Tuesday said that about 1,000 people will be trained in regional languages about trade to support existing and prospective exporters at the district and state levels."
+            },
+            {
+                "type": "text",
+                "value": "Addressing an industry stakeholders meeting on ease of doing business and free trade agreement (FTA) opportunities, he also said that instead of establishing separate offices of every department in every location, integrated commerce and industry offices are envisaged in major cities to provide businesses with a common point of access to multiple departments and agencies."
+            },
+            {
+                "type": "text",
+                "value": "The minister also announced a proposed network of approximately 1,000 trained local personnel, with knowledge of regional languages, to support exporters and prospective exporters at the district and state levels, the commerce ministry said in a statement."
             }
         ],
         "date": "2026-09-26"
@@ -144,21 +372,881 @@
         "date": "2026-09-26"
     },
     {
-        "category": "Policy",
-        "title": "Cabinet raises EPFO wage ceiling to Rs 25,000; 51 lakh employees to benefit",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-raises-epfo-wage-ceiling-to-rs-25000-51-lakh-employees-to-benefit/article71472392.ece",
+        "category": "Internet",
+        "title": "Indian non-profits lag on digital maturity, AI adoption: report",
+        "url": "https://www.thehindu.com/sci-tech/technology/indian-non-profits-lag-on-digital-maturity-ai-adoption-report/article71512189.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The Union Cabinet on Wednesday approved a proposal to raise the wage ceiling for mandatory coverage under the Employees’ Provident Fund Organisation (EPFO) to Rs 25,000 per month from Rs 15,000."
+                "value": "Non-profits lag on technological maturity in India, a new report based on a survey of 500 organisations in the sector said. Even as white collar organisations employing college-educated workers experiment heavily with AI and integrate it into their workflows, non-profits did not score even 50% on digital maturity, even as they showed some interest in using large language models (LLMs) to help with reports and marketing, Delhi-based Digital for Nonprofits (D4NP) said in its State of Nonprofits Digitization Report 2026."
             },
             {
                 "type": "text",
-                "value": "The wage ceiling revision is taking place after 12 years."
+                "value": "In any industry, D4NP founder and former Google executive Abhinav Chetan said, “nonprofits are always the last, no matter which technological trend you pick … They’re still experimenting. They’re still at level one, by the way — they’re only using it for conversations. They’re not really using it for complicated workflows.”"
             },
             {
                 "type": "text",
-                "value": "The decision is expected to bring more than 51 lakh additional employees within the ambit of mandatory EPFO coverage, significantly widening social security protection for workers, Information and Broadcasting Minister Ashwini Vaishnaw said at a press briefing."
+                "value": "While AI systems have made it far easier for organisations to do routine work faster, Mr. Chetan said that many were lagging behind on even the earlier digitisation wave. One example the report cited was most organisations not taking advantage of monthly $10,000 ad grants. That came out to millions of dollars of free advertising money simply lying unused."
+            },
+            {
+                "type": "text",
+                "value": "<strong><b>Also Read | <a href=\"https://www.thehindu.com/business/Industry/india-leads-global-adoption-of-ai-agents-with-32-of-ai-users-emerging-as-frontier-professionals-microsoft/article71423306.ece\" target=\"_self\">India leads global adoption of AI agents, with 32% of AI users emerging as ‘Frontier Professionals’: Microsoft</a></b></strong>"
+            },
+            {
+                "type": "text",
+                "value": "Of the twenty signals, only one organisation — Child Rights and You (CRY) — was on the right side of digital maturity. Mr. Chetan attributed CRY’s adoption of these tools to the corporate background of its staff. The digital maturity “percolates” due to this factor, Mr. Chetan said."
+            },
+            {
+                "type": "text",
+                "value": "This doesn’t mean that organisations are not using AI tools at all. Quite the opposite, the report says, pointing out that the majority of Indian startups, six in ten, use at least one AI tool every day, and 85% use more than one AI tool. But on governance and taking advantage of emerging capabilities, most organisations did not score well."
+            },
+            {
+                "type": "text",
+                "value": "Only roughly one in four nonprofits had any safeguards for AI tools’ handling of sensitive personal data, and only one in four use online analytics tools (which, incidentally, have become easier to use with LLMs)."
+            },
+            {
+                "type": "text",
+                "value": "But the report marked a “median shift” to more adoption versus the previous year, when D4NP ran this survey last year, Mr. Chetan said. He added, “I wish they could even use it for coding — bring up a quick landing page, or create a dashboard… But that’s my sense for next year.”"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Internet",
+        "title": "Waymo Self-Driving Taxi Review | Making peace with autonomous driving technology",
+        "url": "https://www.thehindu.com/sci-tech/technology/waymo-self-driving-taxi-review-making-peace-with-autonomous-driving-technology/article71507319.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "On October 27, 2025, a car ran over a cat in San Francisco. Oceans away, I filed a report on the tragic killing of nine-year-old KitKat. Why did news about the death of a cat in California make international headlines? <a href=\"https://www.thehindu.com/sci-tech/technology/waymo-faces-flak-after-robotaxi-kills-california-cat-report/article70235488.ece\" target=\"_self\">That’s because KitKat was run over by a self-driving Waymo car, owned by Google-parent Alphabet.</a> The company runs a fleet of self-driving electric taxis that are gradually being deployed across cities in the U.S."
+            },
+            {
+                "type": "text",
+                "value": "While local residents slammed Waymo’s safety standards and erected a monument for KitKat, supporters of self-driving cars pointed out that thousands of animals are run over by human-driven cars every year. Robotaxis, on the other hand, are designed to become safer with every iteration, they claimed."
+            },
+            {
+                "type": "text",
+                "value": "Almost a year later, I booked a Waymo ride in San Francisco, from my hotel to a nearby metro station — when the roads were empty. And here’s what I discovered."
+            },
+            {
+                "type": "heading",
+                "value": "Cost and Design"
+            },
+            {
+                "type": "text",
+                "value": "Hailing a robotaxi is not too different from ordering an Uber or even an Indian auto. Simply download the Waymo app, set up your profile and payment information, and choose your pick-up point and destination. Riders can decide if they want a car instantly, or if they want to schedule it for later. Waymo ride costs are relatively higher than human-operated taxis."
+            },
+            {
+                "type": "text",
+                "value": "The Waymo app, while slow to load, was easy and intuitive to use. Apart from arranging rides, it allows users to unlock their self-driving car and start their ride. Users can adjust interior settings or seek customer support via the app, as well as request fewer announcements and shorter walking times to their pick-up point."
+            },
+            {
+                "type": "text",
+                "value": "The payment process was seamless in spite of using an Indian credit card, and I quickly received an e-receipt. Additionally, Waymo gifted me some credit for my next ride."
+            },
+            {
+                "type": "heading",
+                "value": "Interiors"
+            },
+            {
+                "type": "text",
+                "value": "The Waymo vehicle that pulled up to the curb to take me to my destination was a Jaguar, which was a pleasant surprise. The dark interiors were pristine, comfortable, and scent-free. I had enough space to sit in the back with a large suitcase resting next to me. There was a skylight above, outside of which was mounted the Waymo’s spinning sensor."
+            },
+            {
+                "type": "text",
+                "value": "There were two main screens within the car: a longer one at the front and a wider one for those sitting at the back. The screens show your journey status, traffic navigation visuals, estimated arrival times, safety announcements, and media settings. After the greetings and safety briefing, the system played soothing, ambient music throughout my ride. Those taking longer rides can sync their Spotify and YouTube lists in order to listen to their preferred media."
+            },
+            {
+                "type": "text",
+                "value": "The car’s default internal temperature was warm since it was a chilly morning, but riders can adjust this to suit their needs."
+            },
+            {
+                "type": "text",
+                "value": "The Waymo’s steering wheel moves on its own as the car makes its way along its route, giving you the sense of being chauffeured by an invisible person. There are also brake and accelerator pedals, but these do not visibly move during the journey. Unlike the sleek, minimalistic Tesla Cybercab, the Waymo does retain many of the driving and media buttons in the front seat."
+            },
+            {
+                "type": "heading",
+                "value": "Safety"
+            },
+            {
+                "type": "text",
+                "value": "Needless to say, this should form the heart of any self-driving taxi experience."
+            },
+            {
+                "type": "text",
+                "value": "Remembering poor KitKat, and having seen multiple videos of Waymo cars running red lights or driving into restricted emergency zones, I was naturally on edge as I booked my car and waited for about two minutes. Though I had entered a preferred pick-up point right outside my hotel, Waymo altered the location and directed me to walk towards the new pick-up point across the road. Why the change? Because my original pick-up point put the car right on a tram line."
+            },
+            {
+                "type": "text",
+                "value": "Once the Waymo car arrived, I was prompted to unlock it through my phone app. After this, the handles popped out and I was able to open the door. Such a mechanism prevents strangers from taking over or misusing the ride. Once inside and buckled up, a passenger can start the ride via the car’s touchscreen or the app. (The Waymo car is programmed to wait for five minutes before leaving, if the rider does not show up.)"
+            },
+            {
+                "type": "text",
+                "value": "As the Waymo began to gently move, a friendly safety message reminded me to buckle up at all times. I was informed that the cabin could be monitored for safety and security purposes when needed, but that I had the privacy to sing my heart out, if I was so inclined. There were blinking recording panels on the ceiling of the car, both at the front and back."
+            },
+            {
+                "type": "text",
+                "value": "The ride was on the slower side, but smoothly operated for the most part. The Waymo handled steep, near-vertical roads with confident ease, even when it had to brake on the slopes. There were no rollbacks in these instances. The car also unfailingly braked at every stop sign and complied with all the traffic signals and speed limits, despite the roads being empty at the time. Turnings were fluid and predictable."
+            },
+            {
+                "type": "text",
+                "value": "The screen tracked the car’s path, as well as other cars, objects, people, and obstructions. Unexpected adjustments were made with caution, and I felt as though I were being chauffeured by a skilled and patient human driver. There were some bumps, though this was largely due to the terrain."
+            },
+            {
+                "type": "text",
+                "value": "Once at my destination, the car took a couple of extra minutes to find a safe space to pull over, because the sides of the roads were lined with parked cars. In order to exit, riders are directed to pull on the door handle twice. They are given sufficient time to exit the car and collect their things."
+            },
+            {
+                "type": "text",
+                "value": "My ride, which was a little over 3 kilometres long, took 14 minutes to complete and cost me $23.55. Waymo informed me that I had saved 486 grams of Co2 by riding with them."
+            },
+            {
+                "type": "heading",
+                "value": "Conclusion"
+            },
+            {
+                "type": "text",
+                "value": "Though U.S. regulators and San Francisco locals are still divided on autonomous driving technology, a short Waymo ride opened my eyes to the heavy mental load that a robotaxi removes. One has no need to worry about swapped license plate numbers, aggressive or inebriated drivers, sudden fee and route changes, or unfair/discriminatory ride cancellations. Instead of faking a loud safety call to one’s family during a late night or early morning drive, riders can sit back and truly relax within the comfortable robotaxi cabin."
+            },
+            {
+                "type": "text",
+                "value": "There are still flaws to be addressed, of course. Users have flagged concerns about miscreants potentially blocking cars, while the NHTSA regulator warned about self-driving cars barging into restricted zones and obstructing first responders. It remains to be seen how Waymo handles the safety issues that arise with longer drives, after its coverage area grows to encompass suburban and rural roadways across America."
+            },
+            {
+                "type": "text",
+                "value": "But ultimately, Waymo is a game changer for short, inner-city rides where accessibility and women’s safety are priorities."
+            },
+            {
+                "type": "text",
+                "value": "So, if you find yourself in a city where Waymo is live, take the plunge and experience how an ordinary taxi ride becomes the serene highlight of your day."
+            },
+            {
+                "type": "text",
+                "value": "<b><i>This is an independent, non-sponsored review of the Waymo self-driving taxi.</i></b>"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Environment",
+        "title": "Illegal riverbed mining inviting catastrophe: Assam tribal students’ body",
+        "url": "https://www.thehindu.com/news/national/other-states/illegal-riverbed-mining-inviting-catastrophe-assam-tribal-students-body/article71512277.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "<b>GUWAHATI</b>"
+            },
+            {
+                "type": "text",
+                "value": "The All Dimasa Students’ Union (ADSU) has flagged “unscientific, illegal and excessive” riverbed mining in Dima Hasao district in <a href=\"https://www.thehindu.com/news/national/assam/\" target=\"_blank\">Assam</a>, warning that unchecked extraction was threatening severe bank erosion, threatening key transport corridors and drying up drinking water sources for rural communities."
+            },
+            {
+                "type": "text",
+                "value": "In a complaint letter to the district’s Chief Conservator of Forests on Friday (September 25, 2026), the ADSU highlighted unregulated commercial extraction of sand, gravel, stone and boulders, driven by the rampant use of heavy mechanised excavators inside active river channels, across the Diyung, Mahur, Langting and Jatinga rivers."
+            },
+            {
+                "type": "text",
+                "value": "The union said these activities were affecting local ecosystems, infrastructure, and indigenous communities in the district."
+            },
+            {
+                "type": "text",
+                "value": "The ADSU pointed to severe bank erosion and structural hazards, warning that mechanised dredging and unscientific riverbed scooping were destabilising riverbanks and accelerating soil erosion during the monsoon season. It said this was endangering critical lifelines, including National Highway 27 and railway lines, while triggering recurrent landslides near habitations."
+            },
+            {
+                "type": "text",
+                "value": "The union further warned of extensive aquatic habitat destruction, with excessive siltation and riverbed disturbance decimating local biodiversity, including native and endangered fish species, by destroying breeding grounds and disrupting natural hydrology."
+            },
+            {
+                "type": "text",
+                "value": "“Indiscriminate deep mining breaches the natural water table, drastically lowering groundwater levels and drying up vital gravity-fed drinking water streams across rural settlements,” the ADSU said, raising concerns about water security."
+            },
+            {
+                "type": "text",
+                "value": "<b>Livelihoods affected</b>"
+            },
+            {
+                "type": "text",
+                "value": "The letter, signed by ADSU general secretary Suraj Naiding and president Arujit Kemprai, highlighted the impact of such activities on tribal livelihoods. It noted that rural and indigenous communities, dependent on these riparian systems for traditional fishing, agriculture and household water, were facing immediate socio-economic distress."
+            },
+            {
+                "type": "text",
+                "value": "The ADSU underlined that Dima Hasao, an ecologically fragile hill region protected under the Sixth Schedule of the Constitution of India, was witness to extraction activity in contravention of the Assam Minor Mineral Concession Rules, 2013, the Supreme Court’s mandatory guidelines in Deepak Kumar versus State of Haryana (2012), and standing directions of the National Green Tribunal prohibiting heavy mechanised in-stream extraction without approved district survey reports and valid environmental clearances."
+            },
+            {
+                "type": "text",
+                "value": "The ADU called for immediate cessation of illegal mining, including a cease-and-desist order against all non-compliant extraction sites and the impounding of unauthorised heavy machinery operating in river channels."
+            },
+            {
+                "type": "text",
+                "value": "The union also demanded a joint ground inspection and audit, urging the formation of a task force comprising the Forest Department, Revenue and Forest officials of the Dima Hasao Autonomous Council, the district civil administration, ecological experts and local student representatives."
+            },
+            {
+                "type": "text",
+                "value": "It called for strict penal action against illegal operators and quarry owners operating without approved mining plans, valid leases or environmental clearances from the State-Level Environment Impact Assessment Authority, under the Mines and Minerals (Development and Regulation) Act, 1957, and the Environment (Protection) Act, 1986."
+            },
+            {
+                "type": "text",
+                "value": "Additionally, the ADSU sought scientific demarcation of no-mining ecological zones, covering critical river bends, bridge buffers, erosion-prone areas and other ecologically sensitive stretches."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Webinar on developments in diagnosis, treatment of heart disease to be organised",
+        "url": "https://www.thehindu.com/news/cities/chennai/webinar-on-developments-in-diagnosis-treatment-of-heart-disease-to-be-organised/article71508715.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "<i>The Hindu</i>, in association with Kauvery Hospital, will conduct a webinar at 11.30 a.m. on Monday (September 28, 2026) on the prevention, detection, and treatment of heart disease."
+            },
+            {
+                "type": "text",
+                "value": "The webinar, held to mark World Heart Day on September 29 and titled ‘Don’t Miss a Beat: Prevent, Detect, and Treat Heart Disease’, will bring together specialists in different areas of cardiac care to examine how developments in diagnosis, treatment, and rehabilitation are changing the management of heart disease. The session is held as part of <i>The Hindu</i>’s Wellness Series."
+            },
+            {
+                "type": "text",
+                "value": "The panel will feature Ajith Pillai, HOD, interventional cardiologist, Kauvery Hospital, Radial Road; Arunkumar Krishnaswamy, senior consultant and cardiothoracic surgeon, Kauvery Hospital, Alwarpet; Mahadevan V., senior consultant, interventional cardiology and diabetology, Kauvery Hospital, Vadapalani; and Javid Raja, consultant, Paediatric Cardiac Surgeon, Kauvery Hospital, Heartcity, Tiruchi."
+            },
+            {
+                "type": "text",
+                "value": "The panellists will discuss the role of minimally invasive valve procedures, newer approaches to coronary artery bypass surgery, and minimally invasive robotic cardiac surgery, besides touching on the importance of prevention and cardiac rehabilitation in maintaining long-term heart health. The webinar will also focus on congenital heart disease in children, emphasising the need for early detection and appropriate treatment."
+            },
+            {
+                "type": "text",
+                "value": "The session will be moderated by Meenakshy S., Principal Correspondent, <i>The Hindu</i>."
+            },
+            {
+                "type": "text",
+                "value": "To register, please visit https://newsth.live/THKAHBE or scan the QR code below."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Health Ministry orders crackdown on nicotine pouches, citing health risks, letter shows",
+        "url": "https://www.thehindu.com/sci-tech/health/india-orders-crackdown-on-nicotine-pouches-citing-health-risks-letter-shows/article71511847.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Health Ministry has ordered States to crack down ‌on the <a href=\"https://www.thehindu.com/news/national/are-nicotine-pouches-beyond-the-law-explained/article71438519.ece\" target=\"_self\">sale of nicotine pouches</a>, which it considers a major health ​risk, saying globally popular brands are being widely sold illegally in ⁠the country, a letter from the Ministry shows."
+            },
+            {
+                "type": "text",
+                "value": "Nicotine pouches have emerged as one of Big Tobacco's most important bets on a future beyond cigarettes, offering rapid growth, attractive margins and, for now, ‌lighter regulation than many rival smoking alternatives."
+            },
+            {
+                "type": "text",
+                "value": "In India, where tobacco kills 13.5 lakh people a year, the government has banned e-cigarettes but approved certain nicotine ‌replacements like patches and chewing gums."
+            },
+            {
+                "type": "text",
+                "value": "Nicotine pouches — small packets placed under the ‌lip ⁠that contain nicotine but no tobacco — remain illegal and unapproved, with a government ⁠source saying they are often smuggled into India for sale online and through local tobacco stores."
+            },
+            {
+                "type": "text",
+                "value": "A federal study in June called them \"a largely unregulated public health concern\", with wide consumption among people aged 18 to ​40 of brands such as Philip ‌Morris' Zyn and Swedish Smokeless Solutions' White Fox."
+            },
+            {
+                "type": "text",
+                "value": "There is increased \"availability of oral nicotine pouches through online and offline channels in the country ... Nicotine exposure is of particular concern among children,\" the Health Ministry wrote in a letter to all States on September ‌19, seen by <i>Reuters</i>."
+            },
+            {
+                "type": "text",
+                "value": "“Initiate appropriate enforcement action in accordance with the law, in ​the interest of public health and protection of children,\" it added."
+            },
+            {
+                "type": "text",
+                "value": "The directive cited provisions of the drug law that allow for the search and ⁠seizure of such products and the prosecution of those selling them."
+            },
+            {
+                "type": "text",
+                "value": "The Ministry did not respond to requests for comment. Philip Morris and Swedish Smokeless did not immediately respond to requests ‌for comment."
+            },
+            {
+                "type": "text",
+                "value": "Philip Morris on its website says the company has zero tolerance towards illegal trade, while Swedish Smokeless urges users to only buy original products from authorised outlets."
+            },
+            {
+                "type": "text",
+                "value": "While the World Health Organization has <a href=\"https://www.thehindu.com/news/national/who-warns-nicotine-pouch-brands-targeting-youth-as-sales-surge/article70986774.ece\" target=\"_self\">said governments need to introduce more safeguards</a> to protect people, especially youth, from nicotine pouch addiction, some agencies such as the U.S. Food and Drug Administration say smokers who switch completely to alternatives such as pouches, vapes and heated tobacco ‌products may reduce their health risks."
+            },
+            {
+                "type": "heading",
+                "value": "No new approvals"
+            },
+            {
+                "type": "text",
+                "value": "In April, an investigation found that Mumbai international ​airport's duty-free shops run by billionaire Gautam Adani's business group breached the law by selling nicotine pouches."
+            },
+            {
+                "type": "text",
+                "value": "Adani has denied wrongdoing, and the Bombay High Court ⁠this week<a href=\"https://www.thehindu.com/business/Industry/bombay-high-court-rejects-adani-plea-that-duty-free-shops-are-beyond-domestic-laws/article71498440.ece\" target=\"_self\"> rejected the company's arguments</a> that duty-free shops are immune from domestic laws. It also ⁠told the Adani Group it was free to make representations before the government to make a case for the pouches."
+            },
+            {
+                "type": "text",
+                "value": "However, the government believes \"nicotine pouches are addictive, pose ‌independent health risks and have not been established as effective smoking-cessation aids,\" according to minutes of the main federal drug panel's meeting published on September 16."
+            },
+            {
+                "type": "text",
+                "value": "The Drugs Technical ​Advisory Board \"recommended that no new nicotine formulation be approved henceforth in public interest,\" it added."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Why does male contraception still lag so far behind?",
+        "url": "https://www.thehindu.com/sci-tech/health/why-does-male-contraception-still-lag-so-far-behind/article71507351.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "World Contraception Day on September 26 offers an opportunity to look closely at a part of family planning that receives very little attention:  contraception for men. The key question here is why the range of methods available to men and women  remains so different."
+            },
+            {
+                "type": "text",
+                "value": "Women today have options including  oral pills, injectables, implants, intrauterine devices and permanent sterilisation, though access and affordability to safe and reliable contraception in our country continues to remain a major challenge. For men, the practical choices are still largely limited to condoms for reversible contraception and vasectomy for permanent contraception. Male and female reproduction are governed by the same broad hormonal axis, yet the biology, anatomy and mechanics of preventing conception create very different problems. Understanding those differences helps explain why a male equivalent of the pill has remained elusive."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Researchers document first human deaths by Caspian cobra in India",
+        "url": "https://www.thehindu.com/news/national/himachal-pradesh/researchers-document-first-human-deaths-by-caspian-cobra-in-india/article71508064.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Researchers have documented the first confirmed snakebite envenomation and subsequent human deaths in India caused by the venomous Caspian cobra (<i>Naja oxiana</i>), which have never previously been reported in the country, according to a case report published in Epidemiology International, a peer-reviewed journal."
+            },
+            {
+                "type": "text",
+                "value": "The study titled<i> ‘First Report of Deadly Bites by Caspian Cobra (Naja oxiana) From India’</i> by Bharti O.K., Menon J.C., Phull A., Joy S., Sharma V. and Malhotra A. details two fatalities and two survivals from bites by the species, also called the Central Asian cobra, in Himachal Pradesh’s Chamba’s Pir Panjal mountain range."
+            },
+            {
+                "type": "text",
+                "value": "“Envenomation and subsequent deaths from the Caspian Cobra (<i>Naja oxiana</i>) have never previously been reported from India. While collecting data for the Indian Council of Medical Research (ICMR) project on snakebites, we came across two deaths due to the bite of <i>N. oxiana</i>,” said Omesh Kumar Bharti of Himachal Pradesh’s Directorate of Health Services, who led the study."
+            },
+            {
+                "type": "text",
+                "value": "“Deaths due to <i>N. oxiana</i> have never been previously reported from India. <i>Naja oxiana</i> is primarily found in Central Asia, with high human mortality resulting from envenoming. This species has been reported from Pakistan and Kashmir and was recorded in 2019 from Tissa block of Chamba district, Himachal Pradesh. <i>Naja oxiana</i> has been shown to have rapidly expanded its range from Iran towards the northeast and it has been observed to be slowly expanding its range in Chamba towards lower elevations as reported by local rescuers,” noted the study."
+            },
+            {
+                "type": "text",
+                "value": "The first death occurred in July 2020 in Ullansa village, when a 40-year-old man was bitten twice on the leg while spraying an apple orchard. He was taken to a nearby faith healer. However, his condition continued to worsen and on the third day after the bite, he was taken to the Civil Hospital Bharmour, where he was seen by the doctor and was found to lack a detectable pulse. A second victim, a 62-year-old man from Bhanjraru village, was bitten in July 2021 while walking to work and collapsed within half an hour. He died before reaching Civil Hospital Tissa; a post-mortem attributed the death to the venom’s neurotoxic effects, the study said."
+            },
+            {
+                "type": "text",
+                "value": "Snakebite envenoming (SBE) remains a major cause of preventable mortality in rural India. The big four species, namely the spectacled cobra (<i>Naja naja</i>), Russell’s viper (<i>Daboia russelii</i>), common krait (<i>Bungarus caeruleus</i>) and saw-scaled viper (<i>Echis carinatus</i>), are responsible for the majority of snakebite envenomation and deaths in the country. The commercially available anti-snake venom (ASV) correspondingly covers these species only, it said. The study also noted that the available anti-snake venom (ASV), designed to counter the ‘big four’ species responsible for most snakebite deaths nationally, does not effectively neutralise the venom components of <i>N. oxiana</i>."
+            },
+            {
+                "type": "text",
+                "value": "The researchers said that there is a need to create greater community awareness about the danger of this species of snake in affected areas and educate them about ways to reduce the risk of being bitten."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Why is everything linked to inflammation now?",
+        "url": "https://www.thehindu.com/sci-tech/health/inflammation-internet-social-media-modern-life-ageing-food-the-body-autoimmnune-disease-diabetes-cancer-heart-failure-alzheimers/article71498144.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "A recent episode of the Oprah Winfrey Podcast revealed a stunning new hypothesis in cancer research. It had nothing to do with artificial intelligence (A.I.) or a new drug’s mechanism. Instead, it was about chronic inflammation."
+            },
+            {
+                "type": "text",
+                "value": "Winfrey’s guest was Siddhartha Mukherjee, cancer researcher, oncologist and author of the Pulitzer-winning book <i>The Emperor of All Maladies</i>. Partway through their conversation, when she asked about the future of cancer treatment, he said, “There are thousands of dormant cancer cells sitting in your body. Then something happens — I call it the sleeping beauty kiss — that wakes them up. We are realising that that <i>one something</i> is chronic inflammation... It really switches around how we think about cancer... If we could test that one particular kind of inflammation, we would have a bio-marker for future cancers that could even be preventive.”"
+            },
+            {
+                "type": "text",
+                "value": "In the longevity era, inflammation is one of the most studied biological phenomena. And increasingly, scientists are discovering evidence that chronic low-level inflammation, or extended activity of immune cells when there’s no immediate threat, is often the cause of disorders, from diabetes and cancer to autoimmune diseases and neurological conditions such as Alzheimer’s."
+            },
+            {
+                "type": "text",
+                "value": "Just last week, new research published in the <i>European Journal of Preventive Cardiology</i> showed that chronic inflammation increases the risk of heart attack and stroke by 43%. Scientists from MRC Laboratory of Medical Sciences and Imperial College London found that inflammation caused silent structural damage to the heart (thickened walls, smaller chambers and poorer filling) years before symptoms appeared."
+            },
+            {
+                "type": "text",
+                "value": "Is it any wonder then that <a href=\"https://www.instagram.com/p/DU50igOjzfb/\" target=\"_blank\">inflammation is on everybody’s minds these days</a>? No matter where you look, someone is telling you how to reduce it: from self-help guides to influencers on Instagram breaking down inflammatory foods, inflammation belly, and inflammation face in under three minutes."
+            },
+            {
+                "type": "text",
+                "value": "Turmeric is hyped as a miracle cure, others swear by elimination diets. Then there’s parasite detoxes, ice baths, celery juice resets and monotrophic cleanses (where you eat only one food item). The more scientists link inflammation to diseases, the more the wellness industry cashes in by marketing anti-inflammatory products. But take them with a dollop of salt. Often, the advice is fed to us by A.I.-generated doctors, healers and wellness influencers."
+            },
+            {
+                "type": "heading",
+                "value": "Acute and chronic: not the same thing"
+            },
+            {
+                "type": "text",
+                "value": "For most of history, doctors and the public focused on what they could see and feel: red, puffy skin around a wound, pain, fever. “I remember reading an article a few years back about how people with stressful jobs have inflammation, which could lead to illnesses as they age. And I recall closing my eyes and doing a mental body check and noting that ‘no, nothing was swollen or achy, so I’m not inflamed’. I was naive and uninformed,” says Kajal S. (name changed), a media professional in her 40s, explaining how she didn’t know the difference between acute and chronic inflammation."
+            },
+            {
+                "type": "text",
+                "value": "One evening, a couple of years later, the knuckles in her left hand swelled up, and within a few days she was handed a diagnosis of palindromic rheumatism, a rare type of inflammatory arthritis characterised by sudden, recurring flare-ups and severe joint pain. Her doctor talked her through how consistent stress, bad sleep patterns, and gut issues — and the chronic inflammation it caused (that is devoid of swelling or aches) — played the lead role in her condition."
+            },
+            {
+                "type": "text",
+                "value": "So, what’s the difference between acute and chronic inflammation? The former occurs when the body rallies to defend itself against invading microbes or to heal damaged tissue. Capillaries dilate and grow more porous, enabling white blood cells to flood the damaged site. The region swells, which can put pressure on surrounding nerves, causing pain. Chronic inflammation, however, is often silent and occurs when the immune system is over-stimulated all the time. As researchers are discovering, factors such as poor diet, air pollution, lack of sleep and stress can have a more significant impact on it than previously understood."
+            },
+            {
+                "type": "text",
+                "value": "“In modern life, inflammation has five faces: ultra-processed food, sleep debt, a disturbed gut, a sedentary body, and the one I speak of most — the red mind or a state of constant stimulation.”<span class=\"quote-by\">Arpit Bansal<span class=\"ng_quote_attrib\">Oncology surgeon and  chief scientific chair at the Longevity Summit India held last month in Mumbai</span></span>"
+            },
+            {
+                "type": "text",
+                "value": "Arpit Bansal"
+            },
+            {
+                "type": "text",
+                "value": "Over time, in many cases, our immunity can also get so active that it starts attacking our own cells, which is what autoimmune diseases such as rheumatoid arthritis (RA), psoriasis, vasculitis, Hashimoto’s disease and others are. Inflammation can also fuel chronic diseases (without autoimmunity), like Alzheimer’s and endometriosis."
+            },
+            {
+                "type": "text",
+                "value": "“Persistent inflammation can contribute to changes in blood vessels and metabolism and is involved in several chronic diseases. The brain is also connected to these processes,” says Dr. Vinaya Bhandari, consultant neurology and neuromuscular disorder specialist from Mumbai’s Jaslok Hospital and Research Centre. “Inflammatory signals from the body can interact with the brain and its blood vessels... and continual activation is increasingly recognised as one component of neurological conditions, including neurodegenerative diseases [Alzheimer’s, Parkinson’s].”"
+            },
+            {
+                "type": "heading",
+                "value": "Less inflammation doesn’t mean “healthier”"
+            },
+            {
+                "type": "text",
+                "value": "It is easy to see why inflammation is such a perfect social media concept: it is <a href=\"https://www.instagram.com/reel/DFKO2D0vLDB/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==\" target=\"_blank\">invisible, frightening, scientifically legitimate</a>, associated with many diseases, simple to attach to symptoms, as well as food and products. (Ironically, emerging research shows higher levels of inflammation associated with using social media over face-to-face interaction.)"
+            },
+            {
+                "type": "text",
+                "value": "But detecting chronic inflammation isn’t as easy as going to your physician and asking how your immune system is doing. While tests such as C-Reactive Protein (CRP) and Erythrocyte Sedimentation Rate (ESR) can help identify markers of inflammation, for some people such tests just come back negative."
+            },
+            {
+                "type": "text",
+                "value": "To complicate things further, not all inflammation have dire results. “Often, a person doesn’t know they have chronic low-grade inflammation because it is not always behind heart disease or endometriosis, or cancer,” says Dr. Suganya Venkat, a Coimbatore-based gynaecologist. “Chronic inflammation can manifest as brain fog or fatigue or lethargy that just won’t go away.”"
+            },
+            {
+                "type": "text",
+                "value": "Gynaecologist Dr. Suganya Venkat"
+            },
+            {
+                "type": "heading",
+                "value": "Fringe wellness to mainstream culture"
+            },
+            {
+                "type": "text",
+                "value": "Somewhere between a turmeric shot, a cold plunge and a bowl of berries, inflammation has stopped being an immune response. It has become an explanation for why we are tired, puffy, anxious, ageing, gaining weight, breaking out and not feeling okay. Just the month of September has seen hundreds of guides on how to lower your inflammation naturally or how to reset your circadian rhythm to improve inflammation. And forums such as Reddit, with their believers, sceptics and the longevity crowd, are bandying around new terms such as ‘inflammaging’ (to describe the low-grade inflammation that occurs with ageing)."
+            },
+            {
+                "type": "text",
+                "value": "But the future of inflammation is not on the world wide web. It is in labs and clinics around the world where scientists are tracking inflammation in patients over time, trying to understand what normal looks like and when it can become dangerous."
+            },
+            {
+                "type": "text",
+                "value": "The cancer-chronic inflammation link is something Indian oncologists have begun to consider. “Chronic inflammation can create a biological environment that promotes malignant transformation,” explains Dr. Aditya Vidushi, medical oncologist at Faridabad’s M|O|C Cancer Care &amp; Research Centre. “A clear example is <i>H. pylori</i>, a stomach bacterium that triggers long-term irritation, a major driver of gastric cancer. Obesity-related low-grade inflammation is linked to higher risks of colorectal, breast, pancreatic, and liver cancers.”"
+            },
+            {
+                "type": "text",
+                "value": "And the body of science is building. Senthilkumar Rajagopal, associate professor at REVA University in Bengaluru, who has led several research papers on inflammation, says, “South Asian populations may have a distinctive susceptibility to chronic low-grade inflammation arising from the interaction of genes, visceral adiposity, insulin resistance, environmental exposures and lifestyle factors.” The central insight emerging from his work is that targeting molecular interfaces between neuron signalling and inflammatory pathways may offer new strategies."
+            },
+            {
+                "type": "text",
+                "value": "Senthilkumar Rajagopal, associate professor at REVA University"
+            },
+            {
+                "type": "heading",
+                "value": "Maintaining the balance"
+            },
+            {
+                "type": "text",
+                "value": "Experts agree that combining medicine and better lifestyle habits can best prevent flare-ups. But what they prescribe can vary widely, and occasionally be controversial. U.S.-based Mark Hyman, considered the pioneer of Functional Medicine, emphasises in his books that inflammation is the common pathway for all chronic diseases. His recommended solution is an anti-inflammatory diet: omitting sugar, caffeine, beans, dairy, gluten, and processed foods, as well as taking a variety of supplements, including probiotics, fish oil, Vitamins C and D, and curcumin, a key molecule in turmeric. Meanwhile, in his book <i>The End of Illness</i>, American oncologist David Agus prescribes, among other things, not wearing high heels because they inflame the feet and that inflammation could possibly affect vital organs."
+            },
+            {
+                "type": "text",
+                "value": "The healing journey of Goa-based graphic designer Antima Nahar, 48, diagnosed with rheumatoid arthritis (RA) when she was 35, has taken her to doctors, nutritionists and Ayurvedic retreats. Nahar got the transformative diagnosis after a fall during a monsoon trek on the outskirts of Mumbai. Her doctors told her she would live with pain if she did not take steroids and painkillers all her life. “It started with my toes and fingers, and then became a sharp, pounding pain that kept shifting through different joints in my body. At one point, I couldn’t squeeze a toothpaste tube, couldn’t open jars or bottles, couldn’t hold a phone for long,” Nahar says."
+            },
+            {
+                "type": "text",
+                "value": "Goa-based graphic designer Antima Nahar"
+            },
+            {
+                "type": "text",
+                "value": "After years of naturopathic and Ayurvedic treatments, she found a balance with lowered doses of allopathic treatment combined with naturopathy and lifestyle modifications. “The last decade has been about knowing my body. Flare-ups can be because of food, weather changes, dancing, anything. I started recording everything, thinking through everything I did.” Nahar also began making illustrations about her RA journey and is now writing a graphic novel about self-discovery through pain."
+            },
+            {
+                "type": "text",
+                "value": "Interestingly, chronic inflammatory conditions often manifest differently in men and women. Several studies in the past decade reveal that nearly 70% of all autoimmune disease patients in India are women. In men, it can manifest more as heart disease. Indian men face a cardiovascular death rate (349 per 100,000) that is significantly higher than that of men in Western nations, according to the National Noncommunicable Disease Monitoring Survey (NNMS)."
+            },
+            {
+                "type": "text",
+                "value": "Kochi resident Jai Krishnan Sambasivan, 62, says he wouldn’t be able to function well if it were not for steroids. At 42, he was running his own business in Alappuzha, Kerala, when he developed a high fever that lasted months without a diagnosis. Admitted in hospital for over a month, he says he “fit into the category of patients who was clinically well [all tests came back negative], but not well”. What finally led to a diagnosis of vasculitis were two high inflammatory markers: hs-CRP and ESR."
+            },
+            {
+                "type": "text",
+                "value": "Jai Krishnan Sambasivan just moths before his diagnosis"
+            },
+            {
+                "type": "text",
+                "value": "Vasculitis is an autoimmune disease that inflames blood vessels, often leading to blockage of capillaries and eventually causing cardiac failure. He has managed to control the disease with Prednesol, a steroid drug, and lifestyle modifications. “But what keeps me alive is not medicine, it is breath control,” he believes. “I can say I have mastered it. I have learnt to be fearless.”"
+            },
+            {
+                "type": "heading",
+                "value": "What you eat matters"
+            },
+            {
+                "type": "text",
+                "value": "Food plays a major role in managing/ preventing inflammation. According to Delhi-based nutritionist Shonali Sabherwal, a seasonal, pesticide-free, freshly-cooked plant diet is most effective in reducing chronic inflammation. “You need to question staples: the <i>atta</i> that you are using, is it a hybrid variety? Do we know what we are really stocking in our kitchens?”"
+            },
+            {
+                "type": "text",
+                "value": "Sabherwal’s approach, commonly used around the world for conditions such as allergies, autoimmune diseases and other chronic conditions, aligns with Ayurvedic prescriptions for excess <i>agni</i> (fire/ inflammation in the body). Dr. Nitin Kochar, a Mumbai-based Ayurvedic practitioner who specialises in cancer and inflammation, says that “depending on the specific <i>dosha</i> [<i>vata</i>, <i>pitta</i> or <i>kapha</i>, the Ayurvedic way of categorising the human body’s biochemistry], I prescribe fasting, specific plant foods and spices like ginger, cumin, giloy to weaken the fire”."
+            },
+            {
+                "type": "heading",
+                "value": "How do you treat it?"
+            },
+            {
+                "type": "text",
+                "value": "One of the frustrations of treating inflammation is that treatments are so imprecise. Dr. Shreevidya, medical director–preventive health, Apollo Hospitals, says chronic inflammation is usually identified not because someone felt it, but because it surfaced during a preventive health assessment. “Two drivers deserve more attention. One is chronic hidden infection, especially gum disease [untreated periodontitis keeps the whole system inflamed]. The other is air pollution. Long-term exposure to fine particulate matter is consistently associated with higher inflammation,” she says."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Shreevidya, medical director – preventive health, Apollo Hospitals"
+            },
+            {
+                "type": "text",
+                "value": "Dr. Divya Gopal, additional director of internal medicine at Mumbai’s Sir H.N. Reliance Foundation Hospital, says people should start with lifestyle changes. “Pain relievers like ibuprofen and naproxen reduce inflammation, but taking them long-term brings risks,” says Gopal. “For serious cases, I prescribe newer medications that block inflammation pathways.”"
+            },
+            {
+                "type": "text",
+                "value": "As research into inflammation intensifies, new methods are being discovered. Earlier this year, researchers at University College London uncovered a key mechanism that can help the body switch off inflammation and prevent harmful immune cells from building up. Elsewhere, several clinical studies have shown that, independent of weight loss and diabetes, GLP-1 receptor agonists such as Ozempic and Mounjaro can significantly reduce systemic inflammation markers such as CRP and TNF-alpha. There’s also talk about non-invasive continuous inflammation monitors, much like glucose monitors."
+            },
+            {
+                "type": "text",
+                "value": "Science may be on the threshold of cures for several diseases that inflammation drives, but it is important to remember the nuance of it all: inflammation is part of our maintenance and repair system. Without inflammation, we can’t heal. The challenge is to master the balance between the healing short spells and the stubborn, prolonged simmer that has profound implications for our health."
+            },
+            {
+                "type": "text",
+                "value": "<i>The Mumbai-based writer and journalist is behind @the_slow_fix on Instagram.</i>"
+            },
+            {
+                "type": "text",
+                "value": "With inputs from <b>Surya Praphulla Kumar</b>"
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Focus should be on preventive health screening: Prathap C. Reddy",
+        "url": "https://www.thehindu.com/news/cities/chennai/focus-should-be-on-preventive-health-screening-prathap-c-reddy/article71509161.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Ahead of World Heart Day on September 29, Prathap C. Reddy, founder and chairman, Apollo Hospitals, has urged people not to think they are healthy simply because they exercise, but to continue exercising, consult a medical professional, and undergo preventive health screening from the age of 25. A doctor can help determine if an individual is truly healthy and identify any risk factors or underlying health concerns, he said on Friday."
+            },
+            {
+                "type": "text",
+                "value": "“Earlier, we recommended preventive health checks from the age of 30 to 60. Now, we are asking people aged 25 and above to get screened. Get yourself completely screened once in your lifetime. A person should know if he/she is free from diseases and is healthy or is predisposed to any of the diseases,” he said."
+            },
+            {
+                "type": "heading",
+                "value": "‘A serious problem’"
+            },
+            {
+                "type": "text",
+                "value": "Dr. Reddy pointed out that non-communicable diseases were among the most serious problems India was facing. These include heart attacks, strokes, cancers, and diabetes, with obesity and mental illness also adding to the list, he said."
+            },
+            {
+                "type": "text",
+                "value": "Heart attacks are preventable, he said, adding, “It gives you enough time and warning. It is important to detect early and eliminate the risk factors.” With heart attacks occurring at younger ages, he said, apart from genetic factors, smoking, stress, inactivity, lack of diet restrictions, hypertension, diabetes, and family history of heart attacks were among the risk factors for young people."
+            },
+            {
+                "type": "text",
+                "value": "“We can handle diseases, particularly heart diseases. We perform a large number of heart surgeries with better outcomes. We do minimally invasive cardiac surgeries as well as robotic cardiac surgeries,” Dr. Reddy said, adding that in terms of skills, healthcare professionals — doctors, nurses and paramedics — had proven that they could give excellent outcomes. “Cardiac treatments are improving every day, with more private hospitals providing care and the governments activating their own programmes,” he said."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Reddy stressed the need to prioritise women’s health. “Women take care of the health and wellbeing of their family. The incidence of heart attacks in women is no less. We are seeing only 25% of women coming for our preventive health checks and this must increase,” he said, urging families to focus on the health of women. “Prevention is best. Everybody should make health a priority. Then we will see a healthy and happy nation,” he added."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "U.S. FDA approves AbbVie's drug for Parkinson's disease",
+        "url": "https://www.thehindu.com/sci-tech/health/us-fda-approves-abbvies-drug-for-parkinsons-disease/article71511805.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The United States Food and Drug ​Administration has approved AbbVie's treatment for <a href=\"https://www.thehindu.com/sci-tech/health/parkinsons-disease-recognising-symptoms-early-is-key-to-prompt-diagnosis-and-treatment/article70860825.ece\" target=\"_self\">Parkinson's ‌disease </a>in adults, the health regulator's ​website showed on Friday, September 25, 2026."
+            },
+            {
+                "type": "text",
+                "value": "The ⁠drug tavapadon, which AbbVie gained access to through its $8.7 billion acquisition of Cerevel Therapeutics ‌in 2023, comes as a once-a-day pill."
+            },
+            {
+                "type": "text",
+                "value": "It will be sold ‌under the brand name Juvmo, ‌according ⁠to the FDA's website."
+            },
+            {
+                "type": "text",
+                "value": "Parkinson's is ⁠a long-term brain condition that gradually damages movement control, often causing tremors, stiffness and balance issues. ​More than ‌11 million people live with the disease worldwide, according to AbbVie."
+            },
+            {
+                "type": "text",
+                "value": "Juvmo works by mimicking dopamine, a vital brain ‌chemical that naturally decreases in people ​with Parkinson's."
+            },
+            {
+                "type": "text",
+                "value": "The regulator's nod was based on data from ⁠AbbVie's late-stage trial program which showed the drug improved symptoms in patients with ‌the disease. Common side effects reported in the trials included nausea, dizziness and headache."
+            },
+            {
+                "type": "text",
+                "value": "AbbVie did not respond to a Reuters request for comment on the drug's launch and ‌pricing."
+            },
+            {
+                "type": "text",
+                "value": "Citi analysts had previously said the launch ​was expected in the third quarter of 2026, but that uptake ⁠was likely to be gradual as negotiations ⁠progressed on the drug's Medicare coverage."
+            },
+            {
+                "type": "text",
+                "value": "AbbVie continued to target more ‌than $5 billion in combined Parkinson's disease sales, Citi added."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "WHO says Congo Ebola outbreak spreads to two new health zones",
+        "url": "https://www.thehindu.com/sci-tech/health/who-says-congo-ebola-outbreak-spreads-to-two-new-health-zones/article71511782.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The World Health Organization said on Friday, September 25, 2026 that the Ebola ‌outbreak caused by the Bundibugyo virus in the Democratic ​Republic of the Congo has spread to ⁠two additional health zones, bringing the total number affected to 63 across seven provinces."
+            },
+            {
+                "type": "text",
+                "value": "The newly affected zones are Bulu in Sud Ubangi ‌province and Dungu in Haut-Uele province, which borders South Sudan."
+            },
+            {
+                "type": "text",
+                "value": "As of September 23, Congo had reported ‌7,890 confirmed cases and 3,799 deaths, according to the ‌WHO."
+            },
+            {
+                "type": "text",
+                "value": "WHO ⁠Director-General Tedros Adhanom Ghebreyesus said conflict and population ⁠displacement were making it more difficult for health workers to reach affected communities and trace people who may have been exposed to the virus."
+            },
+            {
+                "type": "text",
+                "value": "\"It's ​very difficult to see ‌Ebola in isolation because even our response in Ebola is affected by the conflict because there is displacement and there is access problem to some areas,\" Tedros said. He said ‌restricted access could leave contacts untraced, while displacement and ​crowding increased transmission risks."
+            },
+            {
+                "type": "text",
+                "value": "Tedros said cases were declining overall and that contact tracing, safe burials ⁠and community engagement had improved, although transmission remained uneven across affected areas."
+            },
+            {
+                "type": "text",
+                "value": "The lack of approved vaccines and treatments for the Bundibugyo ‌strain was also complicating the response and could make people reluctant to seek care at treatment centers, Tedros said, adding the WHO was working to accelerate clinical trials of vaccines and treatments."
+            },
+            {
+                "type": "text",
+                "value": "Turning to the risk of future global health emergencies, Tedros said countries needed to strengthen pandemic preparedness. “Ebola ‌will not be a pandemic, but there could be a respiratory pathogen ​that can become a pandemic,\" he said. \"Before that hits, we need to prepare.\""
+            },
+            {
+                "type": "text",
+                "value": "The World Health ⁠Assembly adopted the Pandemic Agreement in May 2025 to strengthen global ⁠prevention, preparedness and response to future pandemics."
+            },
+            {
+                "type": "text",
+                "value": "\"We continue to see significant mis- and disinformation about the WHO ‌Pandemic Agreement, with false claims. It's a power grab that cedes sovereignty to WHO,\" Tedros said. \"This is completely untrue.\""
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Health",
+        "title": "Dengue, influenza in circulation; Chennai hospitals see steady rise in fever cases",
+        "url": "https://www.thehindu.com/news/cities/chennai/dengue-influenza-in-circulation-chennai-hospitals-see-steady-rise-in-fever-cases/article71504797.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Dengue and influenza viruses are currently in circulation, with a number of hospitals in the city reporting a steady flow of patients with fever, though doctors say the numbers remain in line with the seasonal trend."
+            },
+            {
+                "type": "text",
+                "value": "“Currently, both flu and dengue viruses are in circulation. Flu spreads from person to person, while dengue is a vector-borne infection. We need to deal with both the infections carefully. If a person has fever, they should look out for respiratory symptoms such as cold, cough, and throat pain. These are the primary symptoms of Influenza-Like Illness (ILI). If there is a high-grade fever with no respiratory symptoms but body pain and headache, it is a sign of dengue,” a senior government doctor said."
+            },
+            {
+                "type": "heading",
+                "value": "Hidden cases"
+            },
+            {
+                "type": "text",
+                "value": "Epidemiologically, if one case of dengue is notified in a particular area or village, it means there are hidden cases, he said, adding: “There is no need to test everyone, and persons with typical symptoms can be treated appropriately based on a physician consultation. Laboratory tests can be initiated if doctors prescribe.”"
+            },
+            {
+                "type": "text",
+                "value": "He said that in the case of flu, it is mostly self-limiting, but utmost care should be taken for elderly and pregnant women. “ILI can lead to Severe Acute Respiratory Infection and people could land in Acute Respiratory Distress Syndrome. Early treatment is important for flu-like symptoms. For dengue, a basic blood test — Complete Blood Count — will give us clues, especially a drop in the platelet count. So, with two viruses in circulation, which happens naturally during this season, people should be prepared and alert,” he said. However, there are no official institution-wise figures on fever outpatients or admissions. Authorities of at least two government hospitals in Chennai said the number of fever cases were not rampant and admissions for fever had not increased. In another hospital, senior doctors said all beds in the fever ward were full, and that the patients were recovering."
+            },
+            {
+                "type": "heading",
+                "value": "Seasonal trend"
+            },
+            {
+                "type": "text",
+                "value": "S. Chandrasekar, Professor and Head, Department of Medicine and Critical Care Services, Government Stanley Medical College Hospital, said that at present, the situation was not alarming and the rise in fever cases was in line with the expected seasonal trend typically observed from September to November."
+            },
+            {
+                "type": "text",
+                "value": "“A mild variant of flu is also in circulation. Dengue cases slowly peak after rainfall in mid-November and usually settle by February-end every year. There is a small excess of cases this year. Many persons, especially adolescents/teenagers, are being referred late, and with complications such as capillary leak syndrome on the fifth or sixth day of illness. We are closely watching the situation. It is important to know the warning symptoms of dengue,” he said."
+            },
+            {
+                "type": "text",
+                "value": "At Kanchi Kamakoti CHILDS Trust Hospital, medical director Janani Sankar said they were seeing a lot of dengue and influenza A cases as well as a few Respiratory Syncytial Virus infections. “The cases are quite rampant. Our beds are full. We are seeing children with dengue, respiratory infections, wheezing, and bronchiolitis. Some children with dengue are requiring admissions for 24 to 48 hours, but none with complications,” she said."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Sankar said parents should ensure there are no water collections in and around their homes. As dengue virus is transmitted by a day-biting mosquito, schools must ensure that they take mosquito control measures. “If a child is dull after a fever subsides, they should seek medical help. The warning signs of dengue are abdominal pain, vomiting, bleeding, drowsiness, and refusal to take feeds,” she said."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Science",
+        "title": "Private spacecraft falls back to Earth after failing to rescue aging NASA telescope",
+        "url": "https://www.thehindu.com/sci-tech/science/private-spacecraft-falls-back-to-earth-after-failing-to-rescue-aging-nasa-telescope/article71511767.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The robotic spacecraft that failed to <a href=\"https://www.thehindu.com/sci-tech/science/nasa-robot-mission-aiming-to-rescue-space-telescope/article71164357.ece\" target=\"_self\">rescue an aging NASA telescope</a> plunged back to Earth on Friday (September 25, 2026) less than three months after launching on the bold mission."
+            },
+            {
+                "type": "text",
+                "value": "Katalyst Space Technologies announced the demise of its three-armed spacecraft named Link. It reentered the atmosphere overnight, bringing the $30 million, NASA-sponsored salvage effort of the Swift Observatory to a close."
+            },
+            {
+                "type": "text",
+                "value": "Swift is expected to follow in early November as its orbit steadily sinks."
+            },
+            {
+                "type": "text",
+                "value": "“While we'll be sad to see Swift's mission come to a close, we knew this boost effort would be worthwhile either way,” NASA's Shawn Domagal-Goldman said in a statement."
+            },
+            {
+                "type": "text",
+                "value": "It provided valuable practice for future satellite-rescue missions and pushed teams to rush against the clock like never before, Domagal-Goldman added."
+            },
+            {
+                "type": "text",
+                "value": "Thrown together in under a year, Link was supposed to capture the 22-year-old Swift and then boost it to a higher, longer-lasting orbit so it could keep observing some of the biggest explosions in the universe. The sun's intense flare-ups had put the telescope on a downward spiral faster than engineers anticipated."
+            },
+            {
+                "type": "text",
+                "value": "To buy time, NASA suspended observations early this year and repositioned Swift to minimise the atmosphere's downward drag. Otherwise, the telescope would have come down before help could arrive, according to managers."
+            },
+            {
+                "type": "text",
+                "value": "Link launched on July 3, but quickly ran into electronic problems that took out two of the three reaction wheels needed to turn the spacecraft. Then a bad valve sent the satellite into a fast spin that disrupted communication. Engineers regained control, but Link didn't have enough fuel left to carry out its job and the rescue effort was called off in August."
+            },
+            {
+                "type": "text",
+                "value": "Katalyst used the few weeks remaining to practice moving Link's robot arms, each about 3 feet in length with a handlike gripper on the end. Flight controllers even managed to guide the spacecraft to within 12 kilometres to 15 kilometres of Swift, close enough to snap pictures."
+            },
+            {
+                "type": "text",
+                "value": "“We knew from the beginning that this was an ambitious mission on an aggressive timeline,” Katalyst CEO Ghonhee Lee said in a statement."
+            },
+            {
+                "type": "text",
+                "value": "Mr. Lee said the company will carry all the lessons learned to its future satellite-recovery endeavours. “This is a foundation we can build on,\" he added."
+            },
+            {
+                "type": "text",
+                "value": "Swift is back to scanning the universe in the month or so that it has left."
+            },
+            {
+                "type": "text",
+                "value": "Launched in 2004, the $364 million observatory is designed to pivot quickly — as its name suggests — to capture gamma ray bursts, exploding stars and other fast-breaking cosmic action. That ability allows Swift to serve as a lookout or first responder for other telescopes that can follow its lead. NASA is scrambling to see how it now will fill that gap."
+            }
+        ],
+        "date": "2026-09-26"
+    },
+    {
+        "category": "Science",
+        "title": "Biosphere 2, an experiment like no other",
+        "url": "https://www.thehindu.com/sci-tech/science/biosphere-2-an-experiment-like-no-other/article71479873.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The dream of heading out to space and colonising distant celestial bodies isn’t one that is unique to the time we live in. It is one that humans have aspired for long and continue to strive towards, despite the problems plaguing the only known planet that supports life as we know it: Earth."
+            },
+            {
+                "type": "text",
+                "value": "Even as we probe the habitability of celestial bodies, near and far, there have also been another set of experimenters, scientists, and researchers here on Earth that have concentrated on gearing up for that mission, whenever that might be. One of the more popular such experiments came in the form of Biosphere 2."
+            },
+            {
+                "type": "text",
+                "value": "If you were to look up the word “biosphere” in a dictionary, then you will likely learn that it is “a part of a planet’s environment where life exists.” Given that Earth is the only place we know that supports life, the biosphere can also be defined as “the part of the Earth’s environment where life exists.”"
+            },
+            {
+                "type": "text",
+                "value": "With Earth being Biosphere 1, a group of people got together to build Biosphere 2 — a structure that was to serve as a tiny Earth capsule on Earth. This Earth-based laboratory was built to test the ability of human beings to live in outer space in isolation. It was envisioned as a 100-year project, providing for long-term investigation of processes that fundamentally underline our experience here on Earth."
+            },
+            {
+                "type": "heading",
+                "value": "Whose idea was it anyway?"
+            },
+            {
+                "type": "text",
+                "value": "A group of people got together in San Francisco in 1967 to build a community known as the “Synergists”. From building a ship of their own to sailing around the world to living in particular environmental conditions, the Synergists carried out a number of projects that they believed were sustainable both economically and ecologically."
+            },
+            {
+                "type": "text",
+                "value": "During one such project where members were involved in organic farming, carpentry and performing arts on a New Mexico ranch, the group hit upon the idea for Biosphere 2. Believed to be conceived by American engineer and polymath John Allen, the idea turned into a reality once billionaire businessman Edward Bass decided to pump money into the project."
+            },
+            {
+                "type": "heading",
+                "value": "Design and reality"
+            },
+            {
+                "type": "text",
+                "value": "The site for building Biosphere 2 was in the Sonoran Desert in Oracle, Arizona, U.S. Built at a cost of $150 million (over $440 million today), the construction of Biosphere 2 began in 1984 and was completed in the early 1990s. One of the largest buildings to be almost completely cut off from the atmosphere, Biosphere 2 sprawls across a three-acre area."
+            },
+            {
+                "type": "text",
+                "value": "The structure looks like a cross between a multi-level greenhouse and a collection of glass pyramids, towers, minarets, and domes. Inside it resided over 3,500 species of plants and animals in five miniature biomes. The biomes included a tropical rainforest with a 25-foot waterfall, an ocean with its own living coral reef, a mangrove-filled marsh and wetland, a savannah, and a fogged desert."
+            },
+            {
+                "type": "text",
+                "value": "On September 26, 1991, eight people — including some who were involved from the ideation stage — stepped into Biosphere 2. The four women and four men were dressed in dark-blue spacesuits as they bade goodbyes to the gathered friends, family and members of media crews. One of them, Jane Poynter, declared that “The future is here!” before stepping into the ecological laboratory that was hermetically sealed."
+            },
+            {
+                "type": "text",
+                "value": "“The future is here!”<span class=\"quote-by\">Jane Poynter, one of the first eight Biospherians</span>"
+            },
+            {
+                "type": "text",
+                "value": "The eight “Biospherians” had means to communicate with the outside world in the form of email, telephone, and fax, but that’s as far as things got. There was no physical contact from the outside world, and that wasn’t the only challenge that they faced."
+            },
+            {
+                "type": "heading",
+                "value": "Perception and aftermath"
+            },
+            {
+                "type": "text",
+                "value": "If we were to ever construct colonies in outer space, then there’s the need for those building it and living there to be self-sufficient. As the Biospherians were exploring exactly that, they grew their own crops and ate them; recycled all the air, water, and waste; and took care of their surroundings."
+            },
+            {
+                "type": "text",
+                "value": "Despite the difficulties that they faced, the first batch of Biospherians stepped outside their sealed enclosure two years later in 1993. The next crew of seven stepped into Biosphere 2 on March 6, 1994, but their stay was terminated months later the same year owing to financial and executive decisions made outside in Biosphere 1."
+            },
+            {
+                "type": "text",
+                "value": "While there’s no denying that the first crew had help from outside and weren’t entirely transparent with their communication, somewhere along the line the experiment turned into something else for those outside. The problem of enforced social-distancing, both mentally and physically, is better understood now owing to the COVID-19 pandemic. Three decades before that, however, people outside understood little of how things might be. Both the broader public, and a section of the media covering it, became more interested in the storylines and fault lines of the individuals involved, more than what they were trying to achieve."
+            },
+            {
+                "type": "text",
+                "value": "The property was leased out to Columbia University in 1994, and they converted it into a research facility. It was subsequently leased and eventually gifted to the University of Arizona in 2011."
             }
         ],
         "date": "2026-09-26"
