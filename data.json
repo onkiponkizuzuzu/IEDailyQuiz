@@ -1,120 +1,228 @@
 [
     {
-        "category": "Policy",
-        "title": "Central govt employees to get salary in advance on Sept 25 ahead of 3-day bank strike",
-        "url": "https://www.thehindubusinessline.com/economy/policy/central-govt-employees-to-get-salary-in-advance-on-sept-25-ahead-of-3-day-bank-strike/article71501316.ece",
+        "category": "Agri Business",
+        "title": "El Nino threatens rabi crops in rainfed areas, may affect foodgrain output: Agri Secy",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/el-nino-threatens-rabi-crops-in-rainfed-areas-may-affect-foodgrain-output-agri-secy/article71519080.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The Finance Ministry has advised all departments and ministries to disburse September’s salary in advance on September 25 in view of a three-day bank strike called by the United Forum of Bank Unions (UFBU)."
+                "value": "The upcoming rabi (winter) season is likely to be challenging for rainfed areas due to the El Nino weather pattern, and foodgrain production could be affected, Agriculture Secretary Atish Chandra said on Monday."
             },
             {
                 "type": "text",
-                "value": "UFBU, which claims to represent 90 per cent of the banking workforce, are going on a three-day strike beginning September 28, seeking 5-day banking among other demands."
+                "value": "Addressing a two-day national conference on preparedness for the rabi season, Chandra said the kharif season was also very challenging, particularly in rainfed areas. Several States struggled first to achieve crop coverage and later to ensure that the crops survived."
             },
             {
                 "type": "text",
-                "value": "The strike, if it materialises, would coincide with the half-yearly closing of the banking sector."
-            },
+                "value": "Sowing of rabi crops such as wheat and mustard begins in October."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Agri Business",
+        "title": "IMD: Heavy rain likely in TN, Karnataka, Kerala for 3–4 days",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/imd-update-showers-thunderstorms-seen-for-south-peninsula-as-monsoon-resumes-exit/article71518474.ece",
+        "content": [
             {
-                "type": "heading",
-                "value": "Salaries and pensions to be paid in advance"
+                "type": "text",
+                "value": "With just three days left in the south-west <a href=\"https://www.thehindubusinessline.com/topic/Monsoon/\" target=\"_blank\">monsoon</a> season, the Bay of Bengal has stirred into another bout of activity, with an incoming weather pulse from Thailand intensifying rapidly over the weekend into a depression by Monday morning."
             },
             {
                 "type": "text",
-                "value": "In view of a three-day nationwide bank strike proposed from September 28-30, 2026... “the Government has decided that the salary/wages/pensions of all Central Government Employees for the month of September 2026 may be drawn and disbursed by the Central Government offices (including Defence, Posts &amp; Telecommunications) on September 25 2026 (Friday), “ according to an office memorandum issued by the Controller General of Accounts under the Finance Ministry."
+                "value": "<a href=\"https://www.thehindubusinessline.com/economy/agri-business/imd-monsoon-exiting-rajasthan-as-bay-low-awaits-turn-to-intensify/article71487178.ece\" target=\"_blank\">The development had been flagged by <i>businessline</i> eight days ago</a>, based on<a href=\"https://www.thehindubusinessline.com/topic/IMD/\" target=\"_blank\"> India Meteorological Department (IMD)</a> numerical model guidance, which had indicated the potential for the system to emerge over the Bay and intensify."
             },
             {
                 "type": "text",
-                "value": "The wages for September 2026 of the industrial employees of the central government may also be disbursed in advance on September 25, 2026, it said."
+                "value": "The latest depression, however, is unlikely to turn towards the Indian coast. The IMD said it could strengthen further into a deep depression by this (Monday) evening and move along and off the Myanmar coast towards north-east and adjoining Bangladesh coast over next three days. The depression lay over the north Andaman Sea and adjoining Myanmar coast, about 590 km east-north-east of Mayabandar in the Andaman Islands."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Keralam to strengthen compensation, prevention measures for wildlife conflict",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/keralam-to-strengthen-compensation-prevention-measures-for-wildlife-conflict/article71518559.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Keralam Forest Minister Shibu Baby John has said the government will introduce a Containment, Mitigation and Compensation (CMC) policy to address the growing problem of human–wildlife conflict in the State."
             },
             {
                 "type": "text",
-                "value": "The pension for September 2026 of all central government pensioners may also be disbursed by bank/PAOs on September 25, 2026, it said."
+                "value": "Speaking at the 87th annual general body meeting of the Association of Planters of Kerala (APK), the Minister said steps were being taken to restore natural forests, develop grasslands and introduce AI-based defence mechanisms along forest fringes. The government also plans to substantially increase compensation for crop and other losses caused by wild animals and ensure that the payments reach affected farmers within a fixed timeframe."
             },
             {
                 "type": "text",
-                "value": "“The salary/wages/pension so disbursed is to be treated as advance payments and will be subject to adjustment after the full month’s salary/wages/pension of each employee/pensioner is determined. The adjustment, if any, will be made without exception from the salary/wages for October 2026,” it said."
-            },
+                "value": "The Minister said human activities over the years had also contributed to the escalation of human–animal conflict. He added that the government was open to proposals concerning crop diversification, value addition and tourism in the plantation sector."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Agri Business",
+        "title": "India’s kharif crops output may be lower, crops in winter season also at risk in rainfed areas",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-kharif-crops-output-may-be-lower-crops-in-winter-season-also-at-risk-in-rainfed-areas/article71519209.ece",
+        "content": [
             {
-                "type": "heading",
-                "value": "Payments may be processed ahead of strike"
+                "type": "text",
+                "value": "Despite deficient and excessive rainfall threatening some Kharif crop yields, Agriculture Minister Shivraj Singh Chouhan assured on Monday that overall sowing targets were met inspite of El Niño risks. India produced a record 176.04 million tonnes of foodgrains, including 124.76 million tonnes of rice, during the 2025 Kharif season."
             },
             {
                 "type": "text",
-                "value": "As the strike period coincides with the closing days of the current quarter, it said, payments and other banking transactions scheduled towards the end of September 2026 may also be processed in advance, wherever feasible, to avoid delays and disruptions caused by the proposed strike."
+                "value": "Addressing the annual Rabi conference, held to prepare for the winter crops, Chouhan said: “We were concerned about the impact of El Niño. However, I congratulate all of you—the entire team—on having largely met the Kharif sowing targets. Yes, crops have certainly been affected in many places.”"
             },
             {
                 "type": "text",
-                "value": "“The concerned Ministries/Departments are requested to bring these instructions to the notice of their offices for necessary action immediately,” it said."
+                "value": "In his address, union agriculture secretary Atish Chandra said that the Kharif season was very challenging, particularly in rainfed areas. Several States struggled first to achieve crop coverage and later to ensure that the crops survived.”"
             },
             {
                 "type": "text",
-                "value": "The Reserve Bank of India has also been requested to communicate the instructions to the paying branches of banks, the memorandum stated."
-            },
-            {
-                "type": "heading",
-                "value": "Banks asked to remain open on Sunday"
+                "value": "Chandra also said that all estimates project (Kharif crops’) production most likely to be impacted (lower) due to deficient rains in many parts and also heavy and untimely rains even in irrigated areas."
             },
             {
                 "type": "text",
-                "value": "Meanwhile, the finance ministry also directed all banks, including Regional Rural Banks, to remain open on Sunday for convenience of customers in view of the strike."
+                "value": "The secretary further said that the upcoming Rabi season, starting October, will also be a challenge for crops in rainfed areas. The agriculture ministry is likely to release first estimates of production of 2026 Kharif crops next month."
             },
             {
                 "type": "text",
-                "value": "Many public sector banks have started issuing advisories to their customers to use digital channels such as mobile banking, ATM, internet banking, BC Point and UPI for banking needs if the strike materialises."
+                "value": "Commenting on the drought situation in two important agricultural states Karnataka and Maharashtra, Chouhan said a central team would soon visit the states, Karnataka on October 3, while he himself would also undertake an on field assessment later."
             },
             {
                 "type": "text",
-                "value": "Banks have also advised their customers to complete essential banking transactions well in advance of the proposed strike dates to avoid any inconvenience."
+                "value": "The government has fixed a production target of 123.15 mt of rice, 8.41 mt pulses, 31.04 mt maize, 13.56 mt nutri cereals, 28.93 mt of oilseeds, 500 mt of sugarcane and 33.6 million bales of cotton (each bale weighs 170 kh) during Kharif 2026."
             },
             {
                 "type": "text",
-                "value": "The proposed 3-day strike period also coincides with the half-yearly closing of banks on September 30, a date of particular significance for reconciliation, provisioning and treasury and market operations."
+                "value": "The total acreage under all Kharif crops as on September 18 was 1,103.90 lakh hectare (lh), down from 1,118.95 lh year-ago. The normal acreage in the season is 1,104.44 lh."
             },
             {
                 "type": "text",
-                "value": "Published on  September 23, 2026"
+                "value": "The fall in acreage was reported mainly in paddy (by over 15 lh), while marginal drop is also in moong, maize, ragi, groundnut, soyabean, castor and sugarcane."
+            },
+            {
+                "type": "text",
+                "value": "Chandra said some states could face the problem of excess soil moisture, while areas with deficient rainfall may see prolonged periods of stress."
+            },
+            {
+                "type": "text",
+                "value": "Strategies need to be calibrated accordingly for the Rabi season, he added. He also pointed out that India continues to import pulses, edible oils and some horticulture produce such as fruits, even though it has achieved self-sufficiency in cereals."
+            },
+            {
+                "type": "text",
+                "value": "The normal acreage of Rabi crops is about 638 lh including nearly 315 lh under wheat. The government targets 177.72 million tonnes (mt) of foodgrains production which includes 121 mt of wheat, 17.20 mt of pulses, 14.3 mt of mustard and 22.30 mt of nutri/coarse cereals in Rabi 2026-27."
+            },
+            {
+                "type": "text",
+                "value": "Chouhan called for cautious and careful planning for the Rabi season amid threat from Clomate Change. “Traditionally, the heat during this month was intense. Yet, currently one feels as if winter has already set in,” he said adding effects of climate change are clearly visible."
+            },
+            {
+                "type": "text",
+                "value": "He, however, assured the states that crops aren’t damaged everywhere. “In fact, they are excellent in many places,” he noted."
+            },
+            {
+                "type": "text",
+                "value": "Exhorting states to be prepared for the Rabi season, he said timely availability of seeds and fertilisers as well as marketing support including government procurement are key factors for the farmers."
+            },
+            {
+                "type": "text",
+                "value": "Chouhan also appealed to the States to cooperate with central procuring agencies Nafed and NCCF as the Centre has decided now to procure on its own through the nodal agencies without waiting for requests from States. However, there were no further details immediately available on how the oilseeds and pulses procurement will proceed this year."
+            },
+            {
+                "type": "text",
+                "value": "The minister said that there are some key regions which have received excellent rainfall while in some other areas, rainfall is below average. Yet the precipitation is sufficient not to hinder sowing operations, headded."
+            },
+            {
+                "type": "text",
+                "value": "“I urge friends in those (deficient rainfall) states to plan for the Rabi season using a scientific approach. In regions facing water scarcity, one must assess water availability and soil moisture levels, and make advance arrangements for irrigation water. I believe there is a need to formulate a ‘water budget’ at this juncture. How do we utilize the limited water available, which crops should we recommend and plan for,” he said"
+            },
+            {
+                "type": "text",
+                "value": "Selection of crops based on water availability, conservation of soil moisture and timely sowing, right seeds and varieties, and making fertiliser timely available as well as application of its correct dose are the key factors in the preparation, Chouhan said."
+            },
+            {
+                "type": "text",
+                "value": "Published on  September 28, 2026"
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Logistics",
+        "title": "World Bank arm IFC commits ₹672 crore to JNPA for shore power infra",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/world-bank-arm-ifc-commits-672-crore-to-jnpa-for-shore-power-infra/article71518665.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The International Finance Corporation (IFC), the World Bank Group’s private-sector investment arm, has committed $70 million (about ₹672 crore) to the Jawaharlal Nehru Port Authority (JNPA) to finance shore-power infrastructure across its terminals, in what is being described as India’s first blue financing for the maritime sector."
+            },
+            {
+                "type": "text",
+                "value": "The financing will help JNPA enable ships at berth to switch off their diesel engines and plug into land-based electricity, cutting carbon emissions by 63 per cent and harmful air pollution by up to 90 per cent, while creating more than 400 jobs."
+            },
+            {
+                "type": "text",
+                "value": "JNPA will become the first Indian port to deploy shore-power technology at commercial scale, with IFC’s long-term financing expected to help demonstrate the technology’s viability and create a financing model that could be replicated at other Indian ports. The project was first reported by BusinessLine in July 2024, when JNPA had announced plans to invest around ₹100 crore in a pilot shore-power project at one of its terminals. At the time, the port authority had said a rollout across all its terminals could require around ₹600 crore and 74 MW of power capacity."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Logistics",
+        "title": "First cargo vessel since Independence set to sail abroad from Dibrugarh via Brahmaputra",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/first-cargo-vessel-since-independence-set-to-sail-abroad-from-dibrugarh-via-brahmaputra/article71518267.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Nearly eight decades after Independence, Dibrugarh is set to resume international cargo movement through the Brahmaputra, with two vessels carrying 1,080 tonnes of methanol from Bogibeel to Bangladesh, marking the beginning of commercial operations at the newly constructed inland water port."
+            },
+            {
+                "type": "text",
+                "value": "The methanol, produced by Assam Petro-Chemicals Limited (APL) at Namrup, will be transported from the Bogibeel port to Bangladesh. Two cargo vessels, around 30 years old, have been prepared for the operation, with each vessel carrying 27 containers. Each container will hold around 20 tonnes of methanol, allowing each vessel to transport approximately 540 tonnes. Together, the two vessels will carry 1,080 tonnes of methanol on the journey."
+            },
+            {
+                "type": "text",
+                "value": "The vessels will travel nearly 783 kilometres from Bogibeel to the Bangladesh border and are expected to complete the journey in around seven days. The development comes as the Bogibeel inland water port becomes commercially ready for international water transport. The port complex has a customs office, jetty and warehouse, while construction of a lighthouse and a Regional Centre of Excellence is underway."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Logistics",
+        "title": "IndiGo flight suffers tail strike during second landing attempt at Bengaluru airport",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/indigo-flight-suffers-tail-strike-during-second-landing-attempt-at-bengaluru-airport/article71518161.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "A Bengaluru-bound IndiGo flight from Guwahati suffered a tail strike during a second landing attempt at the Bengaluru airport on Sunday, sources said."
+            },
+            {
+                "type": "text",
+                "value": "IndiGo said in a statement that its aircraft operating its Guwahati-Bengaluru flight experienced “abnormal runway contact” while landing during gusty weather at the Kempegowda International Airport."
+            },
+            {
+                "type": "text",
+                "value": "All customers and crew are safe and have disembarked safely, the statement said."
             }
         ],
         "date": "2026-09-28"
     },
     {
         "category": "Policy",
-        "title": "US House passes Russia sanctions bill targeting countries buying Russian oil",
-        "url": "https://www.thehindubusinessline.com/economy/policy/us-house-passes-russia-sanctions-bill-targeting-countries-buying-russian-oil/article71475090.ece",
+        "title": "Goyal says 1,000 people to be trained to support exporters at district, state levels",
+        "url": "https://www.thehindubusinessline.com/economy/policy/goyal-says-1000-people-to-be-trained-to-support-exporters-at-district-state-levels/article71497050.ece",
         "content": [
             {
                 "type": "text",
-                "value": "Congress gave final approval to a bill to give President Donald Trump new powers to impose tariffs on countries that purchase Russian petroleum products, a setback for a coalition of business lobbyists concerned the legislation creates a legal underpinning for a broad new tariff regime against US trading partners."
+                "value": "Commerce and Industry Minister Piyush Goyal on Tuesday said that about 1,000 people will be trained in regional languages about trade to support existing and prospective exporters at the district and state levels."
             },
             {
                 "type": "text",
-                "value": "The legislation, which the House passed Wednesday in a 262-159 vote, has been celebrated by Ukrainian officials eager for a tangible sign of US support in its fight against a Russian invasion. The war, now in its fifth year, is in a critical phase of escalation."
+                "value": "Addressing an industry stakeholders meeting on ease of doing business and free trade agreement (FTA) opportunities, he also said that instead of establishing separate offices of every department in every location, integrated commerce and industry offices are envisaged in major cities to provide businesses with a common point of access to multiple departments and agencies."
             },
             {
                 "type": "text",
-                "value": "The measure now goes to Trump’s desk for his signature, after easily passing the Senate last month. The president plans to sign the bill in the coming days, a White House official said."
-            }
-        ],
-        "date": "2026-09-28"
-    },
-    {
-        "category": "Policy",
-        "title": "Cabinet raises EPFO wage ceiling to Rs 25,000; 51 lakh employees to benefit",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-raises-epfo-wage-ceiling-to-rs-25000-51-lakh-employees-to-benefit/article71472392.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Union Cabinet on Wednesday approved a proposal to raise the wage ceiling for mandatory coverage under the Employees’ Provident Fund Organisation (EPFO) to Rs 25,000 per month from Rs 15,000."
-            },
-            {
-                "type": "text",
-                "value": "The wage ceiling revision is taking place after 12 years."
-            },
-            {
-                "type": "text",
-                "value": "The decision is expected to bring more than 51 lakh additional employees within the ambit of mandatory EPFO coverage, significantly widening social security protection for workers, Information and Broadcasting Minister Ashwini Vaishnaw said at a press briefing."
+                "value": "The minister also announced a proposed network of approximately 1,000 trained local personnel, with knowledge of regional languages, to support exporters and prospective exporters at the district and state levels, the commerce ministry said in a statement."
             }
         ],
         "date": "2026-09-28"
@@ -141,20 +249,744 @@
     },
     {
         "category": "Policy",
-        "title": "Goyal says 1,000 people to be trained to support exporters at district, state levels",
-        "url": "https://www.thehindubusinessline.com/economy/policy/goyal-says-1000-people-to-be-trained-to-support-exporters-at-district-state-levels/article71497050.ece",
+        "title": "Cabinet raises EPFO wage ceiling to Rs 25,000; 51 lakh employees to benefit",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-raises-epfo-wage-ceiling-to-rs-25000-51-lakh-employees-to-benefit/article71472392.ece",
         "content": [
             {
                 "type": "text",
-                "value": "Commerce and Industry Minister Piyush Goyal on Tuesday said that about 1,000 people will be trained in regional languages about trade to support existing and prospective exporters at the district and state levels."
+                "value": "The Union Cabinet on Wednesday approved a proposal to raise the wage ceiling for mandatory coverage under the Employees’ Provident Fund Organisation (EPFO) to Rs 25,000 per month from Rs 15,000."
             },
             {
                 "type": "text",
-                "value": "Addressing an industry stakeholders meeting on ease of doing business and free trade agreement (FTA) opportunities, he also said that instead of establishing separate offices of every department in every location, integrated commerce and industry offices are envisaged in major cities to provide businesses with a common point of access to multiple departments and agencies."
+                "value": "The wage ceiling revision is taking place after 12 years."
             },
             {
                 "type": "text",
-                "value": "The minister also announced a proposed network of approximately 1,000 trained local personnel, with knowledge of regional languages, to support exporters and prospective exporters at the district and state levels, the commerce ministry said in a statement."
+                "value": "The decision is expected to bring more than 51 lakh additional employees within the ambit of mandatory EPFO coverage, significantly widening social security protection for workers, Information and Broadcasting Minister Ashwini Vaishnaw said at a press briefing."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Policy",
+        "title": "Central govt employees to get salary in advance on Sept 25 ahead of 3-day bank strike",
+        "url": "https://www.thehindubusinessline.com/economy/policy/central-govt-employees-to-get-salary-in-advance-on-sept-25-ahead-of-3-day-bank-strike/article71501316.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Finance Ministry has advised all departments and ministries to disburse September’s salary in advance on September 25 in view of a three-day bank strike called by the United Forum of Bank Unions (UFBU)."
+            },
+            {
+                "type": "text",
+                "value": "UFBU, which claims to represent 90 per cent of the banking workforce, are going on a three-day strike beginning September 28, seeking 5-day banking among other demands."
+            },
+            {
+                "type": "text",
+                "value": "The strike, if it materialises, would coincide with the half-yearly closing of the banking sector."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Policy",
+        "title": "US House passes Russia sanctions bill targeting countries buying Russian oil",
+        "url": "https://www.thehindubusinessline.com/economy/policy/us-house-passes-russia-sanctions-bill-targeting-countries-buying-russian-oil/article71475090.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Congress gave final approval to a bill to give President Donald Trump new powers to impose tariffs on countries that purchase Russian petroleum products, a setback for a coalition of business lobbyists concerned the legislation creates a legal underpinning for a broad new tariff regime against US trading partners."
+            },
+            {
+                "type": "text",
+                "value": "The legislation, which the House passed Wednesday in a 262-159 vote, has been celebrated by Ukrainian officials eager for a tangible sign of US support in its fight against a Russian invasion. The war, now in its fifth year, is in a critical phase of escalation."
+            },
+            {
+                "type": "text",
+                "value": "The measure now goes to Trump’s desk for his signature, after easily passing the Senate last month. The president plans to sign the bill in the coming days, a White House official said."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Agriculture",
+        "title": "U.P. focuses on utilisation of Gram Sabha ponds, reservoirs, rivers to make fisheries backbone of rural livelihood",
+        "url": "https://www.thehindu.com/news/national/uttar-pradesh/up-focuses-on-utilisation-of-gram-sabha-ponds-reservoirs-rivers-to-make-fisheries-backbone-of-rural-livelihood/article71516806.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Uttar Pradesh government on Sunday (September 27, 2026) said it was aiming to make fisheries a reliable source of income for farmers and fishing communities by improving the utilisation of Gram Sabha ponds, reservoirs and rivers."
+            },
+            {
+                "type": "text",
+                "value": "The State government said more than 80,000 hectares of Gram Sabha ponds had been leased for fisheries activities, 2,205 km of rivers had been brought under organised leasing frameworks, and 342 reservoirs were now actively supporting fish production."
+            },
+            {
+                "type": "text",
+                "value": "\"Our structured approach has brought transparency, efficiency, and stronger community participation in fisheries management,\" Mukesh Kumar Meshram, Additional Chief Secretary, Animal Husbandry, Dairy Development and Fisheries Department, told <i>The Hindu</i>. He said the expansion in scale and coverage had significantly increased fish output while creating employment opportunities for thousands of rural households. Fish production had risen from 6.29 lakh tonnes to 15.90 lakh tonnes in the past eight years, he said."
+            },
+            {
+                "type": "text",
+                "value": "Mr. Meshram, a 1995-batch Indian Administrative Service (IAS) officer, said the focus on scientific fish culture and improved resource management was also helping farmers achieve sustainable growth without depleting ecological resources. Access to government schemes, modern practices and collective investment models had led to higher productivity and better income stability, he said."
+            },
+            {
+                "type": "text",
+                "value": "\"Our initiative strongly aligns with long-term goals of utilising underused water resources efficiently, enhancing farmers' incomes through targeted schemes, promoting sustainable fisheries management practices and balancing economic growth with ecological sustainability,\" the Additional Chief Secretary added."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Study flags E. coli in 67% of water samples in Keralam’s Pala region",
+        "url": "https://www.thehindu.com/news/national/kerala/study-flags-e-coli-in-67-of-water-samples-in-keralams-pala-region/article71516096.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "A water quality assessment conducted in flood-affected areas along the Meenachil river has detected E. coli bacteria in 67% of the samples, raising concerns over the safety of drinking water sources in and around Pala."
+            },
+            {
+                "type": "text",
+                "value": "The study, conducted by the PG and Research Department of Zoology of Alphonsa College, Pala, in collaboration with local administrations, analysed water samples collected from water bodies in Pala Municipality, Karoor, Bharananganam, Erattupetta, Poonjar, Mutholy and Kidangoor. The assessment was undertaken as part of efforts to mitigate the risk of waterborne diseases in flood-affected areas."
+            },
+            {
+                "type": "text",
+                "value": "The study evaluated nine physicochemical and microbiological parameters, including pH, electrical conductivity (EC), total dissolved solids (TDS), alkalinity, chlorinity, total hardness, sulphate, faecal coliform and E. coli."
+            },
+            {
+                "type": "text",
+                "value": "The findings showed that TDS and pH levels exceeded the normal permissible range in the samples tested. E. coli was detected in 67% of the samples, with researchers attributing the spike in bacterial contamination to the recent floods, which may have allowed contaminated surface water to enter water sources."
+            },
+            {
+                "type": "text",
+                "value": "The assessment has recommended scientific chlorination of water sources and mandatory water quality testing after every flood as key remedial measures. The recommendations have been shared with local stakeholders for follow-up action."
+            },
+            {
+                "type": "text",
+                "value": "The report, along with the recommendations, was handed over to the Pala municipality at a function attended by Water Resources Minister Mons Joseph the other day."
+            },
+            {
+                "type": "text",
+                "value": "Meanwhile, the college has launched a one-year pilot study to track seasonal variations in water quality during the pre-monsoon, monsoon and post-monsoon periods. The study is expected to provide a broader assessment of changes in water quality across the region."
+            },
+            {
+                "type": "text",
+                "value": "The college has also initiated steps to transform its research laboratory into a certified facility, with efforts under way to secure recognition from the Kerala State Pollution Control Board."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Beyond borders and difficult roads, government hospitals in Telangana’s Bhadradri Kothagudem keep specialised care going",
+        "url": "https://www.thehindu.com/news/national/telangana/beyond-borders-and-difficult-roads-government-hospitals-in-telanganas-bhadradri-kothagudem-keep-specialised-care-going/article71515963.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "When Meghana’s family in YSR Kadapa district was told to wait for months for a sinus procedure and private hospitals quoted costs running into lakhs of rupees, they looked beyond Andhra Pradesh for an alternative. They eventually travelled to Yellandu in <a href=\"https://www.thehindu.com/news/national/telangana/how-one-ophthalmologist-helped-a-government-hospital-in-telanganas-remote-tribal-region-complete-400-cataract-surgeries/article71487592.ece\" target=\"_self\">Bhadradri Kothagudem district of Telangana, where a government hospital</a> performed the specialised surgery."
+            },
+            {
+                "type": "text",
+                "value": "Meghana, a resident of Busireddypalli village in Veerapunayunipalli mandal, had been suffering from severe sinus-related problems and nasal obstruction caused by tissue growth inside her nose. Coming from a financially disadvantaged family headed by a single mother, the prospect of paying lakhs of rupees at a private hospital was difficult for the family."
+            },
+            {
+                "type": "text",
+                "value": "Hospitals in Andhra Pradesh and Hyderabad had advised the family to wait for nearly three months for the procedure. It was through an acquaintance that the family came to know of Bhadradri Kothagudem District Coordinator of Hospital Services (DCHS) Dr G. Ravi Babu, who referred Meghana to the Area Hospital at Yellandu."
+            },
+            {
+                "type": "text",
+                "value": "At the hospital, ENT specialist Dr. Ravi Tejaswi performed Functional Endoscopic Sinus Surgery (FESS), along with septoplasty, bilateral turbinectomy and middle meatal conchoplasty. The procedures were aimed at treating her sinus disease and relieving the nasal obstruction. “For the family, the treatment offered at a government hospital in a relatively remote part of Telangana meant that they did not have to wait several months or incur the high costs quoted by private hospitals,” said Dr. Ravi Babu."
+            },
+            {
+                "type": "text",
+                "value": "The effort to keep essential healthcare services available in remote areas is also visible at the Community Health Centre (CHC), Charla, in the same district, where the medical team conducted eight deliveries within 24 hours recently, including four normal deliveries and four Caesarean sections. The deliveries were managed by gynaecologist Dr. Sravani, anaesthesiologist Dr. Krishna Prasad, OT team member Sneha, nursing officers Shailaja and Dayamani, Abrar, labour-room nurses and other hospital staff."
+            },
+            {
+                "type": "text",
+                "value": "The achievement came despite heavy rains in the region over the past three days and difficult road conditions. “The medical team has been travelling nearly 60 km every day to provide maternity services at Charla, ensuring that pregnant women do not have to depend entirely on hospitals located farther away,” Dr Ravi Babu added."
+            },
+            {
+                "type": "text",
+                "value": "Charla is around 56 km from the Area Hospital at Bhadrachalam, making the availability of local maternity services particularly significant for residents of the remote mandal. The continuation of 24x7 services has also helped improve confidence among local residents in using the government hospital."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Ravi Babu said that the hospital had earlier faced a shortage of nursing personnel. Following recent recruitment, adequate nursing staff are now available. Doctors were also recruited, although several have not joined duty because of the hospital’s remote location."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Ahead of winter, why Delhi needs to vaccinate its grandparents alongside their grandchildren",
+        "url": "https://www.thehindu.com/sci-tech/health/ahead-of-winter-why-delhi-needs-to-vaccinate-its-grandparents-alongside-their-grandchildren/article71494264.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The winter season in Delhi usually results in poor air quality, outbreaks of seasonal influenza, a heavy burden on hospitals and increasing medical expenses. Hidden within the yearly air quality reports is a health problem that is preventable, and yet costs the city’s citizens lakhs.  Among the elderly, especially those who have diabetes, chronic obstructive pulmonary disease, heart disease or a suppressed immune system, a viral infection can develop into bacterial pneumonia and  require hospitalization. Industry estimates suggest that the average cost of a hospital stay is about ₹50,000, while intensive care can amount to ₹1 lakh. A single such incident can erase months’ worth of income and cause households relying on pensions and daily wages to slip down the income scale."
+            },
+            {
+                "type": "heading",
+                "value": "The battle against pneumonia"
+            },
+            {
+                "type": "text",
+                "value": "India has achieved real advances in the fight against pneumonia, mainly as a result of introducing the pneumococcal conjugate vaccine (PCV) as part of the Universal Immunisation Programme in 2017 and through Mission Indradhanush. Free three-dose vaccinations are provided to infants, and by 2023, vaccination rates among infants in India had reached 83%,  according to the <a href=\"https://cdn.who.int/media/docs/default-source/country-profiles/immunization/2024-country-profiles/immunization-2024-ind.pdf?sfvrsn=a10c4678_3&amp;download=true\" target=\"_self\">WHO/UNICEF Estimates of National Immunization Coverage (WUENIC)</a>."
+            },
+            {
+                "type": "text",
+                "value": "The grandparents of these infants, however, are almost completely unprotected: National Sample Survey Office (NSSO) 80th Round Data on Health reveals that vaccination coverage among people aged 60 and over is only 0.40 per cent. While one generation is covered by the national programme, the other is left to avail of vaccines from a private market  they may struggle to  afford."
+            },
+            {
+                "type": "text",
+                "value": "This gap is most significant in Delhi, since in the winter, the conditions can turn common respiratory infections  into serious health issues."
+            },
+            {
+                "type": "heading",
+                "value": "Toxic winters"
+            },
+            {
+                "type": "text",
+                "value": "In December 2025, the <a href=\"https://www.thehindu.com/news/cities/Delhi/air-quality-index-new-delhi-on-december-14-2025-severe-category/article70394968.ece\" target=\"_self\">city experienced its most toxic month</a> in  six years, with an average Air Quality Index of 351.  Colder months naturally place a greater strain on the respiratory system.  Winter air, which tends to remain stagnant, traps particulate matter near the ground: prolonged exposure compromises the lungs’ defensive abilities."
+            },
+            {
+                "type": "text",
+                "value": "Government records show that there were more than 2,00,000 cases of acute respiratory illness and 30,000 hospital admissions in just six Delhi government hospitals between 2022 and 2024. When the <a href=\"https://www.thehindu.com/news/cities/Delhi/delhiites-wake-up-to-hazardous-air-aqi-crosses-400-at-27-stations-several-others-slip-to-severe-plus-range/article70428404.ece\" target=\"_self\">pollution lasted throughout December 2025</a>, doctors reportedly noted a 20% to 30%  <a href=\"https://www.thehindu.com/news/cities/Delhi/surge-in-patients-with-respiratory-issues-in-past-twodays-say-doctors/article70396527.ece\" target=\"_self\">increase in the number of patients</a> with respiratory problems, including some who had never before had such a condition."
+            },
+            {
+                "type": "text",
+                "value": "These figures do not reflect the full extent of the problem, as they exclude people treated in private clinics, those who take medication on their own, infections that have never been confirmed by a laboratory test, and cases recorded as pneumonia rather than influenza."
+            },
+            {
+                "type": "heading",
+                "value": "Vaccine present, policy absent"
+            },
+            {
+                "type": "text",
+                "value": "What makes the number of hospitalisations and their resultant expenditure tragic, is that a  a significant portion of this could perhaps be avoided with a vaccine that is already available. The <a href=\"https://www.imamumbaiwest.com/wp-content/uploads/2026/07/IMA-Unified-Consensus-on-Adult-Immunization-2026.pdf\" target=\"_self\">2026 Indian consensus guidelines</a> concerning immunisation in adults recommend pneumococcal vaccination based on age and level of risk. It recommends the PCV20 vaccine for all adults between the ages of 18-49 years with chronic medical conditions or those considered at risk based on their health and lifestyle, or a single dose of the vaccine for all adults aged 50 and above. The guidelines also include adults who have immunosuppression and chronic diseases. For residents of Delhi, in winter when pollution makes the air toxic, this could mean the difference between a minor ailment an episode of hospitalisation."
+            },
+            {
+                "type": "text",
+                "value": "India has no National Adult Immunisation Policy, and as a result, vaccination rates rely on individual awareness, access to a doctor, and the ability to pay out of pocket, a situation that systematically excludes older people in lower-income families.   While this a critical problem ahead of winter in Delhi, it is not merely a Delhi problem:  in 2022, India was estimated to whom were 149 million people aged 60 and over, a large number of whom are still economically active and support households.The Longitudinal Ageing Study in India (2017-18) showed that of Indians aged 45 and over, only around 0.6%  had received a pneumococcal vaccine, a figure that has not changed much since then."
+            },
+            {
+                "type": "text",
+                "value": "The proportion of adults aged 45 years and over who have been vaccinated in Delhi. Source: LASI Wave 1&nbsp;"
+            },
+            {
+                "type": "heading",
+                "value": "The burden in lives"
+            },
+            {
+                "type": "text",
+                "value": "The figure for deaths due to pneumonia recorded by <a href=\"https://censusindia.gov.in/nada/index.php/catalog/47157/download/51403/Annual_Report_on_MCCD_2024.pdf\" target=\"_self\">India’s Medical Certification of Cause of Death</a> in 2024 was 35,987, making it the leading cause of respiratory deaths, although it remains relatively out of the spotlight compared to other causes.  Even this figure is an under estimate since the system covers only about one fifth to one quarter of all registered deaths nationally, and older people who die at home rather than in a hospital where certification takes place almost never get included at all."
+            },
+            {
+                "type": "text",
+                "value": "Data on a year-by-year basis from Delhi shows that this is not an isolated occurrence but a consistent pattern, affecting precisely the group for whom a vaccine is already available but for whom no public system provides it."
+            },
+            {
+                "type": "text",
+                "value": "The number of institutional deaths in Delhi caused by pneumonia from 2005 to 2024. Source: Directorate of Economics &amp; Statistics and Office of the Chief Registrar (Births &amp; Deaths), 2024"
+            },
+            {
+                "type": "heading",
+                "value": "Pollution raises the stakes"
+            },
+            {
+                "type": "text",
+                "value": "It is impossible for Delhi to solve its problem of air pollution by vaccination, and there is no suggestion here that it should. Reducing emissions at the source must continue to be the main course of action. However, the two measures operate at different stages of the same risk pathway. In the winter of 2025, the AQI reached 450 at a number of monitoring stations and people suffering from respiratory and cardiac conditions were told to remain indoors, a recommendation that  is not a policy. When pollution increases baseline vulnerability, the removal of an additional infectious trigger becomes all the more important."
+            },
+            {
+                "type": "text",
+                "value": "Before winter sets in this year,  there is a concrete option available. Delhi could provide free pneumococcal vaccination to adults aged 60 and over who have recorded comorbidities via its present dispensary and mohalla clinic network and then assess both the uptake and the hospitalisation outcomes. The cost of each dose, at a few thousand rupees, is significantly lower  compared to ₹65,000 for a hospitalisation episode."
+            },
+            {
+                "type": "text",
+                "value": "Delhi already vaccinates the grandchildren; the medical case for vaccinating the grandparents is no different, it is merely administratively missing."
+            },
+            {
+                "type": "text",
+                "value": "<i>(Sayesha Gupta is a research student at the economics department, Jesus and Mary College, University of Delhi, sayeshagupta08@gmail.com; Megha Jacob is assistant professor of the department, mjacob@jmc.du.ac.in; and Karan Babbar is an assistant professor of economics at XLRI Jamshedpur, phd17karanb@iima.ac.in)</i>"
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Scientists at IAV, Keralam develop dengue early warning system to forecast trends",
+        "url": "https://www.thehindu.com/news/national/kerala/iav-develops-dengue-early-warning-system-to-forecast-dengue-trends/article71512981.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Scientists at the Institute of Advanced Virology (IAV) in Keralam are developing a dengue forecasting system that integrates epidemiological and weather data on a machine-learning platform to predict <a href=\"https://www.thehindu.com/news/national/kerala/dengue-cases-on-the-rise-in-kerala/article71025648.ece\" target=\"_self\">dengue incidence trends</a> in advance."
+            },
+            {
+                "type": "text",
+                "value": "The aim is to help public health managers plan resource allocation and preventive measures proactively, rather than responding only after outbreaks occur."
+            },
+            {
+                "type": "text",
+                "value": "Climate factors are important early warning indicators for dengue because they directly influence the biology of the Aedes mosquito and the replication of the dengue virus."
+            },
+            {
+                "type": "text",
+                "value": "Warm temperatures accelerate mosquito development, shorten the virus’s extrinsic incubation period—the time required for the virus to become transmissible inside the mosquito—and can increase transmission efficiency. Moderate to high humidity can prolong mosquito survival, while moderate rainfall creates breeding habitats. Torrential rain, however, can flush out mosquito breeding sites."
+            },
+            {
+                "type": "heading",
+                "value": "Favourable climate"
+            },
+            {
+                "type": "text",
+                "value": "Keralam, which remains warm and wet for much of the year, therefore has climatic conditions favourable to Aedes proliferation and dengue transmission. This has prompted considerable interest in developing forecasting models that combine meteorological and epidemiological data to enable disease surveillance to stay ahead of outbreaks."
+            },
+            {
+                "type": "text",
+                "value": "“Our machine learning model integrates six years of epidemiological data (March 2020 to February 2026) with climatic variables, including rainfall, temperature and average humidity, to generate weekly dengue forecasts,” says Abhinand C.S., scientist in the Department of Virus Genomics, Bioinformatics and Statistics at IAV, who developed the model."
+            },
+            {
+                "type": "text",
+                "value": "The Dengue Early Warning System (DEWS), the current version of the system, is accessible at <a href=\"https://dews.iav.res.in/\" target=\"_self\">https://dews.iav.res.in</a>, and uses epidemiological data from the State Surveillance Unit (SSU) of the Directorate of Health Services and meteorological data from the India Meteorological Department."
+            },
+            {
+                "type": "text",
+                "value": "The dengue case trends predicted by DEWS showed a positive correlation with actual case data from the Health department, Dr. Abhinand says. Further evaluation using the SSU data for March-July 2026 has indicated the model’s potential for early prediction of district-wise dengue trends."
+            },
+            {
+                "type": "text",
+                "value": "The model incorporates daily epidemiological and climatic parameters, including temperature, rainfall and humidity, allowing a more granular representation of disease dynamics. Each district is treated as an independent unit, taking into account district-specific geographical and environmental characteristics, including waterbodies and drainage systems. This enables the model to be trained and optimised for individual districts."
+            },
+            {
+                "type": "text",
+                "value": "For easier interpretation by public health managers, predicted disease burden is classified into four risk levels—very high, high, moderate and low, based on predefined prediction ranges. This provides a district-wise indication of the expected risk."
+            },
+            {
+                "type": "heading",
+                "value": "Prediction difficulties"
+            },
+            {
+                "type": "text",
+                "value": "Dengue is among the more difficult infectious diseases to predict because its transmission is multidimensional and can vary substantially between locations."
+            },
+            {
+                "type": "text",
+                "value": "Beyond climate, factors such as urbanisation, human mobility, water-storage practices, population immunity to the four dengue virus serotypes and changes in vector biology can alter transmission dynamics. Models relying heavily on climatic variables may therefore struggle to capture sudden changes in these factors."
+            },
+            {
+                "type": "text",
+                "value": "Under-reporting is another major challenge. A large proportion of dengue infections are asymptomatic or mild and may be mistaken for other viral fevers. Differences in testing and reporting practices can also create geographical biases. Thiruvananthapuram, for instance, has long been regarded as Keralam’s dengue hotspot, although public health experts have argued that its high reported burden also reflects stronger surveillance and testing."
+            },
+            {
+                "type": "text",
+                "value": "The IAV acknowledges these limitations. Since DEWS is trained on historical data, sudden or substantial changes in climatic parameters could affect its accuracy. Variations in the reporting of confirmed dengue cases by the Health department could similarly influence observed disease patterns and the reliability of predictions, Dr. Abhinand says."
+            },
+            {
+                "type": "heading",
+                "value": "Yearly updation"
+            },
+            {
+                "type": "text",
+                "value": "“For the model to evolve from a research model to a routinely functioning public health forecasting system, DEWS will have to undergo yearly updation and further refinement, and perhaps be trained with more variables. DEWS is the first disease forecasting model of its kind to be developed for use by the State,” says IAV Director E. Sreekumar."
+            },
+            {
+                "type": "text",
+                "value": "The platform could eventually be extended to other Aedes-borne diseases such as chikungunya and Zika, potentially strengthening Keralam’s disease surveillance capacity and enabling more timely, data-driven public health interventions."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Dental trauma affects over a billion globally, remains overlooked health concern: AIIMS experts",
+        "url": "https://www.thehindu.com/sci-tech/health/dental-trauma-affects-over-a-billion-globally-remains-overlooked-health-concern-aiims-experts/article71518410.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "More than one billion people globally have experienced traumatic dental injuries, making it a significant yet often overlooked public health concern with potentially long-term consequences for oral health and quality of life, AIIMS experts said."
+            },
+            {
+                "type": "text",
+                "value": "Observed annually on September 21, Global Dental and Oral Trauma Day is supported by the Indian Society of Dental Traumatology to raise awareness about prevention, timely management and equitable access to care for traumatic dental injuries."
+            },
+            {
+                "type": "text",
+                "value": "A study published in the <i>Dental Traumatology</i> journal in 2018 reported that more than one billion living people worldwide have experienced traumatic dental injuries (TDI)."
+            },
+            {
+                "type": "text",
+                "value": "Researchers highlighted that TDI represents a neglected condition of substantial global burden, noting that, if included among the world’s most frequent acute and chronic diseases and injuries, it could rank fifth in terms of prevalence."
+            },
+            {
+                "type": "text",
+                "value": "\"Dental trauma can happen anytime, anywhere and to anyone. It can have both immediate and long-term consequences. It is not simply a broken or displaced tooth. For many patients, a traumatic injury can initiate a lifelong cycle of treatment, follow-up and rehabilitation,\" said Ajay Logani, professor of endodontics at the Centre for Dental Education and Research (CDER), AIIMS Delhi."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Logani stressed the emphasis has to shift from treating trauma only after it occurs to preventing injuries. The public should also know what to do immediately after an accident, he said."
+            },
+            {
+                "type": "text",
+                "value": "Falls, road traffic accidents, sports injuries, domestic violence and everyday accidents are among the common causes of dental trauma."
+            },
+            {
+                "type": "text",
+                "value": "Children are particularly vulnerable to dental trauma, and the first few minutes after an injury can be critical, Nitesh Tewari, professor of paediatric dentistry at CDER, AIIMS Delhi said."
+            },
+            {
+                "type": "text",
+                "value": "\"For a child, a traumatic injury can affect not only the tooth but also facial development, appearance, psychological trauma and quality of life. Parents should know that dental trauma requires timely assessment and should not be dismissed as 'just a broken tooth',\" said Dr. Tewari."
+            },
+            {
+                "type": "text",
+                "value": "Experts said awareness about immediate first aid remains inadequate, despite the fact that the response in the first few minutes can influence the outcome of an injured tooth."
+            },
+            {
+                "type": "text",
+                "value": "\"The first person to handle a dental injury may be a parent, school teacher, sports coach, or even a bystander. A few simple fact -- what to do with an injured tooth, what not to do, how to transport it and where to seek care -- can potentially make a lifelong difference,\" said Sidhartha Sharma, associate professor of endodontics, CDER, AIIMS, Delhi."
+            },
+            {
+                "type": "text",
+                "value": "Dental trauma education therefore needs to move beyond dental clinics and into schools, sports facilities, emergency services and the community, Dr. Sharma underlined."
+            },
+            {
+                "type": "text",
+                "value": "\"Teachers, coaches and parents should be equipped with basic information on recognising serious injuries and taking appropriate immediate steps. This can help reduce avoidable complications and improve the chances of preserving an injured tooth,\" he stated."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Tewari said prevention should include safer sports practices, use of appropriate protective equipment, road safety measures and greater awareness of risks in children and young people."
+            },
+            {
+                "type": "text",
+                "value": "Experts stressed that dental trauma should not be viewed merely as a cosmetic problem, as injuries can have long-term consequences for oral health, function, appearance and quality of life."
+            },
+            {
+                "type": "text",
+                "value": "The observance carries a message extending beyond the dental profession: prevent injuries where possible, know the correct first-aid response when trauma occurs, and ensure timely access to evidence-based care."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "Cancer, kidney, AIDS drugs sold at up to 70 times procurement cost: Karnataka Health Minister",
+        "url": "https://www.thehindu.com/news/cities/bangalore/cancer-kidney-aids-drugs-sold-at-up-to-70-times-procurement-cost-karnataka-health-minister/article71516820.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Pointing out that high-cost medicines used to treat cancer, kidney ailments, and AIDS are being sold at prices up to “70 times higher” than the rates at which dealers and stockists procure them, Karnataka Health Minister U.T. Khader has written a letter to Union Health Minister J.P. Nadda, seeking national action against “abnormal gaps” in drug prices."
+            },
+            {
+                "type": "text",
+                "value": "The Minister said dealers and stockists purchase advanced pharmaceuticals from manufacturers at heavily discounted wholesale landed rates, while the MRPs printed on the medicines are fixed at “inflated, highly disproportionate levels”.&nbsp;The letter said the gap between the procurement price and MRP was “sometimes 30 times to more than 70 times”.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "Mr. Khader said that the issue was particularly concerning for in-patients, emergency and intensive-care patients, oncology patients, and those requiring implants, surgical consumables, and other hospital-based treatment, as they cannot realistically compare suppliers or defer purchases.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The letter said that while the existing MRP framework prevents medicines from being sold above the printed MRP, it does not address situations where the MRP itself has little relation to the actual institutional transaction price, adding that hospitals retain an excessive undisclosed margin.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "Mr. Khader sought a national study comparing the printed MRP, manufacturer/importer price, hospital’s net acquisition price, and the price ultimately billed to patients for selected high-value medicines, medical devices, and consumables.&nbsp;He also proposed that the patient-facing price of products supplied through hospitals be capped at the lower end of the applicable statutory price, MRP or the hospital’s net acquisition cost plus a notified and reasonable service margin and applicable taxes.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The Minister said Karnataka would “cooperate with any pilot or national framework” and could, within its powers, make private hospitals disclose more information, require detailed bills for patients, and set up a system to handle complaints locally. However, he said the Centre needs to fix the basic problem — the large difference between what hospitals pay for medicines, the MRP printed on them and what patients are finally charged.&nbsp;"
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Health",
+        "title": "OpenAI, Anthropic CEOs called to appear at Australian AI probe over health database breach",
+        "url": "https://www.thehindu.com/sci-tech/technology/openai-anthropic-ceos-called-to-appear-at-australian-ai-probe-over-health-database-breach/article71515354.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The CEOs of OpenAI and Anthropic have been called to appear at an ​Australian Senate inquiry on AI, the head of the probe ‌said on Sunday, September 27, 2026, days after the revelation that ​a rogue OpenAI bot had hacked ⁠the country's health-system database."
+            },
+            {
+                "type": "text",
+                "value": "The Medicare breach, condemned by Prime Minister Anthony Albanese, is one of the highest-profile incidents of AI agents accessing ‌external systems outside the U.S."
+            },
+            {
+                "type": "text",
+                "value": "OpenAI's Sam Altman and Anthropic's Dario Amodei have been sent ‌written requests to appear at the inquiry, ‌which ⁠is to hold public hearings in the capital ⁠Canberra on Thursday, said a spokesperson for Senator Sarah Hanson-Young of the Australian\nGreens party, who chairs the probe."
+            },
+            {
+                "type": "text",
+                "value": "OpenAI and Anthropic ​did not immediately respond ‌to requests for comment outside business hours."
+            },
+            {
+                "type": "text",
+                "value": "The OpenAI agent's incursion on one of the country's most used government agencies may prompt Albanese's Labor government\nto toughen ‌AI-specific laws it is readying for next ​year, adding pressure to Australia-US relations already tested by Canberra's ban on social media for ⁠teens, tech policy experts say."
+            },
+            {
+                "type": "text",
+                "value": "The Senate inquiry is examining the potential impacts of AI and data centres on ‌Australian communities, industries, water\nand energy. It is one of several state and federal probes into AI."
+            },
+            {
+                "type": "text",
+                "value": "\"There are serious questions for Sam Altman to answer about the OpenAI hack of Australian government websites,\" Hanson-Young said in a statement. Altman and Amodei \"must front up, ‌face the Senate's questions and have an honest conversation about ​what effective, lasting regulation of this industry should look like\", she said."
+            },
+            {
+                "type": "text",
+                "value": "Albanese, who revealed the June ⁠breach of Medicare on Thursday, called it \"unacceptable\", saying he had ⁠voiced \"extreme concern\" to Altman."
+            },
+            {
+                "type": "text",
+                "value": "OpenAI says it only learned of the breach — one of at ‌least four of Australian government websites — in August. It says the incident was not intentional and did ​not compromise any private information."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Science",
+        "title": "China’s space diplomacy brings Pakistani astronauts closer to orbit",
+        "url": "https://www.thehindu.com/sci-tech/science/chinas-space-diplomacy-brings-pakistani-astronauts-closer-to-orbit/article71518664.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Two Pakistani pilots are memorising Mandarin, spinning in centrifuge drills, and learning to eat, sleep and repair equipment while weightless ​as a decision nears on which one will become the first foreign astronaut aboard China’s Tiangong space station."
+            },
+            {
+                "type": "text",
+                "value": "The voyage into space would be a first for the ‌South Asian nation. It is part of broader cooperation with Beijing that straddles the Belt and Road Initiative and has produced Chinese-launched Pakistani satellites, a joint satellite-navigation system and a Pakistani-built rover due to fly on China’s Chang’e 8 lunar mission around 2028."
+            },
+            {
+                "type": "text",
+                "value": "Pilots Zeeshan Ali and Khurram Daud have spent months training at the China Astronaut Research and Training Center in Beijing for a mission that was conceived by the two countries in 2019, said Amer Gilani, who ​oversees human spaceflight cooperation at Pakistan’s space agency, SUPARCO."
+            },
+            {
+                "type": "text",
+                "value": "China has not said which of the two will fly or when, but Gilani said a final astronaut selection decision is expected ​in mid-to-late October."
+            },
+            {
+                "type": "text",
+                "value": "Whoever is chosen will not return to Pakistan before launch, setting off into space directly from training in China and returning home ⁠after a recovery period following the return to Earth, Gilani said in an interview."
+            },
+            {
+                "type": "text",
+                "value": "Training includes intensive Chinese-language instruction, learning spacecraft systems, and adapting to both the microgravity of orbit and the g-forces ​of liftoff, he added."
+            },
+            {
+                "type": "text",
+                "value": "“You cannot easily find scientists who are familiar with travelling and facing high-level g-forces,” SUPARCO’s director of ​artificial intelligence Uzair Ansari said, explaining this is why the two men with backgrounds in high-speed flying were chosen."
+            },
+            {
+                "type": "text",
+                "value": "The details shared by Gilani and Ansari are the first insight provided by SUPARCO to foreign media since the pilots were selected and deployed to China."
+            },
+            {
+                "type": "text",
+                "value": "China’s space agency did not respond to a request for comment about ​the selection process."
+            },
+            {
+                "type": "text",
+                "value": "Once in space, the chosen pilot will carry the title of “payload specialist”, which is astronaut-speak for someone whose job in orbit is running Pakistan’s science experiments rather than flying ​the ship, Ansari said."
+            },
+            {
+                "type": "text",
+                "value": "Of more than 300 proposals SUPARCO fielded from universities in Karachi, Lahore and Islamabad after a year-long campaign, Gilani said Chinese institutes picked four for this flight: biotechnology experiments that will help combat food ‌insecurity and ⁠climate change."
+            },
+            {
+                "type": "text",
+                "value": "Every experiment is built and pre-tested in SUPARCO’s own labs before Chinese engineers sign off."
+            },
+            {
+                "type": "text",
+                "value": "The scientific payload is modest next to a station that has already hosted more than 180 experiments and produced over 500 research papers and 150 patents, Ansari added."
+            },
+            {
+                "type": "text",
+                "value": "Tiangong’s three modules weigh about 77 metric tonnes combined and house roughly 14 experiment racks spanning life sciences, materials, fluid physics, combustion and radiation exposure, Gilani said."
+            },
+            {
+                "type": "text",
+                "value": "The astronaut will fly aboard a ​Chinese-built spacecraft, launched from a Chinese site, ⁠trained by Chinese instructors and communicating in Mandarin in orbit."
+            },
+            {
+                "type": "text",
+                "value": "Pakistan has no independent launch vehicle or crewed spacecraft of its own, and the stay itself will last a week."
+            },
+            {
+                "type": "text",
+                "value": "The Pakistani astronaut is due to return with two ​members of a Chinese crew that arrived at the space station in May because the third member is expected to stay for a year ​to enable the study of ⁠long-duration human physiology in space."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Science",
+        "title": "Brain mapping of students and teachers uncovers when learning happens best",
+        "url": "https://www.thehindu.com/education/brain-mapping-of-students-and-teachers-uncovers-when-learning-happens-best/article71480689.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "To help us retain the information about the Second World War, Rani Miss, our History teacher, divided the class into three groups. A few students were the Axis powers, another set was the Allied powers, and the rest were bodies like the League of Nations and the UN. A History class that could have been just about remembering the dates and names of people turned into a journey. As we took on the roles of Hitler, Mussolini, Churchill, and Stalin, the textbook became part of our lives, and information stayed well beyond the class tests. The debates that took place also made us understand the distance between the leaders waging wars and the human cost."
+            },
+            {
+                "type": "text",
+                "value": "<i>(Sign up for&nbsp;<a href=\"https://www.thehindu.com/newsletter/thedge/?utm_source=thedge_preview_link&amp;utm_medium=website_nl-sub_page&amp;utm_campaign=newsletter_signup\" target=\"_self\">THEdge,</a> The Hindu’s weekly education&nbsp;newsletter.)</i>"
+            },
+            {
+                "type": "text",
+                "value": "This is a teaching technique known as scaffolding, which is a kind of storytelling where the listener is also a character. Unlike passive storytelling, scaffolding helps students engage more with the information presented, thus improving retention and comprehension."
+            },
+            {
+                "type": "text",
+                "value": "In a 2026 <a href=\"https://www.nature.com/articles/s41539-026-00417-7\" target=\"_self\">study</a> published in <i>Nature</i>, titled ‘Enhanced word learning and neural synchrony during children’s storytelling ’, scientists found that learning outcomes in school-going children significantly improved through social experiences like storytelling and scaffolding. And during these teaching processes, the brain wave patterns in teachers and their students were in sync or aligned with each other – a situation scientists call neural synchrony."
+            },
+            {
+                "type": "text",
+                "value": "<strong><a href=\"https://www.linkedin.com/groups/26260164/\" target=\"_self\">Join THEdge LinkedIn group</a></strong>"
+            },
+            {
+                "type": "text",
+                "value": "Scientists say that when neural synchrony occurs between teachers and students during a session, it is an indication that students are comprehending and engaging."
+            },
+            {
+                "type": "text",
+                "value": "In the study, researchers tested passive storytelling, where the child is the listener, and scaffolding, where the child is a character in the story. They used <a href=\"https://www.thehindu.com/sci-tech/science/scientists-detect-early-brain-response-to-rhythm-in-preterm-babies/article70208316.ece\" target=\"_self\">functional near-infrared spectroscopy</a> (fNIRS), a brain imaging method, to record neural activity in the frontal lobes, the temporal lobes, and the parietal lobes of the child and the instructor."
+            },
+            {
+                "type": "heading",
+                "value": "Regions of the brain engaged"
+            },
+            {
+                "type": "text",
+                "value": "Through neuroimaging, it was found that during a scaffolding session, synchrony occurred mainly between the child’s left prefrontal cortex, which controls language, decision-making, planning, attention, and retention; and the teacher’s right hemisphere which is tied to spatial awareness, empathy, and nonverbal communication."
+            },
+            {
+                "type": "text",
+                "value": "In passive story-listening, synchrony predominantly engaged the child’s right premotor cortex, which is associated with planning and organising movements and actions. “The premotor cortex is known for its part in perceiving and predicting others’ actions within goal-directed contexts, which is essential for social learning,” the authors said in the study. Here, the child was primarily in the receptive role."
+            },
+            {
+                "type": "text",
+                "value": "“This is extremely important from a learning outcome point of view. Simply put, children learn better when there is active engagement from the teacher, which probably tunes several other networks beyond language comprehension, namely attention, arousal, emotion, saliency, and flexible decision-making,” Arpan Banerjee, a scientist and professor at the National Brain Research Centre, told <i>The Hindu</i> (he was not involved in the study). He added that engagement of brain regions involved in social communication is also a key player in improving learning outcomes and gets more optimally involved in an in-person setting."
+            },
+            {
+                "type": "text",
+                "value": "The study found that children were able to pick up new words significantly better in the scaffolding session, as it involved spontaneous dialogue and the left prefrontal cortex was more actively engaged. Several studies have found that children’s vocabulary improves in social learning environments, with storytelling an effective medium of instruction. The sessions have to be instructor-led, with the child given space for responding and answering. “These findings may point to the relation between neural synchrony and the active engagement of both instructor and learner, as they collaboratively build a shared understanding,” the authors wrote in the study."
+            },
+            {
+                "type": "heading",
+                "value": "Remote setting not as effective"
+            },
+            {
+                "type": "text",
+                "value": "However, when the child attended a remote storytelling session online, they were found to be less engaged. The scaffolding effect also disappeared. This is significant as <a href=\"https://www.thehindu.com/education/how-pedagogy-must-evolve-for-effective-online-learning/article71188500.ece\" target=\"_self\">remote classes</a> have become a common phenomenon following the COVID-19 pandemic. Several studies have shown that for active learning, face-to-face interaction plays a vital role in comprehension and mutual understanding between the educator and the child."
+            },
+            {
+                "type": "text",
+                "value": "For educators, it is also essential to test whether children understood the concepts taught in class. The study found that both passive storytelling and scaffolding had an equal impact on test scores. It also showed that neural synchrony does not automatically translate to better outcomes in tests. “The ideal way to test the students would be via an active approach; for example, give them real-life situations where they can project themselves and answer questions akin to solving puzzles,” Dr. Banerjee said."
+            },
+            {
+                "type": "text",
+                "value": "The manner of instruction also has a major impact on the child’s comprehension. A recent <a href=\"https://www.sciencedirect.com/science/article/pii/S1878929326001131\" target=\"_self\">study</a> conducted by researchers from the University of Iowa found that combining gestures with speech through scaffolding helps improve neural synchrony and learning. The study found that it does not matter how much time is spent on a particular topic, but the nature of the interaction is what matters for effective learning. The researchers saw that when parents used gestures, blood flow rose in the problem-solving areas of the child’s brain and the adult’s perception region, which senses when someone understands you."
+            },
+            {
+                "type": "text",
+                "value": "The relationship a student shares with the teacher also influences the learning outcome. A <a href=\"https://direct.mit.edu/jocn/article/31/3/401/28957/Brain-to-Brain-Synchrony-and-Learning-Outcomes\" target=\"_self\">study</a> published in the <i>Journal of Cognitive Neuroscience, </i>conducted among high school students,<i></i>found that students who reported higher social closeness had more neural synchrony during lectures than other students. In terms of retention, the social closeness the student had with a teacher had more influence on the learning outcome than neural synchrony. This helps in predicting students' performance and shaping course outlines."
+            },
+            {
+                "type": "text",
+                "value": "When facts and figures are presented in an isolated manner, it is difficult for children to retain and comprehend the information. Presenting the matter through creative methods like storytelling and scaffolding becomes important to ensure that learning occurs in the classroom. Dr. Banerjee also said it is important to test how such techniques can be applied for children who are within the neurodiversity spectrum. “For example, designing a scaffolding paradigm from brain activations that enhances the learning outcomes in kids or young adults who fall under the spectrum will help to understand how these techniques can work for everyone,” he said."
+            }
+        ],
+        "date": "2026-09-28"
+    },
+    {
+        "category": "Science",
+        "title": "COP31 hosts Australia and Türkiye face the fossil-fuel question",
+        "url": "https://www.thehindu.com/sci-tech/energy-and-environment/cop31-hosts-australia-and-turkiye-face-the-fossil-fuel-question/article71515307.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The next United Nations climate change conference, COP31, will be held in Antalya in Türkiye in November this year. Türkiye will be hosting the event, with its environment minister Murat Kurum serving as COP31 president. Australia will oversee the negotiations process, with its energy and climate change minister Chris Bowen as the vice-president of COP31."
+            },
+            {
+                "type": "text",
+                "value": "This is a novel arrangement — a result of both Australia and Türkiye not being willing to concede their demand to host, and where both countries <a href=\"https://unfccc.int/sites/default/files/resource/20251121_COP31_Presidency_Modalities-CLEAN-AGREED.pdf\" target=\"_self\">share crucial responsibilities</a>. In previous editions, the COP’s physical host has differed from the president only for logistical reasons."
+            },
+            {
+                "type": "text",
+                "value": "A pre-COP event will be held in Fiji on October 5-8, where Pacific Island countries and Australia will discuss preparations for the main event, including what to negotiate. These pre-COPs are a routine affair before the annual summits."
+            },
+            {
+                "type": "heading",
+                "value": "Domestic fossil reliance"
+            },
+            {
+                "type": "text",
+                "value": "Both Türkiye and Australia are heavy users of fossil fuels. Australia is the world’s third-largest fossil fuels exporter, after Russia and the U.S. Domestically, Australia as well as Türkiye rely on coal, gas, and oil to generate respectively around 90% and 80% of their energy needs. Three weeks ago, Australia also came under fire from climate groups for approving the expansion of a coal mine."
+            },
+            {
+                "type": "text",
+                "value": "The <a href=\"https://unfccc.int/news/cop31-presidency-announces-new-targets-on-global-electrification-cutting-waste-resilient-cities\" target=\"_self\">primary goal</a> at COP31 is a target to electrify industry and vehicles and in turn “to raise the share of final energy demand met by electricity from just over 20% today to 35% by 2035”."
+            },
+            {
+                "type": "text",
+                "value": "‘Oceans and Seas’ are also a priority agenda: Türkiye hosted a ‘Blue Dialogue’ on September 10-11 whose focus was on protecting marine resources."
+            },
+            {
+                "type": "text",
+                "value": "However, none of the themes <a href=\"https://cop31-antalya.com/en/cop31-action-agenda-priorities/\" target=\"_self\">listed as a priority</a> for the event make direct reference to transitioning away from fossil fuels."
+            },
+            {
+                "type": "text",
+                "value": "That said, various industries in Australia, including iron-ore mining, are trying to decarbonise by investing in hybrid or electric heavy machinery. Local governments are also pushing for electric vehicles (EVs), which recently overtook petrol car sales for the first time in Australia."
+            },
+            {
+                "type": "text",
+                "value": "Türkiye, on the other hand, is working to augment recycling and so eventually reduce methane emissions. In fact, the country has listed ‘<a href=\"https://cop31-antalya.com/en/cop31-action-agenda-priorities/\" target=\"_self\"><u>zero waste and a circular economy</u></a>’ on the COP31 priority list. The fortunes of a local EV brand, Togg, has ballooned so much that the government hopes it will herald a new era in the automobiles market."
+            },
+            {
+                "type": "heading",
+                "value": "Loss and damage financing"
+            },
+            {
+                "type": "text",
+                "value": "At the COP30 in Belém, Brazil, last year, the European Union pushed for a “fossil fuel roadmap” to help countries worldwide transition away from fossil fuels. While many countries supported the call, observers <a href=\"https://twn.my/title2/climate/info.service/2025/cc251204.htm\" target=\"_self\">have said</a> it took the focus away from developing countries’ calls to triple adaptation finance and developed countries’ resistance to that."
+            },
+            {
+                "type": "text",
+                "value": "That said, most countries involved in the UN Framework Convention on Climate Change (UNFCCC) did not oppose the call for the “fossil fuel roadmap” at COP30. India did not oppose either, on the condition that it incorporate the principle of common but differentiated responsibilities and that countries are not expected to follow uniform energy transition pathways."
+            },
+            {
+                "type": "text",
+                "value": "Beyond the UNFCCC framework as well, and partly because of the slow pace of negotiations at the COP summits, there have been calls for concrete action to transition away from fossil fuels. In April this year, the first conference on ‘Transitioning Away from Fossil Fuels’ was held in Santa Marta in Colombia, co-hosted by Colombia and the Netherlands. The second conference is scheduled for 2027, to be co-hosted by Tuvalu and Ireland."
+            },
+            {
+                "type": "text",
+                "value": "Given such momentum, there is likely to be pressure on the COP31 presidencies to include fossil fuel language as part of the agenda. The catastrophic floods in Nepal on August 26, boosted no doubt by climate change, and the damage they wrought are also set to add momentum to both mitigation action, including the language surrounding fossil fuels at COP31, and to loss and damage financing. But as with their not mentioning the transition away from fossil fuels, the joint Australia-Türkiye presidents have also included no loss and damage financing, or even the broader climate finance question, among the priority topics."
+            },
+            {
+                "type": "text",
+                "value": "“We know there are strong views on all sides of this topic,” the Türkiye presidency said in response to questions from the author about whether this will change. “We will create space for Parties to discuss the transition and listen carefully to the positions they bring forward to see what we can agree by consensus. But listening to Parties’ views on negotiations does not mean we are standing still. We are taking the next logical steps in the energy transition by making electrification the flagship thematic priority of the COP31 Presidency’s Action Agenda, because electrifying buildings, transport and industry is key to reducing emissions and should be accompanied by complementary efforts to expand renewable energy."
+            },
+            {
+                "type": "text",
+                "value": "Likewise, the reply said on mitigation financing: “we have been clear that we need to close the climate finance chasm, and we are holding donors to the financial commitments made at past COPs, while also introducing innovative new mechanisms, such as the ‘Climate Implementation Bridge’, to address the gap between ambitious climate plans and the finance needed to make them a reality.”"
+            },
+            {
+                "type": "text",
+                "value": "The Australian presidency did not respond.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "Countries participating at COPs can propose new agenda items for consideration during negotiations. For example, the European Union introduced the “roadmap” in the formal negotiations agenda at the last minute at COP30. That said, it remains to be seen whether countries will do so at COP31, and if so what the items will be — and ultimately how the event’s two fossil fuel-heavy stewards will navigate negotiations."
+            },
+            {
+                "type": "text",
+                "value": "<i>The author was in Türkiye September 8-13 at the invitation of the government for a COP31-themed media tour. She also visited Australia in October 2025 on a similar official tour.</i>"
+            },
+            {
+                "type": "text",
+                "value": "<i>Rishika Pardikar is a freelance journalist.</i>"
             }
         ],
         "date": "2026-09-28"
