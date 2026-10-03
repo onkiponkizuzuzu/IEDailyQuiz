@@ -15,42 +15,6 @@
             {
                 "type": "text",
                 "value": "Operational since 7 March 2019, the Scheme provides remission of eligible embedded State and Central taxes and levies that are not refunded through other mechanisms."
-            },
-            {
-                "type": "text",
-                "value": "\"The extension will ensure policy continuity and predictability for exporters, while sustaining the competitiveness of India's labour-intensive and value-added apparel and made-ups sector in an increasingly competitive global trading environment,\" an official statement said."
-            },
-            {
-                "type": "text",
-                "value": "During 2025-26, the Scheme benefited more than 15,400 exporters across over 444 districts, with the beneficiary base comprising predominantly MSMEs."
-            },
-            {
-                "type": "text",
-                "value": "Its wide geographical reach underscores the Scheme's role in supporting a dispersed manufacturing ecosystem and strengthening the participation of small and medium exporters in global markets."
-            },
-            {
-                "type": "text",
-                "value": "Published on  September 30, 2026"
-            }
-        ],
-        "date": "2026-10-03"
-    },
-    {
-        "category": "Policy",
-        "title": "Government cuts windfall tax on diesel, ATF exports; petrol duty unchanged",
-        "url": "https://www.thehindubusinessline.com/economy/policy/government-cuts-windfall-tax-on-diesel-atf-exports-petrol-duty-unchanged/article71530122.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The government on Wednesday cut the windfall gains tax on the export of diesel and aviation turbine fuel (ATF), while retaining it at the same level for petrol for the fortnight beginning October 1."
-            },
-            {
-                "type": "text",
-                "value": "The rate of special additional excise duty (SAED) along with road and infrastructure cess on the export of diesel will now be Rs 16 per litre, down from Rs 20 a litre. SAED on export of ATF is set at Rs 10.5 per litre, as against Rs 15 per litre currently."
-            },
-            {
-                "type": "text",
-                "value": "Duty on petrol exports has been retained at Rs 0.5 per litre for the next fortnight."
             }
         ],
         "date": "2026-10-03"
@@ -97,6 +61,26 @@
     },
     {
         "category": "Policy",
+        "title": "Government cuts windfall tax on diesel, ATF exports; petrol duty unchanged",
+        "url": "https://www.thehindubusinessline.com/economy/policy/government-cuts-windfall-tax-on-diesel-atf-exports-petrol-duty-unchanged/article71530122.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government on Wednesday cut the windfall gains tax on the export of diesel and aviation turbine fuel (ATF), while retaining it at the same level for petrol for the fortnight beginning October 1."
+            },
+            {
+                "type": "text",
+                "value": "The rate of special additional excise duty (SAED) along with road and infrastructure cess on the export of diesel will now be Rs 16 per litre, down from Rs 20 a litre. SAED on export of ATF is set at Rs 10.5 per litre, as against Rs 15 per litre currently."
+            },
+            {
+                "type": "text",
+                "value": "Duty on petrol exports has been retained at Rs 0.5 per litre for the next fortnight."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Policy",
         "title": "Oil Ministry aims to amend Petroleum act to decriminalise minor offences",
         "url": "https://www.thehindubusinessline.com/economy/policy/oil-ministry-aims-to-amend-petroleum-act-to-decriminalise-minor-offences/article71529470.ece",
         "content": [
@@ -111,6 +95,1018 @@
             {
                 "type": "text",
                 "value": "Accordingly, the Ministry has proposed to amend the Petroleum Act, 1934 through amendment of Chapter three, which relates to “Penalties and Procedure”."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Internet",
+        "title": "OpenAI says three staffers fired for mishandling 'sensitive' info",
+        "url": "https://www.thehindu.com/sci-tech/technology/openai-says-three-staffers-fired-for-mishandling-sensitive-info/article71539550.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "ChatGPT-maker OpenAI said Thursday that it has fired three researchers for allegedly mishandling \"sensitive information\" and violating company policies, including work that involved an external organisation that evaluates artificial intelligence models."
+            },
+            {
+                "type": "text",
+                "value": "The San Francisco-based AI lab did not confirm their identities, but at least two of the employees worked on safety and alignment, according to the Wall Street Journal and Bloomberg."
+            },
+            {
+                "type": "text",
+                "value": "<strong>ALSO WATCH </strong><a href=\"https://www.thehindu.com/videos/gpt-61-astra-why-openai-halted-its-release/article71529980.ece\"> GPT-6.1 Astra: Why OpenAI halted its release</a>"
+            },
+            {
+                "type": "text",
+                "value": "\"We have parted ways with three individuals,\" OpenAI told AFP in a statement."
+            },
+            {
+                "type": "text",
+                "value": "\"Our investigation confirmed that these individuals mishandled sensitive information outside established company procedures, violating our policies and breaking the trust essential to our work.\""
+            },
+            {
+                "type": "text",
+                "value": "The firings come amid a tense debate about AI safety and whether the technology presents an existential risk to humanity."
+            },
+            {
+                "type": "text",
+                "value": "Last month, a 27-year-old researcher named Jacob Coxon resigned from Anthropic with a stark warning that the leading AI labs, including OpenAI, where he previously worked, were \"gambling with our lives\" by racing toward developing ever more powerful models."
+            },
+            {
+                "type": "text",
+                "value": "The three researchers fired by OpenAI are Jasmine Wang, Tomek Korbak, and Mikita Balesni, according to the WSJ. The researchers did not immediately respond to AFP's request for comment."
+            },
+            {
+                "type": "text",
+                "value": "All three have regularly posted about AI safety-related issues on X in recent weeks."
+            },
+            {
+                "type": "text",
+                "value": "\"i am at OpenAI and i think AI is &gt;10% likely to kill all humans,\" Balesni posted on September 10, echoing statements made by other AI employees in recent weeks."
+            },
+            {
+                "type": "text",
+                "value": "As speculation swirled about why employees at OpenAI and Anthropic were speaking so freely about their personal beliefs, Korbak jumped into the public discourse."
+            },
+            {
+                "type": "text",
+                "value": "\"I'm quite unhappy with much of what OpenAI does. I am very happy that Im allowed to say 'I'm quite unhappy with much of what OpenAI does,'\" Korbak wrote on September 11."
+            },
+            {
+                "type": "text",
+                "value": "\"It's hard to overstate how dangerous speeding towards RSI is,\" Wang posted in response to Coxon's resignation, referring to recursive self-improvement, which is a technique where software is designed to continuously teach itself."
+            },
+            {
+                "type": "text",
+                "value": "Leading US tech companies signed a voluntary pledge this week to regulate themselves on safety after meeting with President Donald Trump at the White House."
+            },
+            {
+                "type": "text",
+                "value": "Trump called it a \"morally binding\" commitment to build adequate safeguards on the fast-moving technology."
+            },
+            {
+                "type": "text",
+                "value": "Executives from Nvidia, Google, Meta, xAI, OpenAI and Anthropic signed the agreement."
+            },
+            {
+                "type": "text",
+                "value": "<a href=\"https://www.thehindu.com/sci-tech/technology/super-intelligence-and-trumps-ai-accord-with-big-tech-leaders-explained/article71531434.ece\" target=\"_self\">Concerns about the safety of advanced AI models have escalated in recent months.</a>"
+            },
+            {
+                "type": "text",
+                "value": "OpenAI canceled the release of a new model, Astra 6.1, because it deemed the model unreliable and found that it frequently ignored instructions."
+            },
+            {
+                "type": "text",
+                "value": "Instead, the company launched GPT-6.1 Sol, an updated version of a different model, during its annual DevDay conference on Tuesday from San Francisco. OpenAI said Sol would cost one-fifth the price of Astra."
+            },
+            {
+                "type": "text",
+                "value": "In July, AI agents developed by OpenAI attacked Hugging Face, an AI model and application library, during an incident where the autonomous software escaped its confined testing environment."
+            },
+            {
+                "type": "text",
+                "value": "Since then, additional security incidents have been reported that involved models developed by OpenAI, Anthropic and Google."
+            },
+            {
+                "type": "text",
+                "value": "On Thursday, cybersecurity firm Asymmetric Security said in a report that agents developed by OpenAI covered up their own tracks after gaining unauthorised access to government websites."
+            },
+            {
+                "type": "text",
+                "value": "The Federal Trade Commission launched a broad investigation into artificial intelligence safety practices at Anthropic and OpenAI, the Washington Post reported on Wednesday, though the scope of the inquiry is unclear."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Internet",
+        "title": "Anthropic warns government attitudes may hurt customer ties, IPO prospectus shows",
+        "url": "https://www.thehindu.com/sci-tech/technology/anthropic-warns-government-attitudes-may-hurt-customer-ties-ipo-prospectus-shows/article71539554.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Anthropic warned that government attitudes toward ‌the company and its technology could have broader implications for its ​business, including its relationships with commercial customers and partners, according to the IPO ⁠prospectus seen by Reuters."
+            },
+            {
+                "type": "text",
+                "value": "Companies routinely warn that policy changes could affect their business, particularly government contractors. For example, SpaceX said in its IPO filing that maintaining strong relationships with US government agencies ‌is critical to its business and warned that any deterioration in those relationships could materially harm its ability to retain existing business and win new opportunities."
+            },
+            {
+                "type": "text",
+                "value": "Anthropic’s ‌disclosure appears broader, suggesting that government perceptions of the company and its conduct ‌could extend ⁠beyond its direct dealings to affect customers, partners, other commercial relationships — ⁠and even civilisation. The filing warns that advanced AI could pose “catastrophic or existential risks to humanity,” an extraordinary warning by a company planning an IPO that could be valued at $2 trillion for the firm’s capacity to profit ​from the same technology."
+            },
+            {
+                "type": "text",
+                "value": "The company ‌said revenue from government agency contracts accounts for less than 1% of its annual revenue."
+            },
+            {
+                "type": "text",
+                "value": "The company has become a magnet for concern about the risks carried by the rapid advancement, intense global competition and limited oversight of AI technologies. The broad ‌question of AI safety has come into the public eye recently with ​Anthropic CEO Dario Amodei’s call for the industry to slow its development, following repeated accounts of hacking activity by so-called rogue autonomous AI agents."
+            },
+            {
+                "type": "text",
+                "value": "Amodei met ⁠US President Donald Trump last Sunday for dinner as calls for greater regulation of AI have grown. Trump has largely rejected those calls, though the Federal Trade Commission is conducting ‌an industrywide probe of AI firms including Anthropic, Reuters reported on Wednesday."
+            },
+            {
+                "type": "text",
+                "value": "In the prospectus, Anthropic cited several interactions with the US government over the past year as examples of actions that could hurt its business."
+            },
+            {
+                "type": "text",
+                "value": "The filing said that in February the president ordered federal agencies to stop using the company’s models and that the US Department of Defense designated Anthropic a supply-chain risk to national security."
+            },
+            {
+                "type": "text",
+                "value": "“The company may experience material revenue ‌losses or business disruptions attributable to these events,” Anthropic said."
+            },
+            {
+                "type": "text",
+                "value": "Anthropic also said that in June the US Department ​of Commerce imposed worldwide export restrictions on its Fable 5 and Mythos 5 models, prompting the company to disable the models for all customers to ⁠ensure compliance."
+            },
+            {
+                "type": "text",
+                "value": "While the Commerce Department later lifted those restrictions and Anthropic redeployed the models, the ⁠company warned that similar actions could occur in the future."
+            },
+            {
+                "type": "text",
+                "value": "Such measures could result in “significant reputational harm, including adverse media coverage, public scrutiny, and negative perceptions among ‌existing and prospective customers, partners, employees, and investors,” regardless of the ultimate outcome."
+            },
+            {
+                "type": "text",
+                "value": "<a href=\"https://www.thehindu.com/sci-tech/technology/us-judge-questions-pentagons-motives-for-labeling-anthropic-as-a-security-threat-in-battle-over-ai/article70782564.ece\" target=\"_self\">The company added that selling to government agencies carries additional risks, including changes in the government’s view ​of Anthropic or its technology.</a>"
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Environment",
+        "title": "Inside Bandhavgarh’s forests: The evolving nature of tiger tourism",
+        "url": "https://www.thehindu.com/sci-tech/energy-and-environment/inside-bandhavgarhs-forests-the-evolving-nature-of-tiger-tourism/article71528124.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Samrat stayed, unmoved. He yawned a bit. His gaze settled somewhere in the middle of our jeep. And then, for a full couple of seconds – which would seem like eternity for all of us seated inside the vehicle – Samrat stared straight."
+            },
+            {
+                "type": "text",
+                "value": "We froze. Everyone thought that the animal was looking at them."
+            },
+            {
+                "type": "text",
+                "value": "In that moment when the world seemed to come to a startling halt, someone shouted, “Camera...picture”, after which we came to our senses, to reach to the visual instruments to capture the moment."
+            },
+            {
+                "type": "text",
+                "value": "Slowly, Samrat started to move away. In a few seconds, he would cross the road and disappear into the bushes...but not before turning back to glance at us."
+            },
+            {
+                "type": "text",
+                "value": "He had seen us. At Bandhavgarh, a board with a tiger near the exit gate out reads, “Don’t be disappointed if you do not see me. Because, I have seen you.”"
+            },
+            {
+                "type": "text",
+                "value": "Samrat is one of the 100-plus tigers for whom the muddy lanes of Madhya Pradesh’s Bandhavgarh is home. Samrat translates to ‘king’ in Hindi and this massive, male Bengal tiger strolls the Tala and Khitauli zones of the park with carefree abandon."
+            },
+            {
+                "type": "text",
+                "value": "“Samrat was my first sighting here, so he is special,” Viswajit Singh Solanki, a tour guide tells me about this 8-year-old tiger, “He lives on the hills and is quite elusive.”"
+            },
+            {
+                "type": "text",
+                "value": "We are driving slowly along the muddy lanes of Bandhavgarh, declared a tiger reserve in the year 1993 after being a National Park for a few decades. The state – Madhya Pradesh – itself leads India’s tiger census, with more than 780 tigers spread across its wildlife reserves."
+            },
+            {
+                "type": "text",
+                "value": "While Bandhavgarh boasts considerable variety in flora and fauna, including the India pitta and crested serpent eagle, the tiger remains the focus. It is home to 164 tigers, according to the last population census, out of which 35 tigers are accessible to tourists in core and buffer zones."
+            },
+            {
+                "type": "text",
+                "value": "Spread across 1536 square kilometres, the reserve is divided almost equally into core and buffer zones. “Buffer zones include farms and villages, which exist with some restrictions,” explains Viswajit, “These are important because sub-adult tigers rely on such zones for easier prey such as cattle, while adult tigers prowl in core zones that have more deer and other prey.”"
+            },
+            {
+                "type": "text",
+                "value": "<b>Tiger tourism: then and now</b>"
+            },
+            {
+                "type": "text",
+                "value": "The tiger is a superstar in these parts of town, according to Manav Khanduja of Pugdundee Safaris, which runs the 14-hectare Kings Lodge set in a natural forested estate that contains 10 cottages and 8 stilt houses. “Bandhavgarh is definitely among the top places in the world to spot a tiger,” he affirms, “but due to the immense pressure to spot one, tourists are also preferring to frequent buffer zones, which was not the case a few years ago.”"
+            },
+            {
+                "type": "text",
+                "value": "Manav recalls a time in Bandhavgarh a couple of decades ago when, during the pre mobile-phone era, “tiger shows” used to be a popular concept. “Elephants were employed to spot tigers, and one elephant would be parked at that place. Tourists who were willing to pay a supplement would climb on the elephant to get a glimpse of the tiger. There was no pressure to sight the tiger back then, because this option was available,” he explains. Such ‘tiger shows’ were ultimately banned by the government. “Today, with the advent of technology and artificial intelligence, we need to find ways to implement responsible tiger tourism,” he adds."
+            },
+            {
+                "type": "text",
+                "value": "<b>A grand sight</b>"
+            },
+            {
+                "type": "text",
+                "value": "We head inside the jungle through Tala Zone, a place that houses more than a dozen caves, some of them filled with bats. Locals believe that the fort here is more than 1000 years old, attached with a story that Lord Rama built it for his brother Lakshman – thus earning the place the name ‘Bandhavgarh’ (fort for the brother). Subsequently, it became the hunting ground for kings. Maharaja Marthand Singh of Rewa is a man often credited with establishment and conservation of the National Park in the Sixties."
+            },
+            {
+                "type": "text",
+                "value": "Today, tourists can plan safaris inside the park, but will not be allowed cellphones – in fact, most reserves have lockers or boxes to deposit your mobiles. This is following a Supreme Court ruling in early 2026, aimed at responsible wildlife tourism and less stress for the animals. “In the past, the focus was on observing the beauty and grandeur of the tiger,” recalls Viswajit, “Tourists used to spend time focussing on every little detail, including its stripes and injury marks. I hope we can bring back those times following this ban because now, the focus is more on capturing footage and photos. We’ve had cases of tourists trying to take selfies with the tiger as well. If you avoid the phone, you will enjoy sighting the tigers.”"
+            },
+            {
+                "type": "text",
+                "value": "<i>The writer was in Bandhavgarh on invitation from Pugdundee Safaris</i>"
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Environment",
+        "title": "Reintroduction of tigers in Buxa: What it means for conservation | Explained",
+        "url": "https://www.thehindu.com/sci-tech/energy-and-environment/reintroduction-of-tigers-in-buxa-what-it-means-for-conservation-explained/article71540010.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "On October 2, 2026 a three-year-old tigress, T138, was released into the Buxa Tiger Reserve in West Bengal marking the beginning of a phased programme to reintroduce tigers and establish a viable, self-sustaining population in the reserve.&nbsp;Two to three more tigers are likely to be added to the reserve which has not recorded much presence of tigers over the past few years."
+            },
+            {
+                "type": "text",
+                "value": "The tigress was translocated from Bihar’s Valmiki Tiger Reserve and released in the presence of Union Environment Minister Bhupender Yadav and West Bengal Chief Minister Suvendu Adhikari."
+            },
+            {
+                "type": "text",
+                "value": "Initially the tigress would be kept in an enclosed area of about 2.3 hectares to allow the animal to acclimatise to its new surroundings before it is released into the wider reserve. T138 would be subject to intensive post-release monitoring using a combination of telemetry, camera trapping and field-based monitoring to assess her movement, adaptation, health and behaviour."
+            },
+            {
+                "type": "text",
+                "value": "The release of the tigress is not is not merely about bringing tigers back to Buxa but its “objective is to create the conditions in which a tiger population can establish, breed and ultimately become viable and self-sustaining,”&nbsp;PIB said in a statement."
+            },
+            {
+                "type": "heading",
+                "value": "Why is Buxa Tiger Reserve significant?"
+            },
+            {
+                "type": "text",
+                "value": "Buxa was declared a tiger reserve in 1983 and is the 15 th tiger reserve in the country. Buxa Tiger Reserve is situated in the Alipurduar Sub-division of Jalpaiguri District, West Bengal."
+            },
+            {
+                "type": "text",
+                "value": "With an area of 760.87 sq km, the reserve stretches over a length of 50 km from west to east and 35 km from north to south. The reserve has corridor connectivity across the border with the forests of Bhutan in the north, on the east it has linkages with the Kochugaon forests, Manas Tiger Reserve and on the West with the Jaldapara National Park."
+            },
+            {
+                "type": "text",
+                "value": "One of the reasons for low tiger density has been changes in the habitat due to increasing anthropogenic pressure. “Over the decades, however, habitat degradation and fragmentation, changes in land use and decline in prey availability have affected the ecological conditions required to sustain a resident tiger population. The Reserve subsequently witnessed a prolonged absence of a stable resident tiger population,” a PIB statement said."
+            },
+            {
+                "type": "heading",
+                "value": "Why was Valmiki Tiger Reserve selected for bringing the tigress?"
+            },
+            {
+                "type": "text",
+                "value": "The National Tiger Conservation Authority found that there were no tigers at Buxa, Dampa and Palamu tiger reserves it initiated a programme of reintroduction of tigers in 2018, which has resulted in re-introduction of tigers at Buxa. Scientists and forest officials were looking for a similar habitat like Buxa from where the tiger may be brought to the reserve. Bihar’s Valmiki Tiger Reserve which lies in the eastern most part of the Terai Arc Landscape, was considered suitable for tiger augmentation because of the similarities in terrain with Buxa."
+            },
+            {
+                "type": "text",
+                "value": "West Bengal has a thriving tiger population in the Sundarbans, the only mangrove forest in the world to have tigers. As per the last census, the Indian Sundarbans is home to about 100 tigers in the unique mangrove ecosystem. However, translocating tigers from Sundarban to Buxa&nbsp;may not have worked because of the vast differences in the terrain and the habitat."
+            },
+            {
+                "type": "heading",
+                "value": "What has been the experience with reintroduction of tigers ?"
+            },
+            {
+                "type": "text",
+                "value": "Tiger ‘reintroduction’ done in India is the first such scientific endeavour in the world, says NTCA. Reintroducing tigers in the Indian context means establishing a tiger population in an area which was part of its historical range but from where it has gone locally extinct."
+            },
+            {
+                "type": "text",
+                "value": "The tiger reintroduction has been a successful collaborative venture between the NTCA State Governments and the Wildlife Institute of India (WII) with numbers of tigers increasing in reserves where the exercise was carried out."
+            },
+            {
+                "type": "text",
+                "value": "The reintroduction started in 2008 when tigers were successfully reintroduced in Sariska (Rajasthan) and Panna (Madhya Pradesh) Tiger Reserves. Tiger reintroduction programme has been carried out across 12 tiger reserves in less than two decades.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The success of the programme, however, has not been uniform across the reserves."
+            },
+            {
+                "type": "text",
+                "value": "A publication titled “Reintroduction &amp; Population Recovery of Tigers in India: Field Experiences &amp; Key Learnings” released by NTCA and WII earlier this year has pointed out that relocation of tigers in Satkosia Tiger Reserve posed several challenges.&nbsp;“The translocated tigers encountered difficulties in adapting to the new environment, and the landscape experienced considerable human-tiger conflict, including incidents of livestock depredation and negative local responses,” the report said.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The NTCA website also added that in the past there are few examples of tiger ‘release’ (Dongarpur in Rajasthan and in Russia) which were not successful owing to several factors."
+            },
+            {
+                "type": "text",
+                "value": "Considering these challenges in mind, the NTCA has prepared a protocol on tiger re-introduction. The protocol deals with aims and objectives of reintroduction, constitution of team, pre-project activities, conducting feasibility study, selection and evaluation of site, suitability of release stock of tigers, socio-economic requirements, preparation for release and post release activities."
+            },
+            {
+                "type": "heading",
+                "value": "What are the challenges of tiger reintroduction at Buxa ?&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "Buxa Tiger Reserve did not have a resident tiger for the past several years, though on some occasions tigers have been recorded in the winter months. The reserve is dotted with settlements and surrounded by revenue villages and tea estates. The state government has convinced about 300 families to relocate so that they can make the tiger reintroduction exercise successful. Wildlife, particularly elephants have been threatened by linear infrastructure including a railway line, resulting in deaths of hundreds of pachyderms over the decade. Because the region lies close to Bhutan, heavy commercial traffic on the road connecting Bhutan and West Bengal through Buxa poses an additional concern."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Pakistani cosmetics seized in Hyderabad traced to Mumbai’s Crawford Market",
+        "url": "https://www.thehindu.com/news/national/telangana/pakistani-cosmetics-seized-in-hyderabad-traced-to-mumbais-crawford-market/article71537544.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "<a href=\"https://www.thehindu.com/news/cities/Hyderabad/unauthorised-pakistani-cosmetics-worth-7-lakh-seized/article71532751.ece\" target=\"_self\">Pakistan-made cosmetics that continued to find their way to Hyderabad</a> more than a year after India shut the door on imports from the neighbouring country have now led investigators to Mumbai’s Crawford Market, pointing to a wider supply chain behind the banned products."
+            },
+            {
+                "type": "text",
+                "value": "The development comes amid a separate public-health concern over some of the skin-whitening products. The Central Drugs Standard Control Organisation (CDSCO) last month specifically warned consumers against two Pakistan-made creams after tests found excessive levels of heavy metals."
+            },
+            {
+                "type": "text",
+                "value": "Both ‘Goree Beauty Cream’ and ‘Chandni Whitening Cream’, named in the September 8 CDSCO alert, were among the products found during raids on three shops in Hyderabad this week."
+            },
+            {
+                "type": "text",
+                "value": "An officer involved in the investigation said the cosmetics seized in Hyderabad were allegedly being sourced from Crawford Market in Mumbai. “Investigators are now looking further up the chain to establish how the products entered India and reached wholesale and retail markets despite restrictions on their import."
+            },
+            {
+                "type": "heading",
+                "value": "Imports from Pakistan prohibited since May 2025"
+            },
+            {
+                "type": "text",
+                "value": "India prohibited the direct or indirect import or transit of all goods originating in or exported from Pakistan on May 2, 2025. The Directorate General of Foreign Trade imposed the restriction through a notification, citing national security and public policy."
+            },
+            {
+                "type": "text",
+                "value": "The prohibition extends to goods entering India indirectly, meaning routing Pakistan-origin products through another country does not by itself make their import permissible."
+            },
+            {
+                "type": "text",
+                "value": "Cosmetics imported into India are additionally governed by the Cosmetics Rules, 2020. Products must be registered with the Central Licensing Authority before import and are required to comply with prescribed quality and safety standards."
+            },
+            {
+                "type": "text",
+                "value": "The CDSCO had stepped up scrutiny even before the latest Hyderabad seizure. In July, it directed its zonal offices, State licensing authorities and officers at ports to maintain enhanced surveillance following instances of imported cosmetics being sold in domestic markets without valid import registration certificates."
+            },
+            {
+                "type": "heading",
+                "value": "Heavy metals found in two creams"
+            },
+            {
+                "type": "text",
+                "value": "The health regulator followed this with a more pointed warning on September 8. After testing Goree Beauty Cream and Chandni Whitening Cream, it said neither had been issued a registration certificate for import and that the products contained heavy metals beyond specified limits, which could pose health risks, including toxic effects. Consumers were advised not to purchase or use them."
+            },
+            {
+                "type": "text",
+                "value": "The Hyderabad investigation has meanwhile opened another line of inquiry. According to the officer, investigators found that an ointment originating from the United Kingdom was allegedly being mixed with cosmetic products and the resulting preparation sold for skin-lightening purposes."
+            },
+            {
+                "type": "text",
+                "value": "Samples of the products have been sent for forensic examination, and investigators are awaiting the laboratory findings to establish their composition and determine the substances present in them."
+            },
+            {
+                "type": "text",
+                "value": "Officials have raised concerns about potentially carcinogenic substances, but the forensic results are awaited. The precise health implications of the seized preparations are therefore yet to be established."
+            },
+            {
+                "type": "text",
+                "value": "The latest investigation follows raids by the Hyderabad police and CDSCO at Beauty Ladies Emporium, Beauty Queen Shop and S.J. Medical Shop in the Habeeb Nagar and Nampally areas, where cosmetics valued at about ₹7 lakh were seized."
+            },
+            {
+                "type": "text",
+                "value": "The stock included several Pakistan-made whitening creams, soaps and other cosmetic products. Five persons were identified in connection with their alleged sale and distribution."
+            },
+            {
+                "type": "text",
+                "value": "The Crawford Market link also comes against the backdrop of enforcement action in Mumbai itself, where Pakistan-made cosmetics valued at about ₹12 lakh were seized during a raid in July."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "T.N. recording around 200 dengue cases a day, numbers remain steady: DPH",
+        "url": "https://www.thehindu.com/news/cities/chennai/tn-recoding-around-200-dengue-cases-a-day-numbers-remain-steady-dph/article71537135.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Tamil Nadu is recording around 200 cases of dengue a day. Fresh cases are being reported in places including Chennai and its neighbouring districts and cities such as Coimbatore and Madurai."
+            },
+            {
+                "type": "text",
+                "value": "Officials of the Directorate of Public Health (DPH) and Preventive Medicine said the caseload remained steady and was not at outbreak proportions. A. Somasundaram, Director of Public Health and Preventive Medicine, said cases had not risen exponentially, with the numbers remaining broadly steady. “We are seeing nearly 200 cases a day. The numbers are not doubling or tripling, which usually happens in an outbreak. Right now, there is a static trend in the number of dengue cases, and we are expecting the cases to decline soon,” he said."
+            },
+            {
+                "type": "text",
+                "value": "Cases are being reported across cities including the Chennai belt (Tiruvallur and Kancheepuram), Coimbatore, and Madurai. This could partly be due to a “natural bias” with these areas having more hospitals and testing facilities, Dr. Somasundaram said."
+            },
+            {
+                "type": "text",
+                "value": "“We have specifically instructed staff to increase the number of tests for dengue for better surveillance and patient management. This is so we don’t miss a case, and when samples are tested, we can identify pockets of cases or clusters, which are likely to bring about an outbreak,” he said. There are over 4,500 government and private laboratories in the State, he added."
+            },
+            {
+                "type": "text",
+                "value": "Surveillance measures to identify <i>Aedes </i>mosquito breeding pools are continuing, but the number of pools detected has started to decline as a result of source reduction measures. The mosquito density is slowly coming down, the official said. About 25,000 Domestic Breeding Checkers (DBC) have been engaged across the State, with 20 persons covering one block."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Somasundaram said while preventive measures had been intensified, they had been holding daily monitoring meetings with District Health Officers via video conferencing. “We are analysing the case trend, whether increase or decrease or static, and number of laboratory tests conducted. We are also monitoring fever triaging, patient management, and discharge policy. Patients are being categorised as having mild, moderate, or severe symptoms and treated appropriately. Right now, the severity of infections is less. Fogging operations and source reduction measures, along with work taken up by DBCs, are being supervised. We are also looking at creating awareness among the public,” he said."
+            },
+            {
+                "type": "text",
+                "value": "With October and November being crucial months, he said, there could be intermittent or heavy rain and people should ensure that their household environment is clean. “Avoid storing water unnecessarily. If you have too, keep containers closed properly,” he added."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Congo’s Ebola outbreak records more than 4,000 deaths",
+        "url": "https://www.thehindu.com/news/international/congos-ebola-outbreak-records-more-than-4000-deaths/article71536483.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Congo’s Ebola outbreak has now recorded more than 4,000 deaths, authorities said as they struggle to contain the spread of the virus."
+            },
+            {
+                "type": "text",
+                "value": "The latest figures were released by the health ministry on Thursday (October 1, 2026). They show that 4,018 people have died from among 8,300 confirmed cases, making up for nearly half of the confirmed cases in what has become the fastest-growing Ebola outbreak in history."
+            },
+            {
+                "type": "text",
+                "value": "Congo announced an outbreak on May 15, caused by the rare Bundibugyo virus, which has no known treatment or vaccine."
+            },
+            {
+                "type": "text",
+                "value": "The World Health Organization has recently raised the alarm regarding the rapid geographical spread of the virus into new health zones, stretching limited resources."
+            },
+            {
+                "type": "text",
+                "value": "The Africa Centers for Disease Control and Prevention said in its latest news conference that the number of confirmed cases is falling, but that could be attributed to insecurity and challenges in getting communities to cooperate in some of the hotspots."
+            },
+            {
+                "type": "text",
+                "value": "A Congolese politician was attacked and beaten to death earlier this week for defending government measures in dealing with the outbreak, highlighting tensions that have stretched both the health community and local resources."
+            },
+            {
+                "type": "text",
+                "value": "Widespread mistrust of health workers and the authorities has hampered efforts to slow the Central African nation’s 17th Ebola outbreak."
+            },
+            {
+                "type": "text",
+                "value": "Authorities last month launched a village-centered approach but those efforts are battling beliefs by some residents who dismiss Ebola as a hoax. There is also deep distrust in the country’s government for reasons ranging from how it’s managed past Ebola outbreaks to chronic corruption."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "3,832 children diagnosed with leprosy as India targets interruption of transmission by 2027",
+        "url": "https://www.thehindu.com/news/national/3832-children-diagnosed-with-leprosy-as-india-targets-interruption-of-transmission-by-2027/article71540064.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India recorded 3,832 new leprosy cases among children in 2025-26, including 37 who had Grade-2 disability (G2D) at diagnosis — an indicator of delayed detection. The child caseload was 91.6% higher than the National Leprosy Eradication Programme's (NLEP) target of 2,000 cases for the year."
+            },
+            {
+                "type": "text",
+                "value": "The figures, from the latest NLEP annual report for 2025-26, come even as India pursues the National Strategic Plan for Leprosy 2023-27, which seeks to interrupt transmission at the district level by 2027. Under the roadmap, a district is considered to have interrupted transmission after reporting zero new indigenous child cases for five consecutive years."
+            },
+            {
+                "type": "text",
+                "value": "The NLEP's programme objectives include zero disability among new child cases and a national G2D rate of less than one case per million population. The roadmap projects 1,000 child cases and a G2D rate of 0.5 per million for 2026-27."
+            },
+            {
+                "type": "text",
+                "value": "The appearance of children among newly detected cases matters beyond the absolute number. The World Health Organisation (WHO) considers new cases among children below 15 years an indicator of recent transmission, while G2D among newly detected patients indicates delayed diagnosis."
+            },
+            {
+                "type": "text",
+                "value": "The WHO also says disabilities among newly detected child cases signal both delayed detection and ongoing transmission."
+            },
+            {
+                "type": "text",
+                "value": "India recorded 63 children with G2D in 2019-20, followed by 35 in 2020-21, 41 in 2021-22, 55 in 2022-23 and 45 in 2023-24. The continued detection of children with G2D contrasts with the NLEP's objective of zero disability among new child cases."
+            },
+            {
+                "type": "text",
+                "value": "The latest numbers therefore raise a fundamental epidemiological question: if India is working to interrupt transmission by 2027, why are children still developing leprosy, and why are some reaching diagnosis only after visible disability has appeared?"
+            },
+            {
+                "type": "text",
+                "value": "India detected 91,783 new leprosy cases in 2025-26, according to the Union Health Ministry. The prevalence rate was 0.56 per 10,000 population, and 1,945 patients had Grade-2 disability at diagnosis, accounting for 2.12% of all newly detected cases. The national G2D rate was 1.34 per million, above the NLEP's target of less than one case per million."
+            },
+            {
+                "type": "text",
+                "value": "According to the WHO's latest global update, India reported the world's largest number of newly detected leprosy cases in 2025, with 91,783 cases, followed by Brazil with 22,901 and Indonesia with 16,292. Together, the three countries accounted for 78.3% of all new cases reported globally. The WHO notes that, although the update is for 2025, India reported data for April 2025 to March 2026."
+            },
+            {
+                "type": "text",
+                "value": "India also reported the world's largest number of new child leprosy cases in the WHO's 2025 global update, with 3,832 cases."
+            },
+            {
+                "type": "text",
+                "value": "The WHO figures and the NLEP figures refer to the same reporting period for India — April 2025 to March 2026 — although the WHO presents India's data in its 2025 global table. The WHO table records 3,832 child cases and 37 child cases with G2D for India."
+            },
+            {
+                "type": "text",
+                "value": "Dr. Kabir Sardana, Professor and Head of Dermatology at ABVIMS-Dr. RML Hospital, Delhi, attributed the continuing burden partly to gaps in case detection."
+            },
+            {
+                "type": "text",
+                "value": "\"Data points to the fact that there is poor detection, which is why we are seeing more children with leprosy,\" he said."
+            },
+            {
+                "type": "text",
+                "value": "The Health Ministry identifies high-endemic and hard-to-reach areas as priorities for intensified case detection. The NLEP emphasises active case detection, household contact surveys and focused campaigns, along with special plans for hard-to-reach areas. The programme also identifies stigma and discrimination as continuing concerns."
+            },
+            {
+                "type": "text",
+                "value": "The WHO says prolonged, close contact with untreated cases allows transmission to continue, while the disease's long incubation period makes interruption difficult. New child cases are considered an indicator of recent transmission, although the presence of a child case cannot by itself establish when or where the infection occurred. The WHO notes that symptoms can appear years after infection."
+            },
+            {
+                "type": "text",
+                "value": "Leprosy, or Hansen's disease, is a chronic bacterial infection caused mainly by Mycobacterium leprae. It primarily affects the skin and peripheral nerves. Transmission occurs mainly through prolonged, close contact with an untreated person. The disease is curable with multidrug therapy, a combination of antibiotics provided free through public-health programmes."
+            },
+            {
+                "type": "text",
+                "value": "Children and household contacts are particularly important to surveillance because a new child case can indicate ongoing transmission within a community. However, the presence of a child case cannot by itself establish when or where the infection occurred. The average incubation period is about five years and can be considerably longer."
+            },
+            {
+                "type": "text",
+                "value": "India's child caseload has fallen substantially from a decade ago, but the decline has not been linear. The country detected 11,365 children with leprosy in 2014-15, 11,389 in 2015-16 and 11,770 in 2016-17. The number fell to 10,287 in 2017-18, 9,227 in 2018-19 and 7,859 in 2019-20."
+            },
+            {
+                "type": "text",
+                "value": "Child detections fell sharply during the COVID-19 period, reaching 3,753 in 2020-21, before rising to 4,107 in 2021-22. They fell again to 2,363 in 2022-23 and 2,335 in 2023-24, before rising to 3,832 in 2025-26. Changes in reported case numbers also reflect the intensity and reach of case detection, making it difficult to interpret the trend as a direct measure of transmission alone."
+            },
+            {
+                "type": "text",
+                "value": "The Health Ministry has identified high-priority States and districts where the burden remains concentrated. Twenty-three districts in Chhattisgarh, 21 in Jharkhand, 18 each in Maharashtra and Odisha, and 10 in Madhya Pradesh had a prevalence rate above one case per 10,000 population, according to the Ministry."
+            },
+            {
+                "type": "text",
+                "value": "These figures identify districts with prevalence above the elimination threshold; they should not be read as meaning that these are the only States or districts with continuing transmission."
+            },
+            {
+                "type": "text",
+                "value": "For a disease that is curable, and for which early detection and treatment can prevent the progression to disability, the continued detection of children — including some already showing Grade-2 disability — highlights the tension between programme targets and what is still being detected in communities."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Menopause is a major health milestone, yet health records barely track it - new research",
+        "url": "https://www.thehindu.com/sci-tech/health/menopause-is-a-major-health-milestone-yet-health-records-barely-track-it-new-research/article71532181.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Anyone with ovaries who lives long enough will <a href=\"https://www.nia.nih.gov/health/menopause/what-menopause\" target=\"_blank\" rel=\"nofollow\">experience menopause</a>. While menopause is a natural transition in midlife, it can strongly <a href=\"https://doi.org/10.1089/jwh.2012.3719\" target=\"_blank\" rel=\"nofollow\">affect a person’s quality of life</a> and their current and future <a href=\"https://orwh.od.nih.gov/menopause-midlife-health\" target=\"_blank\" rel=\"nofollow\">risk of heart disease, osteoporosis and other issues</a>. So you might think that whether someone is experiencing or has gone through menopause would be noted in their medical records."
+            },
+            {
+                "type": "text",
+                "value": "But when we and our colleagues examined the electronic medical records of almost 240,000 women, only <a href=\"https://doi.org/10.1097/GME.0000000000002884\" target=\"_blank\" rel=\"nofollow\">12% included mention of menopause</a>, even though more than half the women reported separately that they were experiencing this transition. Our findings, published in the journal Menopause, reveal a major gap in how clinicians capture basic information about women’s health."
+            },
+            {
+                "type": "text",
+                "value": "The menopausal women we examined are from a broader group of 400,000 who  participated in the <a href=\"https://www.nih.gov/allofus\" target=\"_blank\" rel=\"nofollow\">All of Us Research Program</a>, a nationwide study run by the National Institutes of Health to compile a <a href=\"https://www.researchallofus.org/data-tools/data-snapshots/?_gl=1*1rsb3hx*_ga*MTYxMjU1NzkxOS4xNzg3NTk2ODI4*_ga_MQVR5DG2C4*czE3OTAyODE4MjgkbzMkZzEkdDE3OTAyODE4NDgkajQwJGwwJGgxMzM0MDcyNDg4\" target=\"_blank\" rel=\"nofollow\">wide range of health data</a> from at least 1 million Americans. We looked at how information about menopause was included in electronic health records and how this information differed by demographics, such as age, education, race and income."
+            },
+            {
+                "type": "text",
+                "value": "Because study participants filled out health surveys upon enrolling, we could track discrepancies between their own reports of menopause and what was in their medical records. Age at menopause and symptoms, such as hot flashes or sleep disturbances, were also largely missing from the medical records and survey."
+            },
+            {
+                "type": "heading",
+                "value": "Missing links"
+            },
+            {
+                "type": "text",
+                "value": "<a href=\"https://doi.org/10.1001/jamainternmed.2014.8063\" target=\"_blank\" rel=\"nofollow\">Many aspects of menopause</a>, and the <a href=\"https://doi.org/10.1001/jamacardio.2016.2415\" target=\"_blank\" rel=\"nofollow\">diversity in women’s experiences</a> with it, remain poorly understood."
+            },
+            {
+                "type": "text",
+                "value": "For example, when menopause begins, as well as how disruptive its symptoms are, <a href=\"https://doi.org/10.1016/j.ogc.2011.05.001\" target=\"_blank\" rel=\"nofollow\">can vary greatly</a>. Some women experience extreme hot flashes, sleep disruptions and brain fog, while others do not. One woman may go through natural menopause at age 45, and another at 54. Both ages would be considered normal, but that timing can affect current and future health in distinct ways."
+            },
+            {
+                "type": "text",
+                "value": "Electronic medical records <a href=\"https://doi.org/10.1146/annurev-publhealth-032315-021353\" target=\"_blank\" rel=\"nofollow\">offer an unmatched opportunity</a> to investigate these knowledge gaps, enabling researchers to study the experience of hundreds of thousands or even millions of people using routinely collected data."
+            },
+            {
+                "type": "text",
+                "value": "Such large-scale studies may shed light on how menopause symptoms change over time and who is more likely to experience them; how markers of heart disease, bone health or mental health track with menopause; how social determinants of health, such as ethnicity and access to healthcare, affect someone’s lived experience of menopause; and countless other unanswered questions."
+            },
+            {
+                "type": "heading",
+                "value": "Closing the data gap"
+            },
+            {
+                "type": "text",
+                "value": "Our study is not the first to point out how inconsistently menopause status and symptoms are recorded in <a href=\"https://doi.org/10.1001/jamanetworkopen.2026.23217\" target=\"_blank\" rel=\"nofollow\">healthcare settings</a> and <a href=\"https://doi.org/10.1097/GME.0000000000002868\" target=\"_blank\" rel=\"nofollow\">electronic health records</a>. But it systematically highlights the enormity of the gap, showing that menopause is often not even recorded at all."
+            },
+            {
+                "type": "text",
+                "value": "It’s not clear why menopause is so rarely documented in electronic health records. It may be because menopause is not a disease, so it does not generally occur to clinicians to note it as a diagnostic code. It may feel obvious or irrelevant to diagnose or measure. It’s possible that patients themselves often don’t bring it up unless their symptoms are severe. Healthcare providers routinely ask middle-aged patients about their reproductive health – for example, when they had their last menstrual period – but this information rarely ends up getting documented in the electronic health record."
+            },
+            {
+                "type": "text",
+                "value": "As we see it, not capturing this information is a colossal missed opportunity to drive vital research and improve personalized healthcare. Our team is developing a short, simple questionnaire about menopause status and symptoms for patients to fill out as they check in for medical appointments. These responses could then be added to their medical records for use by both their healthcare team and researchers. We are also developing a computer-based approach to infer menopause-related information from other data in a woman’s health record or genetics."
+            },
+            {
+                "type": "text",
+                "value": "Finally, we are exploring the All of Us dataset to identify systematic differences – for example, in patients’ cultural background or income level, specific health system practices, urban versus rural settings – that might be linked with whether menopause data gets recorded in medical records. These associations can point to targeted ways to encourage its collection."
+            },
+            {
+                "type": "text",
+                "value": "It’s impossible to research, and treat, what’s not measured. Capturing the menopause transition is an essential step to improving healthcare for women in midlife."
+            },
+            {
+                "type": "text",
+                "value": "<i>Audrey Hendricks, University of Colorado Anschutz and Nanette Santoro, University of Colorado Anschutz</i>"
+            },
+            {
+                "type": "text",
+                "value": "<i>This article is republished from The Conversation under a Creative Commons license. Read the original article here: <a href=\"https://theconversation.com/menopause-is-a-major-health-milestone-yet-health-records-barely-track-it-new-research-292227\" target=\"_blank\" rel=\"nofollow\">https://theconversation.com/menopause-is-a-major-health-milestone-yet-health-records-barely-track-it-new-research-292227</a>.</i>"
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Allahabad HC to hear suo motu PIL on noise pollution after student’s death",
+        "url": "https://www.thehindu.com/news/national/allahabad-hc-to-hear-suo-motu-pil-on-noise-pollution-after-students-death/article71536862.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Allahabad High Court has initiated suo motu proceedings on noise pollution following reports of the death of a 7-year-old Class 2 student at a school in Balrampur while a procession carrying loudspeakers and a music system was passing nearby."
+            },
+            {
+                "type": "text",
+                "value": "The incident occurred on September 22 at Divine Public School on City Palace Road in Bhagautiganj, Balrampur. The deceased was identified as Vaishnavi Tiwari. According to reports, the procession was part of the 10-day Ganpati Utsav, which started on September 14."
+            },
+            {
+                "type": "text",
+                "value": "Observing that the incident raises larger questions over the unchecked menace of noise pollution, a Division Bench of Justice Rajan Roy and Justice Manjive Shukla on Wednesday (September 28) ordered the registration of a separate suo motu PIL while hearing an existing case concerning the use of pressure horns, modified silencers and hooters."
+            },
+            {
+                "type": "text",
+                "value": "The court, however, clarified that it had not established any connection between the alleged loud noise and the child’s death."
+            },
+            {
+                "type": "text",
+                "value": "The Bench maintained that the broader problem of noise pollution and the enforcement of statutory safeguards required separate consideration. It observed that violations of the Noise Pollution (Regulation and Control) Rules, 2000, were frequently witnessed in public spaces despite the existing legal framework."
+            },
+            {
+                "type": "text",
+                "value": "The PIL will examine the authorities responsible for controlling noise pollution, the enforcement measures currently in place, and whether regular monitoring is required, The Bench said."
+            },
+            {
+                "type": "text",
+                "value": "The court also stressed the need for greater public awareness, observing that a lack of awareness may contribute to violations. At the same time, the Bench said continued violations despite enforcement measures should attract accountability under the applicable law."
+            },
+            {
+                "type": "text",
+                "value": "The court made the Uttar Pradesh Director General of Police, the Uttar Pradesh Pollution Control Board (UPPCB), the Central Pollution Control Board (CPCB), Lucknow civic authorities and officials from key government departments parties in the matter. The Balrampur District Magistrate, Superintendent of Police and Chief Medical Officer were also directed to be impleaded. The State was asked to obtain reports on the incident and submit details of measures taken or proposed to enforce noise-control laws."
+            },
+            {
+                "type": "text",
+                "value": "The court also expressed hope that the child’s parents and school authorities would not face unnecessary pressure or interference. The matter will now be heard on October 12."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Tennessee execution survivor Christa Pike on ventilator, attorneys say",
+        "url": "https://www.thehindu.com/news/international/tennessee-execution-survivor-christa-pike-on-ventilator-attorneys-say/article71538490.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Convicted murderer Christa Pike is unconscious, intubated and receiving breathing assistance ​from a ventilator after Tennessee’s failed attempt to execute her, ‌her attorneys said on Friday (October 2, 2026), providing the ​first detailed account of the extent of ⁠injuries she suffered during the lethal injection."
+            },
+            {
+                "type": "text",
+                "value": "Hospital staff are working to save Pike’s life and clear the lethal drug pentobarbital from ‌her system, her attorneys said in an emergency court filing seeking an order requiring ‌Tennessee’s Department of Correction to preserve evidence from ‌<a href=\"https://www.thehindu.com/news/international/us-supreme-court-clears-way-for-tennessee-womans-imminent-execution/article71531199.ece\" target=\"_self\">Wednesday night’s ⁠botched execution.</a>"
+            },
+            {
+                "type": "text",
+                "value": "Pike remains in critical condition, her ⁠lawyers said, two days after the state administered two doses of pentobarbital but failed to kill her. She has suffered significant ​injuries to both arms, they ‌added."
+            },
+            {
+                "type": "text",
+                "value": "“At no point did any member of the execution team realize that the IV lines were not correctly placed or that the veins had blown ‌and that the pentobarbital was, in whole ​or in part, entering Ms. Pike’s body,” Pike’s lawyers said in a filing in the ⁠Chancery Court for the State of Tennessee Twentieth Judicial District."
+            },
+            {
+                "type": "text",
+                "value": "The filing provides the fullest picture yet of the ‌medical consequences of an attempted execution that Tennessee Governor Bill Lee said followed the state’s established protocol. It was the state’s second botched execution this year and Lee has halted any further state killings for the rest of 2026 and ordered an independent review ‌of what happened."
+            },
+            {
+                "type": "text",
+                "value": "Pike’s attorneys have said the execution team’s difficulties ​administering the drug were related to intravenous access, an issue they had warned the state ⁠and courts about before the execution."
+            },
+            {
+                "type": "text",
+                "value": "Pike, 50, was convicted of ⁠killing her 19-year-old classmate Colleen Slemmer in 1995, when Pike was 18. She had been scheduled ‌to become the first woman executed in Tennessee in more than two centuries."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "Rethinking suicide prevention in Adivasi communities",
+        "url": "https://www.thehindu.com/sci-tech/health/rethinking-suicide-prevention-in-adivasi-communities/article71532378.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Prem* is a young mathematics graduate from a village in Jharkhand. He was known as an energetic and supportive young person. Children from the village often approached him when they had difficulties with mathematics. When he was selected for a job with the Indian Railways, it was expected to be a moment of happiness. But the thought of leaving his parents, friends, village and the life he shared with them was difficult for him."
+            },
+            {
+                "type": "text",
+                "value": "In the weeks following the job offer, Prem began having sleepless nights, worrying about how he would cope with a new life and new responsibilities. Gradually, he stopped talking to his family. He began to feel helpless and worthless, lost interest in everyday life and reached a point where he attempted to end his life."
+            },
+            {
+                "type": "text",
+                "value": "What helped was having people around him who could understand not only what he was going through, but also the world he was coming from. A neighbourhood facilitator working in a community-based organisation was  able to sit with him, listen to his worries and share his d<i>ukh-sukh.</i> They understood why leaving his parents, friends and village felt so difficult and gave him space to talk about the fears he was carrying."
+            },
+            {
+                "type": "text",
+                "value": "The support was not about asking him simply to adjust or move on. It helped him think about what mattered to him, what he wanted for his future and how he could remain connected to the people and place that were important to him while taking up the new opportunity. He eventually wrote to the department asking for another opportunity to join. He was invited again and went to work,  while continuing to receive support."
+            },
+            {
+                "type": "text",
+                "value": "Prem’s experience highlights  that what looks like a positive life event from the outside can sometimes become overwhelming. A suicidal act can often  happen suddenly, during a moment of intense crisis. But the distress behind that moment may have been building for much longer."
+            },
+            {
+                "type": "text",
+                "value": "For Adivasi communities, distress can be shaped by circumstances that may never appear in a psychiatric consultation."
+            },
+            {
+                "type": "heading",
+                "value": "When distress is accumulates"
+            },
+            {
+                "type": "text",
+                "value": "A recent <a href=\"https://journals.plos.org/mentalhealth/article?id=10.1371/journal.pmen.0000492\" target=\"_self\">study</a> in Jharkhand examined psychosocial distress and help-seeking among Adivasi Ho adolescents. It found that distress was often linked to family conflict, pressure around education and work, financial hardship, violence, separation and loss, and difficulties in relationships. Some adolescents withdrew and stopped sharing what they were going through; for some, this included thoughts of self-harm or suicide"
+            },
+            {
+                "type": "text",
+                "value": "These accounts do not offer a single explanation for suicide among Adivasi communities. They show how distress can accumulate across everyday life — in family conflict, having to leave school temporarily or reduce schooling to help with agricultural or household work, substance use, untreated illness, violence, displacement, loss of livelihood, lack of mentorship, identity-related stigma and self-doubt, or the erosion of community and belonging."
+            },
+            {
+                "type": "heading",
+                "value": "When communities are disrupted"
+            },
+            {
+                "type": "text",
+                "value": "Belonging is an important part of suicide prevention. Stereotypes, exclusion, humiliation, discrimination and pressure to hide one’s identity can affect how people see themselves and how connected they feel to society. Historically, Adivasi communities stayed together. But modern development, alongside education and employment opportunities, have in some cases, uprooted  Adivasi people from their culture. Mainstream schools do not teach Adivasi children in their own mother tongue; their history is woefully under-represented in the school curricula."
+            },
+            {
+                "type": "text",
+                "value": "Sandip Sing, a radiologist from the Munda  community practising in rural West Bengal and a first-generation learner, says,  “There is a rapid transition in accessing and navigating educational and professional spaces, often amid gaps in resources, networks, and institutional familiarity. Bridging these gaps can be challenging, particularly with unfamiliar systems.”"
+            },
+            {
+                "type": "text",
+                "value": "Many educated Adivasis may also have had fewer opportunities to engage with their community’s history, culture, language and traditions, and may have complex or evolving relationships with their Adivasi identities.  This matters for mental health because belonging itself is a source of strength. When people are uprooted  without finding a new sense of belonging, distress can deepen."
+            },
+            {
+                "type": "text",
+                "value": "This does not mean that development itself causes mental illness or suicide. The concern is what happens when rapid social change is accompanied by displacement, loss of livelihood, cultural disconnection and weakening social support."
+            },
+            {
+                "type": "heading",
+                "value": "Collective strength, mentoring"
+            },
+            {
+                "type": "text",
+                "value": "The strength of Adivasi life also lies in ways of expressing emotions and sharing knowledge. Songs and dances are not simply cultural performances; they are ways of expressing emotions, maintaining connection and making sense of life. The Adivasi dance itself is a powerful metaphor. People dance in a chain, holding one another. The village headman, Majhi Baba, dances alongside everyone else. An 80-year-old and an eight-year-old can dance together. There is no hierarchy; the strength is in the circle. For suicide prevention, this collective strength matters."
+            },
+            {
+                "type": "text",
+                "value": "Young people also need places where they can be themselves without constantly having to explain or defend who they are. Lilibiti Saren, a medical officer from the Santhal community working in  tribal areas of Bankura, West Bengal, notes that she often finds young people in these communities lacking direction. “There is a need for proper mentorship,” she says."
+            },
+            {
+                "type": "text",
+                "value": "Locally organised Adivasi youth spaces can help.  Such spaces can offer young people opportunities to speak in their own language, share experiences, learn from peers and elders and explore what <i>Adivasiyat </i>— identity, history, relationships and belonging — means to them."
+            },
+            {
+                "type": "heading",
+                "value": "Access and pathways in care"
+            },
+            {
+                "type": "text",
+                "value": "Clinical care remains essential. A person experiencing suicidal thoughts may need assessment for depression, substance use, trauma, psychosis, previous attempts, suicidal intent, access to means and immediate safety. Treatment and follow-up can save lives."
+            },
+            {
+                "type": "text",
+                "value": "But access to mental health care is itself a major challenge in many Adivasi areas. Services are often limited, distant and unevenly available."
+            },
+            {
+                "type": "text",
+                "value": "And even when services are available, the pathways into care may not be optimal. An Adivasi person with lived experience of mental healthcare says: “I felt like the psychiatrists and the psychologists were not speaking to me. They were judging me for what I had done and they were trying to find symptoms instead of trying to understand me, my pain and my situation.”"
+            },
+            {
+                "type": "text",
+                "value": "This raises an important question: are our mental health systems listening as carefully as they are diagnosing?"
+            },
+            {
+                "type": "text",
+                "value": "When formal services are scarce, difficult to reach, or experienced as unfamiliar or judgmental, people may seek support elsewhere—including from family, community networks, faith healers or indigenous systems. These spaces may offer something that the formal system does not: familiar language, relationships, cultural understanding and a sense of belonging."
+            },
+            {
+                "type": "text",
+                "value": "Adivasi mental health therefore cannot be treated simply as another category within rural health. Representation matters — from schools to healthcare institutions and policy making."
+            },
+            {
+                "type": "heading",
+                "value": "Models that could work"
+            },
+            {
+                "type": "text",
+                "value": "In Adivasi communities of Jharkhand, particularly among the Ho, Munda and Santhal communities, <i>Madait </i> refers to a tradition of voluntary help and collective support for someone who needs it or is in distress.  It reflects an understanding that some difficulties are too large for one household to manage alone."
+            },
+            {
+                "type": "text",
+                "value": "This may be  a useful way to think about mental healthcare too. The question is not simply how services can be delivered to Adivasi communities, but how communities themselves can shape, participate in and lead the care they need."
+            },
+            {
+                "type": "text",
+                "value": "The same principle can be seen in <i>Dukhu-Sukhu Baithaki </i>— community support group meetings where people experiencing mental health difficulties and their families can meet, share experiences and support one another. This model works in West Singhbhum, Jharkhand, where people living with mental health conditions come together each month.  These spaces do not replace professional care. They bring community knowledge, relationships and mutual support into the process of recovery."
+            },
+            {
+                "type": "text",
+                "value": "Education without a knowledge of one’s roots; development that comes with displacement and mental healthcare that does not see or hear the people who need help is no longer enough. For suicide prevention, we must ask not only, “What is wrong with the individual?”, but also, “ Where is the community support? Where is the system that understands them?”"
+            },
+            {
+                "type": "text",
+                "value": "Perhaps suicide prevention in Adivasi communities must begin there — not by doing things for Adivasis, but by doing them with Adivasis."
+            },
+            {
+                "type": "text",
+                "value": "<i>*Name changed to protect privacy</i>"
+            },
+            {
+                "type": "text",
+                "value": "<i>(People in distress can reach out to Tele-MANAS (14416 or 1-800-891-4416) or the helplines listed <a href=\"https://www.thehindu.com/news/national/suicide-prevention-helplines/article61753129.ece\" target=\"_self\">here</a>)</i>"
+            },
+            {
+                "type": "text",
+                "value": "<i>(Dr. Sachin Barbde is a public health physician working with Adivasi communities in Jharkhand barbdesachin@gmail.com;  Dr. Christianez Ratna Kiruba is an internal medicine physician and a freelance health journalist from Guwahati christianezdennis@gmail.com; Dr. Debasmita Saren, is a Santhal Adivasi psychiatrist debasmitasaren5@gmail.com)</i>"
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Health",
+        "title": "International organisations form alliance for diabetic foot survival and limb preservation",
+        "url": "https://www.thehindu.com/news/national/karnataka/international-organisations-form-alliance-for-diabetic-foot-survival-and-limb-preservation/article71536578.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Eight organisations from different parts of the world have come together to <a href=\"https://www.thehindu.com/sci-tech/health/diabetic-foot-society-of-india-calls-for-global-alliance/article71523180.ece\" target=\"_self\">form the Global Alliance for Diabetic Foot Survival</a> and Limb Preservation. This was announced at the Diabetic Foot Society of India’s (DFSI) national conference held in Bengaluru on Friday, October 2, 2026. The founding organisations also signed a joint declaration calling for diabetic foot ulceration to be recognised as a global public health priority."
+            },
+            {
+                "type": "text",
+                "value": "The eight organisations are the DFSI, King’s College London, the International Association of Diabetic Foot Surgeons, D-Foot International, the Pan African Diabetic Foot Study Group, the American Limb Preservation Society, the International Federation of Podiatrists and the Podiatric Surgeons’ Society."
+            },
+            {
+                "type": "text",
+                "value": "A 2023 review cited in the alliance proposal estimated that about 18.6 million people worldwide are affected by diabetic foot ulceration annually. It reported a five-year mortality of about 30% following a diabetic foot ulcer and over 70% following a major amputation."
+            },
+            {
+                "type": "text",
+                "value": "The proposed alliance will focus on research, workforce training, comparable data collection and advocacy with the World Health Organization and national governments to secure greater policy recognition of diabetic foot disease."
+            },
+            {
+                "type": "text",
+                "value": "The proposed framework also emphasises the involvement of people living with diabetes, those who have experienced foot ulcers and people living with amputation or disability in decision-making and programme design. It envisages regional demonstration programmes, a common measurement framework and an annual report on progress."
+            },
+            {
+                "type": "text",
+                "value": "The DFSI Scientific Committee is proposed as the alliance’s interim secretariat, with a governing council representing the founding organisations overseeing strategy, finances and activities. The members are expected to meet within 30 days to discuss governance, collaboration, resource mobilisation and implementation."
+            }
+        ],
+        "date": "2026-10-03"
+    },
+    {
+        "category": "Science",
+        "title": "The ‘WarGames’ problem: Computer science has long understood what it takes to keep AI under control",
+        "url": "https://www.thehindu.com/sci-tech/science/the-wargames-problem-computer-science-has-long-understood-what-it-takes-to-keep-ai-under-control/article71539805.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "AI agents don’t go rogue. That’s something only humans do."
+            },
+            {
+                "type": "text",
+                "value": "Nevertheless, a <i>New York Times</i> article – representative of much news coverage of AI – described an OpenAI hacking as “A.I. bots going rogue and independently spearheading a cyberattack.”"
+            },
+            {
+                "type": "text",
+                "value": "Name-brand artificial intelligence agents have been on a hacking spree in 2026. OpenAI’s software agents hacked software company Hugging Face and government sites, Anthropic’s Claude hacked four companies’ systems, and in cybersecurity experiments Google’s Gemini hacked three companies."
+            },
+            {
+                "type": "text",
+                "value": "The AI companies are investigating tens of thousands of incidents involving their agents, according to a report in <i>Axios</i>. These episodes have heightened fears about AI agents taking actions without human prompting."
+            },
+            {
+                "type": "text",
+                "value": "The problem with headlines proclaiming that AI agents have gone rogue goes beyond anthropomorphising the technology. It creates the impression that the agents were beyond the control of the AI companies that made them and there was little the companies could do about it."
+            },
+            {
+                "type": "text",
+                "value": "As a technology law and ethics scholar who studies the effects disruptive technologies have on society, I know that’s not the case. If you don’t specify the limits of what software is allowed to do, you should not be surprised when the software pursues all possible options to achieve its goal. This behavior – an AI pursuing a fixed objective – is what I call the “WarGames” problem, and it’s been recognised in the field of computer science for decades."
+            },
+            {
+                "type": "heading",
+                "value": "Been there, seen that"
+            },
+            {
+                "type": "text",
+                "value": "In the 1983 movie “WarGames,” a teenager, David, hacks into a computer to play a new video game, Global Thermonuclear War. David doesn’t know that the computer is the government’s AI machine tasked with defending the United States from Russian nuclear attacks and can launch the U.S.’s missiles. When David and his friend start the game, they select Las Vegas as the first target. While the North American Aerospace Defense Command goes on alert, launching bombers and warming up intercontinental ballistic missiles, David’s parents make him turn off the game. It’s over. Or is it?"
+            },
+            {
+                "type": "text",
+                "value": "The next day, David’s phone rings and he connects it to his computer. The caller is the government computer, which updates him that the game was interrupted, the primary goal has not yet been achieved, but a solution is expected in the next 52 hours. Like a modern software agent, the program has been running since David started the game and will work until the task is done."
+            },
+            {
+                "type": "text",
+                "value": "Chess provides another view of the problem. Conquering chess was a goal for early AI. The rules of chess are well defined, including what winning looks like. So, programming a machine to play chess is straightforward. But imagine you let the software reason and act beyond the confines of the chessboard. The software might pursue options such as blackmailing its opponent or grabbing more compute time."
+            },
+            {
+                "type": "text",
+                "value": "This example comes from one of the most assigned textbooks on AI, “Artificial Intelligence: A Modern Approach.” As the authors explain, you might be tempted to see those actions as rogue, but they “are a logical consequence of defining winning as the sole objective for the machine.”"
+            },
+            {
+                "type": "heading",
+                "value": "What to do about it"
+            },
+            {
+                "type": "text",
+                "value": "The AI hacking events involving OpenAI, Anthropic and Google underscore a few lessons that draw on years of computer science research."
+            },
+            {
+                "type": "text",
+                "value": "First, given the increasing use of AI agents, every organization involved in internet infrastructure, from large technology companies to small websites, needs to conduct audits and tighten up its internal security systems. As my colleague Mark Riedl and I explain in our work on AIagents, application programming interfaces, or APIs, are a vital part of managing AI agents. APIs facilitate communication between different software systems. But as more people use AI agents, the agents are likely to reveal and exploit poor API construction and security."
+            },
+            {
+                "type": "text",
+                "value": "Second, it’s important for AI agents to be designed to identify and authenticate themselves to third parties. What if you gave your AI agent your credentials? Website operators will need to know whether a human or bot is making a reservation, selling a product or making a purchase. They may want to limit automated systems that overwhelm their sites or reject AI agents because of high rates of buying errors and refunds. Just as in laws covering human interactions, it’s important for third parties to be able to assess whom or what they are dealing with so they can allow or deny access."
+            },
+            {
+                "type": "text",
+                "value": "Third, it’s important for AI agents to have a default setting to slow down and check in with the human user. In the corporate AI hacking cases, the user appears to have launched their AI agents with the mistaken idea that the agents had a perfect specification of what to do and not to do. I believe it would have been better had it explored options and reported back to the user."
+            },
+            {
+                "type": "text",
+                "value": "Google’s Gemini appears to have had a safeguard that detected the system was outside the simulated environment and so stopped its attacks. Slowing down and verifying actions, especially when a system detects it is exploiting a security hole, would be a big step in managing AI agents."
+            },
+            {
+                "type": "text",
+                "value": "Fourth, AI companies could have strong controls akin to those biomedical researchers use, including ways to check what is happening and how the experiment is working. AI executives have claimed that their software is as or more dangerous than fission and could end humanity. At the same time, they have not built safeguards commensurate with that level of risk."
+            },
+            {
+                "type": "heading",
+                "value": "Reality check"
+            },
+            {
+                "type": "text",
+                "value": "At one point in “WarGames,” David asks the computer, called Joshua, whether it is still playing the game. Joshua responds, “Of course.” It proceeds to update the time when it will launch its missiles and, much like a chatbot, asks, “Would you like to see some projected kill ratios?” David asks, “Is this a game? Or is it real?” Joshua replied, “What’s the difference?”"
+            },
+            {
+                "type": "text",
+                "value": "AI models, of course, don’t have any understanding of reality and are simply attempting to complete the tasks they’ve been assigned. Executives at AI companies, on the other hand, can’t claim that excuse."
+            },
+            {
+                "type": "text",
+                "value": "As of September 2026, luck has so far prevailed. The AIs have attacked nonvital government sites and harmed smaller companies. If the AI companies – and government regulators – don’t take the “WarGames” problem seriously, I believe that we risk serious disasters. Tomorrow it could be taking out a hospital’s power system, wiping out a bank’s account system, breaking air traffic control, or worse."
+            },
+            {
+                "type": "text",
+                "value": "Regarding the AI industry’s approach of rapidly developing powerful models, talking about the massive risks they pose, and at the same time failing to prevent harm, the movie’s climax offers a response: “A strange game. The only winning move is not to play.”"
+            },
+            {
+                "type": "text",
+                "value": "<i>(This article is republished from The Conversation under a Creative Commons license. <a href=\"https://theconversation.com/the-wargames-problem-computer-science-has-long-understood-what-it-takes-to-keep-ai-under-control-292884\" target=\"_blank\" rel=\"nofollow\">Read the original article.)</a></i>"
             }
         ],
         "date": "2026-10-03"
