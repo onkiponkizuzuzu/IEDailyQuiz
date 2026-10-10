@@ -1,5 +1,105 @@
 [
     {
+        "category": "Policy",
+        "title": "New bilateral investment treaty framework to get Cabinet nod soon: FM Sitharaman",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-bilateral-investment-treaty-framework-to-get-cabinet-nod-soon-fm-sitharaman/article71546184.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Finance Minister Nirmala Sitharaman on Monday said a new template for bilateral investment treaties is ready and is expected to get Cabinet approval soon in a bid to make it more investor-friendly."
+            },
+            {
+                "type": "text",
+                "value": "The new template, being prepared over the last one-and-a-half years, seeks to address shortcomings in the model approved in 2016 and provide sharper protection to investors from both sides, she said."
+            },
+            {
+                "type": "text",
+                "value": "India has continued negotiations on investment protection agreements even as the new template is being finalised, she said at the Munich Security Conference here."
+            }
+        ],
+        "date": "2026-10-10"
+    },
+    {
+        "category": "Policy",
+        "title": "Govt notifies 375 permissible works under VB-G RAM G, expands scope by 41%",
+        "url": "https://www.thehindubusinessline.com/economy/policy/govt-notifies-375-permissible-works-under-vb-g-ram-g-expands-scope-by-41/article71550492.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Centre has notified 375 permissible works under the new rural employment framework, with a greater emphasis on livelihood infrastructure, water security and disaster preparedness, expanding the list of works by 41 per cent over the previous scheme."
+            },
+            {
+                "type": "text",
+                "value": "The Ministry of Rural Development said the new schedule, under the Viksit Bharat Guarantee for Rozgar and Ajeevika Mission (VB-G RAM G) Gramin Act, 2025, divides the works into four categories -- water security, core rural infrastructure, livelihood-related infrastructure, and special works for extreme weather events and disaster preparedness."
+            },
+            {
+                "type": "text",
+                "value": "Of the 375 works, 128 fall under water security, 111 under core rural infrastructure, 98 under livelihood-related infrastructure and 38 under disaster preparedness, according to the ministry."
+            }
+        ],
+        "date": "2026-10-10"
+    },
+    {
+        "category": "Policy",
+        "title": "JK govt notifies Electric Vehicle Policy 2026",
+        "url": "https://www.thehindubusinessline.com/economy/policy/jk-govt-notifies-electric-vehicle-policy-2026/article71532233.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Jammu and Kashmir government on Thursday notified the J&amp;K Electric Vehicle Policy 2026, following its approval by the Council of Ministers chaired by Chief Minister Omar Abdullah."
+            },
+            {
+                "type": "text",
+                "value": "The policy has set a six-year roadmap to expand clean, affordable and weather-resilient electric mobility across Jammu and Kashmir, an official spokesperson said."
+            },
+            {
+                "type": "text",
+                "value": "The policy, covering the period of 2026-32, aims to accelerate EV adoption, strengthen charging infrastructure and create an enabling ecosystem for electric mobility across all 20 districts of J&amp;K."
+            }
+        ],
+        "date": "2026-10-10"
+    },
+    {
+        "category": "Policy",
+        "title": "Govt likely to finalise critical minerals stockpiling policy in a month",
+        "url": "https://www.thehindubusinessline.com/economy/policy/govt-likely-to-finalise-critical-minerals-stockpiling-policy-in-a-month/article71563040.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The policy on stockpiling critical minerals is expected to be announced in about a month, a government official said on Friday."
+            },
+            {
+                "type": "text",
+                "value": "The move is aimed at maintaining a stock of critical minerals to spur the growth of strategic sectors such as defence, advanced electronics and aerospace, among others."
+            },
+            {
+                "type": "text",
+                "value": "\"We are on the verge of finalising the policy on stockpiling of critical minerals which will be announced in about a month's time,\" Mines Secretary Keshav Chandra told reporters here."
+            }
+        ],
+        "date": "2026-10-10"
+    },
+    {
+        "category": "Policy",
+        "title": "Govt pushes rare-earth magnet capacity, India seeks control over critical manufacturing inputs: Shaktikanta Das",
+        "url": "https://www.thehindubusinessline.com/economy/policy/govt-pushes-rare-earth-magnet-capacity-india-seeks-control-over-critical-manufacturing-inputs-shaktikanta-das/article71545743.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government is moving to build domestic capacity for rare-earth permanent magnets, which are critical for automobiles, electronic hardware and other manufacturing, Principal Secretary-2 to the Prime Minister Shaktikanta Das said at the Kautilya Economic Conclave 2026."
+            },
+            {
+                "type": "text",
+                "value": "Das said the government has responded to vulnerabilities in the global rare-earth magnet supply chain by initiating measures to develop domestic capabilities in the sector, pointing to the importance of these materials for a wide range of industries. “The central government came out immediately thereafter with a major initiative to develop domestic capacity in rare earth permanent magnets,” Das said. He said rare-earth magnets are an important component for manufacturing and that building domestic capacity would be relevant for sectors including automobiles and electronic hardware."
+            },
+            {
+                "type": "text",
+                "value": "“Because that is one critical component on which automobile manufacturing, electronic hardware manufacturing, and so much other manufacturing depends,” Das said. Das was referring to China's earlier restrictions on rare-earth related exports, which he said had highlighted the extent of global dependence on Chinese supplies. “China had imposed certain restrictions. It was a problem for almost the whole world, and because almost 80 to 90 per cent of rare earth magnet supply and that entire ecosystem originates in China,” he said."
+            }
+        ],
+        "date": "2026-10-10"
+    },
+    {
         "category": "Agri Business",
         "title": "Kashmir’s GI products look abroad, but authenticity and testing delays remain a challenge",
         "url": "https://www.thehindubusinessline.com/economy/agri-business/kashmirs-gi-products-look-abroad-but-authenticity-and-testing-delays-remain-a-challenge/article71564272.ece",
@@ -203,126 +303,6 @@
             {
                 "type": "text",
                 "value": "Published on  October 9, 2026"
-            }
-        ],
-        "date": "2026-10-09"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt pushes rare-earth magnet capacity, India seeks control over critical manufacturing inputs: Shaktikanta Das",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-pushes-rare-earth-magnet-capacity-india-seeks-control-over-critical-manufacturing-inputs-shaktikanta-das/article71545743.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The government is moving to build domestic capacity for rare-earth permanent magnets, which are critical for automobiles, electronic hardware and other manufacturing, Principal Secretary-2 to the Prime Minister Shaktikanta Das said at the Kautilya Economic Conclave 2026."
-            },
-            {
-                "type": "text",
-                "value": "Das said the government has responded to vulnerabilities in the global rare-earth magnet supply chain by initiating measures to develop domestic capabilities in the sector, pointing to the importance of these materials for a wide range of industries. “The central government came out immediately thereafter with a major initiative to develop domestic capacity in rare earth permanent magnets,” Das said. He said rare-earth magnets are an important component for manufacturing and that building domestic capacity would be relevant for sectors including automobiles and electronic hardware."
-            },
-            {
-                "type": "text",
-                "value": "“Because that is one critical component on which automobile manufacturing, electronic hardware manufacturing, and so much other manufacturing depends,” Das said. Das was referring to China's earlier restrictions on rare-earth related exports, which he said had highlighted the extent of global dependence on Chinese supplies. “China had imposed certain restrictions. It was a problem for almost the whole world, and because almost 80 to 90 per cent of rare earth magnet supply and that entire ecosystem originates in China,” he said."
-            },
-            {
-                "type": "text",
-                "value": "The remarks point to a broader push to strengthen India's domestic capabilities in a strategically important part of the manufacturing supply chain, with rare-earth permanent magnets having applications across multiple industries."
-            },
-            {
-                "type": "text",
-                "value": "China's Ministry of Commerce had earlier announced expanded rare-earth export controls in October 2025, as per a news report by Reuters. The ministry said the measures covered additional rare-earth elements and related materials, while also adding scrutiny for certain foreign companies using Chinese rare-earth materials or equipment. The rules included controls covering rare-earth permanent magnet materials and components containing specified rare earths."
-            },
-            {
-                "type": "text",
-                "value": "The ministry's notification listed samarium-cobalt permanent magnets and certain neodymium permanent magnets containing terbium or dysprosium, as well as parts, components and modules containing these materials. The notification also said export applications for certain advanced semiconductor-related items and artificial intelligence research with potential military applications would be considered on a case-by-case basis, Reuters reported."
-            },
-            {
-                "type": "text",
-                "value": "Against this backdrop, Das's comments suggest that developing domestic rare-earth magnet capacity is being viewed as an important part of strengthening the manufacturing ecosystem."
-            },
-            {
-                "type": "text",
-                "value": "Published on  October 5, 2026"
-            }
-        ],
-        "date": "2026-10-09"
-    },
-    {
-        "category": "Policy",
-        "title": "JK govt notifies Electric Vehicle Policy 2026",
-        "url": "https://www.thehindubusinessline.com/economy/policy/jk-govt-notifies-electric-vehicle-policy-2026/article71532233.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Jammu and Kashmir government on Thursday notified the J&amp;K Electric Vehicle Policy 2026, following its approval by the Council of Ministers chaired by Chief Minister Omar Abdullah."
-            },
-            {
-                "type": "text",
-                "value": "The policy has set a six-year roadmap to expand clean, affordable and weather-resilient electric mobility across Jammu and Kashmir, an official spokesperson said."
-            },
-            {
-                "type": "text",
-                "value": "The policy, covering the period of 2026-32, aims to accelerate EV adoption, strengthen charging infrastructure and create an enabling ecosystem for electric mobility across all 20 districts of J&amp;K."
-            }
-        ],
-        "date": "2026-10-09"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt notifies 375 permissible works under VB-G RAM G, expands scope by 41%",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-notifies-375-permissible-works-under-vb-g-ram-g-expands-scope-by-41/article71550492.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Centre has notified 375 permissible works under the new rural employment framework, with a greater emphasis on livelihood infrastructure, water security and disaster preparedness, expanding the list of works by 41 per cent over the previous scheme."
-            },
-            {
-                "type": "text",
-                "value": "The Ministry of Rural Development said the new schedule, under the Viksit Bharat Guarantee for Rozgar and Ajeevika Mission (VB-G RAM G) Gramin Act, 2025, divides the works into four categories -- water security, core rural infrastructure, livelihood-related infrastructure, and special works for extreme weather events and disaster preparedness."
-            },
-            {
-                "type": "text",
-                "value": "Of the 375 works, 128 fall under water security, 111 under core rural infrastructure, 98 under livelihood-related infrastructure and 38 under disaster preparedness, according to the ministry."
-            }
-        ],
-        "date": "2026-10-09"
-    },
-    {
-        "category": "Policy",
-        "title": "New bilateral investment treaty framework to get Cabinet nod soon: FM Sitharaman",
-        "url": "https://www.thehindubusinessline.com/economy/policy/new-bilateral-investment-treaty-framework-to-get-cabinet-nod-soon-fm-sitharaman/article71546184.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "Finance Minister Nirmala Sitharaman on Monday said a new template for bilateral investment treaties is ready and is expected to get Cabinet approval soon in a bid to make it more investor-friendly."
-            },
-            {
-                "type": "text",
-                "value": "The new template, being prepared over the last one-and-a-half years, seeks to address shortcomings in the model approved in 2016 and provide sharper protection to investors from both sides, she said."
-            },
-            {
-                "type": "text",
-                "value": "India has continued negotiations on investment protection agreements even as the new template is being finalised, she said at the Munich Security Conference here."
-            }
-        ],
-        "date": "2026-10-09"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt likely to finalise critical minerals stockpiling policy in a month",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-likely-to-finalise-critical-minerals-stockpiling-policy-in-a-month/article71563040.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The policy on stockpiling critical minerals is expected to be announced in about a month, a government official said on Friday."
-            },
-            {
-                "type": "text",
-                "value": "The move is aimed at maintaining a stock of critical minerals to spur the growth of strategic sectors such as defence, advanced electronics and aerospace, among others."
-            },
-            {
-                "type": "text",
-                "value": "\"We are on the verge of finalising the policy on stockpiling of critical minerals which will be announced in about a month's time,\" Mines Secretary Keshav Chandra told reporters here."
             }
         ],
         "date": "2026-10-09"
