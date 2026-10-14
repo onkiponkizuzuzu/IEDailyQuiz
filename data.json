@@ -1,6 +1,374 @@
 [
     {
         "category": "Agri Business",
+        "title": "As wages soar, Kashmir’s apple growers count the cost",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/aswagessoarkashmirsapplegrowerscountthecost/article71583809.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "After haggling for nearly 30 minutes, Bashir Ahmad, an apple grower in south Kashmir’s Shopian district, finally hired three labourers at ₹1,300 a day to pick apples in his orchard, sprawling over five-kanals."
+            },
+            {
+                "type": "text",
+                "value": "“The rate is more than double the usual daily wage,” Ahmad said."
+            },
+            {
+                "type": "text",
+                "value": "Labourers who would usually charge ₹600 to ₹650 a day are now demanding between ₹1,000 and ₹1,500, growers said, as the apple harvesting season peaks across the Valley."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Agri Business",
+        "title": "India’s coffee research body seeks partnership to speed up development of new varieties",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-coffee-research-body-seeks-partnership-to-speed-up-development-of-new-varieties/article71584474.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Central Coffee Research Institute (CCRI), under the Coffee Board, is seeking research partnerships with private companies, research institutions and coffee growers to accelerate the development of new varieties and improve productivity and quality of the coffees grown in the country."
+            },
+            {
+                "type": "text",
+                "value": "The initiative aims to expand CCRI’s crop improvement programme by identifying promising coffee plants and varieties developed through natural cross-pollination or experimental breeding by growers and other researchers, said M Senthil Kumar, Director, CCRI. The institute believes such material, if scientifically evaluated, could offer potential for commercial cultivation."
+            },
+            {
+                "type": "text",
+                "value": "CCRI, which has a legacy of over 100 years, has traditionally undertaken coffee breeding and variety development through its own research programmes and has released some 15 varieties in Arabica and three in Robusta. However, the institute is now looking to collaborate with external partners to tap expertise, research facilities and manpower beyond its existing resources to strengthen the breeding programme in novel varietal identification, varietal development, diversity analysis, marker development, genotyping of coffee varieties/species, among others, he said."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Agri Business",
+        "title": "How Bengaluru startup Aaahara is taking botanical foods global",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/how-bengaluru-startup-aaahara-is-taking-botanical-foods-global/article71583800.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Bengaluru based food startup Infini Agrotek LLP, which sells its products under the brand name Aaahara is trying to create a category of botanicals infused ready to eat food products, evenwhile expanding its product portfolio that includes cryogenically processed spices targetting both domestic and overseas consumers."
+            },
+            {
+                "type": "text",
+                "value": "The company which recently did shipments to New Zealand and Netherlands, is eyeing markets in Australia and the US, targetting both the Indian diaspora and local consumers in these geographies."
+            },
+            {
+                "type": "text",
+                "value": "Suresh Bafna, CEO, Infini Agrotek said the company was founded around the idea of combining traditional food wisdom with modern processing technology, and it uses cryogenic technology to grind spices at extremely low temperatures, aiming to preserve their essential oils, aroma and nutritional compounds."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Greenspace Herbs launches moringa leaf blend",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/greenspace-herbs-launches-moringa-leaf-blend/article71583461.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Greenspace Herbs, the Bengaluru-based herbal extracts and nutraceutical manufacturer, has launched Morimin, a moringa leaf blend."
+            },
+            {
+                "type": "text",
+                "value": "A media statement said Morimin blends whole-leaf powder with moringa leaf extract in proportions developed by Greenspace’s research and development (R&amp;D) team."
+            },
+            {
+                "type": "text",
+                "value": "Leaf powder keeps the fibre, protein, carbohydrates, and the leaf's natural mineral package intact, while leaf extract concentrates the leaf’s naturally occurring plant compounds, such as polyphenols and flavonoids, into a smaller, more consistent quantity than powder alone can carry, it said."
+            },
+            {
+                "type": "heading",
+                "value": "Made in Karnataka"
+            },
+            {
+                "type": "text",
+                "value": "Morimin was developed and is manufactured at Greenspace’s factory and R&amp;D facility in the Magadi taluk of Karnataka."
+            },
+            {
+                "type": "text",
+                "value": "Quoting Hirehal Nuruddin Shafiulla, Founder and Managing Director of Greenspace Herbs, the statement said: “Moringa has grown in Indian backyards for generations, and our grandmothers knew its value long before the world called it a superfood. What was missing was consistency and proof. With Morimin, we have taken the whole leaf, paired it with a carefully developed extract and tested it for safety, stability and real-world use.”"
+            },
+            {
+                "type": "text",
+                "value": "Published on  October 14, 2026"
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Logistics",
+        "title": "DGCA to investigate hijack alarm scare on Air India flight",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/dgca-to-investigate-hijack-alarm-scare-on-air-india-flight/article71584950.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India’s civil aviation safety regulator, the Directorate General of Civil Aviation (DGCA), will investigate a false alarm scare on an <a href=\"https://www.thehindubusinessline.com/topic/Air_India/\" target=\"_blank\">Air India</a> flight from Frankfurt to Delhi after air traffic control (ATC) reported receiving a signal indicating a possible hijacking of the aircraft, sources told businessline."
+            },
+            {
+                "type": "text",
+                "value": "According to sources, the pilot-in-command denied squawking transponder code 7500, while ATC maintained that it had received the signal from the aircraft."
+            },
+            {
+                "type": "text",
+                "value": "In aviation parlance, transponder code 7500 is used to indicate unlawful interference with an aircraft, including hijacking."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Logistics",
+        "title": "L&T and TuTr Hyperloop sign MoU to develop advanced mobility solutions",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/lt-and-tutr-hyperloop-sign-mou-to-develop-advanced-mobility-solutions/article71584181.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Larsen &amp; Toubro (L&amp;T) has signed a Memorandum of Understanding (MoU) with TuTr Hyperloop, an IIT Madras-incubated deep-tech mobility start-up, to explore opportunities in the development and deployment of next-generation mobility technologies and infrastructure in India.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The MoU establishes a framework for jointly exploring and pursuing opportunities in the emerging mobility ecosystem, with project-specific engagements to be undertaken through separate agreements.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The two organisations will assess opportunities across a range of infrastructure and technology domains, including Linear Induction Motor-based propulsion systems, vacuum tube infrastructure, pressure management systems, civil and structural works, electrical infrastructure, signalling, telecommunications and systems integration."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Logistics",
+        "title": "Emirates to stay at Mumbai airport this winter; says Navi Mumbai not ready for shift",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/emirates-to-stay-at-mumbai-airport-this-winter-says-navi-mumbai-not-ready-for-shift/article71583374.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Dubai-based airline major Emirates will continue operating from Mumbai International Airport during the winter schedule, with Essa Sulaiman Ahmad, Senior Vice-President, West Asia &amp; Indian Ocean, Commercial Operations, Emirates, saying Navi Mumbai airport is “not ready” for a shift."
+            },
+            {
+                "type": "text",
+                "value": "Speaking at an event here to mark the airline’s upcoming launch of A380 aircraft flights to Delhi, Ahmad said catering, cargo warehousing and other supporting facilities would need to be developed before airlines could shift operations to Navi Mumbai."
+            },
+            {
+                "type": "text",
+                "value": "“At an airport, you will require a facility for catering. You will require a facility, for example, for cargo warehousing,” he said."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Logistics",
+        "title": "Aegis Logistics to acquire 89.8% stake in Dubai-based Tristar for ₹7700 crore",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/aegis-logistics-to-acquire-898-stake-in-dubai-based-tristar-for-7700-crore/article71583721.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Mumbai-based <a href=\"https://www.thehindubusinessline.com/stocks/aegis-logistics-ltd/\" target=\"_blank\">Aegis Logistics Ltd</a> has signed a definitive agreement to acquire an 89.8 per cent stake in Dubai-based Tristar Holdings Ltd for an equity consideration of $809 million (around ₹7,700 crore), marking a major step in its plans to expand beyond India and build an international energy logistics platform."
+            },
+            {
+                "type": "text",
+                "value": "The acquisition will be undertaken through Aegis Logistics International Pte Ltd, the company’s wholly owned step-down subsidiary. The consideration includes contingent payments and interest on deferred consideration, Aegis said in a regulatory filing on Tuesday. Tristar is an integrated liquid logistics solutions provider with operations in more than 30 countries. Established in 1998, the company offers maritime logistics, road transportation, fuel storage and distribution, and aviation fuelling services."
+            },
+            {
+                "type": "text",
+                "value": "For the calendar year ended December 2025, Tristar reported consolidated revenue of $1.4 billion, earnings before interest, tax, depreciation and amortisation (EBITDA) of $257 million and net profit of $82 million. The acquisition is expected to contribute to Aegis Logistics’ profitability immediately while providing opportunities for business and geographical diversification, the company said."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Logistics",
+        "title": "Cabinet approves 78 days’ bonus for 11.4 lakh railway employees",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/cabinet-approves-78-days-bonus-for-114-lakh-railway-employees/article71583439.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet has approved the payment of Productivity Linked Bonus of 78 days for 11,40,770 railway employees, amounting to Rs 2009.61 crore, in recognition of their excellent performance, the government said on Wednesday."
+            },
+            {
+                "type": "text",
+                "value": "Payment of PLB to eligible railway employees is made each year before the Durga Puja/Dusshera holidays."
+            },
+            {
+                "type": "text",
+                "value": "“This year also, PLB amount equivalent to 78 days' wages is being paid to about 11.40 lakh non-gazetted Railway employees. The payment of PLB acts as an incentive to motivate the railway employees for working towards improvement in the performance of the Railways,” the government said."
+            },
+            {
+                "type": "text",
+                "value": "It added, “The maximum amount payable per eligible railway employee is Rs 17,951 for 78 days.”"
+            },
+            {
+                "type": "text",
+                "value": "The above amount will be paid to various categories of Railway staff like track maintainers, loco pilots, train managers (Guards), station masters, supervisors, technicians, technician helpers, pointsmen, ministerial staff and other Group 'C staff."
+            },
+            {
+                "type": "text",
+                "value": "“The performance of Railways in the year 2025-26 was very good. Railways loaded a record cargo of 1670 million tonnes and carried nearly 7.41 billion Passengers,” the government said."
+            },
+            {
+                "type": "text",
+                "value": "Published on  October 14, 2026"
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Policy",
+        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
+            },
+            {
+                "type": "text",
+                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
+            },
+            {
+                "type": "text",
+                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Policy",
+        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
+            },
+            {
+                "type": "text",
+                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
+            },
+            {
+                "type": "text",
+                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Policy",
+        "title": "India unveils steel policy aiming for 604 million tonne capacity by 2047",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-unveils-steel-policy-aiming-for-604-million-tonne-capacity-by-2047/article71570627.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India released a draft <a href=\"https://www.thehindubusinessline.com/topic/iron-and-steel/\" target=\"_blank\">steel</a> policy ​for public consultation late on ‌Saturday, targeting 604 million metric ​tonnes of steel ⁠capacity by 2047 from around 220 million tonnes at present."
+            },
+            {
+                "type": "text",
+                "value": "<i>Reuters</i> reported last ‌week, citing the draft document, that the policy ‌lays out plans to ‌cut ⁠sector emissions and shore ⁠up access to iron ore and coking coal — key raw materials — to ​meet anticipated demand."
+            },
+            {
+                "type": "text",
+                "value": "The policy ‌aims to cut the sector’s average carbon-emission intensity to around 1.54 tonnes of carbon ‌dioxide per ton of ​crude steel by 2047 from the current 2.54 tonnes, ⁠in line with India’s net zero emission goal for 2070, ‌according to the draft document."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Policy",
+        "title": "India to roll out data centre policy as concerns grow over power use",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-roll-out-data-centre-policy-as-concerns-grow-over-power-use/article71582852.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India is rolling out ​a policy for data centres, a minister said ‌on Wednesday, saying the government wants to keep ​consumers from paying more for electricity ⁠as the sector’s power use draws concern worldwide."
+            },
+            {
+                "type": "text",
+                "value": "The move follows protests by residents in cities ‌such as Mumbai and Visakhapatnam against data centres planned by Amazon and Google over ‌concerns including water and electricity use"
+            },
+            {
+                "type": "text",
+                "value": "* India does ‌not ⁠have a dedicated policy for ⁠the sector, which is approved under existing environmental and building rules, with some states offering their own incentives"
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Policy",
+        "title": "India to launch National Electricity Data Sharing Framework in October",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+            },
+            {
+                "type": "text",
+                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+            },
+            {
+                "type": "text",
+                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Science",
+        "title": "Mining project threatens future of rare Jeypore ground gecko",
+        "url": "https://www.thehindu.com/sci-tech/science/mining-project-threatens-future-of-rare-jeypore-ground-gecko/article71582605.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "In the crevices of boulders and beneath the rustle of leaf litter in the hills of the Eastern Ghats in Odisha and Andhra Pradesh lives a tiny population of the strikingly-patterned Jeypore ground gecko, which was presumed extinct for 130 years until it was rediscovered in 2010 by an Indian scientist."
+            },
+            {
+                "type": "text",
+                "value": "Just four individuals of this endangered species have been documented in the past year in Odisha’s Balda hills, worryingly, within the site of a proposed <a href=\"https://www.thehindu.com/news/national/odisha/activists-express-concerns-over-exploitation-of-bauxite-deposits-in-odisha/article71331646.ece\" target=\"_self\">bauxite mining project</a> by an Adani-linked group."
+            },
+            {
+                "type": "text",
+                "value": "The nocturnal gecko, some 3.6 inches long, with a comparatively large head, and a yellow-orange body, was originally described as far back as 1878 by the British naturalist Richard Henry Beddome. It was only in 2010 that herpetologists Ishan Agarwal and Aniruddha Datta-Roy sighted a specimen in Odisha’s Koraput district."
+            },
+            {
+                "type": "text",
+                "value": "Later, happily for the herpetologists, there were more sightings: one in 2025, and three this year, including one this month. One of the least studied reptiles in the country, this gecko’s behaviour, habits and lifecycle continue to elude scientists."
+            },
+            {
+                "type": "text",
+                "value": "What is known, however, is that its habitat is fast shrinking, owing to its transformation to coffee plantations, hydropower projects and mining. In fact, the habitat where it was first sighted in the 1870s, Potangi in Odisha, has already been lost to bauxite mining by the National Aluminium Company Limited (NALCO), where the animal is believed to be now extinct."
+            },
+            {
+                "type": "text",
+                "value": "And today, the spectre of Adani’s opencast bauxite mine proposal, covering 147 hectares of forest in the Balda hills, within the Nageswari reserve forest, threatens the very future of this vulnerable species."
+            },
+            {
+                "type": "heading",
+                "value": "Adivasi uprising"
+            },
+            {
+                "type": "text",
+                "value": "The bauxite mining project has also been the site of much contention among resident <a href=\"https://www.thehindu.com/news/national/odisha/gram-sabha-consent-fabricated-to-divert-forest-for-mining-bauxite-say-villagers-in-odishas-koraput/article71048380.ece\" target=\"_self\">Adivasis</a> of the Nageswari reserve forest, who have protested the proposal for the past two years. The Bondo and Porja Adivasis, whose ancestral land this is, lodged a complaint against the Adani-subsidiary Kalinga Alumina Ltd. in February, but to no avail."
+            },
+            {
+                "type": "text",
+                "value": "“The communities have also applied for forest rights over the hill, which the government has refused to recognise,” naturalist Yuvan Aves told <i>The Hindu</i>. “There was a demonstration earlier this month too, and when the Adani group flew drones to scope the area, the Adivasi people stopped the exercise, asserting that this is their ancestral land,” he added."
+            },
+            {
+                "type": "text",
+                "value": "Ecologist Ishan Agarwal, who rediscovered this gecko in the Eastern Ghats in 2010, said that the gecko is “an ecologically and biogeographically significant species having split from its closest relatives over 20 million years ago.” This is a relatively range-restricted species that is only found in high-elevation (900–1,400 metres) forests in the northern Eastern Ghats. “Anything that threatens their habitat is the major risk. Coffee [though we don’t understand to what extent], hydel, mining are all potential threats,” he told <i>The Hindu</i>."
+            },
+            {
+                "type": "text",
+                "value": "The Balda hills are a treasure-trove of biodiversity and host a unique assemblage of species, including the unique limbless amphibian, <i>Gegeneophis orientalis</i>, said Dr. Agarwal. Another endemic species likely to be found in the region is the Araku worm gecko, he added."
+            },
+            {
+                "type": "text",
+                "value": "The Jeypore ground gecko is a “flagship species of the area,” said the renowned herpetologist Romulus Whitaker and added that the proposed mining project will most definitely see the end of the habitat of this important species, as well as others, including some yet undescribed. “I strongly advise against the mining of bauxite in the Balda hills and insist on prioritising the conservation of biodiversity of the area, in particular the Jeypore ground gecko,” Mr. Whitaker said in a release."
+            }
+        ],
+        "date": "2026-10-14"
+    },
+    {
+        "category": "Agri Business",
         "title": "Blenders, exporters lift tea prices at Coonoor auctions",
         "url": "https://www.thehindubusinessline.com/economy/agri-business/blenders-exporters-lift-tea-prices-at-coonoor-auctions/article71582796.ece",
         "content": [
@@ -155,118 +523,6 @@
             {
                 "type": "text",
                 "value": "Assistant Commissioner of Police, Malviya Nagar, Shiv Dayal told PTI that airport authorities had informed police about the emergency landing of the Frankfurt-Delhi flight following a bomb threat."
-            }
-        ],
-        "date": "2026-10-14"
-    },
-    {
-        "category": "Policy",
-        "title": "India unveils steel policy aiming for 604 million tonne capacity by 2047",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-unveils-steel-policy-aiming-for-604-million-tonne-capacity-by-2047/article71570627.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India released a draft <a href=\"https://www.thehindubusinessline.com/topic/iron-and-steel/\" target=\"_blank\">steel</a> policy ​for public consultation late on ‌Saturday, targeting 604 million metric ​tonnes of steel ⁠capacity by 2047 from around 220 million tonnes at present."
-            },
-            {
-                "type": "text",
-                "value": "<i>Reuters</i> reported last ‌week, citing the draft document, that the policy ‌lays out plans to ‌cut ⁠sector emissions and shore ⁠up access to iron ore and coking coal — key raw materials — to ​meet anticipated demand."
-            },
-            {
-                "type": "text",
-                "value": "The policy ‌aims to cut the sector’s average carbon-emission intensity to around 1.54 tonnes of carbon ‌dioxide per ton of ​crude steel by 2047 from the current 2.54 tonnes, ⁠in line with India’s net zero emission goal for 2070, ‌according to the draft document."
-            },
-            {
-                "type": "text",
-                "value": "The steel ministry expects iron ore demand at 772 million tonnes and plans to secure access to high-grade reserves ‌by pursuing foreign assets and joint ventures, ​the document said."
-            },
-            {
-                "type": "text",
-                "value": "The ministry also expects coking coal ⁠demand to reach 236 million tonnes, ⁠the document said, with the government planning to diversify ‌its sourcing via “strategic global outreach” and acquire overseas assets."
-            },
-            {
-                "type": "text",
-                "value": "Published on  October 11, 2026"
-            }
-        ],
-        "date": "2026-10-14"
-    },
-    {
-        "category": "Policy",
-        "title": "India to roll out data centre policy as concerns grow over power use",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-roll-out-data-centre-policy-as-concerns-grow-over-power-use/article71582852.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India is rolling out ​a policy for data centres, a minister said ‌on Wednesday, saying the government wants to keep ​consumers from paying more for electricity ⁠as the sector’s power use draws concern worldwide."
-            },
-            {
-                "type": "text",
-                "value": "The move follows protests by residents in cities ‌such as Mumbai and Visakhapatnam against data centres planned by Amazon and Google over ‌concerns including water and electricity use"
-            },
-            {
-                "type": "text",
-                "value": "* India does ‌not ⁠have a dedicated policy for ⁠the sector, which is approved under existing environmental and building rules, with some states offering their own incentives"
-            }
-        ],
-        "date": "2026-10-14"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt notifies 375 permissible works under VB-G RAM G, expands scope by 41%",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-notifies-375-permissible-works-under-vb-g-ram-g-expands-scope-by-41/article71550492.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Centre has notified 375 permissible works under the new rural employment framework, with a greater emphasis on livelihood infrastructure, water security and disaster preparedness, expanding the list of works by 41 per cent over the previous scheme."
-            },
-            {
-                "type": "text",
-                "value": "The Ministry of Rural Development said the new schedule, under the Viksit Bharat Guarantee for Rozgar and Ajeevika Mission (VB-G RAM G) Gramin Act, 2025, divides the works into four categories -- water security, core rural infrastructure, livelihood-related infrastructure, and special works for extreme weather events and disaster preparedness."
-            },
-            {
-                "type": "text",
-                "value": "Of the 375 works, 128 fall under water security, 111 under core rural infrastructure, 98 under livelihood-related infrastructure and 38 under disaster preparedness, according to the ministry."
-            }
-        ],
-        "date": "2026-10-14"
-    },
-    {
-        "category": "Policy",
-        "title": "New bilateral investment treaty framework to get Cabinet nod soon: FM Sitharaman",
-        "url": "https://www.thehindubusinessline.com/economy/policy/new-bilateral-investment-treaty-framework-to-get-cabinet-nod-soon-fm-sitharaman/article71546184.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "Finance Minister Nirmala Sitharaman on Monday said a new template for bilateral investment treaties is ready and is expected to get Cabinet approval soon in a bid to make it more investor-friendly."
-            },
-            {
-                "type": "text",
-                "value": "The new template, being prepared over the last one-and-a-half years, seeks to address shortcomings in the model approved in 2016 and provide sharper protection to investors from both sides, she said."
-            },
-            {
-                "type": "text",
-                "value": "India has continued negotiations on investment protection agreements even as the new template is being finalised, she said at the Munich Security Conference here."
-            }
-        ],
-        "date": "2026-10-14"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt likely to finalise critical minerals stockpiling policy in a month",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-likely-to-finalise-critical-minerals-stockpiling-policy-in-a-month/article71563040.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The policy on stockpiling critical minerals is expected to be announced in about a month, a government official said on Friday."
-            },
-            {
-                "type": "text",
-                "value": "The move is aimed at maintaining a stock of critical minerals to spur the growth of strategic sectors such as defence, advanced electronics and aerospace, among others."
-            },
-            {
-                "type": "text",
-                "value": "\"We are on the verge of finalising the policy on stockpiling of critical minerals which will be announced in about a month's time,\" Mines Secretary Keshav Chandra told reporters here."
             }
         ],
         "date": "2026-10-14"
