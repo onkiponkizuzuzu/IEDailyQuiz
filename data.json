@@ -1,6 +1,326 @@
 [
     {
         "category": "Agri Business",
+        "title": "Water stress",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/water-stress/article71589661.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Storage in India’s 178 major reservoirs fell below 70 per cent of capacity this week, with levels in the southern region dropping below 45 per cent, data from the Central Water Commission (CWC) showed. The onset of the North-East monsoon, however, is expected to bring some relief to the region."
+            },
+            {
+                "type": "text",
+                "value": "In its weekly reservoir status report, the CWC said storage stood at 126.7 billion cubic metres (BCM), or 68.6 per cent of the total capacity of 184.8 BCM. Fifteen reservoirs were full — four in Jharkhand and three each in Maharashtra and Madhya Pradesh. Aliyar reservoir in Tamil Nadu was empty."
+            },
+            {
+                "type": "text",
+                "value": "Storage in several key reservoirs in the South, including Somasila and Kandaleru in Andhra Pradesh; Lower Bhavani, Mettur, Vaigai, Sholayar, Karayar and Manimuthar in Tamil Nadu; Periyar in Kerala; and Singur in Telangana, was low."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Gadchiroli stands out for exemplary work in water conservation under PMDDKY scheme",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/gadchiroli-stands-out-for-exemplary-work-in-water-conservation-under-pmddky-scheme/article71588637.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Once known for being affected by Naxalism, Gadchiroli district in Maharashtra has done exemplary work in water conservation and drought management, transforming drought-affected areas into greener landscapes and achieving new milestones in agricultural production under the Centre’s Prime Minister Dhan-Dhaanya Krishi Yojana (PMDDKY)."
+            },
+            {
+                "type": "text",
+                "value": "Despite receiving 1,200–1,400 mm of rainfall during the June-September monsoon season, Gadchiroli faces challenges is  water-retention challenges. Nearly 84 per cent of the district’s area lies on metamorphic or hard rock, limiting natural water retention. Consequently, surface water levels decline rapidly during the post-monsoon period (October-February). In summer (March-May), agricultural fields face moisture stress and are often left fallow, while drinking water needs compete with irrigation requirements."
+            },
+            {
+                "type": "text",
+                "value": "In the current fiscal, the district’s monthly ranking under PMDDKY slipped to 42 in September from 26 in July, not because of a decline in performance but owing to improvements in other districts. Its composite score, based on 121 parameters, has risen steadily from 16.08 in April 2026 to 59.54 in September. In March 2026, Gadchiroli ranked 96 among the 100 districts covered by the scheme."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Logistics",
+        "title": "Saudi airline flyadeal eyes expansion in India",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/saudi-airline-flyadealeyes-expansion-in-india/article71547290.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Saudi low-cost airline flyadeal&nbsp;is eyeing new routes and revamping its product as it aims to strengthen its presence in India.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "On Saturday, the airline launched its five-weekly service between Riyadh and Mumbai, adding to its Hyderabad flights.&nbsp;The airline is also looking to introduce services to Delhi, Kozhikode and Lucknow.&nbsp;"
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Policy",
+        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
+            },
+            {
+                "type": "text",
+                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
+            },
+            {
+                "type": "text",
+                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Policy",
+        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
+        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
+            },
+            {
+                "type": "text",
+                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
+            },
+            {
+                "type": "text",
+                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Policy",
+        "title": "Govt pushes rare-earth magnet capacity, India seeks control over critical manufacturing inputs: Shaktikanta Das",
+        "url": "https://www.thehindubusinessline.com/economy/policy/govt-pushes-rare-earth-magnet-capacity-india-seeks-control-over-critical-manufacturing-inputs-shaktikanta-das/article71545743.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government is moving to build domestic capacity for rare-earth permanent magnets, which are critical for automobiles, electronic hardware and other manufacturing, Principal Secretary-2 to the Prime Minister Shaktikanta Das said at the Kautilya Economic Conclave 2026."
+            },
+            {
+                "type": "text",
+                "value": "Das said the government has responded to vulnerabilities in the global rare-earth magnet supply chain by initiating measures to develop domestic capabilities in the sector, pointing to the importance of these materials for a wide range of industries. “The central government came out immediately thereafter with a major initiative to develop domestic capacity in rare earth permanent magnets,” Das said. He said rare-earth magnets are an important component for manufacturing and that building domestic capacity would be relevant for sectors including automobiles and electronic hardware."
+            },
+            {
+                "type": "text",
+                "value": "“Because that is one critical component on which automobile manufacturing, electronic hardware manufacturing, and so much other manufacturing depends,” Das said. Das was referring to China's earlier restrictions on rare-earth related exports, which he said had highlighted the extent of global dependence on Chinese supplies. “China had imposed certain restrictions. It was a problem for almost the whole world, and because almost 80 to 90 per cent of rare earth magnet supply and that entire ecosystem originates in China,” he said."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Policy",
+        "title": "New bilateral investment treaty framework to get Cabinet nod soon: FM Sitharaman",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-bilateral-investment-treaty-framework-to-get-cabinet-nod-soon-fm-sitharaman/article71546184.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Finance Minister Nirmala Sitharaman on Monday said a new template for bilateral investment treaties is ready and is expected to get Cabinet approval soon in a bid to make it more investor-friendly."
+            },
+            {
+                "type": "text",
+                "value": "The new template, being prepared over the last one-and-a-half years, seeks to address shortcomings in the model approved in 2016 and provide sharper protection to investors from both sides, she said."
+            },
+            {
+                "type": "text",
+                "value": "India has continued negotiations on investment protection agreements even as the new template is being finalised, she said at the Munich Security Conference here."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Policy",
+        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
+            },
+            {
+                "type": "text",
+                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
+            },
+            {
+                "type": "text",
+                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Health",
+        "title": "TANKER Foundation invites nominees for annual award",
+        "url": "https://www.thehindu.com/sci-tech/health/tanker-foundation-invites-nominees-for-annual-award/article71583268.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The TANKER Foundation, a non-profit charitable trust, has invited nominations for its annual awards for service and research."
+            },
+            {
+                "type": "text",
+                "value": "The eligibility criteria for The Renny Abraham TANKER Foundation Love For Service Award 2027 include being a medical doctor and a resident of India engaged in community service for at least five years. The last date for nominations is December 15, 2026. There is no age limit. The award will carry a cash prize of ₹1,00,000, a citation and a gold medallion."
+            },
+            {
+                "type": "text",
+                "value": "Additionally, TANKER foundation and the K.V. George Foundation have invited applications for the K.V. George Kottukulam Memorial TANKER Foundation Young Investigator Award 2027 for young researchers in nephrology."
+            },
+            {
+                "type": "text",
+                "value": "The eligibility criteria include being below 45 years of age; the primary researcher must have been a major contributor; and having conducted the research in India. The research must be an outstanding contribution towards understanding kidney diseases, must be of relevance to India, should not have been presented elsewhere, and the consent of co-investigators is needed. The award will carry a cash prize of ₹2,00,000, a citation, and a gold medallion."
+            },
+            {
+                "type": "text",
+                "value": "The last date for submission is December 15, 2026."
+            },
+            {
+                "type": "text",
+                "value": "For details, contact 044-28341635/43090998 or e-mail at info@tankerfoundation.org. The awards will be presented in January 2027."
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Health",
+        "title": "The back end of 55",
+        "url": "https://www.thehindu.com/sci-tech/health/the-back-end-of-55/article71562980.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "I’ll admit it up front: I don’t like procedures. I’m fine doing them to other people. Having one done to me is different. For 10  years I treated my colonoscopy the way some people treat a check-engine light. I knew it was there, I knew what it meant, and I kept driving."
+            },
+            {
+                "type": "text",
+                "value": "Every birthday there was a reason to wait. I was too busy, I had no symptoms, I’d get to it next year. I’m 55 now, which means I spent a full decade telling patients to do what I wouldn’t."
+            },
+            {
+                "type": "text",
+                "value": "Two groups finally wore me down. The first was my wife, who is persistent and usually right, a combination I find exhausting. The second was my colleagues, who brought it up in the lounge more often than you’d think. Once a doctor’s wife and his co-workers are on the same side, the argument is over."
+            },
+            {
+                "type": "heading",
+                "value": "Seeking counsel"
+            },
+            {
+                "type": "text",
+                "value": "Before any big decision, I call my senior partner. He’s been my mentor for years, and he has the sharpest wit of anyone I know. He’s also, as I learned that day, almost no help at all."
+            },
+            {
+                "type": "text",
+                "value": "I told him I’d finally decided to schedule the colonoscopy. He paused, and then  said: “It’s a good thing you called. Now I’ll know why you’re walking funny the next day.”"
+            },
+            {
+                "type": "text",
+                "value": "I hung up, wondering why I keep calling him. I also quietly saved the whole speech, word for word, so that I can pass the same useless advice to the younger doctors in our group. Some traditions deserve to continue."
+            },
+            {
+                "type": "heading",
+                "value": "Why we do this at all"
+            },
+            {
+                "type": "text",
+                "value": "Colorectal cancer is the third most common cancer worldwide, accounting for approximately 10% of all cancer cases and the second leading cause of cancer-related deaths globally. . In India, it accounts for  about 65,000 new cases a year and  is rising, especially in cities, and with no national screening programme, too many cases are found late. Nearly 38,000 Indians die of it every year. It is also one of the few cancers we can actually prevent, not just catch early."
+            },
+            {
+                "type": "text",
+                "value": "Most colon cancers start as polyps, small growths on the lining of the colon. Over roughly 10  years, some become malignant. That long, quiet stretch is the opportunity. If you find a polyp and remove it, the cancer never gets a chanc’e to start. A colonoscopy is one of the few screening tests that also serves as treatment."
+            },
+            {
+                "type": "heading",
+                "value": "A brief history"
+            },
+            {
+                "type": "text",
+                "value": "Colonoscopy is younger than you might guess. In the late 1960s and early 1970s,  William Wolff and Hiromi Shinya in New York used new flexible fiberoptic scopes to examine the whole colon. Dr. Shinya also developed the wire-loop snare to remove polyps through the scope, so they no longer had to be removed through open abdominal surgery. That was a revolutionary change."
+            },
+            {
+                "type": "text",
+                "value": "The landmark evidence came from the <a href=\"https://pubmed.ncbi.nlm.nih.gov/8247072/\" target=\"_self\">National Polyp Study</a>. In 1993,  Sidney Winawer and colleagues reported in the&nbsp;<i>New England Journal of Medicine</i>&nbsp;that removing adenomatous polyps sharply cut the rate of colorectal cancer compared with what would otherwise be expected. In 2012, a <a href=\"https://pubmed.ncbi.nlm.nih.gov/22356322/\" target=\"_self\">long-term follow-up</a> in the same journal showed that removing polyps reduced colorectal cancer deaths by about half. Our whole screening approach rests on those two papers."
+            },
+            {
+                "type": "text",
+                "value": "The recommended starting age in the United States has also come down. Rising rates in younger adults led guidelines to lower it from 50 to 45. That leaves people like me with no excuse."
+            },
+            {
+                "type": "heading",
+                "value": "The alternative"
+            },
+            {
+                "type": "text",
+                "value": "Think about what skipping it looks like. A polyp grows unnoticed for years, and colon cancer often gives no warning until it’s advanced. Then the symptoms come: bleeding, a change in bowel habits, weight loss, fatigue, anaemia. By that point the conversation is about surgery, chemotherapy, and staging scans."
+            },
+            {
+                "type": "text",
+                "value": "For some patients it means a colostomy, where the bowel is brought out through the abdominal wall and stool goes into a bag, sometimes permanently. For too many, it means dying of a disease that a simple screening test could have prevented."
+            },
+            {
+                "type": "text",
+                "value": "Put that way, a day of inconvenience looks like a bargain."
+            },
+            {
+                "type": "heading",
+                "value": "The prep and the procedure"
+            },
+            {
+                "type": "text",
+                "value": "Every patient will tell you the procedure is easy and the prep is the hard part. They’re right."
+            },
+            {
+                "type": "text",
+                "value": "I’ll spare you the details. You either already know, or you’ll find out soon enough. The good news is that the prep has come a long way. The dreaded jug is no longer your only choice, and tablet preps have made the whole thing far more bearable. If your doctor offers them, take them."
+            },
+            {
+                "type": "text",
+                "value": "The next morning was close to anticlimactic. I checked in at the outpatient centre, changed into a gown that and got an IV. A nurse went through the usual checklist, and we chatted about nothing."
+            },
+            {
+                "type": "text",
+                "value": "Then came propofol."
+            },
+            {
+                "type": "text",
+                "value": "If you’ve never had it, here’s what it’s like. A warm flush rises up your arm, a brief awareness that something is about to happen, and then nothing. No dreams and no sense of time passing. One moment you’re listening to the anaesthesiologist, and the next you’re in recovery with a cup of juice, asking whether they’ve started yet."
+            },
+            {
+                "type": "heading",
+                "value": "The verdict"
+            },
+            {
+                "type": "text",
+                "value": "My gastroenterologist is also a friend, and he was completely professional from start to finish. He was calm and thorough, and he put me at ease. He came by recovery to tell me he’d found one polyp and removed it. It will go to pathology, and I’ll come back for surveillance on whatever schedule the results call for."
+            },
+            {
+                "type": "text",
+                "value": "That polyp had probably been growing for years while I made excuses. Now it’s gone. That’s the point of screening: find it before it becomes cancer."
+            },
+            {
+                "type": "heading",
+                "value": "The bottom line"
+            },
+            {
+                "type": "text",
+                "value": "It really isn’t that bad. The prep is unpleasant for a single night, and easier than it used to be. The procedure takes less time than your commute, and the sedation is the best nap you’ll take all year. It may keep you from getting cancer. That’s a pretty good trade."
+            },
+            {
+                "type": "text",
+                "value": "If you’re 45 or older and you’ve been putting it off as I did, talk to your doctor about getting screened. Colonoscopy isn’t the only option. You can do stool tests at home, and your doctor can walk you through other options. The best test is the one you’ll actually do. Doing nothing is the only wrong answer."
+            },
+            {
+                "type": "text",
+                "value": "<i>(Dr. Dinesh Arab is Director, Interventional and Structural Cardiology, AdventHealth Daytona Beach and Clinical Assistant Professor of Medicine, Florida State University dinarab@yahoo.com)</i>"
+            }
+        ],
+        "date": "2026-10-15"
+    },
+    {
+        "category": "Agri Business",
         "title": "IMD declares arrival of north-east monsoon over South Peninsula",
         "url": "https://www.thehindubusinessline.com/economy/agri-business/imd-declares-arrival-of-north-east-monsoon-over-south-peninsula/article71586984.ece",
         "content": [
@@ -155,106 +475,6 @@
             {
                 "type": "text",
                 "value": "GAL may explore and facilitate introductions and interactions with relevant authorities and share its experience and technical know-how, as appropriate, in connection with the initial pact, it said."
-            }
-        ],
-        "date": "2026-10-15"
-    },
-    {
-        "category": "Policy",
-        "title": "India unveils steel policy aiming for 604 million tonne capacity by 2047",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-unveils-steel-policy-aiming-for-604-million-tonne-capacity-by-2047/article71570627.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India released a draft <a href=\"https://www.thehindubusinessline.com/topic/iron-and-steel/\" target=\"_blank\">steel</a> policy ​for public consultation late on ‌Saturday, targeting 604 million metric ​tonnes of steel ⁠capacity by 2047 from around 220 million tonnes at present."
-            },
-            {
-                "type": "text",
-                "value": "<i>Reuters</i> reported last ‌week, citing the draft document, that the policy ‌lays out plans to ‌cut ⁠sector emissions and shore ⁠up access to iron ore and coking coal — key raw materials — to ​meet anticipated demand."
-            },
-            {
-                "type": "text",
-                "value": "The policy ‌aims to cut the sector’s average carbon-emission intensity to around 1.54 tonnes of carbon ‌dioxide per ton of ​crude steel by 2047 from the current 2.54 tonnes, ⁠in line with India’s net zero emission goal for 2070, ‌according to the draft document."
-            }
-        ],
-        "date": "2026-10-15"
-    },
-    {
-        "category": "Policy",
-        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
-            },
-            {
-                "type": "text",
-                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
-            },
-            {
-                "type": "text",
-                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
-            }
-        ],
-        "date": "2026-10-15"
-    },
-    {
-        "category": "Policy",
-        "title": "India to roll out data centre policy as concerns grow over power use",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-roll-out-data-centre-policy-as-concerns-grow-over-power-use/article71582852.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India is rolling out ​a policy for data centres, a minister said ‌on Wednesday, saying the government wants to keep ​consumers from paying more for electricity ⁠as the sector’s power use draws concern worldwide."
-            },
-            {
-                "type": "text",
-                "value": "The move follows protests by residents in cities ‌such as Mumbai and Visakhapatnam against data centres planned by Amazon and Google over ‌concerns including water and electricity use"
-            },
-            {
-                "type": "text",
-                "value": "* India does ‌not ⁠have a dedicated policy for ⁠the sector, which is approved under existing environmental and building rules, with some states offering their own incentives"
-            }
-        ],
-        "date": "2026-10-15"
-    },
-    {
-        "category": "Policy",
-        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
-            },
-            {
-                "type": "text",
-                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
-            },
-            {
-                "type": "text",
-                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
-            }
-        ],
-        "date": "2026-10-15"
-    },
-    {
-        "category": "Policy",
-        "title": "India to launch National Electricity Data Sharing Framework in October",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
-            },
-            {
-                "type": "text",
-                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
-            },
-            {
-                "type": "text",
-                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
             }
         ],
         "date": "2026-10-15"
