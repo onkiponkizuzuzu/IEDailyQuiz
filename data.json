@@ -1,6 +1,266 @@
 [
     {
         "category": "Agri Business",
+        "title": "Healthy soil, healthy crops, healthy water: Rethinking sustainable agriculture in India",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/healthy-soil-healthy-crops-healthy-water-rethinking-sustainable-agriculture-in-india/article71592794.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India’s agricultural progress has secured food production, but climate change, weakening soil fertility and water contamination demand a broader measure of success. The question is not simply how much we grow, but how sustainably. It also means recognising that environmental damage eventually becomes an economic burden for farmers, whose livelihoods depend on reliable harvests and manageable production costs."
+            },
+            {
+                "type": "text",
+                "value": "The scale of the problem is now documented. A nationwide ICAR-led assessment, drawing on more than 2.5 lakh soil samples from over 600 districts, found soil organic carbon declining across large parts of the country’s arable land, with imbalanced fertiliser use (heavily skewed towards urea and phosphorus) and rising temperatures identified as key drivers. Low organic carbon also goes hand in hand with greater micronutrient deficiency, which means falling soil carbon quietly erodes both yield and the nutritional quality of what we grow."
+            },
+            {
+                "type": "text",
+                "value": "Soil, crop and water health are interconnected. Treating each separately obscures how damage to one undermines the others. The connection is visible on farms where depleted soils demand more irrigation, while degraded water sources make restoring soil fertility even harder."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Climate change is quietly lowering the nutrient content of India’s staple crops",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/climate-change-is-quietly-lowering-the-nutrient-content-of-indias-staple-crops/article71592349.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "When we talk about climate change, the conversation usually begins with rising temperatures, unpredictable rainfall, shrinking yields, or food security. Rarely do we talk about something far less visible but equally concerning."
+            },
+            {
+                "type": "text",
+                "value": "Our food is becoming less nutritious."
+            },
+            {
+                "type": "text",
+                "value": "For a country like India, where cereals form the backbone of daily diets, this should concern all of us. Millions of families consume wheat, rice, millets and pulses every single day, assuming these staples provide the nourishment they always have. Increasingly, that assumption may no longer hold true."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Rethinking rice: The low-methane path to food and climate security",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/rethinking-rice-the-low-methane-path-to-food-and-climate-security/article71592308.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Rice feeds more than half of the world’s population and is central to global food security. Yet one of the world’s most important crops is also a significant source of methane emissions. As populations grow and climate pressures intensify, the challenge is clear: how do we produce more rice while reducing its environmental footprint?"
+            },
+            {
+                "type": "text",
+                "value": "Rice paddies average about 7,870 kg CO₂e per ha, accounting for roughly a 1.5 per cent share of total greenhouse gas emissions and a whopping 48 per cent of cropland emissions globally every year. However, in addition to the amount emitted, what makes rice truly climate-intensive is the composition of emissions."
+            },
+            {
+                "type": "text",
+                "value": "Rice fields primarily emit methane, whose global warming potential is 27 times higher than carbon dioxide. Rice cultivation, in fact, accounts for 10 per cent of global methane emissions, and its demand is set to rise significantly as population growth places increasing pressure on global food systems. Unless cultivation practices evolve, the climate impact of rice production will continue to grow alongside it."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Why food processing is India’s real frontier in the fight against food waste",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/why-food-processing-is-indias-real-frontier-in-the-fight-against-food-waste/article71592741.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India has never grown so much. Foodgrain output for 2025 to 26 reached a record 376.56 million tonnes, and horticulture output is estimated at 377.8 million tonnes. Yet only 16 to 17 per cent of what we grow is processed, and post-harvest losses are valued at over ₹1.5 lakh crore. This gap remains one of the least discussed failures in our food economy. When surplus produce cannot be preserved, processed or connected to demand in time, food is wasted and farmers lose income."
+            },
+            {
+                "type": "text",
+                "value": "Our infrastructure response has taken two shapes. One bets on scale, with 25 operational Mega Food Parks. The other bets on proximity, with 74,363 micro units formalised under PMFME and 311 of 409 approved cold chain projects now complete. Which model serves farmers better is a genuine debate, and my view cuts against both camps."
+            },
+            {
+                "type": "text",
+                "value": "Scale without proximity does not help a farmer far from the park. A micro unit without market access, quality systems or working capital rarely survives its first couple of years. What matters is whether a processing asset sits within reach of the farm gate, is reliably run and is plugged into buyers. I would rather see a handful of well used clusters near production belts than one impressive facility running below capacity, and fewer micro units that thrive than thousands formalised only on paper."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Why quality solar infrastructure matters for the future of Indian agriculture",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/why-quality-solar-infrastructure-matters-for-the-future-of-indian-agriculture/article71592288.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "A solar pump for irrigation is only useful if it works when the crop needs water, and that is where quality in Indian agriculture actually starts to matter. Diesel irrigation costs a farmer close to ₹6,790 an acre for wheat, more for a thirsty crop like cotton, and a solar pump that runs reliably can save ₹5,000 to ₹6,500 of that every year. The saving is real, but it only shows up if the system survives the season it was built to serve. That single requirement, more than any subsidy or target, decides whether India’s agricultural solar push succeeds on the ground."
+            },
+            {
+                "type": "text",
+                "value": "India’s agricultural solar programme is entering a new phase. PM-KUSUM’s first phase installed over 11.5 lakh standalone pumps, and its timelines have now been extended to March 2027 to let that work finish properly. The far larger shift is what comes next. PM-KUSUM 2.0, expected to carry an outlay above ₹50,000 crore, brings a dedicated 10 GW agrivoltaics component that pairs power generation with crops on the same land. Farmers under this model stand to see their income rise from around ₹60,000 an acre to over ₹1 lakh, combining harvest revenue with electricity sales."
+            },
+            {
+                "type": "text",
+                "value": "That combination changes what the equipment has to do. A standalone rooftop panel needs a few inches of clearance. A structure built to let a tractor or combine harvester pass underneath needs clearance of four to five metres, and at that height, wind pressure behaves very differently. The steel, the piling and the foundations all have to be engineered for loads that a simple ground mounted system never faces. Add in the dust and heat of an open field, and the remoteness that delays any repair crew, and it becomes clear why agricultural solar cannot simply borrow a rooftop design and scale it up."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Logistics",
+        "title": "Air India extends temporary suspension of flights to Saudi Arabia until Oct 24 amid Houthi attacks",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/air-india-extends-temporary-suspension-of-flights-to-saudi-arabia-until-oct-24-amid-houthi-attacks/article71595830.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Air India and Air India Express have extended their temporary suspension of flights to and from Jeddah, Riyadh and Dammam in Saudi Arabia until October 24 amid the Houthi rebels’ strikes in the West Asian country. In a travel advisory, Air India said that the bookings issued on or before October 15 with travel dates between October 9 and 25 are eligible for a one-time complimentary date change up to &nbsp;November 10."
+            },
+            {
+                "type": "text",
+                "value": "Air India stated, \"In view of the prevailing situation, Air India and Air India Express have temporarily suspended flights to and from Jeddah, Riyadh and Dammam until 24 October 2026. We understand that these disruptions may affect our guests' travel plans and are committed to providing as much flexibility as possible during this period.”"
+            },
+            {
+                "type": "text",
+                "value": "“Guests holding confirmed Air India or Air India Express bookings issued on or before 15 October 2026, with travel dates between 9 October and 25 October 2026, are eligible for a one-time complimentary date change on their respective airline up to 10 November 2026. Guests who do not wish to rebook on the originally preferred sector for a future date may, instead, choose to rebook from an alternative station in the GCC region served by their respective airline, subject to availability,” the statement read."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Logistics",
+        "title": "Alstom preparing to bid for ₹2,000-crore Chennai Metro Rail order",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/alstom-preparing-to-bid-for-2000-crore-chennai-metro-rail-order/article71587571.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Alstom is preparing to bid for a <a href=\"https://www.thehindubusinessline.com/topic/chennai-metro/\" target=\"_blank\">Chennai Metro Rail</a> contract worth around ₹2,000 crore to supply 168 metro cars for the existing Phase I network."
+            },
+            {
+                "type": "text",
+                "value": "This comes at a time when it is set to begin production of another 96 cars for the city’s expanding metro system in November, said Champak Panda, Managing Director of Rolling Stock and Component Business of Alstom India."
+            },
+            {
+                "type": "text",
+                "value": "The tender for the 168 cars, for which bids in the next few days, will require trains customised to Chennai Metro’s existing infrastructure, including its signalling systems, platforms and door-spacing specifications."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Logistics",
+        "title": "Boeing sales chief McMullen to retire, company memo says",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/boeing-sales-chief-mcmullen-to-retire-company-memo-says/article71595299.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Boeing jetliner ​sales chief\nBrad McMullen ‌is retiring in ​December ⁠and will be succeeded in\none ‌of the industry's most ‌high-profile ‌jobs ⁠by Ryan ⁠Weir,\ncurrently in charge of the North ​American ‌market, according to a\nmemo seen by Reuters."
+            },
+            {
+                "type": "text",
+                "value": "McMullen, ‌who is ​senior vice president of ⁠global sales and\nmarketing, led ‌the company's commercial recovery from a 2024\nincident involving a ‌mid-air door-plug blowout, ​and was seen as\ninfluential ⁠in shoring up ⁠strained relations with airlines."
+            },
+            {
+                "type": "text",
+                "value": "Published on  October 17, 2026"
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Policy",
+        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
+            },
+            {
+                "type": "text",
+                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
+            },
+            {
+                "type": "text",
+                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Policy",
+        "title": "New steel policy to promote circular economy, boost value addition: Industry",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
+            },
+            {
+                "type": "text",
+                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
+            },
+            {
+                "type": "text",
+                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Policy",
+        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
+            },
+            {
+                "type": "text",
+                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
+            },
+            {
+                "type": "text",
+                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Policy",
+        "title": "India to launch National Electricity Data Sharing Framework in October",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+            },
+            {
+                "type": "text",
+                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+            },
+            {
+                "type": "text",
+                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Policy",
+        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
+        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
+            },
+            {
+                "type": "text",
+                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
+            },
+            {
+                "type": "text",
+                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
+            }
+        ],
+        "date": "2026-10-17"
+    },
+    {
+        "category": "Agri Business",
         "title": "Kothari Industrial gets DGCA certification for KOAIR-10L agricultural spraying drone",
         "url": "https://www.thehindubusinessline.com/economy/agri-business/kothari-industrial-gets-dgca-certification-for-koair-10l-agricultural-spraying-drone/article71592986.ece",
         "content": [
@@ -75,154 +335,6 @@
             {
                 "type": "text",
                 "value": "In Central India where monsoon rainfall was 6 per cent below normal, except <a href=\"https://www.thehindubusinessline.com/topic/maharashtra/\" target=\"_blank\">Maharashtra</a> and Goa, which were deficient, all other states had either normal or excess rainfall. Maharashtra has reported 23 per cent deficit and Goa 36 per cent. On the other hand, Odisha received 23 per cent surplus <a href=\"https://www.thehindubusinessline.com/topic/rains/\" target=\"_blank\">rains</a>, whereas Chhattisgarh 2 per cent shortfall. Madhya Pradesh had 7 per cent deficit and Gujarat 12 per cent below normal."
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
-            },
-            {
-                "type": "heading",
-                "value": "Disability pension coverage to expand to 27 lakh"
-            },
-            {
-                "type": "text",
-                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
-            },
-            {
-                "type": "text",
-                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
-            },
-            {
-                "type": "heading",
-                "value": "Monthly disability pension rates increased"
-            },
-            {
-                "type": "text",
-                "value": "In addition, the ₹300/month pension for Divyangjan (disabled persons) between 18 and 79 years has been increased to ₹375 for up to 79 years from birth. Similarly, the ₹500/month pension for aged 80 years and above has been increased to ₹625."
-            },
-            {
-                "type": "text",
-                "value": "The government said in a statement that it will implement the revised eligibility criteria, beneficiary coverage, and assistance rates under the disability pension scheme within three months of issuing the guidelines. But it said the pension schemes for the aged and widows, and the family benefit scheme, will continue in their existing form."
-            },
-            {
-                "type": "heading",
-                "value": "Existing pension schemes renamed"
-            },
-            {
-                "type": "text",
-                "value": "The government renamed the “Indira Gandhi National Old Age Pension Scheme” as “Pradhan Mantri Vridhavastha Pension Yojana”, the Indira Gandhi National Widow Pension Scheme as “Pradhan Mantri Vidhawa Pension Yojana”, and the “Indira Gandhi National Disability Pension Scheme” as “Pradhan Mantri Divyangjan Pension Yojana”. Similarly, the National Family Benefit Scheme will become the “Pradhan Mantri Parivar Labh Yojana.”"
-            },
-            {
-                "type": "heading",
-                "value": "NSAP extended until 2030-31 with ₹53,428 crore outlay"
-            },
-            {
-                "type": "text",
-                "value": "Launched on August 15, 1995, the NSAP assists poor households as part of the Centre’s responsibility under Article 41 of the Directive Principles of State Policy in the Constitution. The Centre provides 100 per cent central assistance under the programme to ensure uniform support availability across the country, and the pension is transferred directly to beneficiaries’ bank accounts."
-            },
-            {
-                "type": "text",
-                "value": "The Cabinet’s approval is expected to benefit 3.20 crore beneficiaries across all 36 states and Union territories."
-            },
-            {
-                "type": "heading",
-                "value": "Disability pension eligibility aligned with 2016 Act"
-            },
-            {
-                "type": "text",
-                "value": "The Rights of Persons with Disabilities Act 2016 has changed the eligibility criteria for disability pension and linked it to the ‘Benchmark Disability’ of 40 per cent, the government said. In addition, it mandated disability-related assistance to be invariably 25 per cent higher than similarly placed schemes proposed for other categories."
-            },
-            {
-                "type": "text",
-                "value": "Published on  October 14, 2026"
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "India to launch National Electricity Data Sharing Framework in October",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
-            },
-            {
-                "type": "text",
-                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
-            },
-            {
-                "type": "text",
-                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
-            },
-            {
-                "type": "text",
-                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
-            },
-            {
-                "type": "text",
-                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
-        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
-            },
-            {
-                "type": "text",
-                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
-            },
-            {
-                "type": "text",
-                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "India to roll out data centre policy as concerns grow over power use",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-roll-out-data-centre-policy-as-concerns-grow-over-power-use/article71582852.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India is rolling out ​a policy for data centres, a minister said ‌on Wednesday, saying the government wants to keep ​consumers from paying more for electricity ⁠as the sector’s power use draws concern worldwide."
-            },
-            {
-                "type": "text",
-                "value": "The move follows protests by residents in cities ‌such as Mumbai and Visakhapatnam against data centres planned by Amazon and Google over ‌concerns including water and electricity use"
-            },
-            {
-                "type": "text",
-                "value": "* India does ‌not ⁠have a dedicated policy for ⁠the sector, which is approved under existing environmental and building rules, with some states offering their own incentives"
             }
         ],
         "date": "2026-10-17"
