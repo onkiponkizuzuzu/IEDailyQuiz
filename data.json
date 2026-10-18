@@ -1,63 +1,23 @@
 [
     {
-        "category": "Policy",
-        "title": "India to launch National Electricity Data Sharing Framework in October",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "category": "Agri Business",
+        "title": "FSSAI proposes new pesticide residue limits for tea to protect consumers",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/fssai-proposes-new-pesticide-residue-limits-for-tea-to-protect-consumers/article71597565.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+                "value": "Food regulator FSSAI has proposed maximum residue limits (MRLs) for two pesticides, Acetamiprid and Imidacloprid, in tea, considering the requirement of crop protection while safeguarding consumer interest."
             },
             {
                 "type": "text",
-                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+                "value": "In an official statement on Saturday, the Health Ministry said the Food Safety and Standards Authority of India (FSSAI) has notified draft amendments proposing MRLs for two pesticides, Acetamiprid and Imidacloprid, in tea."
             },
             {
                 "type": "text",
-                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+                "value": "The draft is part of the FSSAI’s ongoing efforts to promote science-based food safety regulation and consumer protection."
             }
         ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "New steel policy to promote circular economy, boost value addition: Industry",
-        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
-            },
-            {
-                "type": "text",
-                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
-            },
-            {
-                "type": "text",
-                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
-            }
-        ],
-        "date": "2026-10-17"
-    },
-    {
-        "category": "Policy",
-        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
-            },
-            {
-                "type": "text",
-                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
-            },
-            {
-                "type": "text",
-                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
-            }
-        ],
-        "date": "2026-10-17"
+        "date": "2026-10-18"
     },
     {
         "category": "Policy",
@@ -77,7 +37,67 @@
                 "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
             }
         ],
-        "date": "2026-10-17"
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Policy",
+        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
+            },
+            {
+                "type": "text",
+                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
+            },
+            {
+                "type": "text",
+                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Policy",
+        "title": "New steel policy to promote circular economy, boost value addition: Industry",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
+            },
+            {
+                "type": "text",
+                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
+            },
+            {
+                "type": "text",
+                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Policy",
+        "title": "India to launch National Electricity Data Sharing Framework in October",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+            },
+            {
+                "type": "text",
+                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+            },
+            {
+                "type": "text",
+                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+            }
+        ],
+        "date": "2026-10-18"
     },
     {
         "category": "Policy",
@@ -97,7 +117,7 @@
                 "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
             }
         ],
-        "date": "2026-10-17"
+        "date": "2026-10-18"
     },
     {
         "category": "Agri Business",
