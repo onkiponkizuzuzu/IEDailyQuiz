@@ -1,40 +1,120 @@
 [
     {
         "category": "Agri Business",
-        "title": "FSSAI proposes new pesticide residue limits for tea to protect consumers",
-        "url": "https://www.thehindubusinessline.com/economy/agri-business/fssai-proposes-new-pesticide-residue-limits-for-tea-to-protect-consumers/article71597565.ece",
+        "title": "The margin you cannot see",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/the-margin-you-cannot-see/article71595502.ece",
         "content": [
             {
                 "type": "text",
-                "value": "Food regulator FSSAI has proposed maximum residue limits (MRLs) for two pesticides, Acetamiprid and Imidacloprid, in tea, considering the requirement of crop protection while safeguarding consumer interest."
+                "value": "Food manufacturing runs on thin margins, and raw materials are the largest and most volatile line in the cost of finished goods. When a commodity price moves, it moves the whole cost base. Yet manufacturers cannot pass that movement on: retail prices are lagged, private label competition caps how far a brand can climb, and demand turns elastic at a threshold. When input costs spike, the increase lands on gross margin. Procurement is one of the few levers a manufacturer holds over profitability. Yet, manufacturers understand and control their raw materials exposure less well than the numbers reported to the board might suggest."
             },
             {
                 "type": "text",
-                "value": "In an official statement on Saturday, the Health Ministry said the Food Safety and Standards Authority of India (FSSAI) has notified draft amendments proposing MRLs for two pesticides, Acetamiprid and Imidacloprid, in tea."
+                "value": "For a hedgeable input such as flour, the landed cost is rarely one number. It is a stack of components, the underlying commodity, the basis, freight, the milling conversion, and a byproduct credit. Only the flat commodity trades on an exchange; basis, freight, and packaging and do not, so coverage is always partial. The rest is handled through supply contracts, and a single contract can carry many prices, varying by delivery terms, volume, and timing. Energy adds another volatile layer. The true cost is assembled from books that do not naturally meet and the result is a fragmented view of the landed cost of finished goods."
             },
             {
                 "type": "text",
-                "value": "The draft is part of the FSSAI’s ongoing efforts to promote science-based food safety regulation and consumer protection."
+                "value": "Unlike trading, hedging is driven by expected consumption. A manufacturer forecasts what each plant will use and tracks how much is already priced. Those coverage numbers feed board reports and securities filings, so an error there becomes an error in public guidance."
             }
         ],
         "date": "2026-10-18"
     },
     {
-        "category": "Policy",
-        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
+        "category": "Agri Business",
+        "title": "IMD update: Chennai drenched as Bay of Bengal and Arabian Sea brace for more activity",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/imd-update-chennai-drenched-as-bay-of-bengal-and-arabian-sea-brace-for-more-activity/article71599284.ece",
         "content": [
             {
                 "type": "text",
-                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
+                "value": "The north-east monsoon has gathered pace over the South Peninsula, with rain-bearing systems firing on both flanks and the Arabian Sea preparing to join action with a possible low-pressure area of its own."
             },
             {
                 "type": "text",
-                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
+                "value": "India Meteorological Department (IMD) said on Sunday morning that a cyclonic circulation over the south-west Arabian Sea, more than 2,000 km from the Kerala coast, could descend to lower levels and spawn a ‘low’ as early as Monday. Its distance means it may have little immediate influence on weather along India’s west coast."
             },
             {
                 "type": "text",
-                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
+                "value": "Closer home, a network of intersecting troughs and cyclonic circulations has transformed the adjoining Arabian Sea and Bay of Bengal into active rain-generating zones, following the onset of the north-east monsoon. The systems delivered heavy to very heavy rain at isolated places across the South Peninsula up to early Sunday, with Tamil Nadu bearing the brunt."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Agri Business",
+        "title": "How specialty coffee is creating new opportunities across India’s coffee-growing ecosystem?",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/how-specialty-coffee-is-creating-new-opportunities-across-indias-coffee-growing-ecosystem/article71595513.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Coffee has always been part of the Indian economy for centuries. Yet, predominantly, the global identity for India is still that of a tea-consuming nation. This is largely because Indian coffee producers have historically focused on volumes of beans meant for international export, often blended with global beans and missing out on an identity of their own."
+            },
+            {
+                "type": "text",
+                "value": "Specialty coffee has been a game changer because the focus of Indian producers has now shifted from volume to quality. It has formalised the coffee-growing ecosystem and given it a framework to connect all the fragmented aspects of the industry."
+            },
+            {
+                "type": "text",
+                "value": "Drawing from global case studies like Colombia, Cuba, and Panama, we see how coffee economies changed drastically as domestic populations turned inwards and began consuming and appreciating their own coffee. Domestic consumption increased, and so did the focus on quality. A similar shift is happening in India, with end consumers increasing their consumption of coffee as a beverage. So much so that today’s informed consumer is curious to know about origin, grade, processing methods, and flavour differentiation; what causes it, and how they can extract and brew coffee at home."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Logistics",
+        "title": "DP World CEO urges India to revise port concessions to attract investment",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/dp-world-ceo-urges-india-to-revise-port-concessions-to-attract-investment/article71599454.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "DP World Group CEO Yuvraj Narayan has called for a fundamental rethink of India's port development model, arguing that traditional time-bound concessions discourage long-term investment and that joint ventures between governments and private operators could deliver more sustained infrastructure development."
+            },
+            {
+                "type": "text",
+                "value": "\"A 30-year concession means what? Just look at the life cycle,\" Narayan said, contending that it can take years to build a port and stabilise operations, leaving operators with a relatively short period of high utilisation in which to recover their investments and modernise facilities."
+            },
+            {
+                "type": "text",
+                "value": "\"Why not JVs? Become a landlord. You have an operator, you agree on KPIs. It's forever, till I break your trust. What's the problem?\" he said."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Logistics",
+        "title": "Signpost India turns Bengaluru’s Majestic Metro into a digital art showcase",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/signpost-india-turns-bengalurus-majestic-metro-into-a-digital-art-showcase/article71599116.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Signpost India Ltd has unveiled Majestic Canvas, a 16,000 sq. ft. immersive visual experience at Bengaluru’s Nadaprabhu Kempegowda Station (Majestic Metro), using advanced projection mapping technology to showcase Karnataka’s mythical forms and temple heritage."
+            },
+            {
+                "type": "text",
+                "value": "The experience was launched on October 17, 2026, with a midnight art soirée titled ‘Stone to Life’. It uses Epson’s EB-L20000U Japanese projector, which delivers 20,000 lumens of brightness and WUXGA resolution, to transform the existing metro wall across the third and fourth platforms into a canvas for cultural storytelling."
+            },
+            {
+                "type": "text",
+                "value": "Curated by Team Gen O, Mumbai, Majestic Canvas showcases five mythical forms rooted in Karnataka’s architectural heritage: Yali, Vrishabha-Kunjara, Gandabherunda, Makara and Kirtimukha."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Logistics",
+        "title": "Southern Railway introduces Vistadome coach on Madurai–Guruvayur Express",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/southern-railway-introduces-vistadome-coach-on-maduraiguruvayur-express/article71599312.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Southern Railway on Sunday said that it has introduced an Executive Vistadome AC coach on the highly patronised Madurai-Guruvayur Express so that passengers get the unique opportunity to experience the breathtaking scenic beauty of the Sengottai–Punalur ghat section of the Western Ghats, including the picturesque Aryankavu pass."
+            },
+            {
+                "type": "text",
+                "value": "The Vistadome coach will be temporarily operated on the Madurai-Guruvayur Express on Thursdays, Fridays, Saturdays and Sundays, for journeys commencing from Madurai from October 22, 2026 to January 15, 2027, Southern Railways said in a release."
+            },
+            {
+                "type": "text",
+                "value": "In the return direction, the train will operate with the Vistadome coach on Fridays, Saturdays, Sundays and Mondays, for journeys commencing from Guruvayur from October 23, 2026 to January 16, 2027, it said."
             }
         ],
         "date": "2026-10-18"
@@ -81,20 +161,20 @@
     },
     {
         "category": "Policy",
-        "title": "India to launch National Electricity Data Sharing Framework in October",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
             },
             {
                 "type": "text",
-                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
             },
             {
                 "type": "text",
-                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
             }
         ],
         "date": "2026-10-18"
@@ -115,6 +195,46 @@
             {
                 "type": "text",
                 "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Policy",
+        "title": "India to launch National Electricity Data Sharing Framework in October",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-to-launch-national-electricity-data-sharing-framework-in-october/article71583283.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The government will launch the National Electricity Data Sharing Framework this month, which will provide unified data on generation, transmission, distribution, grid operations and power markets."
+            },
+            {
+                "type": "text",
+                "value": "The framework has been prepared to help the power sector players, especially startups, make informed decisions and plans, Power Secretary Pankaj Agarwal said, adding that the framework will be launched within this month."
+            },
+            {
+                "type": "text",
+                "value": "Addressing the Brainstorming Conclave on ‘Making the Indian Power Sector AI-enabled’ organised by the Central Electricity Authority (CEA) and industry body FICCI, Agarwal urged the power industry players to develop new applications by adopting artificial intelligence (AI)."
+            }
+        ],
+        "date": "2026-10-18"
+    },
+    {
+        "category": "Agri Business",
+        "title": "FSSAI proposes new pesticide residue limits for tea to protect consumers",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/fssai-proposes-new-pesticide-residue-limits-for-tea-to-protect-consumers/article71597565.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Food regulator FSSAI has proposed maximum residue limits (MRLs) for two pesticides, Acetamiprid and Imidacloprid, in tea, considering the requirement of crop protection while safeguarding consumer interest."
+            },
+            {
+                "type": "text",
+                "value": "In an official statement on Saturday, the Health Ministry said the Food Safety and Standards Authority of India (FSSAI) has notified draft amendments proposing MRLs for two pesticides, Acetamiprid and Imidacloprid, in tea."
+            },
+            {
+                "type": "text",
+                "value": "The draft is part of the FSSAI’s ongoing efforts to promote science-based food safety regulation and consumer protection."
             }
         ],
         "date": "2026-10-18"
