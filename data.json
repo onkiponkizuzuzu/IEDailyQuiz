@@ -1,20 +1,160 @@
 [
     {
-        "category": "Policy",
-        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
-        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
+        "category": "Agri Business",
+        "title": "Centre beats March 2027 target, issues 11 crore unique farmer IDs under AgriStack",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-beats-march-2027-target-issues-11-crore-unique-farmer-ids-under-agristack/article71619339.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
+                "value": "The Centre has created 11 crore unique 11-digit Farmer IDs, or Kisan Pehchaan Patra, under the AgriStack framework, five months ahead of the March 2027 deadline, Union Agriculture Minister Shivraj Singh Chouhan said on Saturday."
             },
             {
                 "type": "text",
-                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
+                "value": "These identification numbers are being issued as part of the Digital Agriculture Mission."
             },
             {
                 "type": "text",
-                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
+                "value": "In a video message, Chouhan said the milestone was achieved on the night of October 23. \"The task of creating 11 crore Farmer IDs has been completed ahead of schedule,\" he said."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Agri Business",
+        "title": "Sugar industry: The cost of regulation",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/sugar-industry-the-cost-of-regulation/article71616645.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The recent surge in sugar prices has created a host of challenges for farmers, millers, consumers and policymakers alike. Operating within a complex web of regulations across the upstream and downstream value chain, the sugar industry’s central concern is not merely what drives sugar prices, but who bears the costs of regulation."
+            },
+            {
+                "type": "text",
+                "value": "Our analysis of five leading sugar companies reveals that revenue-weighted operating margins (EBITDA) fell from 10.8 per cent in FY2021–22 to 8.4 per cent in FY2024–25, recovering only marginally to 8.47 per cent in FY2025–26, despite rising wholesale sugar prices. Financial pressures on mills can, in turn, translate into delayed payments to farmers through cane arrears, creating additional fiscal liabilities for the government."
+            },
+            {
+                "type": "text",
+                "value": "Mills have limited flexibility to benefit from higher sugar prices, as government controls over domestic sales quotas and international trade restrict their ability to respond to market conditions. Ethanol offers an alternative revenue stream, but there is a catch. Between FY2020–21 and FY2025–26, wholesale sugar prices rose by 23 per cent, broadly keeping pace with the 25 per cent increase in cane FRP."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Agri Business",
+        "title": "West Bengal farmers cut area under early potato varieties due to ‘unremunerative’ price",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/west-bengal-farmers-cut-area-under-early-potato-varieties-due-to-unremunerative-price/article71616709.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "West Bengal, the country’s second-largest potato grower, is witnessing a decline in acreage for the early varieties of the spud, as prices have remained low and unremunerative for farmers."
+            },
+            {
+                "type": "text",
+                "value": "If prices do not increase next month, the State may see a fall in the total area under potato cultivation during the 2026-27 season. For the 2025-26 season, area under potato  was around 5 lakh hectares."
+            },
+            {
+                "type": "text",
+                "value": "Currently, truck-loading prices at cold storage gates for the average variety of Jyoti potato are ruling at a  ₹500 per quintal, some ₹100 lower than the same period last year."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Agri Business",
+        "title": "CMFRI supply 5 lakh green mussel seeds to coastal fisher-folk in Maharashtra",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/cmfri-supply-5-lakh-green-mussel-seeds-to-coastal-fisher-folk-in-maharashtra/article71619358.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The ICAR-Central Marine Fisheries Research Institute (CMFRI) has supplied an additional five lakh hatchery-produced green mussel seeds to fisher-folk and tribal communities in Maharashtra, taking the cumulative supply to one million in the past six months."
+            },
+            {
+                "type": "text",
+                "value": "The initiative aims to translate marine fisheries research into livelihood opportunities by promoting sustainable bivalve farming along the Maharashtra coast, said CMFRI Director Grinson George."
+            },
+            {
+                "type": "text",
+                "value": "The green mussel seeds, measuring 2–4 mm, were produced at CMFRI’s bivalve hatchery at its Vizhinjam Regional Centre under the Pradhan Mantri Matsya Sampada Yojana (PMMSY). In addition, one lakh oyster seeds produced at the institute’s Madras Regional Station were supplied to Maharashtra to promote oyster farming."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Agri Business",
+        "title": "IMD update: Extremely severe rain for Coastal AP as cyclone watch continues",
+        "url": "https://www.thehindubusinessline.com/economy/agri-business/imd-update-extremely-severe-rain-for-coastal-ap-as-cyclone-watch-continues/article71619219.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Coastal Andhra Pradesh is in the crosshairs of a brewing Bay of Bengal storm, with the India Meteorological Department (IMD) warning of isolated, extremely heavy rain of 20 cm or more on Monday and Tuesday.&nbsp;"
+            },
+            {
+                "type": "text",
+                "value": "The well-marked low-pressure area over the east-central Bay is expected to become a depression later today (Saturday), deepen into a deep depression on Sunday and potentially graduate into cyclone <i>Arnab</i> by Monday morning. With the system likely to strengthen further as it heads west-northwest, the Andhra coast is increasingly in focus, though the time of landfall and area thereof remains uncertain."
+            },
+            {
+                "type": "text",
+                "value": "Tamil Nadu, Puducherry and Karaikal are also in the firing line, with isolated very heavy rain forecast over the next three days from Saturday. The emerging system is expected to work in tandem with a counterpart ‘low’ over the south-east Arabian Sea and adjoining Lakshadweep, keeping the rain engines humming on both sides of the peninsula."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Logistics",
+        "title": "Boeing supplier dispute has halted 777 freighter production for two months",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/boeing-supplier-dispute-has-halted-777-freighter-production-for-two-months/article71619028.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Boeing's dispute with\na small Florida-based supplier has halted ​production of its 777\nfreighter for nearly two months ⁠and disrupted output of the 767,\nincluding freighters and KC-46 aerial refueling tankers,\naccording to Boeing workers and court filings."
+            },
+            {
+                "type": "text",
+                "value": "Boeing filed a complaint in August alleging supplier ‌Vaero\nhad stopped delivering a critical wing component known as the\ntrailing-edge rib kit, stalling work at the Everett, Washington,\nwing-production facility ‌that supports the 777 freighter and 767\nprograms, according to a ‌copy ⁠of the complaint reviewed by\nReuters. The disruption was costing ⁠Boeing as much as $6.5\nmillion a day, the complaint said."
+            },
+            {
+                "type": "text",
+                "value": "Boeing said in the complaint that the trailing-edge rib kit\nwas an \"indispensable\" part and Vaero was the sole supplier."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Logistics",
+        "title": "Thiruvananthapuram airport to handle 644 weekly air traffic movements in winter",
+        "url": "https://www.thehindubusinessline.com/economy/logistics/thiruvananthapuram-airport-to-handle-644-weekly-air-traffic-movements-in-winter/article71619272.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Thiruvananthapuram International Airport will handle 644 weekly air traffic movements under its winter schedule for 2026-27, up from 620 in the summer schedule, with Riyadh added as a new destination."
+            },
+            {
+                "type": "text",
+                "value": "The winter schedule, effective from October 25, 2026, to March 27, 2027, will see weekly domestic air traffic movements increase by 12 per cent, from 294 to 328, the airport operator said in a statement."
+            },
+            {
+                "type": "text",
+                "value": "The airport will also see enhanced connectivity to Bahrain, Kuwait, Delhi, Mumbai and Bengaluru."
+            }
+        ],
+        "date": "2026-10-24"
+    },
+    {
+        "category": "Policy",
+        "title": "New steel policy to promote circular economy, boost value addition: Industry",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
+            },
+            {
+                "type": "text",
+                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
+            },
+            {
+                "type": "text",
+                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
             }
         ],
         "date": "2026-10-24"
@@ -61,20 +201,20 @@
     },
     {
         "category": "Policy",
-        "title": "New steel policy to promote circular economy, boost value addition: Industry",
-        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
+        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
+        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
         "content": [
             {
                 "type": "text",
-                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
+                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
             },
             {
                 "type": "text",
-                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
+                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
             },
             {
                 "type": "text",
-                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
+                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
             }
         ],
         "date": "2026-10-24"
