@@ -1,5 +1,105 @@
 [
     {
+        "category": "Policy",
+        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
+        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
+            },
+            {
+                "type": "text",
+                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
+            },
+            {
+                "type": "text",
+                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
+            }
+        ],
+        "date": "2026-10-25"
+    },
+    {
+        "category": "Policy",
+        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
+        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
+            },
+            {
+                "type": "text",
+                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
+            },
+            {
+                "type": "text",
+                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
+            }
+        ],
+        "date": "2026-10-25"
+    },
+    {
+        "category": "Policy",
+        "title": "New steel policy to promote circular economy, boost value addition: Industry",
+        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
+            },
+            {
+                "type": "text",
+                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
+            },
+            {
+                "type": "text",
+                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
+            }
+        ],
+        "date": "2026-10-25"
+    },
+    {
+        "category": "Policy",
+        "title": "Govt to bear ‘expensive’ certification costs for micro, small exporters under EPM: Piyush Goyal",
+        "url": "https://www.thehindubusinessline.com/economy/policy/govt-to-bear-expensive-certification-costs-for-micro-small-exporters-under-epm-piyush-goyal/article71614722.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "Commerce and Industry Minister Piyush Goyal on Friday said the government is willing to bear the entire cost of \"expensive\" certification for micro and small enterprises under the Export Promotion Mission (EPM), urging existing and new exporters to approach the Directorate General of Foreign Trade for support to access global markets."
+            },
+            {
+                "type": "text",
+                "value": "In November last year, the government approved the mission with an outlay of Rs 25,060 crore for six financial years. The mission is being implemented through two sub-schemes: Niryat Protsahan (Rs 10,401 crore) and Niryat Disha (Rs 14,659 crore)."
+            },
+            {
+                "type": "text",
+                "value": "\"Under the mission, we are willing to support everybody who wants to export anywhere in the world. We will give them support. For micro and small (enterprises), we are willing to literally take care of the entire cost of certification and others also, if there is some very expensive certification or process,\" he told reporters here."
+            }
+        ],
+        "date": "2026-10-25"
+    },
+    {
+        "category": "Policy",
+        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
+        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
+        "content": [
+            {
+                "type": "text",
+                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
+            },
+            {
+                "type": "text",
+                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
+            },
+            {
+                "type": "text",
+                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
+            }
+        ],
+        "date": "2026-10-25"
+    },
+    {
         "category": "Agri Business",
         "title": "Centre issues 11 crore farmer IDs under AgriStack, 26% are women",
         "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-issues-11-crore-farmer-ids-under-agristack-26-are-women/article71620251.ece",
@@ -243,106 +343,6 @@
             {
                 "type": "text",
                 "value": "Published on  October 24, 2026"
-            }
-        ],
-        "date": "2026-10-24"
-    },
-    {
-        "category": "Policy",
-        "title": "Defence Ministry approves over ₹2,400 crore procurement from startups and MSMEs",
-        "url": "https://www.thehindubusinessline.com/economy/policy/defence-ministry-approves-over-2400-cr-procurement-from-start-ups-msmes-rajnath/article71588630.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Ministry of Defence has approved the procurement of over ₹2,400 crore from startups and MSMEs, Defence Minister Rajnath Singh said on Thursday."
-            },
-            {
-                "type": "text",
-                "value": "Speaking at an event, Rajnath Singh also said that defence projects worth over Rs 1,500 crore have been approved to develop new technology, underscoring the Ministry’s resolve to make the tri-services future war-ready."
-            },
-            {
-                "type": "text",
-                "value": "Roughly 8,000 to 12,000+ MSMEs and more than 600 startups are engaged as vendors, suppliers, and sub-tier partners for Defence Public Sector Undertakings (DPSUs), ordnance factories, and the private-sector defence ecosystem."
-            }
-        ],
-        "date": "2026-10-24"
-    },
-    {
-        "category": "Policy",
-        "title": "New steel policy to promote circular economy, boost value addition: Industry",
-        "url": "https://www.thehindubusinessline.com/economy/policy/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/article71595896.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The proposed National Steel Policy will promote a circular economy and boost value-added production within India, steel industry stakeholders said."
-            },
-            {
-                "type": "text",
-                "value": "The policy, which builds a roadmap up to 2027 for the sector, also focuses on decarbonisation of the Indian steel industry, they said."
-            },
-            {
-                "type": "text",
-                "value": "Pankaj Malhan, MD &amp; CEO of RHI Magnesita India, said the recognition of refractory recovery and magnesite raw material security in the draft policy reflects a holistic approach to build a resilient and competitive steel ecosystem."
-            }
-        ],
-        "date": "2026-10-24"
-    },
-    {
-        "category": "Policy",
-        "title": "Govt to bear ‘expensive’ certification costs for micro, small exporters under EPM: Piyush Goyal",
-        "url": "https://www.thehindubusinessline.com/economy/policy/govt-to-bear-expensive-certification-costs-for-micro-small-exporters-under-epm-piyush-goyal/article71614722.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "Commerce and Industry Minister Piyush Goyal on Friday said the government is willing to bear the entire cost of \"expensive\" certification for micro and small enterprises under the Export Promotion Mission (EPM), urging existing and new exporters to approach the Directorate General of Foreign Trade for support to access global markets."
-            },
-            {
-                "type": "text",
-                "value": "In November last year, the government approved the mission with an outlay of Rs 25,060 crore for six financial years. The mission is being implemented through two sub-schemes: Niryat Protsahan (Rs 10,401 crore) and Niryat Disha (Rs 14,659 crore)."
-            },
-            {
-                "type": "text",
-                "value": "\"Under the mission, we are willing to support everybody who wants to export anywhere in the world. We will give them support. For micro and small (enterprises), we are willing to literally take care of the entire cost of certification and others also, if there is some very expensive certification or process,\" he told reporters here."
-            }
-        ],
-        "date": "2026-10-24"
-    },
-    {
-        "category": "Policy",
-        "title": "Cabinet expands disability pension coverage to 27 lakh, raises monthly assistance",
-        "url": "https://www.thehindubusinessline.com/economy/policy/cabinet-expands-disability-pension-coverage-to-27-lakh-raises-monthly-assistance/article71583756.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "The Union Cabinet on Wednesday revised eligibility criteria and assistance rates for disability pensioners, aiming to cover as many as 27 lakh people, up from 8.33 lakh beneficiaries. The Cabinet also approved continuing and renaming the National Social Assistance Programme (NSAP) until 2030-31, with an outlay of ₹53,428 crore over the next five years, starting from the current fiscal year."
-            },
-            {
-                "type": "text",
-                "value": "Briefing the media after the cabinet meeting, Information and Broadcasting Minister Ashwini Vaishnaw said the NSAP scheme has been renamed “Pradhan Mantri Samajik Sahayata Yojana”. He said that after the revised criteria, as many as 27 lakh people would be able to get disability pension benefits."
-            },
-            {
-                "type": "text",
-                "value": "Two major changes have been made to the pension for disabled persons: the minimum age of 18 years for inclusion has been abolished, and persons with 40 per cent disability can also receive the monthly pension, down from 80 per cent."
-            }
-        ],
-        "date": "2026-10-24"
-    },
-    {
-        "category": "Policy",
-        "title": "India-Mauritius tax treaty amended to curb treaty abuse; PPT test introduced",
-        "url": "https://www.thehindubusinessline.com/economy/policy/india-mauritius-tax-treaty-amended-to-curb-treaty-abuse-ppt-test-introduced/article71583541.ece",
-        "content": [
-            {
-                "type": "text",
-                "value": "India and Mauritius have amended their bilateral tax treaty by adding a treaty-level Principal Purpose Test (PPT) to the existing framework, in a move to curb treaty abuse."
-            },
-            {
-                "type": "text",
-                "value": "The amendment also replaces the treaty preamble to say that the pact intends to eliminate double taxation “without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including treaty-shopping arrangements” designed to obtain treaty relief indirectly for residents of third jurisdictions. ⁠"
-            },
-            {
-                "type": "text",
-                "value": "The amended India-Mauritius double taxation avoidance agreement (DTAA) was notified on October 13 and came into force on August 10, 2026."
             }
         ],
         "date": "2026-10-24"
